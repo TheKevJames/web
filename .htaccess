@@ -1,7 +1,12 @@
 Options -Indexes
 ServerSignature Off
-DefaultLanguage en
-AddDefaultCharset utf-8
+DefaultLanguage en-US
+AddDefaultCharset UTF-8
+SetEnv SERVER_ADMIN kevin.j.carruthers@gmail.com
+ServerSignature Email
+
+# Homepage has moved
+Redirect 301 /homepage/index.html http://www.pleb.x10.mx/homepage.php
 
 # TODO: Determine which is installed
 <ifmodule mod_php4.c>
@@ -35,11 +40,16 @@ AddDefaultCharset utf-8
 	ExpiresByType image/png A604800
 	ExpiresByType image/jpg A604800
 	ExpiresByType image/jpeg A604800
+	ExpiresByType text/html A86400
+	ExpiresByType text/txt A86400
+	ExpiresByType text/css A86400
+	ExpiresByType text/js A604800
+	ExpiresByType text/ini A604800
 </ifModule>
 
 <ifModule mod_headers.c>
 	<FilesMatch "\.(html|txt|css)$">
-		Header set Cache-Control "max-age=5"
+		Header set Cache-Control "max-age=86400"
 	</FilesMatch>
 	<FilesMatch ".(ini|js|jpg|jpeg|png)$">
 		Header set Cache-Control "max-age=604800"

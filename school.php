@@ -73,7 +73,7 @@ include_once('nav.inc.php');
 			</tr>
 	</table>
 
-	<h2>Completed Courses</h2>
+	<h2>Courses Taken</h2>
 	<table id='coursestable'>
 		<tr>
 			<th>ID</th>

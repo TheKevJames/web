@@ -107,12 +107,12 @@ include_once('nav.inc.php');
 		</tr>
 		<tr>
 			<td>Math 115</td>
-			<td>Linear Algebra for Engineering</td>
+			<td><a href='media/math115.pdf' target='_blank'>Linear Algebra for Engineering</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>
 			<td>Math 117</td>
-			<td>Calculus 1 for Engineering</td>
+			<td><a href='media/math117.pdf' target='_blank'>Calculus 1 for Engineering</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>
@@ -127,7 +127,7 @@ include_once('nav.inc.php');
 		</tr>
 		<tr>
 			<td>ECE 105</td>
-			<td>Physics of Electrical Engineering 1</td>
+			<td><a href='media/ece105.pdf' target='_blank'>Physics of Electrical Engineering 1</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>
@@ -142,7 +142,7 @@ include_once('nav.inc.php');
 		</tr>
 		<tr>
 			<td>ECE 140</td>
-			<td>Linear Circuits</td>
+			<td><a href='media/math115.pdf' target='_blank'>Linear Circuits</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>

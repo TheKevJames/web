@@ -88,6 +88,10 @@ content {
   #schooltable td {
     padding: 6px 12px;
     border-bottom: 1px solid rgba(221, 221, 221, 0.6); }
+    #schooltable td a {
+      display: block;
+      padding: 0px;
+      height: 100%; }
 
 #coursestable {
   text-align: left;

@@ -14,5 +14,4 @@ function curPage() {
 	<li><a href='calendar.php'		<? if(curPage() == 'calendar.php') { echo "class='selected'"; } ?>	>calendar</a>	<? if(curPage() == 'projects.php') {	echo "<div class='arrow'></div>"; } ?>
 	<li><a href='projects.php'		<? if(curPage() == 'projects.php') { echo "class='selected'"; } ?>	>projects</a>	<? if(curPage() == 'homepage.php') {	echo "<div class='arrow'></div>"; } ?>
 	<li><a href='homepage.php'		<? if(curPage() == 'homepage.php') { echo "class='selected'"; } ?>	>homepage</a>
-	<li><a href='proxy/index.php'																		>proxy</a>
 </ul></nav>

@@ -149,6 +149,11 @@ content {
 .foldingmenuitem450:hover ul {
   height: 450px; }
 
+.pagepeeker {
+  width: 300px;
+  height: 187px;
+  border: 1px black solid; }
+
 /* Homepage Stuff */
 .homepage {
   position: relative;

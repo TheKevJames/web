@@ -16,7 +16,7 @@ include_once('nav.inc.php');
 	<p><a href='https://github.com/CromiumApps/uwhub'>UWHub</a> is a central access point for all uWaterloo API resources. Currently in development, the final goal is to have an app which centralizes course stuff, exam things, faculty details, food schedules, and much, much more!
 
 	<h2>Favlets</h2>
-	<p>These "bookmarklets/favelets" do something <i>to</i> a page instead of navigating you away from it.</p>
+	<p>These "bookmarklets/favlets" do something <i>to</i> a page instead of navigating you away from it.</p>
 	<span class='foldingmenu'>
 		<span class='foldingmenuitem150'>
  			<h4><a href='javascript:document.location=document.referrer;' title='Back to Referrer'>
@@ -37,7 +37,7 @@ include_once('nav.inc.php');
 
 	<h2>Websites</h2>
 	<center>
-		<a href='http://www.pleb.x10.mx'>	<img src='media/pleb.png' style='border:1px black solid;'></a>
+		<a href='http://www.pleb.x10.mx'>	<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=pleb.x10.mx' class='pagepeeker'></a>
 		<a href='http://www.se2017.com'>	<img src='media/se2017.png' style='border:1px black solid;'></a>
 	</center>
 

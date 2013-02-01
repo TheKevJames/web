@@ -12,22 +12,8 @@ include_once('nav.inc.php');
 ?>
 
 <content>
-	<h2>Code Snippets</h2>
-	<span class='foldingmenu'>
-		<span class='foldingmenuitem200'>
- 			<h4>isPrime.c</h4>
-			<ul><pre><code class='language-c'>int isPrime(int number) {<br />  if(number <= 1) return 0;<br />  for(int i = 2; i <= sqrt(number); i++) {<br />    if(number % i == 0) return 0;<br />  }<br />  return 1;<br />}</code></pre></ul>
-		</span>
-		<span class='foldingmenuitem200'>
-			<h4>isLeapYear.c</h4>
-			<ul><pre><code class='language-c'>int isLeapYear(int year) {<br />  if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) return 1;<br />  return 0;<br />}</code></pre></ul>
-		</span>
-		<span class='foldingmenuitem450'>
-			<h4>factor.c</h4>
-			<ul><pre><code class='language-c'>void factor(int number) {<br />  printf("%d = ", number);<br />  int storenumber = number;<br />  int tempnumber = sqrt(number)*2;<br />  for(int i = 2; i <= tempnumber;) {<br />    if(number % i == 0) {
-      printf("%d%s", i, number != i ? "*" : "");<br />      number /= i;<br />    }<br />    else if(number == i) {<br />      printf("%d", i);<br />    }<br />    else i++;<br />  }<br />  if(number == storenumber) printf("%d", number);<br />  printf("\n");<br />}</code></pre></ul>
-		</span>
-	</span>
+	<h2>Android Apps</h2>
+	<p><a href='https://github.com/CromiumApps/uwhub'>UWHub</a> is a central access point for all uWaterloo API resources. Currently in development, the final goal is to have an app which centralizes course stuff, exam things, faculty details, food schedules, and much, much more!
 
 	<h2>Favlets</h2>
 	<p>These "bookmarklets/favelets" do something <i>to</i> a page instead of navigating you away from it.</p>

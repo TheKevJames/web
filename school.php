@@ -151,6 +151,19 @@ include_once('nav.inc.php');
 			<td>University of Waterloo</td>
 		</tr>
 	</table>
+
+	<h2>Classmates</h2>
+	<p>Being in a Software Engineering class, a bunch of my classmates have done some amazing stuff. Check out some of their websites and projects here! (this is very temporary, and  is basically a test of pagepeeker)
+	<center>
+		<a href='http://www.lishid.com'>			<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=lishid.com' class='pagepeeker'></a>
+		<a href='http://www.justclary.tumblr.com/'>	<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=justclary.tumblr.com' class='pagepeeker'></a>
+		<a href='http://www.nettek.ca'>				<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=nettek.ca' class='pagepeeker'></a>
+	</center>
+	<center>
+		<a href='http://www.j-li.net'>		<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=j-li.net' class='pagepeeker'></a>
+		<a href='http://jacobwirth.ca/'>	<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=jacobwirth.ca' class='pagepeeker'></a>
+		<a href='http://kevinpan.ca/'>		<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=kevinpan.ca' class='pagepeeker'></a>
+	</center>
 </content>
 
 </body>

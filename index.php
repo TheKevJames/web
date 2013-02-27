@@ -16,9 +16,8 @@ include_once('nav.inc.php');
 	<div class='social'>
 		<a href='https://twitter.com/KevinKarruthers' target='_blank'>Twitter</a> | 
 		<a href='https://www.facebook.com/kevin.j.carruthers' target='_blank'>Facebook</a> | 
-		<a href='https://github.com/KevinKarruthers' target='_blank'>GitHub</a> | 
-		<a href='https://plus.google.com/u/0/116007442349131770617' target='_blank'>Google+</a> | 
 		<a href='http://ca.linkedin.com/in/kevinkarruthers' target='_blank'>LinkedIn</a> | 
+		<a href='https://github.com/KevinKarruthers' target='_blank'>GitHub</a> | 
 		<a href='mailto:kevin.j.carruthers@gmail.com' target='_blank'>Email</a> 
 		(<a href='media/pgpkey.asc'>PGP</a>)</div>
 <!--

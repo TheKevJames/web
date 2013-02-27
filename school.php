@@ -152,6 +152,7 @@ include_once('nav.inc.php');
 		</tr>
 	</table>
 
+	<!--
 	<h2>Classmates</h2>
 	<p>Being in a Software Engineering class, a bunch of my classmates have done some amazing stuff. Check out some of their websites and projects here! (this is very temporary, and  is basically a test of pagepeeker)
 	<center>
@@ -164,6 +165,7 @@ include_once('nav.inc.php');
 		<a href='http://jacobwirth.ca/'>	<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=jacobwirth.ca' class='pagepeeker'></a>
 		<a href='http://kevinpan.ca/'>		<img src='http://free.pagepeeker.com/v2/thumbs.php?size=x&url=kevinpan.ca' class='pagepeeker'></a>
 	</center>
+	-->
 </content>
 
 </body>

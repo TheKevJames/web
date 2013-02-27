@@ -82,7 +82,7 @@ include_once('nav.inc.php');
 		</tr>
 		<tr>
 			<td>CS 137</td>
-			<td>Programming Principles</td>
+			<td><a href='media/cs137.pdf' target='_blank'>Programming Principles</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>

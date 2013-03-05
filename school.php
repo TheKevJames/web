@@ -73,6 +73,9 @@ include_once('nav.inc.php');
 			</tr>
 	</table>
 
+	<h2>uWaterloo Course Chart, by Term</h2>
+	<img id='courseschart' src='media/coursechart.png' />
+
 	<h2>Courses Taken</h2>
 	<table id='coursestable'>
 		<tr>

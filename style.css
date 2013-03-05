@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font: 16px 'Verdana','Arial',sans-serif !important;
+  font: 16px "Verdana", "Arial", sans-serif !important;
   background-color: #f2f2f2;
   text-align: justify; }
 
@@ -83,8 +83,8 @@ content {
   #schooltable th {
     font-size: 18px;
     padding: 10px 12px;
-    border-top: 2px solid #61210B;
-    border-bottom: 2px solid #61210B; }
+    border-top: 2px solid #61210b;
+    border-bottom: 2px solid #61210b; }
   #schooltable td {
     padding: 6px 12px;
     border-bottom: 1px solid rgba(221, 221, 221, 0.6); }
@@ -101,13 +101,17 @@ content {
   #coursestable th {
     font-size: 18px;
     padding: 10px 12px;
-    border-top: 2px solid #61210B;
-    border-bottom: 2px solid #61210B; }
+    border-top: 2px solid #61210b;
+    border-bottom: 2px solid #61210b; }
   #coursestable td {
     padding: 6px 12px;
     border-bottom: 1px solid rgba(221, 221, 221, 0.6); }
   #coursestable tr:hover {
     background-color: #ebebeb; }
+
+#courseschart {
+  width: 100%;
+  border: 1px solid black; }
 
 .framed {
   width: 810px;
@@ -175,8 +179,8 @@ content {
       width: 100%;
       height: 100%; }
     #homepage1 div:hover {
-      border: 1px #fff solid;
-      box-shadow: 0px 0px 5px #fff;
+      border: 1px white solid;
+      box-shadow: 0px 0px 5px white;
       margin-left: 4px;
       margin-top: 4px; }
 

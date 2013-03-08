@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang='en'>
 <head>
-	<title>Homepage | Kevin Carruthers' Homepage</title>
+	<title>Homepage</title>
 	<link rel='stylesheet' href='style.css'>
 	<script type='text/javascript' src='homepage/source.js'></script>
 	<script type='text/javascript' src='homepage/jquery-1.6.1.min.js'></script>

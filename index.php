@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang='en'>
 <head>
-	<title>Home | Kevin Carruthers' Homepage</title>
+	<title>Home</title>
 	<link rel='stylesheet' href='style.css'>
 	<link rel='icon' href='favicon.png' />
 </head>
@@ -12,7 +12,7 @@ include_once('nav.inc.php');
 ?>
 
 <content style='width:79%;'>
-	<div class='bigname'>Kevin Carruthers</div>
+	<div class='bigname'>Kevin James</div>
 	<div class='social'>
 		<a href='https://twitter.com/KevinKarruthers' target='_blank'>Twitter</a> | 
 		<a href='https://www.facebook.com/kevin.j.carruthers' target='_blank'>Facebook</a> | 

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang='en'>
 <head>
-	<title>Calendar | Kevin Carruthers' Homepage</title>
+	<title>Calendar</title>
 	<link rel='stylesheet' href='style.css'>
 	<link rel='icon' href='favicon.png' />
 </head>

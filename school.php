@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang='en'>
 <head>
-	<title>School | Kevin Carruthers' Homepage</title>
+	<title>School</title>
 	<link rel='stylesheet' href='style.css'>
 	<link rel='icon' href='favicon.png' />
 </head>

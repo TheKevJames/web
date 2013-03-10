@@ -90,7 +90,7 @@ include_once('nav.inc.php');
 		</tr>
 		<tr>
 			<td>CS 138</td>
-			<td>Data Abstraction and Implementation</td>
+			<td><a href='media/cs138.pdf' target='_blank'>Data Abstraction and Implementation</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>
@@ -120,12 +120,12 @@ include_once('nav.inc.php');
 		</tr>
 		<tr>
 			<td>Math 119</td>
-			<td>Calculus 2 for Engineering</td>
+			<td><a href='media/math119.pdf' target='_blank'>Calculus 2 for Engineering</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>
 			<td>Math 135</td>
-			<td>Algebra for Honours Mathematics</td>
+			<td><a href='media/math135.pdf' target='_blank'>Algebra for Honours Mathematics</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>
@@ -135,12 +135,12 @@ include_once('nav.inc.php');
 		</tr>
 		<tr>
 			<td>ECE 106</td>
-			<td>Physics of Electrical Engineering 2</td>
+			<td><a href='media/ece106.pdf' target='_blank'>Physics of Electrical Engineering 2</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>
 			<td>ECE 124</td>
-			<td>Digital Cicuits and Systems</td>
+			<td><a href='media/ece124.pdf' target='_blank'>Digital Cicuits and Systems</a></td>
 			<td>University of Waterloo</td>
 		</tr>
 		<tr>

@@ -5,7 +5,7 @@ function curPage() {
 ?>
 
 <nav><ul class='container'>
-	<li><a href='index.php'>kevin james</a></li>
+	<li><a href='index.php'>kevin carruthers</a></li>
 	<img src='media/symbol.png' />																						<? if(curPage() == 'index.php') {		echo "<div class='arrow'></div>"; } ?>
 	<li><a href='index.php'			<? if(curPage() == 'index.php') { echo "class='selected'"; } ?>		>home</a>		<? if(curPage() == 'bio.php') {			echo "<div class='arrow'></div>"; } ?>
 	<li><a href='bio.php'			<? if(curPage() == 'bio.php') { echo "class='selected'"; } ?>		>bio</a>		<? if(curPage() == 'resume.php') {		echo "<div class='arrow'></div>"; } ?>

@@ -5,9 +5,6 @@ AddDefaultCharset UTF-8
 SetEnv SERVER_ADMIN kevin.j.carruthers@gmail.com
 ServerSignature Email
 
-# Homepage has moved
-Redirect 301 /homepage/index.html http://www.pleb.x10.mx/homepage.php
-
 # TODO: Determine which is installed
 <ifmodule mod_php4.c>
 	php_value zlib.output_compression 16386

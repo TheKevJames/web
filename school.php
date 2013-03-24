@@ -7,11 +7,7 @@
 </head>
 <body>
 
-<?php
-include_once('nav.inc.php');
-?>
-
-<content>
+<content class='centered'>
 	<h2>Bachelor Degree Progress</h2>
 		<table id='schooltable'>
 			<tr>
@@ -25,11 +21,11 @@ include_once('nav.inc.php');
 			<tr>
 				<td colspan='3'></td>
 				<td colspan='3'>2012</td>
-				<td colspan='3' style='background-color:#ebebeb;'>2013</td>
+				<td colspan='3' style='background-color:#111;'>2013</td>
 				<td colspan='3'>2014</td>
-				<td colspan='3' style='background-color:#ebebeb;'>2015</td>
+				<td colspan='3' style='background-color:#111;'>2015</td>
 				<td colspan='3'>2016</td>
-				<td colspan='2' style='background-color:#ebebeb;'>2017</td>
+				<td colspan='2' style='background-color:#111;'>2017</td>
 			</tr>
 			<tr>
 				<td colspan='5'><b>Season</b></td>
@@ -73,10 +69,8 @@ include_once('nav.inc.php');
 			</tr>
 	</table>
 
-	<h2>uWaterloo Course Chart, by Term</h2>
-	<img id='courseschart' src='media/coursechart.png' />
-
 	<h2>Courses Taken</h2>
+	<h3><a href='media/coursechart.png' target='_blank'>Click here for a uWaterloo SE course chart!</a></h3>
 	<table id='coursestable'>
 		<tr>
 			<th>ID</th>

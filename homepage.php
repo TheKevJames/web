@@ -11,10 +11,6 @@
 </head>
 <body style='background-color:#260930;' onLoad='self.focus();document.form.q.focus()'>
 
-<?php
-include_once('nav.inc.php');
-?>
-
 <content>
 	<div id='homepage'>
 			<div id='homepage1'>

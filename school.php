@@ -70,7 +70,6 @@
 	</table>
 
 	<h2>Courses Taken</h2>
-	<h3><a href='media/coursechart.png' target='_blank'>Click here for a uWaterloo SE course chart!</a></h3>
 	<table id='coursestable'>
 		<tr>
 			<th>ID</th>

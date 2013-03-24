@@ -18,10 +18,12 @@ a {
 .wordcloud {
   font-family: 'Henny Penny';
   position: relative;
-  margin: 5% auto 0 auto;
+  margin: 0 auto 0 auto;
   height: 400px;
   width: 900px;
   overflow-y: hidden; }
+  .wordcloud div {
+    -webkit-transition: all 1s ease-in-out; }
 
 .firstname {
   position: absolute;
@@ -29,7 +31,8 @@ a {
   left: 160px;
   -webkit-transform: rotate(310deg);
   font-size: 80px;
-  color: #eeeeee; }
+  color: #eeeeee;
+  cursor: default; }
 
 .lastname {
   position: absolute;
@@ -37,13 +40,13 @@ a {
   left: 420px;
   -webkit-transform: rotate(325deg);
   font-size: 74px;
-  color: #eeeeee; }
+  color: #eeeeee;
+  cursor: default; }
 
 .symbol {
   position: absolute;
   top: 185px;
-  left: 435px;
-  -webkit-transform: rotate(0deg); }
+  left: 435px; }
 
 .resume {
   position: absolute;
@@ -52,6 +55,8 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 30px;
   color: #eeeeee; }
+  .resume:hover {
+    -webkit-transform: rotate(350deg); }
 
 .github {
   position: absolute;
@@ -60,6 +65,8 @@ a {
   -webkit-transform: rotate(25deg);
   font-size: 36px;
   color: #e65c00; }
+  .github:hover {
+    -webkit-transform: rotate(15deg); }
 
 .linkedin {
   position: absolute;
@@ -68,6 +75,8 @@ a {
   -webkit-transform: rotate(40deg);
   font-size: 36px;
   color: #47b56c; }
+  .linkedin:hover {
+    -webkit-transform: rotate(30deg); }
 
 .twitter {
   position: absolute;
@@ -76,6 +85,8 @@ a {
   -webkit-transform: rotate(345deg);
   font-size: 28px;
   color: #e65c00; }
+  .twitter:hover {
+    -webkit-transform: rotate(355deg); }
 
 .facebook {
   position: absolute;
@@ -84,6 +95,8 @@ a {
   -webkit-transform: rotate(65deg);
   font-size: 28px;
   color: #47b56c; }
+  .facebook:hover {
+    -webkit-transform: rotate(55deg); }
 
 .email {
   position: absolute;
@@ -92,6 +105,8 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 32px;
   color: #e65c00; }
+  .email:hover {
+    -webkit-transform: rotate(350deg); }
 
 .school {
   position: absolute;
@@ -100,6 +115,8 @@ a {
   -webkit-transform: rotate(30deg);
   font-size: 28px;
   color: #47b56c; }
+  .school:hover {
+    -webkit-transform: rotate(20deg); }
 
 .uwhub {
   position: absolute;
@@ -108,6 +125,8 @@ a {
   -webkit-transform: rotate(10deg);
   font-size: 24px;
   color: #7070ff; }
+  .uwhub:hover {
+    -webkit-transform: rotate(0deg); }
 
 .se2017 {
   position: absolute;
@@ -116,6 +135,8 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 24px;
   color: #7070ff; }
+  .se2017:hover {
+    -webkit-transform: rotate(350deg); }
 
 .win8homepage {
   position: absolute;
@@ -124,6 +145,8 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 24px;
   color: #7070ff; }
+  .win8homepage:hover {
+    -webkit-transform: rotate(350deg); }
 
 .french {
   position: absolute;
@@ -131,7 +154,8 @@ a {
   left: 583px;
   -webkit-transform: rotate(355deg);
   font-size: 18px;
-  color: #e65c00; }
+  color: #e65c00;
+  cursor: default; }
 
 .spanish {
   position: absolute;
@@ -139,7 +163,8 @@ a {
   left: 120px;
   -webkit-transform: rotate(20deg);
   font-size: 18px;
-  color: #e65c00; }
+  color: #e65c00;
+  cursor: default; }
 
 .coding {
   position: absolute;
@@ -147,7 +172,8 @@ a {
   left: 560px;
   -webkit-transform: rotate(350deg);
   font-size: 18px;
-  color: #e65c00; }
+  color: #e65c00;
+  cursor: default; }
 
 .writing {
   position: absolute;
@@ -155,7 +181,8 @@ a {
   left: 760px;
   -webkit-transform: rotate(60deg);
   font-size: 18px;
-  color: #47b56c; }
+  color: #47b56c;
+  cursor: default; }
 
 .music {
   position: absolute;
@@ -163,15 +190,18 @@ a {
   left: 215px;
   -webkit-transform: rotate(340deg);
   font-size: 18px;
-  color: #47b56c; }
+  color: #47b56c;
+  cursor: default; }
 
 .lip {
   position: absolute;
   top: 260px;
-  left: 330px;
+  left: 340px;
   -webkit-transform: rotate(350deg);
   font-size: 18px;
   color: #47b56c; }
+  .lip:hover {
+    -webkit-transform: rotate(360deg); }
 
 .ibid {
   position: absolute;
@@ -180,6 +210,32 @@ a {
   -webkit-transform: rotate(290deg);
   font-size: 20px;
   color: #47b56c; }
+  .ibid:hover {
+    -webkit-transform: rotate(330deg); }
+
+.lightboxbg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-opacity: 0.8;
+  opacity: 0.8;
+  background-color: black;
+  z-index: 11; }
+
+.lightbox {
+  display: none;
+  position: absolute;
+  top: 160px;
+  left: 400px;
+  padding: 16px;
+  border: 2px solid #e65c00;
+  -webkit-border-radius: 20px;
+  background-color: white;
+  z-index: 12;
+  -webkit-transition: all 1s ease-in-out; }
 
 .centered {
   text-align: center;

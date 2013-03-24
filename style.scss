@@ -24,11 +24,15 @@ a {
 	font-family:'Henny Penny';
 
 	position:relative;
-	margin:5% auto 0 auto;
+	margin:0 auto 0 auto;
 	height:400px;
 	width:900px;
 
 	overflow-y:hidden;
+
+	div {
+		-webkit-transition:all 1s ease-in-out;
+	}
 }
 
 $orange:#e65c00;
@@ -45,6 +49,8 @@ $gray:#eee;
 
 	font-size:80px;
 	color:$gray;
+	
+	cursor:default;
 }
 
 .lastname {
@@ -56,14 +62,14 @@ $gray:#eee;
 
 	font-size:74px;
 	color:$gray;
+	
+	cursor:default;
 }
 
 .symbol {
 	position:absolute;
 	top:185px;
 	left:435px;
-
-	-webkit-transform:rotate(0deg);
 }
 
 .resume {
@@ -75,6 +81,10 @@ $gray:#eee;
 
 	font-size:30px;
 	color:$gray;
+
+	&:hover {
+		-webkit-transform:rotate(350deg);
+	}
 }
 
 .github {
@@ -86,6 +96,10 @@ $gray:#eee;
 
 	font-size:36px;
 	color:$orange;
+
+	&:hover {
+		-webkit-transform:rotate(15deg);
+	}
 }
 
 .linkedin {
@@ -97,6 +111,10 @@ $gray:#eee;
 
 	font-size:36px;
 	color:$green;
+
+	&:hover {
+		-webkit-transform:rotate(30deg);
+	}
 }
 
 .twitter {
@@ -108,6 +126,10 @@ $gray:#eee;
 
 	font-size:28px;
 	color:$orange;
+
+	&:hover {
+		-webkit-transform:rotate(355deg);
+	}
 }
 
 .facebook {
@@ -119,6 +141,10 @@ $gray:#eee;
 
 	font-size:28px;
 	color:$green;
+
+	&:hover {
+		-webkit-transform:rotate(55deg);
+	}
 }
 
 .email {
@@ -130,6 +156,10 @@ $gray:#eee;
 
 	font-size:32px;
 	color:$orange;
+
+	&:hover {
+		-webkit-transform:rotate(350deg);
+	}
 }
 
 .school {
@@ -141,6 +171,10 @@ $gray:#eee;
 
 	font-size:28px;
 	color:$green;
+
+	&:hover {
+		-webkit-transform:rotate(20deg);
+	}
 }
 
 .uwhub {
@@ -152,6 +186,10 @@ $gray:#eee;
 
 	font-size:24px;
 	color:$blue;
+
+	&:hover {
+		-webkit-transform:rotate(0deg);
+	}
 }
 
 .se2017 {
@@ -163,6 +201,10 @@ $gray:#eee;
 
 	font-size:24px;
 	color:$blue;
+
+	&:hover {
+		-webkit-transform:rotate(350deg);
+	}
 }
 
 .win8homepage {
@@ -174,6 +216,10 @@ $gray:#eee;
 
 	font-size:24px;
 	color:$blue;
+
+	&:hover {
+		-webkit-transform:rotate(350deg);
+	}
 }
 
 .french {
@@ -185,6 +231,8 @@ $gray:#eee;
 
 	font-size:18px;
 	color:$orange;
+	
+	cursor:default;
 }
 
 .spanish {
@@ -196,6 +244,8 @@ $gray:#eee;
 
 	font-size:18px;
 	color:$orange;
+	
+	cursor:default;
 }
 
 .coding {
@@ -207,6 +257,8 @@ $gray:#eee;
 
 	font-size:18px;
 	color:$orange;
+	
+	cursor:default;
 }
 
 .writing {
@@ -218,6 +270,8 @@ $gray:#eee;
 
 	font-size:18px;
 	color:$green;
+	
+	cursor:default;
 }
 
 .music {
@@ -229,17 +283,23 @@ $gray:#eee;
 
 	font-size:18px;
 	color:$green;
+	
+	cursor:default;
 }
 
 .lip {
 	position:absolute;
 	top:260px;
-	left:330px;
+	left:340px;
 
 	-webkit-transform:rotate(350deg);
 
 	font-size:18px;
 	color:$green;
+
+	&:hover {
+		-webkit-transform:rotate(360deg);
+	}
 }
 
 .ibid {
@@ -251,6 +311,44 @@ $gray:#eee;
 
 	font-size:20px;
 	color:$green;
+
+	&:hover {
+		-webkit-transform:rotate(330deg);
+	}
+}
+
+.lightboxbg {
+	display:none;
+
+	position:absolute;
+	top:0;
+	left:0;
+
+	width:100%;
+	height:100%;
+
+	-webkit-opacity:0.8;
+	opacity:0.8;
+
+	background-color:black;
+	z-index:11;
+}
+
+.lightbox {
+	display:none;
+
+	position:absolute;
+	top:160px;
+	left:400px;
+
+	padding:16px;
+	border:2px solid $orange;
+	-webkit-border-radius:20px;
+
+	background-color:white;
+	z-index:12;
+
+	-webkit-transition:all 1s ease-in-out;
 }
 
 .centered {

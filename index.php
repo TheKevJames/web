@@ -30,7 +30,7 @@
 		<div class='win8homepage'><a href='homepage.php'>Win8Homepage</a></div>
 
 		<div class='lip'><a href='javascript:void(0)' onclick='document.getElementById("liplight").style.display="block";document.getElementById("fade").style.display="block"'>Live! in Print</a></div>
-		<div class='ibid'><a href='http://sjr.mb.ca/document.doc?id=376' target='_blank'>ibid.</a></div>
+		<div class='ibid'><a href='media/ibid.pdf' target='_blank'>ibid.</a></div>
 
 		<div class='french'>French</div>
 		<div class='spanish'>Spanish</div>
@@ -40,15 +40,15 @@
 
 
 		<div id='liplight' class='lightbox'>
-			<a href='media/lip1.png' target='_blank'>Issue 1<a/><br />
-			<a href='media/lip2.pdf' target='_blank'>Issue 2<a/><br />
-			<a href='media/lip5.pdf' target='_blank'>Issue 5<a/><br />
-			<a href='media/lip6.pdf' target='_blank'>Issue 6<a/>
+			<a href='media/lip1.png' target='_blank'>Issue 1</a><br />
+			<a href='media/lip2.pdf' target='_blank'>Issue 2</a><br />
+			<a href='media/lip5.pdf' target='_blank'>Issue 5</a><br />
+			<a href='media/lip6.pdf' target='_blank'>Issue 6</a>
 		</div>
 
 		<div id='schoollight' class='lightbox'>
-			<a href='school.php'>Bachelor's Progress<a/><br />
-			<a href='media/coursechart.png' target='_blank'>SE Courses Chart<a/>
+			<a href='school.php'>Bachelor's Progress</a><br />
+			<a href='media/coursechart.png' target='_blank'>SE Courses Chart</a>
 		</div>
 	</div>
 </content>

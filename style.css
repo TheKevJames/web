@@ -6,7 +6,7 @@
 
 html, body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px 0;
   font: 16px "Verdana", "Arial", sans-serif !important;
   background: url("media/noise.png") black;
   text-align: justify; }
@@ -55,8 +55,6 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 30px;
   color: #eeeeee; }
-  .resume:hover {
-    -webkit-transform: rotate(350deg); }
 
 .github {
   position: absolute;
@@ -65,8 +63,6 @@ a {
   -webkit-transform: rotate(25deg);
   font-size: 36px;
   color: #e65c00; }
-  .github:hover {
-    -webkit-transform: rotate(15deg); }
 
 .linkedin {
   position: absolute;
@@ -75,8 +71,6 @@ a {
   -webkit-transform: rotate(40deg);
   font-size: 36px;
   color: #47b56c; }
-  .linkedin:hover {
-    -webkit-transform: rotate(30deg); }
 
 .twitter {
   position: absolute;
@@ -85,8 +79,6 @@ a {
   -webkit-transform: rotate(345deg);
   font-size: 28px;
   color: #e65c00; }
-  .twitter:hover {
-    -webkit-transform: rotate(355deg); }
 
 .facebook {
   position: absolute;
@@ -95,8 +87,6 @@ a {
   -webkit-transform: rotate(65deg);
   font-size: 28px;
   color: #47b56c; }
-  .facebook:hover {
-    -webkit-transform: rotate(55deg); }
 
 .email {
   position: absolute;
@@ -105,8 +95,6 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 32px;
   color: #e65c00; }
-  .email:hover {
-    -webkit-transform: rotate(350deg); }
 
 .school {
   position: absolute;
@@ -115,8 +103,6 @@ a {
   -webkit-transform: rotate(30deg);
   font-size: 28px;
   color: #47b56c; }
-  .school:hover {
-    -webkit-transform: rotate(20deg); }
 
 .uwhub {
   position: absolute;
@@ -125,8 +111,6 @@ a {
   -webkit-transform: rotate(10deg);
   font-size: 24px;
   color: #7070ff; }
-  .uwhub:hover {
-    -webkit-transform: rotate(0deg); }
 
 .se2017 {
   position: absolute;
@@ -135,8 +119,6 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 24px;
   color: #7070ff; }
-  .se2017:hover {
-    -webkit-transform: rotate(350deg); }
 
 .win8homepage {
   position: absolute;
@@ -145,8 +127,22 @@ a {
   -webkit-transform: rotate(340deg);
   font-size: 24px;
   color: #7070ff; }
-  .win8homepage:hover {
-    -webkit-transform: rotate(350deg); }
+
+.lip {
+  position: absolute;
+  top: 260px;
+  left: 330px;
+  -webkit-transform: rotate(350deg);
+  font-size: 18px;
+  color: #47b56c; }
+
+.ibid {
+  position: absolute;
+  top: 164px;
+  left: 360px;
+  -webkit-transform: rotate(290deg);
+  font-size: 20px;
+  color: #47b56c; }
 
 .french {
   position: absolute;
@@ -193,26 +189,6 @@ a {
   color: #47b56c;
   cursor: default; }
 
-.lip {
-  position: absolute;
-  top: 260px;
-  left: 340px;
-  -webkit-transform: rotate(350deg);
-  font-size: 18px;
-  color: #47b56c; }
-  .lip:hover {
-    -webkit-transform: rotate(360deg); }
-
-.ibid {
-  position: absolute;
-  top: 164px;
-  left: 360px;
-  -webkit-transform: rotate(290deg);
-  font-size: 20px;
-  color: #47b56c; }
-  .ibid:hover {
-    -webkit-transform: rotate(330deg); }
-
 .lightboxbg {
   display: none;
   position: absolute;
@@ -222,7 +198,7 @@ a {
   height: 100%;
   -webkit-opacity: 0.8;
   opacity: 0.8;
-  background-color: black;
+  background-color: #000;
   z-index: 11; }
 
 .lightbox {
@@ -231,9 +207,9 @@ a {
   top: 160px;
   left: 400px;
   padding: 16px;
-  border: 2px solid #e65c00;
+  border: 2px solid #7070ff;
   -webkit-border-radius: 20px;
-  background-color: white;
+  background-color: #fff;
   z-index: 12;
   -webkit-transition: all 1s ease-in-out; }
 

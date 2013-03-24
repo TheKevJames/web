@@ -7,10 +7,10 @@
 
 html, body {
 	margin:0;
-	padding:0;
+	padding:0 0 20px 0;
 	font:16px 'Verdana','Arial',sans-serif !important;
 
-	background:url('media/noise.png') black;
+	background:url('media/noise.png') #000;
 
 	text-align:justify;
 }
@@ -81,10 +81,6 @@ $gray:#eee;
 
 	font-size:30px;
 	color:$gray;
-
-	&:hover {
-		-webkit-transform:rotate(350deg);
-	}
 }
 
 .github {
@@ -96,10 +92,6 @@ $gray:#eee;
 
 	font-size:36px;
 	color:$orange;
-
-	&:hover {
-		-webkit-transform:rotate(15deg);
-	}
 }
 
 .linkedin {
@@ -111,10 +103,6 @@ $gray:#eee;
 
 	font-size:36px;
 	color:$green;
-
-	&:hover {
-		-webkit-transform:rotate(30deg);
-	}
 }
 
 .twitter {
@@ -126,10 +114,6 @@ $gray:#eee;
 
 	font-size:28px;
 	color:$orange;
-
-	&:hover {
-		-webkit-transform:rotate(355deg);
-	}
 }
 
 .facebook {
@@ -141,10 +125,6 @@ $gray:#eee;
 
 	font-size:28px;
 	color:$green;
-
-	&:hover {
-		-webkit-transform:rotate(55deg);
-	}
 }
 
 .email {
@@ -156,10 +136,6 @@ $gray:#eee;
 
 	font-size:32px;
 	color:$orange;
-
-	&:hover {
-		-webkit-transform:rotate(350deg);
-	}
 }
 
 .school {
@@ -171,10 +147,6 @@ $gray:#eee;
 
 	font-size:28px;
 	color:$green;
-
-	&:hover {
-		-webkit-transform:rotate(20deg);
-	}
 }
 
 .uwhub {
@@ -186,10 +158,6 @@ $gray:#eee;
 
 	font-size:24px;
 	color:$blue;
-
-	&:hover {
-		-webkit-transform:rotate(0deg);
-	}
 }
 
 .se2017 {
@@ -201,10 +169,6 @@ $gray:#eee;
 
 	font-size:24px;
 	color:$blue;
-
-	&:hover {
-		-webkit-transform:rotate(350deg);
-	}
 }
 
 .win8homepage {
@@ -216,10 +180,28 @@ $gray:#eee;
 
 	font-size:24px;
 	color:$blue;
+}
 
-	&:hover {
-		-webkit-transform:rotate(350deg);
-	}
+.lip {
+	position:absolute;
+	top:260px;
+	left:330px;
+
+	-webkit-transform:rotate(350deg);
+
+	font-size:18px;
+	color:$green;
+}
+
+.ibid {
+	position:absolute;
+	top:164px;
+	left:360px;
+
+	-webkit-transform:rotate(290deg);
+
+	font-size:20px;
+	color:$green;
 }
 
 .french {
@@ -287,36 +269,6 @@ $gray:#eee;
 	cursor:default;
 }
 
-.lip {
-	position:absolute;
-	top:260px;
-	left:340px;
-
-	-webkit-transform:rotate(350deg);
-
-	font-size:18px;
-	color:$green;
-
-	&:hover {
-		-webkit-transform:rotate(360deg);
-	}
-}
-
-.ibid {
-	position:absolute;
-	top:164px;
-	left:360px;
-
-	-webkit-transform:rotate(290deg);
-
-	font-size:20px;
-	color:$green;
-
-	&:hover {
-		-webkit-transform:rotate(330deg);
-	}
-}
-
 .lightboxbg {
 	display:none;
 
@@ -330,7 +282,7 @@ $gray:#eee;
 	-webkit-opacity:0.8;
 	opacity:0.8;
 
-	background-color:black;
+	background-color:#000;
 	z-index:11;
 }
 
@@ -342,14 +294,15 @@ $gray:#eee;
 	left:400px;
 
 	padding:16px;
-	border:2px solid $orange;
+	border:2px solid $blue;
 	-webkit-border-radius:20px;
 
-	background-color:white;
+	background-color:#fff;
 	z-index:12;
 
 	-webkit-transition:all 1s ease-in-out;
 }
+
 
 .centered {
 	text-align:center;
@@ -404,6 +357,7 @@ $gray:#eee;
 		background-color:#000;
 	}
 }
+
 
 /* Homepage Stuff */
 .homepage {

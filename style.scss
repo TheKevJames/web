@@ -32,10 +32,14 @@ a {
 
 	div {
 		-webkit-transition:all 1s ease-in-out;
+		-moz-transition:all 1s ease-in-out;
+		-o-transition:all 1s ease-in-out;
+		transition:all 1s ease-in-out;
 	}
 }
 
 $orange:#e65c00;
+$brown:#61210b;
 $green:#47b56c;
 $blue:#7070ff;
 $gray:#eee;
@@ -46,6 +50,9 @@ $gray:#eee;
 	left:160px;
 
 	-webkit-transform:rotate(310deg);
+	-moz-transform:rotate(310deg);
+	-o-transform:rotate(310deg);
+	transform:rotate(310deg);
 
 	font-size:80px;
 	color:$gray;
@@ -59,6 +66,9 @@ $gray:#eee;
 	left:420px;
 
 	-webkit-transform:rotate(325deg);
+	-moz-transform:rotate(325deg);
+	-o-transform:rotate(325deg);
+	transform:rotate(325deg);
 
 	font-size:74px;
 	color:$gray;
@@ -78,6 +88,9 @@ $gray:#eee;
 	left:386px;
 
 	-webkit-transform:rotate(340deg);
+	-moz-transform:rotate(340deg);
+	-o-transform:rotate(340deg);
+	transform:rotate(340deg);
 
 	font-size:30px;
 	color:$gray;
@@ -89,6 +102,9 @@ $gray:#eee;
 	left:300px;
 
 	-webkit-transform:rotate(25deg);
+	-moz-transform:rotate(25deg);
+	-o-transform:rotate(25deg);
+	transform:rotate(25deg);
 
 	font-size:36px;
 	color:$orange;
@@ -100,6 +116,9 @@ $gray:#eee;
 	left:460px;
 
 	-webkit-transform:rotate(40deg);
+	-moz-transform:rotate(40deg);
+	-o-transform:rotate(40deg);
+	transform:rotate(40deg);
 
 	font-size:36px;
 	color:$green;
@@ -111,6 +130,9 @@ $gray:#eee;
 	left:259px;
 
 	-webkit-transform:rotate(345deg);
+	-moz-transform:rotate(345deg);
+	-o-transform:rotate(345deg);
+	transform:rotate(345deg);
 
 	font-size:28px;
 	color:$orange;
@@ -122,6 +144,9 @@ $gray:#eee;
 	left:595px;
 
 	-webkit-transform:rotate(65deg);
+	-moz-transform:rotate(65deg);
+	-o-transform:rotate(65deg);
+	transform:rotate(65deg);
 
 	font-size:28px;
 	color:$green;
@@ -133,20 +158,40 @@ $gray:#eee;
 	left:672px;
 
 	-webkit-transform:rotate(340deg);
+	-moz-transform:rotate(340deg);
+	-o-transform:rotate(340deg);
+	transform:rotate(340deg);
 
 	font-size:32px;
 	color:$orange;
 }
 
-.school {
+.coursechart {
 	position:absolute;
-	top:160px;
-	left:90px;
+	top:200px;
+	left:82px;
 
-	-webkit-transform:rotate(30deg);
+	-webkit-transform:rotate(340deg);
+	-moz-transform:rotate(340deg);
+	-o-transform:rotate(340deg);
+	transform:rotate(340deg);
 
-	font-size:28px;
+	font-size:22px;
 	color:$green;
+}
+
+.notes {
+	position:absolute;
+	top:132px;
+	left:618px;
+
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
+
+	font-size:22px;
+	color:$blue;
 }
 
 .uwhub {
@@ -155,6 +200,9 @@ $gray:#eee;
 	left:240px;
 
 	-webkit-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	-o-transform:rotate(10deg);
+	transform:rotate(10deg);
 
 	font-size:24px;
 	color:$blue;
@@ -166,6 +214,9 @@ $gray:#eee;
 	left:700px;
 
 	-webkit-transform:rotate(340deg);
+	-moz-transform:rotate(340deg);
+	-o-transform:rotate(340deg);
+	transform:rotate(340deg);
 
 	font-size:24px;
 	color:$blue;
@@ -177,6 +228,9 @@ $gray:#eee;
 	left:350px;
 
 	-webkit-transform:rotate(340deg);
+	-moz-transform:rotate(340deg);
+	-o-transform:rotate(340deg);
+	transform:rotate(340deg);
 
 	font-size:24px;
 	color:$blue;
@@ -188,6 +242,9 @@ $gray:#eee;
 	left:330px;
 
 	-webkit-transform:rotate(350deg);
+	-moz-transform:rotate(350deg);
+	-o-transform:rotate(350deg);
+	transform:rotate(350deg);
 
 	font-size:18px;
 	color:$green;
@@ -199,6 +256,9 @@ $gray:#eee;
 	left:360px;
 
 	-webkit-transform:rotate(290deg);
+	-moz-transform:rotate(290deg);
+	-o-transform:rotate(290deg);
+	transform:rotate(290deg);
 
 	font-size:20px;
 	color:$green;
@@ -210,6 +270,9 @@ $gray:#eee;
 	left:583px;
 
 	-webkit-transform:rotate(355deg);
+	-moz-transform:rotate(355deg);
+	-o-transform:rotate(355deg);
+	transform:rotate(355deg);
 
 	font-size:18px;
 	color:$orange;
@@ -223,6 +286,9 @@ $gray:#eee;
 	left:120px;
 
 	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
 
 	font-size:18px;
 	color:$orange;
@@ -236,6 +302,9 @@ $gray:#eee;
 	left:560px;
 
 	-webkit-transform:rotate(350deg);
+	-moz-transform:rotate(350deg);
+	-o-transform:rotate(350deg);
+	transform:rotate(350deg);
 
 	font-size:18px;
 	color:$orange;
@@ -249,6 +318,9 @@ $gray:#eee;
 	left:760px;
 
 	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+	-o-transform:rotate(60deg);
+	transform:rotate(60deg);
 
 	font-size:18px;
 	color:$green;
@@ -262,6 +334,9 @@ $gray:#eee;
 	left:215px;
 
 	-webkit-transform:rotate(340deg);
+	-moz-transform:rotate(340deg);
+	-o-transform:rotate(340deg);
+	transform:rotate(340deg);
 
 	font-size:18px;
 	color:$green;
@@ -296,18 +371,23 @@ $gray:#eee;
 	padding:16px;
 	border:2px solid $blue;
 	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	-o-border-radius:20px;
+	border-radius:20px;
 
 	background-color:#fff;
 	z-index:12;
 
 	-webkit-transition:all 1s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
+	-o-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
 }
 
 
 .centered {
 	text-align:center;
-	margin-left:auto;
-	margin-right:auto;
+	margin:100px auto 0 auto;
 
 	color:#fff;
 }
@@ -322,12 +402,12 @@ $gray:#eee;
 	th {
 		font-size:18px;
 		padding:10px 12px;
-		border-top:2px solid #61210B;
-		border-bottom:2px solid #61210B;
+		border-top:2px solid $brown;
+		border-bottom:2px solid $brown;
 	}
 	td {
 		padding:6px 12px;
-		border-bottom:1px solid rgba(221,221,221,0.6);
+		border-bottom:1px solid rgba(20,20,20,0.6);
 		a {
 			display:block;
 			padding:0px;
@@ -360,10 +440,10 @@ $gray:#eee;
 
 
 /* Homepage Stuff */
-.homepage {
+#homepage {
 	position:relative;
-	width:1120px;
-	height:1520px;
+	width:980px;
+	margin:10% auto 0 auto;
 }
 
 #homepage1 {

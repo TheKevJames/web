@@ -194,6 +194,20 @@ $gray:#eee;
 	color:$blue;
 }
 
+.progress {
+	position:absolute;
+	top:153px;
+	left:78px;
+
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
+
+	font-size:22px;
+	color:$blue;
+}
+
 .uwhub {
 	position:absolute;
 	top:270px;

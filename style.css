@@ -57,9 +57,11 @@ nav {
   .social img {
     height: 66px;
     opacity: 0;
+    transition: opacity 0.8s;
     -webkit-transition: opacity 0.8s; }
     .social img:hover {
       opacity: 1;
+      transition: opacity 0.8s;
       -webkit-transition: opacity 0.8s; }
 
 #navcontainer {
@@ -79,7 +81,12 @@ nav {
   font: 66px "Merriweather Sans";
   text-transform: uppercase;
   background: -webkit-linear-gradient(280deg, #5a8cfa 12%, #1e32e6 82%);
+  background: -moz-linear-gradient(280deg, #5a8cfa 12%, #1e32e6 82%);
+  background: -ms-linear-gradient(280deg, #5a8cfa 12%, #1e32e6 82%);
+  background: -o-linear-gradient(280deg, #5a8cfa 12%, #1e32e6 82%);
+  background: linear-gradient(280deg, #5a8cfa 12%, #1e32e6 82%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent; }
 
 .mask {
@@ -99,10 +106,12 @@ nav {
     .sitemenu li:last-child {
       border: none; }
   .sitemenu a {
-    -webkit-transition: color 0.2s; }
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
   .sitemenu a:hover {
     color: #3246aa;
-    -webkit-transition: color 0.2s; }
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
 
 #content {
   position: absolute;
@@ -137,7 +146,9 @@ article {
   margin: 10px -14px 0 -6px;
   padding: 15px 15px 30px 15px;
   background-color: #fff;
-  -webkit-box-shadow: -3px -3px 18px 0px #bbbbbb; }
+  -webkit-box-shadow: -3px -3px 18px 0px #bbbbbb;
+  -moz-box-shadow: -3px -3px 18px 0px #bbbbbb;
+  box-shadow: -3px -3px 18px 0px #bbbbbb; }
 
 .title {
   font: 18px "Merriweather Sans";
@@ -190,7 +201,9 @@ h1 {
   height: 800px;
   padding: 15px;
   background-color: #fff;
-  -webkit-box-shadow: -3px -3px 18px 0px #bbbbbb; }
+  -webkit-box-shadow: -3px -3px 18px 0px #bbbbbb;
+  -moz-box-shadow: -3px -3px 18px 0px #bbbbbb;
+  box-shadow: -3px -3px 18px 0px #bbbbbb; }
 
 .titlepost {
   margin-bottom: 5px;

@@ -82,10 +82,12 @@ nav {
 		height:66px;
 
 		opacity:0;
+		transition:opacity 0.8s;
 		-webkit-transition:opacity 0.8s;
 
 		&:hover {
 			opacity:1;
+			transition:opacity 0.8s;
 			-webkit-transition:opacity 0.8s;
 		}
 	}
@@ -115,7 +117,12 @@ nav {
 	text-transform:uppercase;
 
 	background:-webkit-linear-gradient(280deg, rgb(90,140,250) 12%, rgb(30,50,230) 82%);
+	background:   -moz-linear-gradient(280deg, rgb(90,140,250) 12%, rgb(30,50,230) 82%);
+	background:    -ms-linear-gradient(280deg, rgb(90,140,250) 12%, rgb(30,50,230) 82%);
+	background:     -o-linear-gradient(280deg, rgb(90,140,250) 12%, rgb(30,50,230) 82%);
+	background:        linear-gradient(280deg, rgb(90,140,250) 12%, rgb(30,50,230) 82%);
 	-webkit-background-clip:text;
+	background-clip:text;
 	-webkit-text-fill-color:transparent;
 }
 
@@ -146,11 +153,13 @@ nav {
 
 	a {
 		-webkit-transition:color 0.2s;
+		transition:color 0.2s;
 	}
 
 	a:hover {
 		color:$blue;
 		-webkit-transition:color 0.2s;
+		transition:color 0.2s;
 	}
 }
 
@@ -199,6 +208,8 @@ article {
 	padding:15px 15px 30px 15px;
 	background-color:#fff;
 	-webkit-box-shadow:-3px -3px 18px 0px #bbb;
+	-moz-box-shadow:-3px -3px 18px 0px #bbb;
+	box-shadow:-3px -3px 18px 0px #bbb;
 }
 
 .title {
@@ -276,6 +287,8 @@ h1 {
 	padding:15px;
 	background-color:#fff;
 	-webkit-box-shadow:-3px -3px 18px 0px #bbb;
+	-moz-box-shadow:-3px -3px 18px 0px #bbb;
+	box-shadow:-3px -3px 18px 0px #bbb;
 }
 
 .titlepost {

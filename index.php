@@ -83,4 +83,4 @@ include_once('nav.inc.php');
 </body>
 </html>
 
-<!-- TODO: email, se2017, bio, coursechart, progress, uwhub -->
+<!-- TODO: email, se2017, bio, progress, uwhub -->

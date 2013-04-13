@@ -43,6 +43,9 @@
 		<li><a href='https://www.facebook.com/kevin.j.carruthers' style='background-image:url("media/facebook.png");'>
 			<img src='media/facebooka.png' />
 		</a></li>
+		<li><a href='mailto:kevin.j.carruthers@gmail.com' style='background-image:url("media/email.png");'>
+			<img src='media/emaila.png' />
+		</a></li>
 	</ul>
 	<div id='navcontainer'>
 		<div id='arrow'><div id='name'>

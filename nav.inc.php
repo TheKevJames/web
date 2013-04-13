@@ -50,9 +50,10 @@
 		</div></div>
 		<div class='sitemenu'>
 			<ul>
-				<li><a href='index.php'>Home</a></li>
+				<li><a href='index.php'>Blog</a></li>
 				<li><a href='media/resume.pdf'>R&eacute;sum&eacute;</a></li>
 				<li><a href='post2.php'>Notes</a></li>
+				<li><a href='homepage.php'>Homepage</a></li>
 			</ul>
 		</div>
 	</div>

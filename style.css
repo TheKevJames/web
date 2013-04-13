@@ -216,6 +216,12 @@ h1 {
   width: 220px; }
 
 /* ------------------- */
+.onecol {
+  position: absolute;
+  top: 180px;
+  left: 350px;
+  margin-right: 40px; }
+
 #coursestable {
   text-align: left;
   border-collapse: collapse;

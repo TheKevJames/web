@@ -7,7 +7,31 @@
 include_once('nav.inc.php');
 ?>
 
-<div id='content'>
+<div id='content' style='width:800px;'>
+	<article>
+		<div id='post3'>
+			<div class='meta'>
+				<div class='cat'>chart, school</div>
+				<div class='date'>April 13th, 2013</div>
+			</div>
+			<div class='mainpost'>
+				<div class='title'>
+					<h1><a href='post3.php'>What Does it Take to be an Engineer?</a></h1>
+				</div>
+				<div class='thumb'>
+					<a href='post3.php'>
+						<img src='media/posts/coursechart.png' />
+					</a>
+				</div>
+				<div class='excerpt'>
+					<p>I've been told I take good notes. Now, personally, I think that's a gross overstatement, but a million adoring fans can't be wrong (not that I'd know... someone who has a million adoring fans, please let me know if I'm correct).
+					<p>Anyway, people probably like my notes mostly because they're written in LaTeX, and are all formatted and pretty. At least, that's probably why <a href='http://clarisseschneider.tumblr.com'>Clarisse</a> likes them...
+					<p style='float:right;'><a href='post3.php'>continue reading</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
 	<article>
 		<div id='post2'>
 			<div class='meta'>
@@ -58,3 +82,5 @@ include_once('nav.inc.php');
 
 </body>
 </html>
+
+<!-- TODO: email, se2017, bio, coursechart, progress, uwhub -->

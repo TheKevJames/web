@@ -11,7 +11,7 @@ include_once('nav.inc.php');
 	<div id='article' style='width:780px;'>
 		<div id='post'>
 			<div class='metapost'>
-				<div class='cat'>notes, se</div>
+				<div class='cat'>notes, school</div>
 				<div class='date'>April 13th, 2013</div>
 			</div>
 			<div class='mainpostfull'>

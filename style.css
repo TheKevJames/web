@@ -93,9 +93,9 @@ nav {
     float: right;
     clear: both;
     padding: 5px 5px 5px 0;
-    width: 100px;
+    width: 130px;
     font: 24px "Merriweather Sans";
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid #888888; }
     .sitemenu li:last-child {
       border: none; }
   .sitemenu a {

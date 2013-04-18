@@ -1,15 +1,22 @@
+<?php
+function curPage() {
+	return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+}
+?>
+
 	<link rel='stylesheet' href='style.css'>
 	<link rel='icon' href='favicon.png' />
 	<script src='media/jquery191.js'></script>
 	<script src='media/mousewheel.js'></script>
-	<script>
+	<? if(curPage() == 'index.php') {
+	echo "<script>
 	$(function() {
-		$("body").mousewheel(function(event, delta) {
+		$('body').mousewheel(function(event, delta) {
 			this.scrollLeft -= (delta * 35);
 			event.preventDefault();
 		});
 	});
-	</script>
+	</script>"; } ?>
 </head>
 <body>
 
@@ -27,6 +34,7 @@
 		<div style='opacity:0.2;'></div>
 		<div style='opacity:0.1;'></div>
 		<div style='opacity:0.1;'></div>
+		<div style='opacity:0;'></div>
 		<div style='opacity:0;'></div>
 		<div style='opacity:0;'></div>
 	</div>
@@ -49,7 +57,7 @@
 	</ul>
 	<div id='navcontainer'>
 		<div id='arrow'><div id='name'>
-			<a href='http://thekev.in' class='mask'>Kevin</a>
+			<a href='http://thekev.in'>Kevin</a>
 		</div></div>
 		<div class='sitemenu'>
 			<ul>

@@ -21,6 +21,7 @@ include_once('nav.inc.php');
 				<p>I've been told I take good notes. Now, personally, I think that's a gross overstatement, but a million adoring fans can't be wrong (not that I'd know... someone who has a million adoring fans, please let me know if I'm correct).</p>
 				<p>Anyway, people probably like my notes mostly because they're written in LaTeX, and are all formatted and pretty. At least, that's probably why <a href='http://clarisseschneider.tumblr.com'>Clarisse</a> likes them.</p>
 				<p>You can find my notes for every course I've completed here, in this extremely convenient chart. Wow, I wonder where that came from!</p>
+				<p>At the moment, all notes are up except for SE 101 (I'll write something up eventually), CS 229 (Need to merge my notes), and CS 138 (first few classes is up, haven't updated it since then).
 			
 				<table id='coursestable'>
 					<thead>

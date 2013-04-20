@@ -169,7 +169,7 @@ nav {
     #content #article .box {
       margin: 76px -14px 0 -6px;
       height: 80%;
-      overflow-y: scroll; }
+      overflow-y: auto; }
       #content #article .box .title {
         margin-bottom: 5px;
         text-align: left;

@@ -7,7 +7,30 @@
 include_once('nav.inc.php');
 ?>
 
-<div id='content' style='width:1300px;'>
+<div id='content' style='width:1600px;'>
+	<article>
+		<div id='post6'>
+			<div class='meta'>
+				<div class='cat'>morse</div>
+				<div class='date'>April 20th, 2013</div>
+			</div>
+			<div class='box'>
+				<div class='title'>
+					<h1><a href='post6.php'>On Morse and BSTs</a></h1>
+				</div>
+				<div class='thumb'>
+					<a href='post6.php'>
+						<img src='media/posts/morsereal.jpg' />
+					</a>
+				</div>
+				<div class='excerpt'>
+					<p>I... honestly have no idea why I thought of this. I suppose this is what happens when you spend an entire class (and I mean the full term, not just one day) doing linked lists and BSTs (comprised of linked lists). Throw in morse code, and you have a quick way to decipher it without actually learning anything...</p>
+					<p style='float:right;'><a href='post6.php'>continue reading</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
 	<article>
 		<div id='post5'>
 			<div class='meta'>
@@ -24,7 +47,7 @@ include_once('nav.inc.php');
 					</a>
 				</div>
 				<div class='excerpt'>
-					<p>In a few days, I'll be moving out of my on-campus residence (with a cafeteria) and be forced to - once again - begin making food for myself. I'm sure many of you are in the same situation, so I'll share some of my cooking tips and recipes to the less culinarily inclined among you...
+					<p>In a few days, I'll be moving out of my on-campus residence (with a cafeteria) and be forced to - once again - begin making food for myself. I'm sure many of you are in the same situation, so I'll share some of my cooking tips and recipes to the less culinarily inclined among you...</p>
 					<p style='float:right;'><a href='post5.php'>continue reading</a>
 				</div>
 			</div>

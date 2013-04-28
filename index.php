@@ -7,7 +7,30 @@
 include_once('nav.inc.php');
 ?>
 
-<div id='content' style='width:1600px;'>
+<div id='content' style='width:1870px;'>
+	<article>
+		<div id='post7'>
+			<div class='meta'>
+				<div class='cat'>school, selfie</div>
+				<div class='date'>April 28th, 2013</div>
+			</div>
+			<div class='box'>
+				<div class='title'>
+					<h1><a href='post7.php'>On Angst</a></h1>
+				</div>
+				<div class='thumb'>
+					<a href='post7.php'>
+						<img src='media/posts/angst.jpg' />
+					</a>
+				</div>
+				<div class='excerpt'>
+					<p>So all of my classmates posted on our SE2017 Facebook group that our end-of-term marks are out. I went to check the school website, and...</p>
+					<p style='float:right;'><a href='post7.php'>continue reading</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
 	<article>
 		<div id='post6'>
 			<div class='meta'>

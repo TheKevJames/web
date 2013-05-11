@@ -15,13 +15,13 @@ include_once('nav.inc.php');
 		</div>
 		<div class='box'>
 			<div class='title'>
-				<h1><a href='post7.php'>On Angst</a></h1>
+				<h1><a href='post7.php'>Angst</a></h1>
 			</div>
 			<div class='contents'>
-				<p>So all of my classmates posted on our SE2017 Facebook group that our end-of-term marks are out. I went to check the school website, and... I can't access it. In despair, I tried a different browser. Nope.</p>
-				<p>With anxiety, I went down to the lobby, to use a public PC (I'm in a hotel, at the moment). Nope. Tried every browser there is on that PC. Nope.</p>
-				<p>I tried it on my cell phone. Still no.</p>
-				<p>So, know I'm sitting here, feeling deliciously angsty, as I wonder whether I passed this term... and whether I'll ever know.</p>
+				<p>So all of my classmates posted on our Facebook group that our end-of-term marks are out. My heart stops for a moment. This is it, the moment of truth. What I see on the school website will determine whether I passed or failed, whether I win or lose, whether I... hold on. I can't access the site in Chromium. Ah, that's OK, I'll use IE or Firefox or Safari or... huh, these aren't working.</p>
+				<p>No problem, I've got an Android with wifi. I'll just... huh, that's weird. Not in Chrome either? Well then... I'm in a hotel, why don't I just go use the lobby PCs?</p>
+				<p>Run down to the elevator, now feeling quite anxious, get to one of the PCs, open up Firefox... nope. I hope none of the guests heard my frustrated scream.</p>
+				<p>Return to my room. Sitting here, morosely and deliciously angsty, wondering whether or not I passed this term... and whether I'll ever know.</p>
 			</div>
 		</div>
 	</div>

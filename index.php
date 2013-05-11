@@ -16,7 +16,7 @@ include_once('nav.inc.php');
 			</div>
 			<div class='box'>
 				<div class='title'>
-					<h1><a href='post7.php'>On Angst</a></h1>
+					<h1><a href='post7.php'>Angst</a></h1>
 				</div>
 				<div class='thumb'>
 					<a href='post7.php'>
@@ -24,7 +24,7 @@ include_once('nav.inc.php');
 					</a>
 				</div>
 				<div class='excerpt'>
-					<p>So all of my classmates posted on our SE2017 Facebook group that our end-of-term marks are out. I went to check the school website, and...</p>
+					<p>So all of my classmates posted on our Facebook group that our end-of-term marks are out. My heart stops for a moment. This is it, the moment of truth. What I see on the school website will determine whether I passed or failed, whether I win or lose, whether I...</p>
 					<p style='float:right;'><a href='post7.php'>continue reading</a>
 				</div>
 			</div>

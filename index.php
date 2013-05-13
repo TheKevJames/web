@@ -7,7 +7,54 @@
 include_once('nav.inc.php');
 ?>
 
-<div id='content' style='width:1870px;'>
+<div id='content' style='width:2350px;'>
+	<article>
+		<div id='post9'>
+			<div class='meta'>
+				<div class='cat'>fiction, stolen</div>
+				<div class='date'>May 12th, 2013</div>
+			</div>
+			<div class='box'>
+				<div class='title'>
+					<h1><a href='post9.php'>Voices</a></h1>
+				</div>
+				<div class='thumb'>
+					<a href='post9.php'>
+						<img src='media/posts/silence.jpg' />
+					</a>
+				</div>
+				<div class='excerpt'>
+					<p>"You know that ringing sound that you will perceive when you are in a very quiet area? Some people say this is an auditory-illusion brought about the ear’s inability to detect frequencies below the threshold of the human senses. This is completely wrong..."</p>
+					<p style='float:right;'><a href='post9.php'>continue reading</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article>
+		<div id='post8'>
+			<div class='meta'>
+				<div class='cat'>career, advice</div>
+				<div class='date'>May 11th, 2013</div>
+			</div>
+			<div class='box'>
+				<div class='title'>
+					<h1><a href='post8.php'>Words to Avoid Using Near Your Boss</a></h1>
+				</div>
+				<div class='thumb'>
+					<a href='post8.php'>
+						<img src='media/posts/words.jpg' />
+					</a>
+				</div>
+				<div class='excerpt'>
+					<p>I recently started an internship at Oracle. I'm working as a software engineer, with very little say in how anything is done, but I do get to suggest options and possibilities to my team lead and project managers.</p>
+					<p>Luckily, this isn't my first rodeo. I've already been through the initially ugly "interfacing technical stuff with HR stuff" stage, and can now manage to give a suggestion to a higher-up without their eyes bugging out and my fearing for my job...</p>
+					<p style='float:right;'><a href='post8.php'>continue reading</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
 	<article>
 		<div id='post7'>
 			<div class='meta'>
@@ -175,5 +222,3 @@ include_once('nav.inc.php');
 
 </body>
 </html>
-
-<!-- TODO: se2017, progress, uwhub -->

@@ -218,6 +218,21 @@ dl {
   dl ol {
     list-style: decimal; }
 
+#samplefadingcsstext {
+  height: 200px;
+  width: 600px;
+  margin: 5px 5px 15px 5px;
+  line-height: 133px;
+  color: transparent;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  transition: color 0.5s; }
+  #samplefadingcsstext:hover {
+    color: black; }
+  #samplefadingcsstext img {
+    float: left;
+    margin-right: 10px; }
+
 /* ------------------- */
 #post1 {
   margin-top: 140px; }
@@ -245,3 +260,6 @@ dl {
 
 #post9 {
   margin-top: 240px; }
+
+#post10 {
+  margin-top: 220px; }

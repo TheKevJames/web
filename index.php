@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang='en'>
 <head>
@@ -8,6 +9,29 @@ include_once('nav.inc.php');
 ?>
 
 <div id='content' style='width:2350px;'>
+	<article>
+		<div id='post10'>
+			<div class='meta'>
+				<div class='cat'>web dev, tech</div>
+				<div class='date'>May 20th, 2013</div>
+			</div>
+			<div class='box'>
+				<div class='title'>
+					<h1><a href='post10.php'>Fading Text in CSS</a></h1>
+				</div>
+				<div class='thumb'>
+					<a href='post10.php'>
+						<img src='media/posts/webdesign.jpg' />
+					</a>
+				</div>
+				<div class='excerpt'>
+					<p>As some of you (read: probably none of you) know, I hate JS with a passion, and will go to absurdly great lengths to implement something in CSS3 -- which is basically my one true love...</p>
+					<p style='float:right;'><a href='post10.php'>continue reading</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
 	<article>
 		<div id='post9'>
 			<div class='meta'>

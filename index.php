@@ -8,7 +8,7 @@
 include_once('nav.inc.php');
 ?>
 
-<div id='content' style='width:2350px;'>
+<div id='content' style='width:2600px;'>
 	<article>
 		<div id='post10'>
 			<div class='meta'>

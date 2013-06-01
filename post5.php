@@ -34,7 +34,7 @@ include_once('nav.inc.php');
 					<dd>Cooking by recipes is all well and good, but to truly begin making great meals you'll have to put your head into it. Try new things, new combinations of flavours, different spices, etc. Maybe you'll find something amazing, and if not you'll at least gain some instincts as to what you shouldn't mix.</dd>
 
 					<dt>Use basil</dt>
-					<dd>Basil. Oh my God, basil. Basil is an amazing spice, incredibly delicious, and goes with most things. You have not tasted a real hamburger until you've ground up basil leaves into the beef. Get some basil, use your basil, love your basil (and use leaves instead of powder, if you can!).
+					<dd>Basil. Oh my God, basil. Basil is an amazing spice, incredibly delicious, and goes with most things. You have not tasted a real hamburger until you've ground up basil leaves into the beef. Get some basil, use your basil, love your basil (and use leaves instead of powder, if you can!).</dd>
 				</dl>
 
 				And now, for la piece de resistance, a few recipes for you <del>unsophisticated slobs</del> <ins>as-of-yet unculinarilized people</ins>.

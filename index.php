@@ -8,7 +8,30 @@
 include_once('nav.inc.php');
 ?>
 
-<div id='content' style='width:2600px;'>
+<div id='content' style='width:2860px;'>
+	<article>
+		<div id='post11'>
+			<div class='meta'>
+				<div class='cat'>career, advice</div>
+				<div class='date'>May 31st, 2013</div>
+			</div>
+			<div class='box'>
+				<div class='title'>
+					<h1><a href='post11.php'>Common Job Interview Mistakes</a></h1>
+				</div>
+				<div class='thumb'>
+					<a href='post11.php'>
+						<img src='media/posts/jobinterview.jpg' />
+					</a>
+				</div>
+				<div class='excerpt'>
+					<p>Today, I'm going to annoy you all with my ramblings about what people do wrong in job interviews, and how you can do better. What makes me qualified to discuss this, you ask...?</p>
+					<p style='float:right;'><a href='post11.php'>continue reading</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
 	<article>
 		<div id='post10'>
 			<div class='meta'>

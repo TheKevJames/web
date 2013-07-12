@@ -1,0 +1,106 @@
+/* Barebones HTML5 CSS3 reset */
+*, a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Google Fonts */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Merriweather Sans Regular"), local("MerriweatherSans-Regular"), url(http://themes.googleusercontent.com/static/fonts/merriweathersans/v1/AKu1CjQ4qnV8MUltkAX3sL2aU247V0zTzydO4RoO9Ok.woff) format("woff"); }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100px;
+  width: 100%;
+  background: url("media/bgnav.png"); }
+  nav a {
+    font: 24px Courier;
+    color: white;
+    text-decoration: none; }
+  nav #navCurr {
+    position: fixed;
+    top: 20px;
+    left: 30px; }
+  nav #navSub {
+    position: fixed;
+    top: 50px;
+    left: 70px; }
+    nav #navSub li {
+      display: inline;
+      margin-right: 10px; }
+  nav #cv {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 68px;
+    width: 68px;
+    margin: 4px;
+    padding: 10px;
+    font-family: Arial;
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    line-height: 68px;
+    vertical-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 1px 3px #666666;
+    text-shadow: 1px 1px 3px #666666;
+    border: solid #0e990e 2px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#0e990e), to(#11fa05));
+    background: -moz-linear-gradient(top, #0e990e, #11fa05); }
+    nav #cv:hover {
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#0e9000), to(#11f000));
+      background: -moz-linear-gradient(top, #0e9000, #11f000); }
+
+body {
+  height: 100%;
+  width: 100%;
+  background: url("media/bg.jpg"); }
+
+content {
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  margin-left: -165px; }
+
+#name {
+  font: 55px 'Merriweather Sans'; }
+
+#social li {
+  float: left;
+  height: 66px; }
+#social a {
+  display: block;
+  height: 66px; }
+#social img {
+  height: 66px;
+  opacity: 0;
+  transition: opacity 0.7s;
+  -webkit-transition: opacity 0.7s; }
+  #social img:hover {
+    opacity: 1;
+    transition: opacity 0.7s;
+    -webkit-transition: opacity 0.7s; }

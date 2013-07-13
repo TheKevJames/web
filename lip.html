@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<title>Kevin James</title>
+	<link rel='stylesheet' href='style.css' />
+	<link rel='icon' href='favicon.png' />
+	<script src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+	<script src='http://s3slider-original.googlecode.com/svn/trunk/s3Slider.js'></script>
+	<script>$(document).ready(function(){$('#s3slider').s3Slider({timeOut:3000});});</script>
+</head>
+
+<body>
+	<nav>
+		<div id='navCurr'>
+			<a href='index.html'>KevinJames:~/</a>
+			<a href='design.html'>design/</a>
+			<a href='lip.html'>lip/</a>
+		</div>
+		<ul id='navSub'>
+			<li><a href='media/lip1.png' target='_blank'>lipIssue1.png</a></li>
+			<li><a href='media/lip2.pdf' target='_blank'>lipIssue2.pdf</a></li>
+			<li><a href='media/lip5.pdf' target='_blank'>lipIssue5.pdf</a></li>
+			<li><a href='media/lip6.pdf' target='_blank'>lipIssue6.pdf</a></li>
+		</ul>
+		<a href='media/cv.pdf'>
+			<div id='cv'>C.V.</div>
+		</a>
+	</nav>
+
+	<content>
+		<div id='s3slider'>
+			<ul id='s3sliderContent'>
+				<li class='s3sliderImage'>
+					<a href='media/lip1.png' target='_blank'>
+						<img src='media/slider/lip1.png' />
+						<span>First issue of the year, with a complete redesign</span>
+					</a>
+				</li>
+				<li class='s3sliderImage'>
+					<a href='media/lip2.pdf' target='_blank'>
+						<img src='media/slider/lip2.png' />
+						<span>Second issue, featuring an incredibly scathing critique of... peer pressure</span>
+					</a>
+				</li>
+				<li class='s3sliderImage'>
+					<a href='media/lip5.pdf' target='_blank'>
+						<img src='media/slider/lip5.png' />
+						<span>Our super-duper special Christmas issue</span>
+					</a>
+				</li>
+				<li class='s3sliderImage'>
+					<a href='media/lip6.pdf' target='_blank'>
+						<img src='media/slider/lip6.png' />
+						<span>Our final issue, with all the newspaper-y goodness you expect</span>
+					</a>
+				</li>
+				<div class='clear s3sliderImage'></div>
+			</ul>
+		</div>
+	</content>
+</body>
+</html>

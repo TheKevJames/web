@@ -1,0 +1,353 @@
+.configDialog{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: url('../lib/config-dialog-back.png') repeat;
+	display: none;
+}
+
+.dialogContent{
+	position:relative;
+	width: 400px;
+	height: 155px;
+	background-color: #333;
+	border: 1px #666 solid;
+	margin: 0 auto;
+}
+
+.dialogTitle{
+	font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	position: absolute;
+	top: -25px;
+}
+
+.dialogContent span{
+	float: left;
+	color: #fff;
+	line-height: 40px;
+	margin-left: 10px;
+}
+
+.dialogContent span:hover{
+	cursor: pointer;
+	color: #00aef0;
+}
+
+.dialogContent form{
+	text-align: right;
+	width: 380px;
+	height: 100px;
+	padding: 10px;
+	position:relative;
+	top: 0px;
+	left: 0px;
+}
+
+#configDialog-screens form{
+	width: 280px;
+}
+
+.dialogContent form div{
+	margin: 5px 0px;
+}
+
+.dialogContent label,
+.dialogContent select,
+.dialogContent button{
+	background: #fff;
+	border: 2px #fff solid;
+	margin: 0px;
+	padding: 0px;
+	height: 23px;
+	display: block;
+}
+
+.configDialog input[type="text"]{
+	width: 300px;
+	height: 21px;
+	margin: 0px;
+}
+
+#configDialog-name1 input[type="text"],
+#configDialog-name2 input[type="text"],
+#configDialog-name3 input[type="text"]{
+	width: 260px;
+}
+
+#configDialog-name1 .dialogContent,
+#configDialog-name2 .dialogContent,
+#configDialog-name3 .dialogContent{
+	height: 91px;
+}
+
+#configDialog-screens{
+	display: block;
+}
+
+#configDialog-screens .dialogContent{
+	height:155px;
+	width: 300px;
+}
+
+#configDialog-screens input[type="radio"]{
+	float: left;
+	width: 14px;
+	height: 19px;
+	margin: 2px 3px;
+}
+
+#configDialog-screens input[type="radio"]:focus{
+	border-color: #fff;
+}
+
+#configDialog-screens label.radioY{
+	width: 20px;
+	text-align: left;
+	color:#000;
+	padding: 0px;
+	margin: 0px;
+}
+
+#configDialog-screens label.radioN{
+	width: 16px;
+	text-align: left;
+	color:#000;
+	padding: 0px;
+	margin: 0px;
+}
+
+#configDialog-screens label{
+	width: 170px;
+	float: left;
+	color: #999;
+	padding-right: 10px;
+	line-height: 25px;
+}
+
+#configDialog-name1 label,
+#configDialog-name2 label,
+#configDialog-name3 label{
+	width: 100px;
+}
+
+.configDialog label{
+	width: 60px;
+	float: left;
+	color: #999;
+	padding-right: 10px;
+	line-height: 25px;
+}
+
+.configDialog button{
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	float: right;
+	background: url('../lib/arrow.png') center;
+	border: none;
+}
+
+.configDialog button:hover{
+	background: url('../lib/arrow-hover.png') center;
+}
+
+#configDialog-screens select{
+	height: 27px;
+	width: 96px;
+	text-align: left;
+	outline:none;
+}
+
+#configDialog-screens select:focus{
+	border-color: #00aef0;
+}
+
+#configDialog-screens select option{
+	outline: none;
+	padding: 3px;
+}
+
+#place div div{
+	line-height: 100%;
+	overflow: hidden;
+}
+
+#place img{
+	position: absolute;
+	cursor: pointer;
+}
+
+#name1 span,
+#name2 span,
+#name3 span{
+	font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	float: left;
+	position: relative;
+}
+
+#name1 img,
+#name2 img,
+#name3 img{
+	position: relative !important;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+
+#wrapper1 div,
+#wrapper2 div,
+#wrapper3 div{
+	text-align: left;	
+}
+
+#wrapper1 span,
+#wrapper2 span,
+#wrapper3 span{
+	color: #fff;
+}
+
+#thumb1-1,
+#thumb2-1,
+#thumb3-1{
+	font-size:24px;
+}
+
+#thumb1-2,
+#thumb2-2,
+#thumb3-2{
+	font-size:24px;
+}
+
+#thumb1-3,
+#thumb2-3,
+#thumb3-3{
+	font-size:14px;
+}
+
+#thumb1-4,
+#thumb2-4,
+#thumb3-4{
+	font-size:14px;
+}
+
+#thumb1-5,
+#thumb2-5,
+#thumb3-5{
+	font-size:33px;
+}
+
+#thumb1-6,
+#thumb2-6,
+#thumb3-6{
+	font-size:52px;
+}
+
+#thumb1-7,
+#thumb2-7,
+#thumb3-7{
+	font-size:38px;
+}
+
+#thumb1-8,
+#thumb2-8,
+#thumb3-8{
+	font-size:17px;
+}
+
+#thumb1-9,
+#thumb2-9,
+#thumb3-9{
+	font-size:17px;
+}
+
+#thumb1-10,
+#thumb2-10,
+#thumb3-10{
+	font-size:49px;
+}
+
+#thumb1-11,
+#thumb2-11,
+#thumb3-11{
+	font-size:23px;
+}
+
+#thumb1-12,
+#thumb2-12,
+#thumb3-12{
+	font-size:22px;
+}
+
+.thumbTitle,
+.thumbUrl,
+.thumbImage{
+	color:#fff;
+	width:96%;
+	height:21%;
+	margin: 2% !important;
+	font-size: 75%;
+	font-family: 'Vegur',Arial, Helvetica, sans-serif;
+	white-space:nowrap;
+}
+
+.thumbTitle{
+	margin-top: 6% !important;
+	font-weight: bold;
+}
+
+.thumbUrl{
+	font-style: italic;
+}
+
+#generate{
+	position: absolute;
+	padding: 5px;
+	width: 140px;
+	height: 39px;
+	bottom: 5px;
+	left:0px;
+	background: url('../lib/generate.png');	
+}
+
+#generate:hover{
+	background: url('../lib/generate-hover.png');
+	cursor: pointer;
+}
+
+#selectAll{
+	position: absolute;
+	top: 65px;
+	right: 20px;
+	cursor: pointer;
+	border-bottom: 1px dashed;
+}
+
+#back{
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	width: 83px;
+	height: 30px;
+	background: url('../lib/back.png');
+	display:none;
+}
+
+#back:hover{
+	background: url('../lib/back-hover.png');
+	cursor: pointer;
+}
+
+#settings{
+	width: 100%;
+	position: absolute;
+	top:0px;
+	left: 0px;
+	background: #fff;
+	display: none;
+}

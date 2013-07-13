@@ -82,25 +82,60 @@ body {
 
 content {
   position: absolute;
-  top: 350px;
-  left: 50%;
-  margin-left: -165px; }
+  top: 300px;
+  left: 50%; }
 
 #name {
+  margin-left: -165px;
   font: 55px 'Merriweather Sans'; }
 
-#social li {
-  float: left;
-  height: 66px; }
-#social a {
-  display: block;
-  height: 66px; }
-#social img {
-  height: 66px;
-  opacity: 0;
-  transition: opacity 0.7s;
-  -webkit-transition: opacity 0.7s; }
-  #social img:hover {
-    opacity: 1;
+#social {
+  margin-left: -165px; }
+  #social li {
+    float: left;
+    height: 66px; }
+  #social a {
+    display: block;
+    height: 66px; }
+  #social img {
+    height: 66px;
+    opacity: 0;
     transition: opacity 0.7s;
     -webkit-transition: opacity 0.7s; }
+    #social img:hover {
+      opacity: 1;
+      transition: opacity 0.7s;
+      -webkit-transition: opacity 0.7s; }
+
+#s3slider {
+  position: relative;
+  margin-left: -400px;
+  width: 800px;
+  height: 400px;
+  overflow: hidden; }
+
+#s3sliderContent {
+  position: absolute;
+  top: 0;
+  margin-left: 0;
+  width: 800px; }
+
+.s3sliderImage {
+  position: relative;
+  float: left;
+  display: none; }
+  .s3sliderImage span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 774px;
+    padding: 10px 13px;
+    display: none;
+    background-color: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    font: 10px/15px Arial, Helvetica, sans-serif;
+    color: #fff; }
+
+.clear {
+  clear: both; }

@@ -85,16 +85,18 @@ body {
 
 content {
 	position:absolute;
-	top:350px;
+	top:300px;
 	left:50%;
-	margin-left:-165px;
 }
 
 #name {
+	margin-left:-165px;
+
 	font:55px 'Merriweather Sans';
 }
 
 #social {
+	margin-left:-165px;
 
 	li {
 		float:left;
@@ -120,4 +122,49 @@ content {
 			-webkit-transition:opacity 0.7s;
 		}
 	}
+}
+
+#s3slider {
+	position:relative;
+	margin-left:-400px;
+
+	width:800px;
+	height:400px;
+
+	overflow:hidden;
+}
+
+#s3sliderContent {
+	position:absolute;
+	top:0;
+	margin-left:0;
+
+	width:800px;
+}
+
+.s3sliderImage {
+	position:relative;
+	float:left;
+	display:none;
+
+	span {
+		position:absolute;
+		top:0;
+		left:0;
+
+		width:774px;
+		padding:10px 13px;
+
+		display:none;
+		background-color:#000;
+		opacity:0.7;
+		filter:alpha(opacity=70);
+
+		font:10px/15px Arial, Helvetica, sans-serif;
+		color:#fff;
+	}
+}
+
+.clear {
+	clear:both;
 }

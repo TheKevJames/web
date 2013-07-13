@@ -44,6 +44,8 @@ nav {
     position: fixed;
     top: 20px;
     left: 30px; }
+    nav #navCurr a {
+      margin-right: -5px; }
   nav #navSub {
     position: fixed;
     top: 50px;
@@ -68,7 +70,7 @@ nav {
     border-radius: 20px;
     box-shadow: 0px 1px 3px #666666;
     text-shadow: 1px 1px 3px #666666;
-    border: solid #0e990e 2px;
+    border: 2px solid #0e990e;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#0e990e), to(#11fa05));
     background: -moz-linear-gradient(top, #0e990e, #11fa05); }
     nav #cv:hover {
@@ -87,6 +89,7 @@ content {
 
 #name {
   margin-left: -165px;
+  margin-top: 100px;
   font: 55px 'Merriweather Sans'; }
 
 #social {
@@ -132,10 +135,39 @@ content {
     padding: 10px 13px;
     display: none;
     background-color: #000;
-    opacity: 0.7;
-    filter: alpha(opacity=70);
+    opacity: 0.8;
+    filter: alpha(opacity=80);
     font: 10px/15px Arial, Helvetica, sans-serif;
     color: #fff; }
 
 .clear {
   clear: both; }
+
+#image-coursechart {
+  position: relative;
+  margin-left: -600px;
+  margin-top: -100px;
+  height: 600px;
+  width: 1200px;
+  background: url("media/coursechart.png");
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px #666666;
+  border: 2px solid #111; }
+
+#table-coursenotes {
+  position: relative;
+  margin-left: -230px; }
+
+#coursestable {
+  text-align: left;
+  cursor: default; }
+  #coursestable th {
+    padding: 10px 12px;
+    border-top: 2px solid #61210B;
+    border-bottom: 2px solid #61210B;
+    font-size: 18px; }
+  #coursestable td {
+    padding: 6px 12px;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.6); }
+  #coursestable tr:hover {
+    background-color: rgba(90, 200, 110, 0.2); }

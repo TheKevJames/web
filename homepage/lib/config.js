@@ -934,59 +934,32 @@ $(document).ready(function(){
 	
 
 	$('#generate').click(function(){
-		$('body').css('overflow','auto');
-		var source = '<style type="text/css">p{margin:20px 10px;}</style>'+'\n'+
-					'<p>Replace text in \'source.js\' with this text:</p>'+'\n'+
-					
-					'<div id="selectAll" title="works in Firefox and Opera">select all</div>'+'\n'+
-					'<script type="text/javascript">$(\'#selectAll\').click(function(){'+'\n'+
-					'$(\'code\').selText();'+'\n'+	
-					'});</script>'+'\n';
-		
-		source = source + '<pre>'+'\n'+
-					'<code class="javascript">'+'\n'+
-					'<span class="keyword">var</span> hoverEffect = <span class="literal">'+hoverEffect+'</span>; <span class="comment">// set true for hover effect, set false for no hover effect</span>'+'\n'+
-					''+'\n'+
-					'<span class="keyword">var</span> searchEngine = <span class="string">\''+searchEngine+'\'</span>; <span class="comment">// default search engine - set google for google search, bing for bing search, yahoo for yahoo search</span>'+'\n'+
-					''+'\n'+
-					'<span class="keyword">var</span> numberOfScreens = <span class="number">'+num+'</span>; <span class="comment">// set number of screens (1 or 2 or 3)</span>'+'\n'+
-					' '+'\n'+
-					'<span class="keyword">var</span> blockName = <span class="keyword">new</span> Array(); <span class="comment">// set names of blocks</span>'+'\n'+
-					''+'\n'+
-					'blockName[<span class="number">1</span>] = <span class="string">\''+blockName[1]+'\'</span>;'+'\n'+
-					'blockName[<span class="number">2</span>] = <span class="string">\''+blockName[2]+'\'</span>;'+'\n'+
-					'blockName[<span class="number">3</span>] = <span class="string">\''+blockName[3]+'\'</span>;'+'\n'+
-					''+'\n'+
-					'<span class="keyword">var</span> bookmark = <span class="keyword">new</span> Array();'+'\n'+
-					'bookmark[<span class="number">0</span>] = <span class="keyword">new</span> Array();'+'\n'+
-					'bookmark[<span class="number">1</span>] = <span class="keyword">new</span> Array();'+'\n'+
-					'bookmark[<span class="number">2</span>] = <span class="keyword">new</span> Array();'+'\n'+
-					''+'\n'+
-					''+'\n'+
-					'<span class="comment">// set your bookmarks here: (If you do not fill \'thumb\' for thumbnail will be used title)</span>'+'\n';
-					
-		for (var m=0; m < num; m++) {
-			source = source + '<span class="comment">// '+(m+1)+'. BLOCK</span>'+'\n';
-			
-			for (var n=0; n < 12; n++) {
-				source = source + 'bookmark[<span class="number">'+m+'</span>][<span class="number">'+n+'</span>] = {'+'\n'+
-						    '<span class="string">\'title\'</span>:<span class="string">\''+bookmark[m][n]['title']+'\'</span>,'+'\n'+
-						    '<span class="string">\'url\'</span>:<span class="string">\''+bookmark[m][n]['url']+'\'</span>,'+'\n'+
-						    '<span class="string">\'thumb\'</span>:<span class="string">\''+bookmark[m][n]['thumb']+'\'</span>'+'\n'+
-						'};'+'\n';
-			};
-			source = source + '<span class="comment">// end of '+(m+1)+'. BLOCK</span>'+'\n';
-		};			
-					
-		source = source +'    </code>'+'\n'+
-				'	</pre>';
-		
-		$('#place').hide();
-		$('#generate').hide();		
-		$('#settings').html(source).show();
-		$('#back').show();
-		
-		
+		var content =	'var hoverEffect = ' + hoverEffect + ';\n\n' +
+						'var searchEngine = \'' + searchEngine + '\';\n\n' +
+						'var numberOfScreens = ' + num + ';\n\n' +
+						'var blockName = new Array();\n' +
+						'blockName[1] = \'' + blockName[1] + '\';\n' +
+						'blockName[2] = \'' + blockName[2] + '\';\n' +
+						'blockName[3] = \'' + blockName[3] + '\';\n\n' +
+						'var bookmark = new Array();\n' +
+						'bookmark[0] = new Array();\n' + 
+						'bookmark[1] = new Array();\n' + 
+						'bookmark[2] = new Array();\n\n' + 
+						'// If \'thumb\' is left blank, a default image will be used with the \'title\'\n';
+
+		for (var m = 0; m < num; m++) {
+			for (var n = 0; n < 12; n++) {
+				content = content + 'bookmark[' + m + '][' + n + '] = {\n'+
+									'\'title\':\'' + bookmark[m][n]['title'] + '\',\n' + 
+									'\'url\':\'' + bookmark[m][n]['url'] + '\',\n' +
+									'\'thumb\':\'' + bookmark[m][n]['thumb'] + '\',\n' +
+									'};\n';
+			}
+		}
+
+		window.open("data:application/javascript," + encodeURIComponent(content), 'settings');
+
+		location.href = 'index.htm';
 	});
 	
 	$('#back').click(function(){

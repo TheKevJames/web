@@ -54,7 +54,7 @@ nav {
 		top:0;
 		right:0;
 
-		margin:4px;
+		margin:4px 6px;
 		padding:0 10px;
 
 		font-family:Arial;
@@ -116,13 +116,13 @@ content {
 		height:66px;
 
 		opacity:0;
-		transition:opacity 0.7s;
-		-webkit-transition:opacity 0.7s;
+		transition:opacity 0.6s;
+		-webkit-transition:opacity 0.6s;
 
 		&:hover {
 			opacity:1;
-			transition:opacity 0.7s;
-			-webkit-transition:opacity 0.7s;
+			transition:opacity 0.6s;
+			-webkit-transition:opacity 0.6s;
 		}
 	}
 }

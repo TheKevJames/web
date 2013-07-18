@@ -1,7 +1,3 @@
-/* 
-(c) 2011 Lubomir Krupa, CC BY-ND 3.0
-*/
-
 jQuery.fn.selText = function() {
     var obj = this[0];
     if ($.browser.msie) {
@@ -934,18 +930,18 @@ $(document).ready(function(){
 	
 
 	$('#generate').click(function(){
-		var content =	'var hoverEffect = ' + hoverEffect + ';\n\n' +
-						'var searchEngine = \'' + searchEngine + '\';\n\n' +
-						'var numberOfScreens = ' + num + ';\n\n' +
-						'var blockName = new Array();\n' +
-						'blockName[1] = \'' + blockName[1] + '\';\n' +
-						'blockName[2] = \'' + blockName[2] + '\';\n' +
-						'blockName[3] = \'' + blockName[3] + '\';\n\n' +
-						'var bookmark = new Array();\n' +
-						'bookmark[0] = new Array();\n' + 
-						'bookmark[1] = new Array();\n' + 
-						'bookmark[2] = new Array();\n\n' + 
-						'// If \'thumb\' is left blank, a default image will be used with the \'title\'\n';
+		var content =	"var hoverEffect = " + hoverEffect + ";\n\n" +
+						"var searchEngine = %27" + searchEngine + "';\n\n" +
+						"var numberOfScreens = " + num + ";\n\n" +
+						"var blockName = new Array();\n" +
+						"blockName[1] = \'" + blockName[1] + "\';\n" +
+						"blockName[2] = \'" + blockName[2] + "\';\n" +
+						"blockName[3] = \'" + blockName[3] + "\';\n\n" +
+						"var bookmark = new Array();\n" +
+						"bookmark[0] = new Array();\n" + 
+						"bookmark[1] = new Array();\n" + 
+						"bookmark[2] = new Array();\n\n" + 
+						"// If \'thumb\' is left blank, a default image will be used with the \'title\'\n";
 
 		for (var m = 0; m < num; m++) {
 			for (var n = 0; n < 12; n++) {
@@ -957,9 +953,13 @@ $(document).ready(function(){
 			}
 		}
 
-		window.open("data:application/javascript," + encodeURIComponent(content), 'settings');
+		var http = new XMLHttpRequest();
+		var url = "save.php";
+		http.open("POST", url, true);
+		http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+		http.send("filename=source.js&data=" + content);
 
-		location.href = 'index.htm';
+		window.location.href = 'index.htm';
 	});
 	
 	$('#back').click(function(){

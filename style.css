@@ -112,8 +112,6 @@ nav {
     position: fixed;
     top: 15px;
     left: 30px; }
-    nav #navCurr a {
-      margin-right: -5px; }
   nav #navSub {
     position: fixed;
     top: 45px;

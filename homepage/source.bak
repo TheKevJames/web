@@ -75,11 +75,6 @@ bookmark[0][11] = {
 'url':'http://xkcd.com',
 'thumb':'xkcd.png',
 };
-bookmark[2][0] = {
-'title':'linkedin',
-'url':'http://www.linkedin.com/',
-'thumb':'linkedin.png',
-};
 bookmark[1][0] = {
 'title':'Kevin Pan',
 'url':'http://kevinpan.ca/',

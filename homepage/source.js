@@ -75,11 +75,6 @@ bookmark[0][11] = {
 'url':'http://xkcd.com',
 'thumb':'xkcd.png',
 };
-bookmark[2][0] = {
-'title':'linkedin',
-'url':'http://www.linkedin.com/',
-'thumb':'linkedin.png',
-};
 bookmark[1][0] = {
 'title':'Kevin Pan',
 'url':'http://kevinpan.ca/',
@@ -139,59 +134,4 @@ bookmark[1][11] = {
 'title':'',
 'url':'',
 'thumb':'',
-};
-bookmark[2][1] = {
-'title':'digg',
-'url':'http://digg.com/',
-'thumb':'digg.png',
-};
-bookmark[2][2] = {
-'title':'flickr',
-'url':'http://www.flickr.com/',
-'thumb':'flickr.png',
-};
-bookmark[2][3] = {
-'title':'msn',
-'url':'http://www.msn.com/',
-'thumb':'msn.png',
-};
-bookmark[2][4] = {
-'title':'reddit',
-'url':'http://www.reddit.com/',
-'thumb':'reddit.png',
-};
-bookmark[2][5] = {
-'title':'skype',
-'url':'http://www.skype.com/',
-'thumb':'skype.png',
-};
-bookmark[2][6] = {
-'title':'technorati',
-'url':'http://technorati.com',
-'thumb':'technorati.png',
-};
-bookmark[2][7] = {
-'title':'delicious',
-'url':'http://www.delicious.com/',
-'thumb':'delicious.png',
-};
-bookmark[2][8] = {
-'title':'MySpace',
-'url':'http://www.myspace.com/',
-'thumb':'myspace.png',
-};
-bookmark[2][9] = {
-'title':'orkut',
-'url':'http://www.orkut.com/',
-'thumb':'orkut.png',
-};
-bookmark[2][10] = {
-'title':'tumblr',
-'url':'http://www.tumblr.com/',
-'thumb':'tumblr.png',
-};
-bookmark[2][11] = {
-'title':'StumbleUpon',
-'url':'http://www.stumbleupon.com/',
-'thumb':'stumbleupon.png',
 };

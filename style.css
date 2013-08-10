@@ -269,6 +269,10 @@ content {
   margin-left: -195px;
   background: url("media/morse.png"); }
 
+ol {
+  margin-left: 25px;
+  list-style: decimal; }
+
 dl {
   margin: 20px 5px; }
   dl dt {

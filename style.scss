@@ -1,5 +1,6 @@
 /* Barebones HTML5 CSS3 reset */
 *,a,abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{background:transparent;border:0;font-size:100%;margin:0;outline:0;padding:0;vertical-align:baseline;}body{line-height:1;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}ol,ul{list-style:none;}table{border-collapse:collapse;border-spacing:0;}
+a{text-decoration:none;}
 
 /** nanoScroller **/
 .scrolling{overflow:hidden}.scrolling .content{position:absolute;overflow:scroll;overflow-x:hidden;top:0;right:0;bottom:0;left:0;padding:20px 25px 20px 20px}.scrolling .content:focus{outline:thin dotted}.scrolling .content::-webkit-scrollbar{visibility:hidden}.has-scrollbar .content::-webkit-scrollbar{visibility:visible}.scrolling>.pane{background:rgba(0,0,0,.25);position:absolute;width:10px;right:-1px;top:0;bottom:0;visibility:hidden\9;opacity:.01;transition:.2s;-webkit-transition:.2s;border-radius:10px;z-index:10}.scrolling>.pane>.slider{background:#444;background:rgba(0,0,0,.5);position:relative;margin:0 1px;border-radius:3px}.scrolling:hover>.pane,.pane.active,.pane.flashed{visibility:visible\9;opacity:.99}#whiteBoxBottom,#whiteBoxTop{position:absolute;height:20px;width:1200px;background-color:#fff;border-radius:20px;z-index:1}#whiteBoxBottom{bottom:0}#whiteBoxTop{top:0}
@@ -33,7 +34,6 @@ nav {
 	a {
 		font:24px Courier;
 		color:white;
-		text-decoration:none;
 	}
 
 	#navCurr {
@@ -238,6 +238,18 @@ content {
 		margin-bottom:10px;
 	}
 
+	h2 {
+		font:20px 'Merriweather Sans';
+		text-align:center;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+
+	h3 {
+		font:20px 'Merriweather Sans';
+		margin:8px 0 8px 10px;
+	}
+
 	p, dt, dd, li {
 		text-align:justify;
 		margin:6px 0;
@@ -320,4 +332,8 @@ dl {
 		margin:6px 0;
 		font-size:17px;
 	}
+}
+
+code {
+	font-size:14px;
 }

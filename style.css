@@ -21,6 +21,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a {
+  text-decoration: none; }
+
 /** nanoScroller **/
 .scrolling {
   overflow: hidden; }
@@ -106,8 +109,7 @@ nav {
   background: url("media/bgnav.png"); }
   nav a {
     font: 24px Courier;
-    color: white;
-    text-decoration: none; }
+    color: white; }
   nav #navCurr {
     position: fixed;
     top: 15px;
@@ -250,6 +252,14 @@ content {
     font: 22px 'Merriweather Sans';
     text-align: center;
     margin-bottom: 10px; }
+  #wordFrame h2 {
+    font: 20px 'Merriweather Sans';
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  #wordFrame h3 {
+    font: 20px 'Merriweather Sans';
+    margin: 8px 0 8px 10px; }
   #wordFrame p, #wordFrame dt, #wordFrame dd, #wordFrame li {
     text-align: justify;
     margin: 6px 0;
@@ -307,3 +317,6 @@ dl {
     text-align: justify;
     margin: 6px 0;
     font-size: 17px; }
+
+code {
+  font-size: 14px; }

@@ -126,8 +126,8 @@ bookmark[1][9] = {
 'thumb':'',
 };
 bookmark[1][10] = {
-'title':'Clarisse Schenider',
-'url':'http://clarisseschneider.tumblr.com/',
+'title':'Clarisse Schneider',
+'url':'http://clarisseschneider.ca/',
 'thumb':'',
 };
 bookmark[1][11] = {

@@ -1,0 +1,361 @@
+@font-face {
+	font-family:'Merriweather Sans';
+	font-style:normal;
+	font-weight:400;
+	src:local('Merriweather Sans Regular'), local('MerriweatherSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/merriweathersans/v1/AKu1CjQ4qnV8MUltkAX3sL2aU247V0zTzydO4RoO9Ok.woff) format('woff');
+}
+@font-face {
+	font-family:'Rock Salt';
+	font-style:normal;
+	font-weight:400;
+	src:local('Rock Salt'), local('RockSalt'), url(http://themes.googleusercontent.com/static/fonts/rocksalt/v4/Q94aHXFHGip10K5uxi1jOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+	font-family:'Kite One';
+	font-style:normal;
+	font-weight:400;
+	src:local('Kite One'), local('KiteOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/kiteone/v2/VNHoD96LpZ9rGZTwjozAOvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+	font-family:'Fenix';
+	font-style:normal;
+	font-weight:400;
+	src:local('Fenix'), local('Fenix-Regular'), url(http://themes.googleusercontent.com/static/fonts/fenix/v2/c6Y-VhDabeO1oBJ8dG5vpA.woff) format('woff');
+}
+
+
+body {
+	background-color:black;
+	overflow:hidden;
+}
+
+#background-image {
+	background:black url('images/bg2.jpg') no-repeat;
+	opacity:0.4;
+	-webkit-filter:blur(3px);
+
+	position:fixed;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+
+$arrow_nav: 120px;
+content {
+	background-image:
+		-webkit-gradient(linear, right top, left bottom, from(rgba(100,100,250,0.9)), to(rgba(90,90,200,0.9)));
+	position:absolute;
+	top:$arrow_nav;
+	bottom:$arrow_nav;
+	left:$arrow_nav;
+	right:$arrow_nav;
+	text-align:center;
+}
+
+$content_height: 550px;
+$content_width: 700px;
+#centered {
+	position:absolute;
+	top:calc(50% - 275px);
+	left:calc(50% - 350px);
+	height:$content_height;
+	width:$content_width;
+}
+
+#name {
+	font:65px 'Merriweather Sans';
+	margin:10px 0;
+	cursor:default;
+}
+
+#quote {
+	color:rgba(0,0,0,0.8);
+	font:16px/22px 'Rock Salt';
+	padding:0 30px;
+	margin-bottom:60px;
+	cursor:default;
+}
+
+#social {
+	position:absolute;
+	left:calc(50% - 165px);
+	width:330px;
+
+	li {
+		float:left;
+
+		height:66px;
+	}
+
+	a {
+		display:block;
+		height:66px;
+	}
+
+	img {
+		height:66px;
+
+		opacity:0;
+		transition:opacity 0.6s;
+		-webkit-transition:opacity 0.6s;
+
+		&:hover {
+			opacity:1;
+			transition:opacity 0.6s;
+			-webkit-transition:opacity 0.6s;
+		}
+	}
+}
+
+.arrow_box {
+	display:inline-block;
+	vertical-align:middle;
+	width:$arrow_nav;
+	height:$arrow_nav;
+
+	p {
+		font:16px/22px 'Rock Salt';
+		color:white;
+	}
+
+	img {
+		height:$arrow_nav;
+		width:$arrow_nav;
+
+		position:relative;
+		top:-22px;
+
+		opacity:0;
+		transition:opacity 0.2s;
+		-webkit-transition:opacity 0.2s;
+
+		&:hover {
+			opacity:1;
+			transition:opacity 0.2s;
+			-webkit-transition:opacity 0.2s;
+		}
+	}
+}
+
+#nav_up {
+	background-color:transparent;
+	text-align:center;
+	position:absolute;
+	top:0;
+	left:$arrow_nav*2;
+	right:$arrow_nav*2;
+	height:$arrow_nav;
+
+	p {
+		position:relative;
+		bottom:-94px;
+	}
+	
+	&:before {
+		content: '';
+		display:inline-block;
+		height:100%;
+		vertical-align:middle;
+		margin-right:-0.25em;
+	}
+}
+
+#nav_left {
+	background-color:transparent;
+	text-align:center;
+	position:absolute;
+	left:0;
+	top:$arrow_nav*2;
+	bottom:$arrow_nav*2;
+	width:$arrow_nav;
+
+	p {
+		-webkit-transform:rotate(270deg);
+		position:relative;
+		right:-47px;
+		top:47px;
+	}
+	
+	&:before {
+		content: '';
+		display:inline-block;
+		height:100%;
+		vertical-align:middle;
+		margin-right:-0.25em;
+	}
+}
+
+#nav_right {
+	background-color:transparent;
+	text-align:center;
+	position:absolute;
+	right:0;
+	top:$arrow_nav*2;
+	bottom:$arrow_nav*2;
+	width:$arrow_nav;
+
+	p {
+		-webkit-transform:rotate(90deg);
+		position:relative;
+		left:-47px;
+		top:47px;
+	}
+	
+	&:before {
+		content: '';
+		display:inline-block;
+		height:100%;
+		vertical-align:middle;
+		margin-right:-0.25em;
+	}
+}
+
+#nav_down {
+	background-color:transparent;
+	text-align:center;
+	position:absolute;
+	bottom:0;
+	left:$arrow_nav*2;
+	right:$arrow_nav*2;
+	height:$arrow_nav;
+	
+	&:before {
+		content: '';
+		display:inline-block;
+		height:100%;
+		vertical-align:middle;
+		margin-right:-0.25em;
+	}
+}
+
+$timeline_height:80%;
+$timeline_width:478px;
+#timeline {
+	position:absolute;
+	top:10%;
+	left:80px;
+	height:$timeline_height;
+	width:$timeline_width;
+	text-align:left;
+	border-left:3px solid black;
+	-webkit-box-shadow:-5px 0 2px -2px rgba(50,50,50,0.75);
+}
+
+.timeitem {
+	height:30px;
+	width:200px;
+	font:16px/30px 'Merriweather Sans';
+	margin:3px 3px 2px 5px;
+	padding:4px;
+	-webkit-border-radius:5px;
+	cursor:default;
+
+	transition:width 0.2s;
+	-webkit-transition:width 0.2s;
+}
+
+.school, .work {
+	&:hover {
+		width:250px;
+		transition:width 0.2s;
+		-webkit-transition:width 0.2s;
+	}
+}
+
+.inactive {
+	background-color:rgba(250,250,250,0.8);
+}
+
+.misc {
+	background-color:rgba(200,250,150,0.8);
+}
+
+.school {
+	background-color:rgba(250,200,150,0.8);
+}
+
+.work, #item3, #item8 {
+	background-color:rgba(200,200,250,0.8);
+}
+
+#item0, #item2 {
+	height:65px;
+}
+
+#item0 {
+	height:85px;
+	background-image:
+		-webkit-gradient(linear, left top, left bottom, from(rgba(250,200,150,0.8)), to(rgba(0,0,0,0)));
+	background-color:rgba(0,0,0,0);
+	-webkit-border-radius:0px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+}
+
+#information {
+	height:$timeline_height - 10%;
+	width:50%;
+	max-width:800px;
+	position:absolute;
+	top:15%;
+	right:8%;
+	text-align:center;
+	border-left:15px solid black;
+
+	div {
+		#title {
+			font:28px/46px 'Merriweather Sans';
+			padding-top:20px;
+		}
+
+		#tagline {
+			font:14px/22px 'Kite One';
+			padding-left:60px;
+			padding-right:60px;
+		}
+
+		#categories {
+			font:14px/22px 'Merriweather Sans';
+			padding-left:60px;
+			padding-right:60px;
+		}
+
+		#info {
+			font:14px/22px 'Fenix';
+			padding:40px 20px;
+			text-align:justify;
+		}
+	}
+}
+
+.info_block {
+	display:none;
+
+	p {
+		margin-bottom:10px;
+	}
+
+	a {
+		color:#333;
+		text-decoration:none;
+	}
+
+	.lfloat, .rfloat {
+		width:48%;
+	}
+
+	.lfloat {
+		float:left;
+	}
+
+	.rfloat {
+		float:right;
+		border-left:1px solid black;
+		padding-left:10px;
+	}
+
+	div {		
+		height:$timeline_height - 10%;
+	}
+}

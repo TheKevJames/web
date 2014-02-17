@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<title>Kevin James</title>
+
+	<link rel='stylesheet' href='/static/reset.css' />
+	<link rel='stylesheet' href='/static/style.css' />
+	<link rel='icon' href='/static/images/favicon.png' />
+</head>
+
+<body>
+	<div id='background-image'></div>
+	<a href='timeline'>
+		<div id='nav_down'>
+			<div class='arrow_box' style='background-image:url("/static/images/arrow_down.png");'><p>timeline</p><img src='/static/images/arrow_down_hover.png' /></div>
+		</div>
+	</a>
+	<a href='resource?resume'>
+		<div id='nav_right'>
+			<div class='arrow_box' style='background-image:url("/static/images/arrow_right.png");'><p>resume</p><img src='/static/images/arrow_right_hover.png' /></div>
+		</div>
+	</a>
+	<content>
+		<div id='centered'>
+			<img src='http://s.gravatar.com/avatar/ba8ec5ac9fe95bb410bda4416aba08c8?s=200' alt='Kevin James' width='200' height='200' style='border-radius:50%; border:black 2px solid;'>
+			<h1 id='name'>Kevin James</h1>
+			<h4 id='quote'>"My self-confidence on any given day is directly proportional to the spikiness of my hair."</h4>
+			<ul id='social'>
+				<li><a href='http://linkedin.com/in/TheKevJames' style='background-image:url("/static/images/linkedin.png");'>
+					<img src='/static/images/linkedin_hover.png' />
+				</a></li>
+				<li><a href='https://github.com/TheKevJames' style='background-image:url("/static/images/github.png");'>
+					<img src='/static/images/github_hover.png' />
+				</a></li>
+				<li><a href='https://twitter.com/TheKevJ' style='background-image:url("/static/images/twitter.png");'>
+					<img src='/static/images/twitter_hover.png' />
+				</a></li>
+				<li><a href='https://www.facebook.com/TheKevJames' style='background-image:url("/static/images/facebook.png");'>
+					<img src='/static/images/facebook_hover.png' />
+				</a></li>
+				<li><a href='&#109;&#097;&#105;&#108;&#116;&#111;:&#075;&#101;&#118;&#105;&#110;&#074;&#097;&#109;&#101;&#115;&#064;&#084;&#104;&#101;&#075;&#101;&#118;&#046;&#105;&#110;' style='background-image:url("/static/images/email.png");'>
+					<img src='/static/images/email_hover.png' />
+				</a></li>
+			</ul>
+		</div>
+	</content>
+
+<script>
+document.onkeyup = KeyCheck;
+function KeyCheck(e) {
+	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+	switch(KeyID) {
+		case 39:
+			window.location = 'resource?resume';
+			break;
+		case 40:
+			window.location = 'timeline';
+			break;
+	}
+}
+</script>
+</body>
+</html>

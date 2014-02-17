@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<title>Kevin James</title>
+
+	<link rel='stylesheet' href='/static/reset.css' />
+	<link rel='stylesheet' href='/static/style.css' />
+	<link rel='icon' href='/static/images/favicon.png' />
+</head>
+
+<body>
+	<div id='background-image'></div>
+	<a href='/'>
+		<div id='nav_left'>
+			<div class='arrow_box' style='background-image:url("/static/images/arrow_left.png");'><p>home</p><img src='/static/images/arrow_left_hover.png' /></div>
+		</div>
+	</a>
+	<content>
+		{% if type == 'pdf' %}
+			<iframe src='/static/resources/{{ load }}.pdf' style='width:100%; max-width:850px; height:95%; padding:1%;'>
+		{% elif type == 'png' %}
+			<div style='height:95%; width:80%; margin-left:10%; margin-right:10%; padding:1%; overflow-x:scroll; overflow-y:hidden;'><img src='/static/resources/{{ load }}.png' style='height:100%;' /><div>
+		{% else %}
+			<p>ERROR: could not load resource.</p>
+		{% endif %}
+	</content>
+
+<script>
+document.onkeyup = KeyCheck;
+function KeyCheck(e) {
+	var KeyID = (window.event) ? event.keyCode : e.keyCode;
+
+	switch(KeyID) {
+		case 37:
+			window.location = '/';
+			break;
+	}
+}
+</script>
+</body>
+</html>

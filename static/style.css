@@ -29,7 +29,13 @@ body {
 #background-image {
   background: black url("images/bg2.jpg") no-repeat;
   opacity: 0.4;
+  filter: blur(3px);
   -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: url(blur.svg#blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   position: fixed;
   top: 0;
   left: 0;
@@ -37,7 +43,10 @@ body {
   width: 100%; }
 
 content {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(100, 100, 250, 0.9)), to(rgba(90, 90, 200, 0.9)));
+  background: #6464fa;
+  background: -webkit-gradient(linear, right top, left bottom, from(rgba(100, 100, 250, 0.9)), to(rgba(90, 90, 200, 0.9)));
+  background: -moz-linear-gradient(right top, rgba(100, 100, 250, 0.9), rgba(90, 90, 200, 0.9));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6464fa', endColorstr='#5a5ac8');
   position: absolute;
   top: 120px;
   bottom: 120px;
@@ -132,7 +141,9 @@ content {
   bottom: 240px;
   width: 120px; }
   #nav_left p {
+    transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
     position: relative;
     right: -47px;
     top: 47px; }
@@ -152,7 +163,9 @@ content {
   bottom: 240px;
   width: 120px; }
   #nav_right p {
+    transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     position: relative;
     left: -47px;
     top: 47px; }
@@ -186,7 +199,7 @@ content {
   width: 478px;
   text-align: left;
   border-left: 3px solid black;
-  -webkit-box-shadow: -5px 0 2px -2px rgba(50, 50, 50, 0.75); }
+  box-shadow: -5px 0 2px -2px rgba(50, 50, 50, 0.75); }
 
 .timeitem {
   height: 30px;
@@ -194,7 +207,9 @@ content {
   font: 16px/30px 'Merriweather Sans';
   margin: 3px 3px 2px 5px;
   padding: 4px;
+  border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   cursor: default;
   transition: width 0.2s;
   -webkit-transition: width 0.2s; }
@@ -221,11 +236,20 @@ content {
 
 #item0 {
   height: 85px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 200, 150, 0.8)), to(rgba(0, 0, 0, 0)));
+  background: #fac896;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 200, 150, 0.8)), to(rgba(0, 0, 0, 0)));
+  background: -moz-linear-gradient(top, rgba(250, 200, 150, 0.8), rgba(0, 0, 0, 0));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fac896', endColorstr='#000');
   background-color: rgba(0, 0, 0, 0);
+  border-radius: 0px;
   -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-top-left-radius: 5px;
   -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px; }
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px; }
 
 #information {
   height: 70%;

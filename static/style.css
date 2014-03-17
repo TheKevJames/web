@@ -5,10 +5,10 @@
   src: local("Merriweather Sans Regular"), local("MerriweatherSans-Regular"), url(http://themes.googleusercontent.com/static/fonts/merriweathersans/v1/AKu1CjQ4qnV8MUltkAX3sL2aU247V0zTzydO4RoO9Ok.woff) format("woff"); }
 
 @font-face {
-  font-family: 'Rock Salt';
+  font-family: 'The Girl Next Door';
   font-style: normal;
   font-weight: 400;
-  src: local("Rock Salt"), local("RockSalt"), url(http://themes.googleusercontent.com/static/fonts/rocksalt/v4/Q94aHXFHGip10K5uxi1jOD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+  src: local("The Girl Next Door"), local("TheGirlNextDoor"), url(http://themes.googleusercontent.com/static/fonts/thegirlnextdoor/v5/cWRA4JVGeEcHGcPl5hmX7rOFxJ5Ig03puUh67ume3us.woff) format("woff"); }
 
 @font-face {
   font-family: 'Kite One';
@@ -69,7 +69,7 @@ content {
 
 #quote {
   color: rgba(0, 0, 0, 0.8);
-  font: 16px/22px 'Rock Salt';
+  font: 20px/22px 'The Girl Next Door';
   padding: 0 30px;
   margin-bottom: 60px;
   cursor: default; }
@@ -100,7 +100,7 @@ content {
   width: 120px;
   height: 120px; }
   .arrow_box p {
-    font: 16px/22px 'Rock Salt';
+    font: 20px/22px 'The Girl Next Door';
     color: white; }
   .arrow_box img {
     height: 120px;

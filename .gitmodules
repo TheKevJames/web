@@ -1,0 +1,3 @@
+[submodule "webhome"]
+	path = webhome
+	url = https://github.com/TheKevJames/webhome.git

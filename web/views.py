@@ -1,17 +1,24 @@
+from os.path import isfile
+
+from django.core.context_processors import csrf
 from django.shortcuts import render_to_response
 
 
 def home(request):
-	return render_to_response("index.html")
+	return render_to_response("index.html", csrf(request))
 
 def timeline(request):
-	return render_to_response("timeline.html")
+	return render_to_response("timeline.html", csrf(request))
 
 def resource(request):
-	from os.path import isfile
+	resp = csrf(request)
+
 	if isfile('static/resources/' + request.GET.keys()[0] + '.pdf'):
-		return render_to_response("resource.html", {'type': 'pdf', 'load': request.GET.keys()[0]})
+		resp.update({'type': 'pdf', 'load': request.GET.keys()[0]})
+		return render_to_response("resource.html", resp)
 	elif isfile('static/resources/' + request.GET.keys()[0] + '.png'):
-		return render_to_response("resource.html", {'type': 'png', 'load': request.GET.keys()[0]})
+		resp.update({'type': 'png', 'load': request.GET.keys()[0]})
+		return render_to_response("resource.html", resp)
 	else:
-		return render_to_response("resource.html", {'type': 'other', 'load': request.GET.keys()[0]})
+		resp.update({'type': 'other', 'load': request.GET.keys()[0]})
+		return render_to_response("resource.html", resp)

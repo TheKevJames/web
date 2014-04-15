@@ -1,7 +1,19 @@
+try:
+	from web.secret import DATABASES, SECRET_KEY
+except ImportError:
+	SECRET_KEY = 'ThisKeyIsPubliclyViewableDoNotUseIt'
+
+	from os.path import dirname, join
+
+	DATABASES = {
+		'default': {
+			'ENGINE': 'django.db.backends.sqlite3',
+			'NAME': join(dirname(__file__), 'db.sqlite3'),
+		}
+	}
+
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-SECRET_KEY = 'cr33hjtn4m^1#4^=r$gc*=l&f7l4_&umm_mjoop87!p4-3$n^)'
 
 DEBUG = False
 TEMPLATE_DEBUG = False
@@ -24,13 +36,6 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'web.urls'
 WSGI_APPLICATION = 'web.wsgi.application'
-
-DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-	}
-}
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'

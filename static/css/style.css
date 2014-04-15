@@ -270,26 +270,31 @@ content {
     padding-right: 60px; }
   #information div #info {
     font: 14px/22px 'Fenix';
-    padding: 40px 20px;
+    padding: 40px 20px 3px 20px;
     text-align: justify; }
 
 .info_block {
-  display: none; }
+  display: none;
+  background-color: rgba(200, 200, 220, 0.4); }
   .info_block p {
     margin-bottom: 10px; }
   .info_block a {
     color: #333;
     text-decoration: none; }
   .info_block .lfloat, .info_block .rfloat {
-    width: 48%; }
+    background-color: rgba(200, 200, 220, 0.4);
+    position: absolute;
+    padding: 1%;
+    height: 254px;
+    width: 48%;
+    margin-top: 3px;
+    border-top: 1px solid black; }
   .info_block .lfloat {
-    float: left; }
+    left: 0; }
   .info_block .rfloat {
-    float: right;
+    right: 0;
     border-left: 1px solid black;
     padding-left: 10px; }
-  .info_block div {
-    height: 70%; }
 
 #projects {
   height: 100%;

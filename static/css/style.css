@@ -347,7 +347,7 @@ content {
 .project_horiz0, #project0, #project1, #project2, #project3 {
   top: 1%; }
 
-.project_horiz1, #project4 {
+.project_horiz1, #project4, #project5 {
   top: 34%; }
 
 .project_horiz2 {
@@ -356,7 +356,7 @@ content {
 .project_vert0, #project0, #project4 {
   left: 1%; }
 
-.project_vert1, #project1 {
+.project_vert1, #project1, #project5 {
   left: 26%; }
 
 .project_vert2, #project2 {

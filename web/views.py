@@ -7,8 +7,8 @@ from django.shortcuts import render_to_response
 def home(request):
 	return render_to_response("index.html", csrf(request))
 
-def timeline(request):
-	return render_to_response("timeline.html", csrf(request))
+def projects(request):
+	return render_to_response("projects.html", csrf(request))
 
 def resource(request):
 	resp = csrf(request)
@@ -22,3 +22,6 @@ def resource(request):
 	else:
 		resp.update({'type': 'other', 'load': request.GET.keys()[0]})
 		return render_to_response("resource.html", resp)
+
+def timeline(request):
+	return render_to_response("timeline.html", csrf(request))

@@ -27,7 +27,7 @@ body {
   overflow: hidden; }
 
 #background-image {
-  background: black url("images/bg2.jpg") no-repeat;
+  background: black url("../images/bg2.jpg") no-repeat;
   opacity: 0.4;
   filter: blur(3px);
   -webkit-filter: blur(3px);

@@ -54,4 +54,4 @@ docs/_build/
 
 # Project specific
 web/secret.py
-static/.sass-cache
+.sass-cache

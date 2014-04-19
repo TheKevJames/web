@@ -3,12 +3,17 @@ from os.path import isfile
 from django.core.context_processors import csrf
 from django.shortcuts import render_to_response
 
+import vanity
+
 
 def home(request):
 	return render_to_response("index.html", csrf(request))
 
 def projects(request):
-	return render_to_response("projects.html", csrf(request))
+	resp = csrf(request)
+	resp.update({'almostempty': vanity.downloads_total('almost-empty', False)})
+
+	return render_to_response("projects.html", resp)
 
 def resource(request):
 	resp = csrf(request)

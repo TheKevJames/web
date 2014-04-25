@@ -1,4 +1,4 @@
-Django==1.6.2
+Django==1.6.3
 argparse==1.2.1
 vanity==2.0.3
 wsgiref==0.1.2

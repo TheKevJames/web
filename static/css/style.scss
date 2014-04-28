@@ -24,6 +24,21 @@
 }
 
 
+::-webkit-scrollbar {
+	width:12px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius:10px;
+	-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius:10px;
+	-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+
 body {
 	background-color:black;
 	overflow:hidden;
@@ -338,12 +353,6 @@ $timeline_width:478px;
 			padding-right:60px;
 		}
 
-		#categories {
-			font:14px/22px 'Merriweather Sans';
-			padding-left:60px;
-			padding-right:60px;
-		}
-
 		#info {
 			font:14px/22px 'Fenix';
 			padding:40px 20px 3px 20px;
@@ -354,6 +363,8 @@ $timeline_width:478px;
 
 .info_block {
 	display:none;
+	height:100%;
+	overflow-y:auto;
 	background-color:rgba(200,200,220,0.4);
 
 	p {
@@ -366,7 +377,7 @@ $timeline_width:478px;
 	}
 
 	.lfloat, .rfloat {
-		background-color:rgba(200,200,220,0.4);
+		background-color:rgba(200,200,220,0);
 		position:absolute;
 		padding:1%;
 		height:254px;

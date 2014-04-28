@@ -30,7 +30,7 @@
 			<div class='timeitem inactive' id='item11'>3A Software Engineering</div>
 			<div class='timeitem inactive' id='item10'>3rd Work Term</div>
 			<div class='timeitem inactive' id='item9'>2B Software Engineering</div>
-			<div class='timeitem' id='item8'>Wriber Inc.</div>
+			<div class='timeitem work' id='item8' onclick='show("item8_info"); return false;'>Wriber</div>
 			<div class='timeitem school' id='item7' onclick='show("item7_info"); return false;'>2A Software Engineering</div>
 			<div class='timeitem work' id='item6' onclick='show("item6_info"); return false;'>Oracle</div>
 			<div class='timeitem school' id='item5' onclick='show("item5_info"); return false;'>1B Software Engineering</div>
@@ -44,8 +44,7 @@
 		<div id='information'>
 			<div class='info_block' id='item1_info'>
 				<div id='title'>Cholakis Dental Group</div>
-				<div id='tagline'>Running an entire medical office.</div>
-				<div id='categories'>network security - administration - web development - management</div>
+				<div id='tagline'>Running an entire medical office</div>
 				<div id='info'>
 					<p>This was my first formal job, and it went about as smoothly as you would expect. I was really thrown into the deep-end here: though I'd done some coding and work with computers, I'd never been solely responsible for medical-level network security, large network administration, web development and maintenance, and managing several graphics designers...</p>
 					<p>I ended up doing a large amount of network analysis and security work. Before I got there, the network had been a loose collection of various technologies which had been poorly tied together, at best. Afterwards... well, they're called "security standards" for a reason.</p>
@@ -54,7 +53,7 @@
 			</div>
 			<div class='info_block' id='item2_info'>
 				<div id='title'>Grade 12</div>
-				<div id='tagline'>Getting diplomas, degrees, and certificates.</div>
+				<div id='tagline'>Getting diplomas, degrees, and certificates</div>
 				<div id='info'>
 					<p>Besides getting my high-school diploma, a good portion of my twelfth grade was spent writing the ACT, SAT, SAT II's, and several AP tests. I achieved high scores across the board and graduated with honours.</p>
 					<p>I also took two very interesting online courses: the World Bank Institute certified me as a Social Innovator and I completed the inaugural version of Stanford's online machine learning course.</p>
@@ -87,7 +86,7 @@
 			</div>
 			<div class='info_block' id='item4_info'>
 				<div id='title'>1A Software Engineering</div>
-				<div id='tagline'>Starting university.</div>
+				<div id='tagline'>Starting university</div>
 				<div id='info'>
 					<p>My first term at the University of Waterloo was a big change from high school. The courses I took (<a href='resource?cs137'>CS 137</a>, <a href='resource?ece105'>ECE 105</a>, <a href='resource?ece140'>ECE 140</a>, <a href='resource?math115'>MATH 115</a>, and <a href='resource?math117'>MATH 117</a>) were far more difficult (i.e. I had to pay attention now and again and do some homework once in a while) and the atmosphere was completely different.</p>
 					<p>If you aren't here to see my notes for one of those courses, you may be here to see my <a href='resource?coursechart'>SE Course Chart</a>.</p>
@@ -95,7 +94,7 @@
 			</div>
 			<div class='info_block' id='item5_info'>
 				<div id='title'>1B Software Engineering</div>
-				<div id='tagline'>Realizing that university takes <u>effort</u>.</div>
+				<div id='tagline'>Realizing that university takes <u>effort</u></div>
 				<div id='info'>
 					<p>After my first term's impressive change from high school, I knew that I would need to put more effort into studying and paying attention in class in order to do well. So, of course, I decided this would be a good time to sign up for several time-consuming extra-cirriculars.</p>
 					<p>I joined the SHADOW program, which matched me with several foreign exchange students in order to help them feel comfortable with their new surroundings. I joined / co-founded an Android app development club and released an app with some of the members of that group (UWHub on the <a href='https://play.google.com/store/apps/details?id=com.cromiumapps.uwhub&hl=en'>Google App Store</a> / <a href='https://github.com/CromiumApps/uwhub'>GitHub</a>), I redesigned the <a href='http://www.agm.essco.ca/'>ESSCO AGM 2013</a> website, and I competed in the Ontario Engineering Competition for debating.</p>
@@ -105,23 +104,36 @@
 			</div>
 			<div class='info_block' id='item6_info'>
 				<div id='title'>Oracle</div>
-				<div id='tagline'>Being thrown straight into the deep end.</div>
+				<div id='tagline'>Being thrown straight into the deep end</div>
 				<div id='info'>
 					<p>My first co-op job experience was incredible: I moved down to Boston to work with a big-name company right across the street from MIT. Basically, I was in Heaven.</p>
 					<p>The product I was working on was their <a href='http://www.oracle.com/us/solutions/business-analytics/business-intelligence/endeca/overview/index.html'>Endeca Information Discovery</a> system. Basically, it was a system which would push user data (read: Excel spreadsheets) into Oracle databases and then run information discovery on them to determine data trends, groupings, et cetera.</p>
-					<p>My first major project was to expand the data input system to include JSON as a data source. Since JSON data and standard databases are fairly different in structure, a lrage part of this task was in determining exactly how the data should be converted. In the end, I wrote a streaming parser (which, for example, could be connected to an auto-updating URL like Twitter's firehouse) which made heavy use of determined flattening (figuring out which key was most important and flattening the data around that) and multi-selection (basically, data structures within other data structures in the Oracle DB).</p>
+					<p>My first major project was to expand the data input system to include JSON as a data source. Since JSON data and standard databases are fairly different in structure, a large part of this task was in determining exactly how the data should be converted. In the end, I wrote a streaming parser (which, for example, could be connected to an auto-updating URL like Twitter's firehouse) which made heavy use of determined flattening (figuring out which key was most important and flattening the data around that) and multi-selection (basically, data structures within other data structures in the Oracle DB).</p>
 					<p>I also dealt with increasing the number of useable back-end databases. EID was initially only able to interface with a few pre-selected databases (MySQL 5+, Oracle 11, and SQLite 3, IIRC). By re-configuring the interface between EID and the database connection, I was able to expand this list to include any database which had JDBC drivers.</p>
 					<p>I finished the term by writing an installation script for the full EID stack. This was previously a notoriously difficult product to install, but can now be installed and configured for any environment with one click.</p>
 				</div>
 			</div>
 			<div class='info_block' id='item7_info'>
 				<div id='title'>2A Software Engineering</div>
-				<div id='tagline'>Learning how to learn.</div>
+				<div id='tagline'>Learning how to learn</div>
 				<div id='info'>
 					<p>It took a while, but this term I finally figured out how to properly pay attention, study, not have too much on my plate...</p>
 					<p>My courses this term finally started to get interesting; this was the first term I didn't have a basic CS course, two intro physics course, and two beginning math courses, and I certainly appreciated the change. Although some of the courses (<b>cough cough Chemistry cough cough</b>) weren't exactly my idea of an improvement...</p>
 					<p>If you're looking for my course notes, you can find them here: <a href='resource?cs241'>CS 241</a>, <a href='resource?psych101'>PSYCH 101</a>, <a href='resource?se212'>SE 212</a>, and <a href='resource?stat206'>STAT 206</a>. I didn't take any notes for CHE 102 since it didn't have much content, nor for ECE 222 since I had no clue what the course was actually about (I think it was a... general, catch-all mostly-hardware course?).</p>
 					<p>If you aren't here to see my notes for one of those courses, you may be here to see my <a href='resource?coursechart'>SE Course Chart</a>.</p>
+				</div>
+			</div>
+			<div class='info_block' id='item8_info'>
+				<div id='title'>Wriber</div>
+				<div id='tagline'>Changing the way the world writes</div>
+				<div id='info'>
+					<p>My second co-op job was even better than the first: I'd thought that I would enjoy traveling for co-op more than the alternative, but staying in Waterloo (well, Kitchener) to work for Wriber was definitely more fun than moving down to Boston had been.</p>
+					<p>When I joined Wriber, they were in the middle of product development for their <a href='http://www.wriber.com'>flagship product</a>. In a nutshell, they wanted to create a writing coach which would help writers, bloggers, students... basically, anyone that needs to write something. While you type, Wriber provides insights and asks thought-provoking questions, all to help you expand on your work and prevent you from getting stuck (<i>writer's block</i> is their mortal enemy).</p>
+					<p>Unlike Oracle, I wasn't given a single (read: specific) task at Wriber. Instead, I took a look at what they had and spent four months making it better in any way possible. Though Wriber was in early stages when I first began working there, I am confident that it is now well on its way to public success.</p>
+					<p>The difference between Wriber's code four months ago and as I write this is incredible, and I had a hand in the bulk of those changes, but the major features I worked on were as follows:</p>
+					<p>I designed machine learning systems for classifying page clusters (e.g. as relevant or irrelevant), for ranking pages, and for determining which insights would most benefit the user. My work used cutting-edge machine learning and AI algorithms, and was an immense step up from the naive metrics it replaced.</p>
+					<p>I also replaced Wriber's grammar preprocessor and question creation systems with completely re-designed implementations. The grammar preprocessor now uses a regex-based recognition algorithm more accurate than any third-party library we could find and chunks sentences in such a way that we can understand the relatinships between various phrases. Using this preprocessor, I rewrote the question generation system to ask questions about individual phrases rather than entire sentences, and to use a semantic engine in order to generate only relevant question types (e.g. when talking about past coops, we might ask 'When exactly did you work at Wriber?').</p>
+					<p>Finally, I wrangled with the various modules of the system, both local and third-party, to ensure everything functioned as required. A few cool things I did: rewrote one external library from the ground up, thus decreasing it's runtime speed by at least 5x and rendering it slightly more accurate; redesigned the task system in order to provide multi-threaded functionality as well as just-in-time task interruption; ran analyses on several competing libraries to determine which of them functioned fastest and best; and, implemented a full-fledged test suite (within my first week!) which ran through all layers of the codebase.</p>
 				</div>
 			</div>
 		</div>
@@ -144,6 +156,7 @@ function KeyCheck(e) {
 			break;
 	}
 }
+
 function getElementsByClassName(classname, node) {
 	if(!node) node = document.getElementsByTagName("body")[0];
 	var a = [];
@@ -153,6 +166,7 @@ function getElementsByClassName(classname, node) {
 		if(re.test(els[i].className)) a.push(els[i]);
 	return a;
 }
+
 function show(id) {
 	var elements = new Array();
 	elements = getElementsByClassName('info_block');
@@ -167,7 +181,8 @@ function show(id) {
 	document.getElementById(id.replace(/_info$/, '')).style.width = '250px';
 	document.getElementById(id).style.display = 'block';
 }
-window.onload = show("item7_info");
+
+window.onload = show("item8_info");
 </script>
 </body>
 </html>

@@ -18,6 +18,17 @@
   font-style: normal;
   font-weight: 400;
   src: local("Fenix"), local("Fenix-Regular"), url(http://themes.googleusercontent.com/static/fonts/fenix/v2/c6Y-VhDabeO1oBJ8dG5vpA.woff) format("woff"); }
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
 body {
   background-color: black;
   overflow: hidden; }
@@ -264,10 +275,6 @@ content {
     font: 14px/22px 'Kite One';
     padding-left: 60px;
     padding-right: 60px; }
-  #information div #categories {
-    font: 14px/22px 'Merriweather Sans';
-    padding-left: 60px;
-    padding-right: 60px; }
   #information div #info {
     font: 14px/22px 'Fenix';
     padding: 40px 20px 3px 20px;
@@ -275,6 +282,8 @@ content {
 
 .info_block {
   display: none;
+  height: 100%;
+  overflow-y: auto;
   background-color: rgba(200, 200, 220, 0.4); }
   .info_block p {
     margin-bottom: 10px; }
@@ -282,7 +291,7 @@ content {
     color: #333;
     text-decoration: none; }
   .info_block .lfloat, .info_block .rfloat {
-    background-color: rgba(200, 200, 220, 0.4);
+    background-color: rgba(200, 200, 220, 0);
     position: absolute;
     padding: 1%;
     height: 254px;

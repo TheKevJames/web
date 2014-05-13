@@ -11,8 +11,10 @@ def home(request):
 
 def projects(request):
 	resp = csrf(request)
-	resp.update({'almostempty': vanity.downloads_total('almost-empty', False)})
-	resp.update({'packtex': vanity.downloads_total('packtex', False)})
+	# resp.update({'almostempty': vanity.downloads_total('almost-empty', False)})
+	resp.update({'almostempty': '7756'})
+	# resp.update({'packtex': vanity.downloads_total('packtex', False)})
+	resp.update({'packtex': '2670'})
 
 	return render_to_response("projects.html", resp)
 

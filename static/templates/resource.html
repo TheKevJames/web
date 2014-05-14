@@ -17,9 +17,9 @@
 	</a>
 	<content>
 		{% if type == 'pdf' %}
-			<iframe src='/static/resources/{{ load }}.pdf' style='width:100%; max-width:850px; height:95%; padding:1%;'>
+			<iframe src='/static/resources/{{ load }}' style='width:100%; max-width:850px; height:95%; padding:1%;'>
 		{% elif type == 'png' %}
-			<div style='height:95%; width:80%; margin-left:10%; margin-right:10%; padding:1%; overflow-x:scroll; overflow-y:hidden;'><img src='/static/resources/{{ load }}.png' style='height:100%;' /><div>
+			<div style='height:95%; width:80%; margin-left:10%; margin-right:10%; padding:1%; overflow-x:scroll; overflow-y:hidden;'><img src='/static/resources/{{ load }}' style='height:100%;' /><div>
 		{% else %}
 			<p>ERROR: could not load resource.</p>
 		{% endif %}

@@ -21,15 +21,14 @@ def projects(request):
 def resource(request):
     resp = csrf(request)
 
-    if isfile('static/resources/' + request.GET.keys()[0] + '.pdf'):
-        resp.update({'type': 'pdf', 'load': request.GET.keys()[0]})
-        return render_to_response("resource.html", resp)
-    elif isfile('static/resources/' + request.GET.keys()[0] + '.png'):
-        resp.update({'type': 'png', 'load': request.GET.keys()[0]})
-        return render_to_response("resource.html", resp)
+    filename = request.GET.keys()[0]
+    resp.update({'load': filename})
+    if isfile('static/resources/' + filename):
+        resp.update({'type': filename[-3:]})
     else:
-        resp.update({'type': 'other', 'load': request.GET.keys()[0]})
-        return render_to_response("resource.html", resp)
+        resp.update({'type': 'other'})
+
+    return render_to_response("resource.html", resp)
 
 def timeline(request):
     return render_to_response("timeline.html", csrf(request))

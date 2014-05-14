@@ -2,7 +2,7 @@ TODO
 ====
 
 * Add title to projects page, timeline page?
+* Make links more obvious
 * Redesign timeline
 * Responsiveness
-* Submodulize notes
 * Finish implementing celery stuff

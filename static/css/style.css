@@ -120,20 +120,50 @@ content {
     height: 66px;
     width: 66px;
     float: left; }
-  #social a {
-    height: 66px;
-    width: 66px;
-    display: block; }
+    #social li a {
+      position: absolute;
+      height: 66px;
+      width: 66px;
+      display: block;
+      -webkit-transition: all 0.6s;
+      transition: all 0.6s; }
+    #social li a.front, #social li:hover a.back {
+      -webkit-transform: rotateY(0deg);
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -moz-transform: rotateY(0deg);
+      -moz-transform-style: preserve-3d;
+      -moz-backface-visibility: hidden; }
+    #social li a.back, #social li:hover a.front {
+      -webkit-transform: rotateY(-180deg);
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -moz-transform: rotateY(-180deg);
+      -moz-transform-style: preserve-3d;
+      -moz-backface-visibility: hidden; }
   #social img {
     height: 66px;
-    width: 66px;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s;
-    transition: opacity 0.6s; }
-    #social img:hover {
-      opacity: 1;
-      -webkit-transition: opacity 0.6s;
-      transition: opacity 0.6s; }
+    width: 66px; }
+  #social #linkedin a.front {
+    background-image: url(../images/linkedin.png); }
+  #social #linkedin a.back {
+    background-image: url(../images/linkedin_color.png); }
+  #social #github a.front {
+    background-image: url(../images/github.png); }
+  #social #github a.back {
+    background-image: url(../images/github_color.png); }
+  #social #facebook a.front {
+    background-image: url(../images/facebook.png); }
+  #social #facebook a.back {
+    background-image: url(../images/facebook_color.png); }
+  #social #twitter a.front {
+    background-image: url(../images/twitter.png); }
+  #social #twitter a.back {
+    background-image: url(../images/twitter_color.png); }
+  #social #email a.front {
+    background-image: url(../images/email.png); }
+  #social #email a.back {
+    background-image: url(../images/email_color.png); }
 
 .arrow_box {
   display: inline-block;

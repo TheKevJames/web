@@ -30,11 +30,6 @@
 }
 
 
-@mixin boxshadow($args) {
-	-webkit-box-shadow:$args;
-	-moz-box-shadow:$args;
-	box-shadow:$args;
-}
 @mixin blur($amount) {
 	filter:blur($amount);
 	-webkit-filter:blur($amount);
@@ -44,10 +39,24 @@
 	filter:url(blur.svg#blur);
 	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 }
+@mixin boxshadow($args) {
+	-webkit-box-shadow:$args;
+	-moz-box-shadow:$args;
+	box-shadow:$args;
+}
 @mixin calc($property, $expression) {
 	#{$property}:-webkit-calc(#{$expression});
 	#{$property}:-moz-calc(#{$expression});
 	#{$property}:calc(#{$expression});
+}
+@mixin flip($rotate) {
+	-webkit-transform:#{$rotate};
+	-webkit-transform-style:preserve-3d;
+	-webkit-backface-visibility:hidden;
+
+	-moz-transform:#{$rotate};
+	-moz-transform-style:preserve-3d;
+	-moz-backface-visibility:hidden;
 }
 @mixin transition($property, $amount) {
 	-webkit-transition:#{$property} #{$amount};
@@ -170,23 +179,76 @@ $content_width:700px;
 		height:66px;
 		width:66px;
 		float:left;
-	}
 
-	a {
-		height:66px;
-		width:66px;
-		display:block;
+		a {
+			position:absolute;
+			height:66px;
+			width:66px;
+			display:block;
+			@include transition(all, 0.6s);
+		}
+
+		a.front, &:hover a.back {
+			@include flip(rotateY(0deg));
+		}
+
+		a.back, &:hover a.front {
+			@include flip(rotateY(-180deg));
+		}
 	}
 
 	img {
 		height:66px;
 		width:66px;
-		opacity:0;
-		@include transition(opacity, 0.6s);
+	}
 
-		&:hover {
-			opacity:1;
-			@include transition(opacity, 0.6s);
+	#linkedin {
+		a.front {
+			background-image:url(../images/linkedin.png);
+		}
+
+		a.back {
+			background-image:url(../images/linkedin_color.png);
+		}
+	}
+
+	#github {
+		a.front {
+			background-image:url(../images/github.png);
+		}
+
+		a.back {
+			background-image:url(../images/github_color.png);
+		}
+	}
+
+	#facebook {
+		a.front {
+			background-image:url(../images/facebook.png);
+		}
+
+		a.back {
+			background-image:url(../images/facebook_color.png);
+		}
+	}
+
+	#twitter {
+		a.front {
+			background-image:url(../images/twitter.png);
+		}
+
+		a.back {
+			background-image:url(../images/twitter_color.png);
+		}
+	}
+
+	#email {
+		a.front {
+			background-image:url(../images/email.png);
+		}
+
+		a.back {
+			background-image:url(../images/email_color.png);
 		}
 	}
 }

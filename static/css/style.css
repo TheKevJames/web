@@ -3,29 +3,28 @@
   font-style: normal;
   font-weight: 400;
   src: local("Cantarell Regular"), local("Cantarell-Regular"), url(http://themes.googleusercontent.com/static/fonts/cantarell/v4/V86VyqXbc09Sss3BPsMj1z8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
-
 @font-face {
   font-family: 'Cantarell';
   font-style: normal;
   font-weight: 700;
   src: local("Cantarell Bold"), local("Cantarell-Bold"), url(http://themes.googleusercontent.com/static/fonts/cantarell/v4/Yir4ZDsCn4g1kWopdg-ehHhCUOGz7vYGh680lGh-uXM.woff) format("woff"); }
-
 @font-face {
   font-family: 'Fjalla One';
   font-style: normal;
   font-weight: 400;
   src: local("Fjalla One"), local("FjallaOne-Regular"), url(http://themes.googleusercontent.com/static/fonts/fjallaone/v2/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff) format("woff"); }
-
 ::-webkit-scrollbar {
   width: 12px; }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
 
 .font0, #name, #information div #title, .project_item .project_name {
   font-family: 'Fjalla One', sans-serif;
@@ -33,7 +32,7 @@
   text-transform: uppercase;
   font-size: 43px;
   line-height: 46px;
-  margin: 0 0 23px 0; }
+  margin: 0 0 3px 0; }
 
 .font1, #quote, .arrow_box p, .timeitem, #information div #tagline, .project_item .project_description, .project_item .project_code, .project_item .project_live {
   font-family: 'Cantarell', sans-serif;
@@ -55,7 +54,8 @@ body {
   overflow: hidden; }
 
 #background-image {
-  background: #2b2b2b url("../images/bg2.jpg") no-repeat;
+  background: #2b2b2b url("../images/bg2.jpg");
+  background-size: cover;
   opacity: 0.4;
   filter: blur(3px);
   -webkit-filter: blur(3px);
@@ -82,12 +82,12 @@ content {
 
 #centered {
   position: absolute;
-  top: calc(50% - 225px);
-  top: -moz-calc(50% - 225px);
   top: -webkit-calc(50% - 225px);
-  left: calc(50% - 350px);
-  left: -moz-calc(50% - 350px);
+  top: -moz-calc(50% - 225px);
+  top: calc(50% - 225px);
   left: -webkit-calc(50% - 350px);
+  left: -moz-calc(50% - 350px);
+  left: calc(50% - 350px);
   height: 450px;
   width: 700px; }
 
@@ -101,15 +101,16 @@ content {
 #quote {
   font-size: 20px;
   line-height: 23px;
+  margin-top: 23px;
   color: white;
   cursor: default; }
 
 #social {
   position: absolute;
-  left: calc(50% - 165px);
-  left: -moz-calc(50% - 165px);
   left: -webkit-calc(50% - 165px);
-  width: 330px;
+  left: -moz-calc(50% - 165px);
+  left: calc(50% - 165px);
+  width: 350px;
   margin-top: 20px; }
   #social li {
     height: 66px;
@@ -120,12 +121,12 @@ content {
   #social img {
     height: 66px;
     opacity: 0;
-    transition: opacity 0.6s;
-    -webkit-transition: opacity 0.6s; }
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s; }
     #social img:hover {
       opacity: 1;
-      transition: opacity 0.6s;
-      -webkit-transition: opacity 0.6s; }
+      -webkit-transition: opacity 0.6s;
+      transition: opacity 0.6s; }
 
 .arrow_box {
   display: inline-block;
@@ -141,12 +142,12 @@ content {
     position: relative;
     top: -30px;
     opacity: 0;
-    transition: opacity 0.2s;
-    -webkit-transition: opacity 0.2s; }
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
     .arrow_box img:hover {
       opacity: 1;
-      transition: opacity 0.2s;
-      -webkit-transition: opacity 0.2s; }
+      -webkit-transition: opacity 0.2s;
+      transition: opacity 0.2s; }
 
 #nav_up {
   background-color: transparent;
@@ -240,13 +241,13 @@ content {
   -webkit-border-top-right-radius: 5px;
   -moz-border-top-right-radius: 5px;
   cursor: default;
-  transition: width 0.2s;
-  -webkit-transition: width 0.2s; }
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s; }
 
 .school:hover, .work:hover {
   width: 330px;
-  transition: width 0.2s;
-  -webkit-transition: width 0.2s; }
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s; }
 
 .inactive {
   background-color: #cccccc; }
@@ -263,8 +264,8 @@ content {
 #item0 {
   height: 85px;
   background: #4978a2;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4978a2), to(rgba(0, 0, 0, 0)));
-  background: -moz-linear-gradient(top, #4978a2, rgba(0, 0, 0, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(#4978a2), to(transparent));
+  background: -moz-linear-gradient(top, #4978a2, transparent);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$col1, endColorstr='#000');
   border-top-right-radius: 5px;
   -webkit-border-top-right-radius: 5px;
@@ -273,7 +274,6 @@ content {
 #information {
   height: 70%;
   width: 50%;
-  max-width: 800px;
   position: absolute;
   top: 15%;
   right: 8%;
@@ -339,18 +339,18 @@ content {
   .project_item .project_live {
     bottom: 35px;
     background-color: #4978a2;
-    transition: background-color 0.4s;
-    -webkit-transition: background-color 0.4s; }
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s; }
     .project_item .project_live:hover {
       background-color: #346699;
-      transition: background-color 0.4s;
-      -webkit-transition: background-color 0.4s; }
+      -webkit-transition: background-color 0.4s;
+      transition: background-color 0.4s; }
   .project_item .project_code {
     bottom: 0;
     background-color: #8aad92;
-    transition: background-color 0.4s;
-    -webkit-transition: background-color 0.4s; }
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s; }
     .project_item .project_code:hover {
       background-color: #70997f;
-      transition: background-color 0.4s;
-      -webkit-transition: background-color 0.4s; }
+      -webkit-transition: background-color 0.4s;
+      transition: background-color 0.4s; }

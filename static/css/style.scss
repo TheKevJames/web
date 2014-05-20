@@ -127,21 +127,26 @@ content {
 	text-align:center;
 }
 
-$content_height:450px;
 $content_width:700px;
 #centered {
 	position:absolute;
-	@include calc(top, '50% - 225px');
+	@include calc(top, '50% - 210px');
 	@include calc(left, '50% - 350px');
-	height:$content_height;
 	width:$content_width;
+
+	#pic {
+		height:200px;
+		width:200px;
+		border-radius:50%;
+		border:black 2px solid;
+	}
 }
 
 #name {
 	@extend .font0;
 	font-size:57px;
 	line-height:60px;
-	margin-top:16px;
+	margin-top:1%;
 	color:white;
 	cursor:default;
 }
@@ -150,7 +155,7 @@ $content_width:700px;
 	@extend .font1;
 	font-size:20px;
 	line-height:23px;
-	margin-top:23px;
+	margin-top:1%;
 	color:white;
 	cursor:default;
 }
@@ -159,20 +164,23 @@ $content_width:700px;
 	position:absolute;
 	@include calc(left, '50% - 165px');
 	width:350px;
-	margin-top:20px;
+	margin-top:2%;
 
 	li {
 		height:66px;
+		width:66px;
 		float:left;
 	}
 
 	a {
 		height:66px;
+		width:66px;
 		display:block;
 	}
 
 	img {
 		height:66px;
+		width:66px;
 		opacity:0;
 		@include transition(opacity, 0.6s);
 

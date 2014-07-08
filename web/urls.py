@@ -5,7 +5,12 @@ from webhome.views import webhome
 
 
 urlpatterns = patterns('',
-    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/static/images/favicon.ico'}),
+    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to',
+        {'url': '/static/images/favicon.ico'}),
+    (r'^robots\.txt$', 'django.views.generic.simple.direct_to_template',
+        {'template': 'robots.txt', 'mimetype': 'text/plain'}),
+    (r'^sitemap\.xml$', 'django.views.generic.simple.direct_to_template',
+        {'template': 'sitemap.xml', 'mimetype': 'text/xml'}),
 
     url(r'^$', home),
     url(r'^projects$', projects),

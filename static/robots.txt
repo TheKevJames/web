@@ -1,0 +1,3 @@
+Sitemap: http://thekev.in/sitemap.xml
+User-agent: *
+Disallow: /static

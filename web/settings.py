@@ -15,7 +15,7 @@ except ImportError:
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '.thekev.in', '.thekev.in.', 'thekev.in']

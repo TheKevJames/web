@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, url
 
 from web.views import home, projects, resource, timeline
+
+from hexclock.views import hexclock
 from webhome.views import webhome
 
 
@@ -17,5 +19,6 @@ urlpatterns = patterns('',
     url(r'^resource$', resource),
     url(r'^timeline$', timeline),
 
+    url(r'^hexclock$', hexclock),
     url(r'^webhome$', webhome),
 )

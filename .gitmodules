@@ -3,4 +3,4 @@
 	url = https://github.com/TheKevJames/webhome.git
 [submodule "static/resources/notes"]
 	path = static/resources/notes
-	url = https://github.com/TheKevJames/notes
+	url = https://github.com/TheKevJames/notes.git

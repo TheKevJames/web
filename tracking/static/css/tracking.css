@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Cantarell';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cantarell Regular"), local("Cantarell-Regular"), url(http://themes.googleusercontent.com/static/fonts/cantarell/v4/V86VyqXbc09Sss3BPsMj1z8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+body {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 17px;
+  line-height: 23px;
+  margin: 0 0 23px 0; }
+
+.segment {
+  float: left; }
+  .segment.location {
+    background-color: gray;
+    height: 50px;
+    border-radius: 45px; }
+    .segment.location p {
+      line-height: 50px; }
+  .segment.activity {
+    height: 5px;
+    margin-top: 22.5px; }
+    .segment.activity.walking {
+      background-color: green; }
+    .segment.activity.running {
+      background-color: purple; }
+    .segment.activity.cycling {
+      background-color: blue; }
+    .segment.activity.transport {
+      background-color: orange; }
+
+/*# sourceMappingURL=tracking.css.map */

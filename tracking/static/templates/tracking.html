@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tracking Dashboard</title>
+
+	<link rel='stylesheet' href='/static/css/reset.css' />
+	<link rel='stylesheet' href='/static/css/tracking.css' />
+	<link rel='icon' href='/static/images/favicon.png' />
+</head>
+
+<body>
+<center>
+	<p>Age: {{ age }}</p>
+	<p>Heart Rate: {{ heart_rate }}</p>
+	<p>Weight: {{ weight }}</p>
+	<p>BMI: {{ bmi }}</p>
+
+	{% for segment in location %}
+		<div class='segment {{ segment.type }} {{ segment.data }}' style='width: {{ segment.time }}px'>
+			{% if segment.type == 'location' %}
+				<p>{{ segment.data }}</p>
+			{% endif %}
+		</div>
+	{% endfor %}
+</center>
+</body>
+</html>

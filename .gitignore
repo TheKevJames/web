@@ -55,3 +55,4 @@ docs/_build/
 # Project specific
 web/secret.py
 .sass-cache
+*.css.map

@@ -18,12 +18,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '.thekev.in', '.thekev.in.', 'thekev.in']
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    '127.0.0.1',
+    '.thekev.in',
+    '.thekev.in.',
+    'thekev.in'
+]
 
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'hexclock',
     'webhome',
+    'tracking',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -42,17 +49,19 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = False
 USE_L10N = False
-USE_TZ = False
+USE_TZ = True
 
 STATIC_ROOT = '/home3/thekevi4/public_html/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'hexclock', 'static'),
+    os.path.join(BASE_DIR, 'tracking', 'static'),
     os.path.join(BASE_DIR, 'webhome', 'static'),
 )
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'static', 'templates'),
     os.path.join(BASE_DIR, 'hexclock', 'static', 'templates'),
+    os.path.join(BASE_DIR, 'tracking', 'static', 'templates'),
     os.path.join(BASE_DIR, 'webhome', 'static', 'templates'),
 )

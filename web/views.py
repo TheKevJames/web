@@ -1,4 +1,5 @@
 from os.path import isfile
+from random import sample
 
 from django.core.context_processors import csrf
 from django.shortcuts import render_to_response
@@ -6,8 +7,19 @@ from django.shortcuts import render_to_response
 # import vanity
 
 
+QUOTES = {
+    '"Life is about kicking ass, not kissing it."',
+    '"Live forever or die trying."',
+    '"Tail Recursion is its own reward."'
+}
+
 def home(request):
-    return render_to_response("index.html", csrf(request))
+    resp = csrf(request)
+
+    quote = sample(QUOTES, 1)[0]
+    resp.update({'quote': quote})
+
+    return render_to_response("index.html", resp)
 
 def projects(request):
     resp = csrf(request)

@@ -1,22 +1,31 @@
+import os
+
 try:
     # pylint: disable=unused-import
-    from web.secret import DATABASES, SECRET_KEY
+    from web.secret import (
+        ADMINS, MANAGERS,
+        DATABASES,
+        SECRET_KEY,
+        DEFAULT_FROM_EMAIL, SERVER_EMAIL,
+        EMAIL_HOST, EMAIL_PORT,
+        EMAIL_HOST_USER, EMAIL_HOST_PASSWORD,
+        EMAIL_USE_SSL, EMAIL_USE_TLS,
+    )
 except ImportError:
-    SECRET_KEY = 'ThisKeyIsPubliclyViewableDoNotUseIt'
-
-    from os.path import dirname, join
-
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': join(dirname(__file__), 'db.sqlite3'),
+            'NAME': os.path.join(os.path.dirname(__file__), 'db.sqlite3'),
         }
     }
 
-import os
+    SECRET_KEY = 'ThisKeyIsPubliclyViewableDoNotUseIt'
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ENVIRONMENT = 'development'
+
+STATIC_ROOT = '/www/public_html/static/'
 
 DEBUG = True
 TEMPLATE_DEBUG = False
@@ -32,17 +41,15 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'hexclock',
-    'webhome',
     'tracking',
+    'webhome',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'web.urls'
@@ -54,7 +61,6 @@ USE_I18N = False
 USE_L10N = False
 USE_TZ = True
 
-STATIC_ROOT = '/home3/thekevi4/public_html/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),

@@ -11,11 +11,6 @@ from webhome.views import webhome
 urlpatterns = patterns(
     '',
     (
-        r'^favicon\.ico$',
-        'django.views.generic.simple.redirect_to',
-        {'url': '/static/images/favicon.ico'}
-    ),
-    (
         r'^robots\.txt$',
         TemplateView.as_view(
             template_name='robots.txt',

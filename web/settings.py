@@ -1,4 +1,5 @@
 try:
+    # pylint: disable=unused-import
     from web.secret import DATABASES, SECRET_KEY
 except ImportError:
     SECRET_KEY = 'ThisKeyIsPubliclyViewableDoNotUseIt'
@@ -14,6 +15,8 @@ except ImportError:
 
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+ENVIRONMENT = 'development'
 
 DEBUG = True
 TEMPLATE_DEBUG = False

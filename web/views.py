@@ -56,12 +56,16 @@ def projects(request):
 def resource(request):
     resp = csrf(request)
 
-    filename = request.GET.keys()[0]
+    params = request.GET.keys()
+    if not params:
+        return home(request)
+
+    filename = params[0]
     resp.update({'load': filename})
     if isfile('static/resources/' + filename):
         resp.update({'type': filename[-3:]})
     else:
-        resp.update({'type': 'other'})
+        resp.update({'type': 'foreign_' + filename[-3:]})
 
     return render_to_response("resource.html", resp)
 

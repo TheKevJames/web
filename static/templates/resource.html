@@ -19,9 +19,16 @@
 		{% if type == 'pdf' %}
 			<iframe src='/static/resources/{{ load }}' style='width:100%; max-width:850px; height:95%; padding:1%;'>
 		{% elif type == 'png' %}
-			<div style='height:95%; width:80%; margin-left:10%; margin-right:10%; padding:1%; overflow-x:scroll; overflow-y:hidden;'><img src='/static/resources/{{ load }}' alt='{{ load }}' style='height:100%;' /><div>
-		{% else %}
-			<p>ERROR: could not load resource.</p>
+			<div style='height:95%; width:80%; margin-left:10%; margin-right:10%; padding:1%; overflow-x:scroll; overflow-y:hidden;'>
+				<img src='/static/resources/{{ load }}' alt='{{ load }}' style='height:100%;' />
+			<div>
+		{% elif type == 'foreign_pdf' %}
+			<iframe src='http://docs.google.com/viewer?url=https://github.com/TheKevJames/notes/raw/master/{{ load }}&embedded=true' style='width:100%; max-width:850px; height:95%; padding:1%;'>
+			}
+		{% elif type == 'foreign_png' %}
+			<div style='height:95%; width:80%; margin-left:10%; margin-right:10%; padding:1%; overflow-x:scroll; overflow-y:hidden;'>
+				<img src='https://github.com/TheKevJames/notes/raw/master/{{ load }}' alt='{{ load }}' style='height:100%;' />
+			<div>
 		{% endif %}
 	</content>
 

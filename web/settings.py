@@ -2,7 +2,7 @@ import os
 
 try:
     # pylint: disable=unused-import
-    from web.secret import (
+    from .secret import (
         ADMINS, MANAGERS,
         DATABASES,
         SECRET_KEY,

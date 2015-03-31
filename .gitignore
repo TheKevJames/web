@@ -53,6 +53,7 @@ coverage.xml
 docs/_build/
 
 # Project specific
+tracking/secret.py
 web/secret.py
 .sass-cache
 *.css.map

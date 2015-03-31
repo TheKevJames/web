@@ -5,6 +5,7 @@ try:
     from .secret import (
         ADMINS, MANAGERS,
         DATABASES,
+        NEW_RELIC_LICENSE_KEY,
         SECRET_KEY,
         DEFAULT_FROM_EMAIL, SERVER_EMAIL,
         EMAIL_HOST, EMAIL_PORT,
@@ -20,6 +21,8 @@ except ImportError:
     }
 
     SECRET_KEY = 'ThisKeyIsPubliclyViewableDoNotUseIt'
+
+    NEW_RELIC_LICENSE_KEY = 'CouldNotLoadNewRelicKey'
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 

@@ -29,14 +29,14 @@ def projects(request):
     def update_vanity_data():
         almostempty = vanity.downloads_total('almost-empty', False)
         update(
-            'web/vanity_data',
+            'web/vanity_data.py',
             'VANITY_ALMOSTEMPTY',
             'VANITY_ALMOSTEMPTY = ' + str(almostempty)
         )
 
         packtex = vanity.downloads_total('packtex', False)
         update(
-            'web/vanity_data',
+            'web/vanity_data.py',
             'VANITY_PACKTEX',
             'VANITY_PACKTEX = ' + str(packtex)
         )

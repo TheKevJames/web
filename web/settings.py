@@ -4,7 +4,6 @@ try:
     # pylint: disable=unused-import
     from .secret import (
         ADMINS, MANAGERS,
-        DATABASES,
         NEW_RELIC_LICENSE_KEY,
         SECRET_KEY,
         DEFAULT_FROM_EMAIL, SERVER_EMAIL,
@@ -13,16 +12,9 @@ try:
         EMAIL_USE_SSL, EMAIL_USE_TLS,
     )
 except ImportError:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(os.path.dirname(__file__), 'db.sqlite3'),
-        }
-    }
-
+    NEW_RELIC_LICENSE_KEY = 'CouldNotLoadNewRelicKey'
     SECRET_KEY = 'ThisKeyIsPubliclyViewableDoNotUseIt'
 
-    NEW_RELIC_LICENSE_KEY = 'CouldNotLoadNewRelicKey'
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 

@@ -1,7 +1,7 @@
-Django==1.7.7
+Django==1.8
 lxml==3.4.2
 MySQL-python==1.2.5
-newrelic==2.48.0.38
+newrelic==2.50.0.39
 python-dateutil==2.4.2
 requests==2.6.0
 six==1.9.0

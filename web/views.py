@@ -12,9 +12,12 @@ from .vanity_data import VANITY_ALMOSTEMPTY, VANITY_PACKTEX
 
 
 QUOTES = {
+    '"Be better than you were yesterday."',
+    '"Failure is not an option. It\'s bundled with your software."',
     '"Life is about kicking ass, not kissing it."',
     '"Live forever or die trying."',
     '"Tail Recursion is its own reward."',
+    '"Treat each day as your last; one day you\'ll be right."',
 }
 
 def home(request):
@@ -23,7 +26,7 @@ def home(request):
     quote = sample(QUOTES, 1)[0]
     resp.update({'quote': quote})
 
-    return render_to_response("index.html", resp)
+    return render_to_response('index.html', resp)
 
 def projects(request):
     def update_vanity_data():
@@ -51,7 +54,7 @@ def projects(request):
     resp.update({'almostempty': VANITY_ALMOSTEMPTY})
     resp.update({'packtex': VANITY_PACKTEX})
 
-    return render_to_response("projects.html", resp)
+    return render_to_response('projects.html', resp)
 
 def resource(request):
     resp = csrf(request)
@@ -67,7 +70,14 @@ def resource(request):
     else:
         resp.update({'type': 'foreign_' + filename[-3:]})
 
-    return render_to_response("resource.html", resp)
+    return render_to_response('resource.html', resp)
+
+def robots(request):
+    return render_to_response(
+        'robots.txt',
+        csrf(request),
+        content_type='text/plain'
+    )
 
 def timeline(request):
-    return render_to_response("timeline.html", csrf(request))
+    return render_to_response('timeline.html', csrf(request))

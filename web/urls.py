@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, url
-from django.views.generic.base import RedirectView
 
 from .views import home, projects, resource, robots, timeline
 from hexclock.views import hexclock
@@ -29,9 +28,6 @@ urlpatterns = patterns(
     # webhome
     url(r'^webhome$', webhome),
 
-    # old links
-    url(
-        r'^blog/2010/11/new-tsa-motto/$',
-        RedirectView.as_view(url='/', permanent=True)
-    ),
+    # everything else
+    url(r'^.*$', home),
 )

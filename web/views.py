@@ -18,6 +18,7 @@ QUOTES = {
     '"Live forever or die trying."',
     '"Tail Recursion is its own reward."',
     '"Treat each day as your last; one day you\'ll be right."',
+    '"The master has failed more times than the beginner has even tried."',
 }
 
 def home(request):

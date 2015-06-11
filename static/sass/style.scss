@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'Fjalla One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fjalla One'), local('FjallaOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/fjallaone/v2/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+    font-family: 'Cantarell';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cantarell Regular'), local('Cantarell-Regular'), url(http://themes.googleusercontent.com/static/fonts/cantarell/v4/V86VyqXbc09Sss3BPsMj1z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin boxsizing($args) {
+    -webkit-box-sizing: $args;
+    -moz-box-sizing: $args;
+    box-sizing: $args;
+}
+
+$color-bg: #DFE2DB;
+$color-offbg: #B2B5AF;
+$color-dark: darken($color-offbg, 20%);
+$color-black: #191919;
+$color-font: $color-black;
+
+$color-accent: #4978a2;
+$color-accent-sec: darken(#8aad92, 10%);
+
+.font-header {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 43px;
+    line-height: 46px;
+    color: $color-font;
+    // margin: 0 0 3px 0;
+}
+.font-subheader {
+    font-family: 'Cantarell', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0 0 23px 0;
+    color: $color-font;
+}
+.font-body {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 17px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    color: $color-font;
+}
+
+body {
+    background-color: $color-bg;
+
+    overflow-x: hidden;
+}
+
+#line {
+    position: absolute;
+    top: 0;
+
+    height: 2px;
+    width: 100%;
+
+    z-index: 99;
+
+    background-color: $color-accent;
+}
+
+#headline {
+    margin: 50px 50px 0 50px;
+
+    #symbol {
+        padding: 0;
+        border: 1px solid $color-black;
+
+        margin-bottom: 20px;
+
+        min-height: 180px;
+        min-width: 180px;
+        max-height: 240px;
+        max-width: 240px;
+    }
+
+    #bio {
+        #name {
+            @extend .font-header;
+
+            font-size: 57px;
+            line-height: 60px;
+            color: $color-font;
+            cursor: default;
+
+            padding-top: 50px;
+        }
+
+        #quote {
+            @extend .font-subheader;
+
+            line-height: 30px;
+            color: $color-accent;
+            cursor: default;
+
+            padding-top: 10px;
+        }
+    }
+
+    #map-container {
+        height: 250px;
+        float: right;
+
+        margin-bottom: 20px;
+        padding: 0;
+
+        border: 1px solid $color-black;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .marker-container {
+            .marker {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                margin-top: -25px;
+
+                .icon {
+                    width: 48px;
+                    height: 48px;
+                    margin-left: -24px;
+
+                    z-index: 3;
+
+                    border: 1px solid $color-accent;
+                    border-radius: 50%;
+                    background-image: url("../img/icon.jpg");
+                    background-size: 100% 100%;
+                }
+
+                .label {
+                    display: block;
+                    padding: 4px 20px;
+                    margin-top: 10px;
+
+                    background-color: $color-bg;
+                    border: 1px solid $color-black;
+
+                    color: $color-black;
+
+                    .last-spotted {
+                        @extend .font-body;
+
+                        font-size: 9px;
+                        line-height: 15px;
+                        text-transform: uppercase;
+
+                        margin: 0;
+                    }
+
+                    .location {
+                        @extend .font-body;
+
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: bold;
+
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#social {
+    margin: 0 50px 30px 50px;
+    @media (min-width: 768px) {
+        padding-top: 20px;
+    }
+
+    img {
+        min-height: 48px;
+        min-width: 48px;
+        max-height: 64px;
+        max-width: 64px;
+        height: 18%;
+        width: 18%;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+#content {
+    div {
+        h2 {
+            @extend .font-subheader;
+
+            text-align: center;
+        }
+    }
+}
+
+.list {
+    width: 100%;
+
+    div {
+        // height: 200px;
+        width: 90%;
+        background-color: $color-offbg;
+        margin: 10px 5% 20px 5%;
+
+        h3 {
+            @extend .font-header;
+
+            text-transform: none;
+
+            padding: 5px;
+            text-align: center;
+            background-color: $color-dark;
+        }
+
+        p {
+            @extend .font-subheader;
+
+            text-transform: none;
+            padding: 5px;
+
+            &.description {
+                text-align: center;
+            }
+
+            &.title {
+                margin-bottom: 0;
+            }
+        }
+
+        .live, .code, .read-more {
+            @extend .font-subheader;
+            @include boxsizing(border-box);
+
+            display: block;
+            padding: 5px;
+            margin: 0;
+
+            width: 100%;
+
+            color: white;
+            text-decoration: none;
+            text-align: center;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        .live {
+            background-color: $color-accent;
+        }
+
+        .code {
+            background-color: $color-accent-sec;
+        }
+
+        .read-more {
+            background-color: $color-black;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 80%;
+    }
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.job-title {
+    @extend .font-header;
+}
+
+.job-review {
+    p {
+        @extend .font-body;
+    }
+
+    img {
+        width: 100%;
+    }
+}

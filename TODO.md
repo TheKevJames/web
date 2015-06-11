@@ -1,5 +1,0 @@
-TODO
-====
-
-* Redesign
-* Deployment Strategy

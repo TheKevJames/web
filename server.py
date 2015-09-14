@@ -9,10 +9,10 @@ from flask import Flask, redirect, url_for
 
 
 # pylint: disable=C0301
-MOVES_ACCESS_TOKEN = '9tXcrsYuvn74nst27GobrJ_uvj1YYMJ9dfLaB0Y7vg919pOC51aiS3WE3NVFBdqU'
-MOVES_CLIENT_ID = 'XYet1ivrVF9gn2it0yV8zOTWL9ADJ38p'
-MOVES_CLIENT_SECRET = 'Q24PXPcprhURQU8Io_BU9k9xc2hn9VQUVt_epyDFuAT55rc2YE86n20kE0TLXR3Q'
-MOVES_REFRESH_TOKEN = 'WlxZ0vW4w8sJqcmEFduxoh2ghDICQEoQ3igm8LrwE085M551ud3RvEkeCczE9Hc9'
+MOVES_ACCESS_TOKEN = 'sxffDTAVHe8rLyrpFE5538eM9Bz6pIEsuu2TWCzkPPnp005apG6xOS276L_SMi1b'
+MOVES_CLIENT_ID = 'ClTm26kPswAbYVbCXNb7UGeMm08qfT7K'
+MOVES_CLIENT_SECRET = 'n46lWtEd2ZQUEcl4J74YoXj7Fpfew5506E4X_A0oF4if9UE2P2fgiV5xu0oubTw5'
+MOVES_REFRESH_TOKEN = 'i2WK7WEB0iHJUPC66DOLz2Av0m3Sp7uiS13436p2hUx5Qy3Mmduz2wCe25WN73Cm'
 
 
 def refresh():
@@ -26,10 +26,10 @@ def refresh():
     response = requests.post(url, data)
 
     access_token = response.json()['access_token']
-    print('New access token: %s' % access_token, file=sys.stderr)
+    print('New Moves access token: %s' % access_token, file=sys.stderr)
 
     refresh_token = response.json()['refresh_token']
-    print('New refresh_token token: %s' % refresh_token, file=sys.stderr)
+    print('New Moves refresh_token token: %s' % refresh_token, file=sys.stderr)
 
     return access_token
 

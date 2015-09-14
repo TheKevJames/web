@@ -58,7 +58,7 @@ def moves_api():
 
         response = requests.get(url(new_token))
 
-    location_data = response.json()[0]['segments'][0]['place']
+    location_data = response.json()[-1]['segments'][-1]['place']
     return json.dumps({
         'lat': location_data['location']['lat'],
         'lng': location_data['location']['lon'],

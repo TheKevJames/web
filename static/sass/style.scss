@@ -1,8 +1,9 @@
 @font-face {
-    font-family: 'Fjalla One';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Fjalla One'), local('FjallaOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/fjallaone/v2/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
     font-family: 'Cantarell';
@@ -25,23 +26,21 @@
     box-sizing: $args;
 }
 
-$color-bg: #DFE2DB;
-$color-offbg: #B2B5AF;
-$color-dark: darken($color-offbg, 20%);
 $color-black: #191919;
-$color-font: $color-black;
+$color-gray: lighten($color-black, 35%);
+$color-white-transparent: rgba(255, 255, 255, 0.8);
 
-$color-accent: #4978a2;
-$color-accent-sec: darken(#8aad92, 10%);
+$color-accent-primary-nofade: #4978a2;
+$color-accent-primary: lighten($color-accent-primary-nofade, 25%);
+$color-accent-secondary: darken(#8aad92, 5%);
 
 .font-header {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 43px;
-    line-height: 46px;
-    color: $color-font;
-    // margin: 0 0 3px 0;
+    font-size: 28px;
+    line-height: 40px;
+    color: $color-black;
 }
 .font-subheader {
     font-family: 'Cantarell', sans-serif;
@@ -50,20 +49,17 @@ $color-accent-sec: darken(#8aad92, 10%);
     line-height: 30px;
     text-transform: uppercase;
     letter-spacing: -1px;
-    margin: 0 0 23px 0;
-    color: $color-font;
+    color: $color-black;
 }
 .font-body {
     font-family: 'Cantarell', sans-serif;
     font-size: 17px;
     line-height: 23px;
     margin: 0 0 23px 0;
-    color: $color-font;
+    color: $color-black;
 }
 
 body {
-    background-color: $color-bg;
-
     overflow-x: hidden;
 }
 
@@ -76,7 +72,7 @@ body {
 
     z-index: 99;
 
-    background-color: $color-accent;
+    background-color: $color-accent-primary;
 }
 
 #headline {
@@ -84,7 +80,6 @@ body {
 
     #symbol {
         padding: 0;
-        border: 1px solid $color-black;
 
         margin-bottom: 20px;
 
@@ -100,7 +95,7 @@ body {
 
             font-size: 57px;
             line-height: 60px;
-            color: $color-font;
+            color: $color-black;
             cursor: default;
 
             padding-top: 50px;
@@ -110,7 +105,7 @@ body {
             @extend .font-subheader;
 
             line-height: 30px;
-            color: $color-accent;
+            color: $color-accent-primary-nofade;
             cursor: default;
 
             padding-top: 10px;
@@ -146,7 +141,7 @@ body {
 
                     z-index: 3;
 
-                    border: 1px solid $color-accent;
+                    border: 1px solid $color-accent-primary;
                     border-radius: 50%;
                     background-image: url("../img/icon.jpg");
                     background-size: 100% 100%;
@@ -157,8 +152,8 @@ body {
                     padding: 4px 20px;
                     margin-top: 10px;
 
-                    background-color: $color-bg;
-                    border: 1px solid $color-black;
+                    background-color: $color-white-transparent;
+                    border-radius: 4px;
 
                     color: $color-black;
 
@@ -188,21 +183,37 @@ body {
 }
 
 #social {
-    margin: 0 50px 30px 50px;
+    text-align: right;
+    margin: 0 50px 40px 50px;
     @media (min-width: 768px) {
         padding-top: 20px;
     }
 
-    img {
-        min-height: 48px;
-        min-width: 48px;
-        max-height: 64px;
-        max-width: 64px;
-        height: 18%;
-        width: 18%;
+    i {
+        font-size: 72px;
+        color: black;
+        height: 62px;
+        width: 62px;
+        vertical-align: middle;
+        line-height: 0.88;
+        border-radius: 16px;
 
-        &:hover {
-            opacity: 0.9;
+        margin-left: 15.5px;
+
+        &.fa-facebook-square:hover {
+            background-color: #3b5998;
+        }
+        &.fa-twitter-square:hover {
+            background-color: #55acee;
+        }
+        &.fa-github-square:hover {
+            background-color: #999999;
+        }
+        &.fa-linkedin-square:hover {
+            background-color: #0077b5;
+        }
+        &.fa-envelope-square:hover {
+            background-color: #db4437;
         }
     }
 }
@@ -221,10 +232,11 @@ body {
     width: 100%;
 
     div {
-        // height: 200px;
         width: 90%;
-        background-color: $color-offbg;
         margin: 10px 5% 20px 5%;
+
+        border: 1px $color-gray solid;
+        border-radius: 4px;
 
         h3 {
             @extend .font-header;
@@ -233,7 +245,6 @@ body {
 
             padding: 5px;
             text-align: center;
-            background-color: $color-dark;
         }
 
         p {
@@ -242,7 +253,11 @@ body {
             text-transform: none;
             padding: 5px;
 
-            &.description {
+            &.overview {
+                display:none;
+            }
+
+            &.description, &.title {
                 text-align: center;
             }
 
@@ -271,15 +286,19 @@ body {
         }
 
         .live {
-            background-color: $color-accent;
+            background-color: $color-accent-primary;
         }
 
         .code {
-            background-color: $color-accent-sec;
+            background-color: $color-accent-secondary;
         }
 
         .read-more {
-            background-color: $color-black;
+            background-color: $color-gray;
+        }
+
+        :last-child {
+            border-radius: 0 0 4px 4px;
         }
     }
 }
@@ -291,7 +310,7 @@ body {
 }
 
 .modal-content {
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 .job-title {

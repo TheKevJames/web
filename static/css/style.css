@@ -1,8 +1,15 @@
 @font-face {
-  font-family: 'Fjalla One';
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@font-face {
+  font-family: 'Questrial';
   font-style: normal;
   font-weight: 400;
-  src: local("Fjalla One"), local("FjallaOne-Regular"), url(http://themes.googleusercontent.com/static/fonts/fjallaone/v2/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff) format("woff"); }
+  src: local("Questrial"), local("Questrial-Regular"), url(https://fonts.gstatic.com/s/questrial/v6/MYWJ4lYm5dbZ1UBuYox79FtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 @font-face {
   font-family: 'Cantarell';
   font-style: normal;
@@ -14,11 +21,11 @@
   clear: both; }
 
 .font-header, #headline #bio #name, .list div h3, .job-title {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 43px;
-  line-height: 46px;
+  font-size: 28px;
+  line-height: 40px;
   color: #191919; }
 
 .font-subheader, #headline #bio #quote, #content div h2, .list div p, .list div .live, .list div .code, .list div .read-more {
@@ -28,7 +35,6 @@
   line-height: 30px;
   text-transform: uppercase;
   letter-spacing: -1px;
-  margin: 0 0 23px 0;
   color: #191919; }
 
 .font-body, #headline #map-container .marker-container .marker .label .last-spotted, #headline #map-container .marker-container .marker .label .location, .job-review p {
@@ -39,7 +45,6 @@
   color: #191919; }
 
 body {
-  background-color: #dfe2db;
   overflow-x: hidden; }
 
 #line {
@@ -48,13 +53,12 @@ body {
   height: 2px;
   width: 100%;
   z-index: 99;
-  background-color: #4978a2; }
+  background-color: #99b7d1; }
 
 #headline {
   margin: 50px 50px 0 50px; }
   #headline #symbol {
     padding: 0;
-    border: 1px solid #191919;
     margin-bottom: 20px;
     min-height: 180px;
     min-width: 180px;
@@ -90,7 +94,7 @@ body {
         height: 48px;
         margin-left: -24px;
         z-index: 3;
-        border: 1px solid #4978a2;
+        border: 1px solid #99b7d1;
         border-radius: 50%;
         background-image: url("../img/icon.jpg");
         background-size: 100% 100%; }
@@ -98,8 +102,8 @@ body {
         display: block;
         padding: 4px 20px;
         margin-top: 10px;
-        background-color: #dfe2db;
-        border: 1px solid #191919;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
         color: #191919; }
         #headline #map-container .marker-container .marker .label .last-spotted {
           font-size: 9px;
@@ -113,19 +117,30 @@ body {
           margin: 0; }
 
 #social {
-  margin: 0 50px 30px 50px; }
+  text-align: right;
+  margin: 0 50px 40px 50px; }
   @media (min-width: 768px) {
     #social {
       padding-top: 20px; } }
-  #social img {
-    min-height: 48px;
-    min-width: 48px;
-    max-height: 64px;
-    max-width: 64px;
-    height: 18%;
-    width: 18%; }
-    #social img:hover {
-      opacity: 0.9; }
+  #social i {
+    font-size: 72px;
+    color: black;
+    height: 62px;
+    width: 62px;
+    vertical-align: middle;
+    line-height: 0.88;
+    border-radius: 16px;
+    margin-left: 15.5px; }
+    #social i.fa-facebook-square:hover {
+      background-color: #3b5998; }
+    #social i.fa-twitter-square:hover {
+      background-color: #55acee; }
+    #social i.fa-github-square:hover {
+      background-color: #999999; }
+    #social i.fa-linkedin-square:hover {
+      background-color: #0077b5; }
+    #social i.fa-envelope-square:hover {
+      background-color: #db4437; }
 
 #content div h2 {
   text-align: center; }
@@ -134,17 +149,19 @@ body {
   width: 100%; }
   .list div {
     width: 90%;
-    background-color: #b2b5af;
-    margin: 10px 5% 20px 5%; }
+    margin: 10px 5% 20px 5%;
+    border: 1px #727272 solid;
+    border-radius: 4px; }
     .list div h3 {
       text-transform: none;
       padding: 5px;
-      text-align: center;
-      background-color: #7f847a; }
+      text-align: center; }
     .list div p {
       text-transform: none;
       padding: 5px; }
-      .list div p.description {
+      .list div p.overview {
+        display: none; }
+      .list div p.description, .list div p.title {
         text-align: center; }
       .list div p.title {
         margin-bottom: 0; }
@@ -162,17 +179,19 @@ body {
       .list div .live:hover, .list div .code:hover, .list div .read-more:hover {
         opacity: 0.9; }
     .list div .live {
-      background-color: #4978a2; }
+      background-color: #99b7d1; }
     .list div .code {
-      background-color: #6c9876; }
+      background-color: #7ba284; }
     .list div .read-more {
-      background-color: #191919; }
+      background-color: #727272; }
+    .list div :last-child {
+      border-radius: 0 0 4px 4px; }
 
 @media (min-width: 768px) {
   .modal-dialog {
     width: 80%; } }
 .modal-content {
-  border-radius: 0px; }
+  border-radius: 4px; }
 
 .job-review img {
   width: 100%; }

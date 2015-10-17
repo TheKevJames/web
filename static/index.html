@@ -164,6 +164,11 @@
             <h2>Other Stuff</h2>
 
             <div class='list'>
+                <div id='jarvis'>
+                    <h3>Jarvis</h3>
+                    <a class='read-more' href='#' data-toggle='modal' data-target='#jarvisModal'>Read More</a>
+                    <a class='code' href='https://github.com/TheKevJames/jarvis'>Github</a>
+                </div>
                 <div id='cv'>
                     <h3>CV / R&eacute;sum&eacute;</h3>
                     <a class='live' href='resource/cv.pdf'>Available Here</a>
@@ -255,6 +260,26 @@
       </div>
     </div>
 
+    <div id='jarvisModal' class='modal' role='dialog'>
+      <div class='modal-dialog'>
+        <div class='modal-content'>
+          <div class='modal-header job-title'>
+            <h1 class='modal-title'>Jarvis</h1>
+          </div>
+          <div class='modal-body job-review'>
+            <p>At some point, I plan to blog about my experiences setting up my home server, as well as managing the deployments of all of my other apps. That'll come later; for now, I'd like to introduce you to J.A.R.V.I.S., or Jarvis for short, a slack-bot which does far too much.</p>
+            <p>Jarvis is an app similar to <a href='https://hubot.github.com/'>Hubot</a>. What's the difference? Well... Jarvis is written in Python. That's pretty much it, theoretically every Jarvis plugin could be written as a hubot extension, but then I'd have to write CoffeeScript and... ugh. That said, Hubot was the original inspiration for Jarvis; one of the companies at which I've worked had Hubot set up as an automated deploy-bot and that got me thinking about all the cool things I could do with a similar chat-bot. Shortly thereafter, me and my friends started using <a href='https://slack.com/'>Slack</a> for chatting and the rest is history.</p>
+            <p>A bit of background about my house / roommates; we're all programmers and we've been living together for a couple years now. Understandably, our house looks like what you'd expect: we have a couple different sound systems set up, a projector in our basement / home theatre, ethernet wires running literally all across our house, and so on. Don't get me wrong, this is awesome, but the fact that we originally had to manually turn the media centres off and on? Not OK. Clearly something had to be done.</p>
+            <p>Enter Jarvis. He's a work in progress, but soon he'll be the interface for our entire house. Feeling like listening to music? Jarvis works as well as Spotify. Want to download a movie? Jarvis will store it on the Stark Industries' Central Database (not really). Maybe you just want to know the weather? Jarvis knows the surf conditions.</p>
+            <p>Programmatically, keeping Jarvis simple was important. At startup, he simply scans through his plugins directory and "installs" them. The plugins read in any command we send to Jarvis over Slack, do whatever they need to, and (optionally) write any output back to the channel the command originated from. There's a couple requirements for plugins (they must have an "outputs" list, their entry must be a "process_MESSAGETYPE" function), but -- so long as those couple rules are followed -- everything should "just work".</p>
+            <p>Architecturally, Jarvis integrates perfectly with my <a href='https://github.com/TheKevJames/dotfiles'>PuppetFiles</a>, which I use to manage any computer I touch (my laptop, my work computer, my servers, etc). In fact, all you need to do to install jarvis is to run puppet manifest on a node configured to "include slack::jarvis". More about these manifests and how they effectively manage everything will be posted eventually.</p>
+            <p><strike>Interfaceially</strike> Of or pertaining to the interface, Jarvis is meant to be straightforward to use. If you tell Jarvis to "describe himself", he should do exactly that. If you tell him that "Jim sent $12 to Bob", he should remember that and make sure Bob knows he's in debt. Clearly, this is a far-reaching goal, but they did it in Iron Man so there should be no reason why I can't do it with Jarvis... right, guys? Guys? ...getting Jarvis to react to natural language is probably a pipe dream; I have nowhere near enough experience with NLP to build that. On that note, though...</p>
+            <p>If you want to check out Jarvis or -- hint, hint -- contribute to his skillset, you can find him <a href='https://github.com/TheKevJames/jarvis'>on my Github</a>. As with any and all of my projects, I'm always happy to see contributions. Hope to see you there!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id='coursechartModal' class='modal' role='dialog'>
       <div class='modal-dialog'>
         <div class='modal-content'>
@@ -296,8 +321,13 @@ setInterval(function() {
         .style('opacity', 1);
 }, 1000 * 10);
 </script>
+
 <script src='js/jquery-2.1.4.min.js'></script>
 <script src='js/bootstrap-3.3.4.min.js'></script>
+<script>
+$(window.location.hash).modal();
+</script>
+
 <script src='js/map.js'></script>
 </body>
 </html>

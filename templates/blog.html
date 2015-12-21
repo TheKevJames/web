@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+
+    <div class='container-fluid' id='content'>
+        <div class='col-lg-8 col-md-8 col-sm-12 col-xs-12' id='blog-recent'>
+            <h2>Recent Posts</h2>
+
+            <div class='list'>
+            {% for post in posts[:4] %}
+                <div id='post-{{ post.path }}'>
+                    <h3>{{ post.title }}</h3>
+                    <p class='date'>{{ post.date }}</p>
+                    <a class='live' href="{{ url_for('post_page', name=post.path.replace('pages/', '')) }}">View</a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+
+        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12' id='blog-entries'>
+            <h2>All Posts</h2>
+
+            <ul class='list'>
+            {% for year, grouped in indexed.iteritems() %}
+                <li>{{ year }}</li>
+                <ul>
+                {% for post in grouped %}
+                    <li>
+                        <a href="{{ url_for('post_page', name=post.path.replace('pages/', '')) }}">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

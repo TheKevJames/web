@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang='en'>
+<head>
+{% block head %}
+    <meta charset='utf-8'>
+    <meta name='author' content='Kevin James'>
+    <meta name='description' content='Homepage of Kevin James | Almost-Software-Engineer @uWaterloo; former @AtomicLabs, @Oracle, @WriberInc, and @Enflick Intern; Coder; Investor; Musician; Writer'>
+    <meta name='keywords' content='Kevin,James'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>{% block title %}{% endblock %} | Kevin James</title>
+
+    <link rel='stylesheet' href='/css/bootstrap-3.3.4.min.css' />
+    <link rel='stylesheet' href='/css/reset.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+
+    <link rel='icon' href='/img/favicon.png' />
+{% endblock %}
+</head>
+
+<body>
+{% block body %}
+    <div id='line'></div>
+
+    <nav>
+        <div>
+            <a href="{{ url_for('index') }}">Home</a>
+        </div>
+        <div>
+            <a href="{{ url_for('blog') }}">Blog</a>
+        </div>
+        <div>
+            <a href="{{ url_for('projects') }}">Projects</a>
+        </div>
+
+        <div id='cv'>
+            <a href='/resource/cv.pdf'>R&eacute;sum&eacute;</a>
+        </div>
+    </nav>
+{% endblock %}
+
+<script src='/js/jquery-2.1.4.min.js'></script>
+<script src='/js/bootstrap-3.3.4.min.js'></script>
+{% block js %}{% endblock %}
+
+</body>
+</html>

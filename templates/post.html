@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+
+    <div class='container-fluid' id='content'>
+        <div class='col-lg-9 col-md-9 col-sm-12 col-xs-12' id='blog-page'>
+            <h2>{{ post.title }}</h2>
+            <h4>{{ post.date }}</h3>
+
+            {{ post.html|safe }}
+        </div>
+    </div>
+{% endblock %}

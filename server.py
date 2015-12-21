@@ -1,14 +1,19 @@
 #!/usr/bin/env python
 from __future__ import print_function
 
+from collections import deque, OrderedDict
 import json
+import operator
 import os
-import requests
 import sys
 
-from flask import Flask, redirect, url_for
+import requests
+
+from flask import Flask, render_template, url_for
+from flask_flatpages import FlatPages
 
 
+FLATPAGES_EXTENSION = '.md'
 MOVES_URL = 'https://api.moves-app.com'
 
 
@@ -34,15 +39,39 @@ def refresh():
 
 
 app = Flask(__name__, static_url_path='')
+flatpages = FlatPages(app)
+app.config.from_object(__name__)
 
 
 @app.route('/')
 def index():
-    return redirect(url_for('static', filename='index.html'))
+    return render_template('index.html')
+
+@app.route('/blog')
+def blog():
+    posts = [p for p in flatpages]
+    posts.sort(key=operator.itemgetter('date'), reverse=True)
+
+    indexed = OrderedDict()
+    for post in posts:
+        if post['date'].year not in indexed:
+            indexed[post['date'].year] = deque()
+        indexed[post['date'].year].appendleft(post)
+
+    return render_template('blog.html', indexed=indexed, posts=posts)
+
+@app.route('/blog/<name>/')
+def post_page(name):
+    post = flatpages.get_or_404(name)
+    return render_template(url_for('static', filename='post.html'), post=post)
 
 @app.route('/hexclock')
 def hexclock():
-    return redirect(url_for('static', filename='hexclock.html'))
+    return render_template('hexclock.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
 
 @app.route('/moves-api')
 def moves_api():
@@ -67,4 +96,4 @@ def moves_api():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

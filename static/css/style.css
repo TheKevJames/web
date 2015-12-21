@@ -5,12 +5,6 @@
   src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 @font-face {
-  font-family: 'Questrial';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Questrial"), local("Questrial-Regular"), url(https://fonts.gstatic.com/s/questrial/v6/MYWJ4lYm5dbZ1UBuYox79FtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-@font-face {
   font-family: 'Cantarell';
   font-style: normal;
   font-weight: 400;
@@ -28,7 +22,7 @@
   line-height: 40px;
   color: #191919; }
 
-.font-subheader, #headline #bio #quote, #content div h2, .list div p, .list div .live, .list div .code, .list div .read-more {
+.font-subheader, nav div a, #headline #bio #quote, #content div h2, .list div p, .list div .live, .list div .code, .list div .read-more {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -37,12 +31,15 @@
   letter-spacing: -1px;
   color: #191919; }
 
-.font-body, #headline #map-container .marker-container .marker .label .last-spotted, #headline #map-container .marker-container .marker .label .location, .job-review p {
+.font-body, .font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #headline #map-container .marker-container .marker .label .last-spotted, #headline #map-container .marker-container .marker .label .location, #content div h4, #content div p, .job-review p {
   font-family: 'Cantarell', sans-serif;
   font-size: 17px;
   line-height: 23px;
   margin: 0 0 23px 0;
   color: #191919; }
+
+.font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post {
+  margin: 0 0 10px 0 !important; }
 
 body {
   overflow-x: hidden; }
@@ -55,8 +52,31 @@ body {
   z-index: 99;
   background-color: #99b7d1; }
 
+nav {
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 30px;
+  background-color: #7ba284; }
+  nav div {
+    display: inline;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px; }
+    nav div a {
+      line-height: 40px;
+      color: white; }
+      nav div a:hover {
+        text-decoration: none;
+        color: #e6e6e6; }
+    nav div#cv {
+      float: right; }
+
+#spacer {
+  margin-top: 120px; }
+
 #headline {
-  margin: 50px 50px 0 50px; }
+  margin: 0 50px; }
   #headline #symbol {
     padding: 0;
     margin-bottom: 20px;
@@ -117,8 +137,7 @@ body {
           margin: 0; }
 
 #social {
-  text-align: right;
-  margin: 0 50px 40px 50px; }
+  text-align: center; }
   @media (min-width: 768px) {
     #social {
       padding-top: 20px; } }
@@ -144,6 +163,8 @@ body {
 
 #content div h2 {
   text-align: center; }
+#content div h4 {
+  font-style: italic; }
 
 .list {
   width: 100%; }
@@ -161,9 +182,10 @@ body {
       padding: 5px; }
       .list div p.overview {
         display: none; }
-      .list div p.description, .list div p.title {
+      .list div p.description, .list div p.date {
         text-align: center; }
       .list div p.title {
+        text-align: center;
         margin-bottom: 0; }
     .list div .live, .list div .code, .list div .read-more {
       -webkit-box-sizing: border-box;
@@ -187,11 +209,34 @@ body {
     .list div :last-child {
       border-radius: 0 0 4px 4px; }
 
-@media (min-width: 768px) {
-  .modal-dialog {
-    width: 80%; } }
-.modal-content {
-  border-radius: 4px; }
-
 .job-review img {
   width: 100%; }
+
+#blog-entries ul li {
+  margin-bottom: 0 !important;
+  padding: 5px; }
+#blog-entries ul ul {
+  list-style-type: disc;
+  margin-left: 1.6em; }
+  #blog-entries ul ul li {
+    padding: 1px; }
+
+#blog-page {
+  text-align: justify; }
+  #blog-page .next-post {
+    float: right; }
+    #blog-page .next-post:after {
+      content: " \2192"; }
+  #blog-page .prev-post {
+    float: left; }
+    #blog-page .prev-post:before {
+      content: "\2190  "; }
+  #blog-page img {
+    width: 100%;
+    border: 1px solid #191919; }
+
+#personal-projects {
+  margin-top: 20px; }
+  #personal-projects .list div {
+    width: 300px;
+    margin: 0 1.3%; }

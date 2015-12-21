@@ -58,6 +58,10 @@ $color-accent-secondary: darken(#8aad92, 5%);
     margin: 0 0 23px 0;
     color: $color-black;
 }
+.font-single {
+    @extend .font-body;
+    margin: 0 0 10px 0 !important;
+}
 
 body {
     overflow-x: hidden;
@@ -75,8 +79,47 @@ body {
     background-color: $color-accent-primary;
 }
 
+nav {
+    height: 40px;
+    width: 100%;
+
+    padding: 0 10px;
+    margin-bottom: 30px;
+
+    background-color: $color-accent-secondary;
+
+    div {
+        display: inline;
+        height: 40px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+        a {
+            @extend .font-subheader;
+
+            line-height: 40px;
+
+            color: white;
+
+            &:hover {
+                text-decoration: none;
+                color: darken(white, 10%);
+            }
+        }
+
+        &#cv {
+            float: right;
+        }
+    }
+}
+
+#spacer {
+    margin-top: 120px;
+}
+
 #headline {
-    margin: 50px 50px 0 50px;
+    margin: 0 50px;
 
     #symbol {
         padding: 0;
@@ -183,8 +226,7 @@ body {
 }
 
 #social {
-    text-align: right;
-    margin: 0 50px 40px 50px;
+    text-align: center;
     @media (min-width: 768px) {
         padding-top: 20px;
     }
@@ -225,6 +267,13 @@ body {
 
             text-align: center;
         }
+        h4 {
+            @extend .font-body;
+            font-style: italic;
+        }
+        p {
+            @extend .font-body;
+        }
     }
 }
 
@@ -257,11 +306,14 @@ body {
                 display:none;
             }
 
-            &.description, &.title {
+
+            &.description, &.date {
+                @extend .font-single;
                 text-align: center;
             }
 
             &.title {
+                text-align: center;
                 margin-bottom: 0;
             }
         }
@@ -303,16 +355,6 @@ body {
     }
 }
 
-@media (min-width: 768px) {
-    .modal-dialog {
-        width: 80%;
-    }
-}
-
-.modal-content {
-    border-radius: 4px;
-}
-
 .job-title {
     @extend .font-header;
 }
@@ -324,5 +366,62 @@ body {
 
     img {
         width: 100%;
+    }
+}
+
+#blog-entries {
+    ul {
+        li {
+            @extend .font-single;
+            margin-bottom: 0 !important;
+
+            padding: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.6em;
+
+            li {
+                padding: 1px;
+            }
+        }
+    }
+}
+
+#blog-page {
+    .next-post {
+        @extend .font-single;
+        float: right;
+
+        &:after {
+            content: " \2192";
+        }
+    }
+    .prev-post {
+        @extend .font-single;
+        float: left;
+
+        &:before {
+            content: "\2190  ";
+        }
+    }
+
+    text-align: justify;
+
+    img {
+        width: 100%;
+        border: 1px solid $color-black;
+    }
+}
+
+#personal-projects {
+    margin-top: 20px;
+
+    .list {
+        div {
+            width: 300px;
+            margin: 0 1.3%;
+        }
     }
 }

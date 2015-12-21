@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    {{ super() }}
+
+    <script src='/js/mapbox-2.1.9.min.js'></script>
+    <link href='/css/mapbox-2.1.5.min.css' rel='stylesheet' />
+
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+
+    <div class='col-lg-12 col-md-12 col-sm-12 hidden-xs' id='spacer'></div>
+
+    <div id='headline'>
+        <img class='col-lg-3 col-md-3 col-sm-4 hidden-xs' id='symbol' src='img/symbol.png' alt='logo' />
+
+        <div class='col-lg-5 col-md-6 col-sm-8 col-xs-12' id='bio'>
+            <h1 id='name'>Kevin James</h1>
+            <h2 id='quote'></h2>
+        </div>
+
+        <div class='col-lg-4 col-md-3 col-sm-12 col-xs-12' id='map-container'>
+            <div id='map'></div>
+            <div class='marker-container'>
+                <div class='marker'>
+                    <div class='icon'></div>
+                    <div class='label'>
+                        <div class='last-spotted'>Last Spotted At</div>
+                        <div class='location'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='social'>
+        <!-- TODO: fix small screens -->
+        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' id='social-container'>
+            <a href='https://github.com/TheKevJames'>
+                <i class='fa fa-github-square'></i>
+            </a>
+            <a href='http://linkedin.com/in/TheKevJames'>
+                <i class='fa fa-linkedin-square'></i>
+            </a>
+            <a href='https://twitter.com/TheKevJ'>
+                <i class='fa fa-twitter-square'></i>
+            </a>
+            <a href='https://www.facebook.com/TheKevJames'>
+                <i class='fa fa-facebook-square'></i>
+            </a>
+            <a href='&#109;&#097;&#105;&#108;&#116;&#111;:&#075;&#101;&#118;&#105;&#110;&#074;&#097;&#109;&#101;&#115;&#064;&#084;&#104;&#101;&#075;&#101;&#118;&#046;&#105;&#110;'>
+                <i class='fa fa-envelope-square'></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- TODO <div id='online-courses'></div> -->
+    <!-- <div id='certifications'></div> -->
+    <!-- WBI Social Innovator -->
+    <!-- Inaugural Stanford ML -->
+    <!-- Fundamentals of Scala -->
+    <!-- <div id='awards'></div> -->
+    <!-- Software Engineering Entrance Scholarship -->
+    <!-- National AP with Distinction -->
+    <!-- Governer's Honour Roll 2009-2012 -->
+    <!-- Honours highschool graduate -->
+{% endblock %}
+
+{% block js %}
+<script src='/js/d3-3.5.5.min.js'></script>
+<script>
+quotes = [
+    '"Be better than you were yesterday."',
+    '"Failure is not an option. It\'s bundled with your software."',
+    '"Life is about kicking ass, not kissing it."',
+    '"Live forever or die trying."',
+    '"Tail Recursion is its own reward."',
+    '"Treat each day as your last; one day you\'ll be right."',
+    '"The master has failed more times than the beginner has even tried."',
+    '"I\'ve never feared death or dying; I only fear never trying.',
+]
+quote_ptr = -1;
+
+function change_quote() {
+    quote_ptr = (quote_ptr + 1) % quotes.length;
+    d3.select('#quote')
+        .transition()
+        .duration(200)
+        .style('opacity', 0);
+
+    d3.select('#quote')
+        .transition()
+        .duration(200)
+        .text(quotes[quote_ptr])
+        .delay(200)
+        .style('opacity', 1);
+};
+
+change_quote();
+setInterval(change_quote, 1000 * 8);
+</script>
+
+<script src='js/map.js'></script>
+{% endblock %}

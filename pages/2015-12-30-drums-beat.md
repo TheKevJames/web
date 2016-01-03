@@ -6,6 +6,8 @@ has been time-consuming and my hobbies has suffered. That said, it (writing) is
 certainly something I want to get back into. Here's hoping that posting some of
 my previous works will be enough to motivate me.
 
+---
+
 The drums beat.<br>
 Driving us, pushing us,<br>
 The Sun sets behind us.<br>

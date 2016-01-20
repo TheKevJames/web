@@ -240,3 +240,6 @@ nav {
   #personal-projects .list div {
     width: 300px;
     margin: 0 1.3%; }
+
+blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
+  margin-bottom: 0 !important; }

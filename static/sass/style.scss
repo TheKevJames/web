@@ -425,3 +425,7 @@ nav {
         }
     }
 }
+
+blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
+    margin-bottom: 0 !important;
+}

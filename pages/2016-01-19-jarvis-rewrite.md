@@ -26,42 +26,45 @@ the same claim. That's OK, we'll get there.
 
 One of the cool things about treating functions as objects is you can do
 object-ey things with them, for example:
-```python
-def i_am_a_function(arg0, arg1):
-    do_something()
 
-i_am_a_function.is_an_object = 'Absolutely true'
-```
+    #!python
+    def i_am_a_function(arg0, arg1):
+        do_something()
+
+    i_am_a_function.is_an_object = 'Absolutely true'
+
 And given that everything is duck-typed in Python, things like attributes on
 functions can be whatever we want them to be.
 
 _Another_ cool thing we can do with functions, since they're first class, is to
 pass them to each other. In addition to passing them around as normal
 parameters, eg.
-```python
-def bar(fn):
-    fn()
-    print 'bar'
 
-def foo():
-    print 'foo',
+    #!python
+    def bar(fn):
+        fn()
+        print 'bar'
 
-bar(foo)  # prints 'foo bar'
-```
+    def foo():
+        print 'foo',
+
+    bar(foo)  # prints 'foo bar'
+
 Python also allows us to use special
 [decorator](https://wiki.python.org/moin/PythonDecorators) syntax. If we were
 to re-write the previous example with decorators, we'd have:
-```python
-def bar(fn):
-    fn()
-    print 'bar'
 
-@bar
-def foo():
-    print 'foo',
+    #!python
+    def bar(fn):
+        fn()
+        print 'bar'
 
-foo()  # also prints 'foo bar'
-```
+    @bar
+    def foo():
+        print 'foo',
+
+    foo()  # also prints 'foo bar'
+
 There are a few big advantages to this, as I see it. The fact that the caller
 doesn't need to know which functions to chain and in what order is a big one,
 but even more important is that we are beginning to develop a framework for
@@ -70,19 +73,18 @@ doing some very fun things.
 Now, let's put those two tidbits together to come up with something cool.
 Here's a snippet from Jarvis, of the class from which all Plugins inherit.
 
-```python
-class Plugin(object):
-    # snip
+    #!python
+    class Plugin(object):
+        # snip
 
-    @staticmethod
-    def on_message(msg):
-        def on_message_decorator(func):
-            func.regex = re.compile(msg)
-            return func
-        return on_message_decorator
+        @staticmethod
+        def on_message(msg):
+            def on_message_decorator(func):
+                func.regex = re.compile(msg)
+                return func
+            return on_message_decorator
 
-    # snip
-```
+        # snip
 
 See what's going on here? We've defined a function, which takes some parameter
 and returns a different function with an attribute set to the regex compiled
@@ -102,19 +104,20 @@ What does this mean? Well, it means that by subclassing from `type` (the base /
 default metaclass), we can change how classes are instantiated.
 
 In Jarvis, we have
-```python
-class PluginMetaclass(type):
-    def __new__(mcs, name, bases, namespace, **_kwargs):
-        result = type.__new__(mcs, name, bases, dict(namespace))
-        result.response_fns = [fn for fn in sorted(namespace.values())
-                               if hasattr(fn, 'regex')]
-        return result
 
-class Plugin(object):
-    __metaclass__ = PluginMetaclass
+    #!python
+    class PluginMetaclass(type):
+        def __new__(mcs, name, bases, namespace, **_kwargs):
+            result = type.__new__(mcs, name, bases, dict(namespace))
+            result.response_fns = [fn for fn in sorted(namespace.values())
+                                   if hasattr(fn, 'regex')]
+            return result
 
-    # snip
-```
+    class Plugin(object):
+        __metaclass__ = PluginMetaclass
+
+        # snip
+
 This metaclass really doesn't do much, only one line besides calling its
 parent. But that one line is the basis of all the magic.
 
@@ -127,20 +130,20 @@ resulting class object will always have this attribute set.
 
 Finally, we define a method in which our base class can make use of this new
 attribute:
-```python
-class Plugin(object):
-    # snip
 
-    def respond(self, ch, user, msg):
-        for fn in self.response_fns:
-            regex_match = fn.regex.match(msg)
-            if not regex_match:
-                continue
+    #!python
+    class Plugin(object):
+        # snip
 
-            fn(self, ch, user, regex_match.groups())
+        def respond(self, ch, user, msg):
+            for fn in self.response_fns:
+                regex_match = fn.regex.match(msg)
+                if not regex_match:
+                    continue
 
-    # snip
-```
+                fn(self, ch, user, regex_match.groups())
+
+        # snip
 
 What have we done here? Basically, we've defined a function that, when called,
 will search through all methods of that class which have the 'regex' attribute
@@ -148,12 +151,13 @@ set, attempt to apply the regex, and call the method only if a match is found.
 
 This allows us to -- very easily -- define plugins which listen and respond to
 specific phrases. How easily? Well...
-```python
-class CashPool(Plugin):
-    @Plugin.on_message(r'(.*) (\w+) sent \$([\d\.]+) to ([, \w]+)\.?')
-    def send_money(self, ch, user, groups):
-        # snip
-```
+
+    #!python
+    class CashPool(Plugin):
+        @Plugin.on_message(r'(.*) (\w+) sent \$([\d\.]+) to ([, \w]+)\.?')
+        def send_money(self, ch, user, groups):
+            # snip
+
 The above function listens for any instances of users sending money to each
 other, recognizes the event, and splits the event into groups (eg. from_user,
 to_user, value, etc)... all before even calling the function. Writing new

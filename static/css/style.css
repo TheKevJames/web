@@ -160,6 +160,8 @@ nav {
       background-color: #0077b5; }
     #social i.fa-envelope-square:hover {
       background-color: #db4437; }
+    #social i.fa-rss-square:hover {
+      background-color: #ff6600; }
 
 #content div h2 {
   text-align: center; }

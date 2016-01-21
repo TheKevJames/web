@@ -12,7 +12,13 @@
     <div class='container-fluid' id='content'>
         <div class='col-lg-9 col-md-9 col-sm-12 col-xs-12' id='blog-page'>
             <h2>{{ post.title }}</h2>
-            <h4>{{ post.date }}</h3>
+
+            <div class='col-lg-6'>
+                <h4>{{ post.date }}</h4>
+            </div>
+            <div class='col-lg-6 text-right' >
+                <h4><a href="{{ url_for('blog_rss') }}">Subscribe with RSS</a></h4>
+            </div>
 
             {{ post.html|safe }}
         </div>

@@ -14,7 +14,7 @@
     <link>http://thekev.in{{ url_for('blog_page', name=post.path) }}</link>
     <guid>http://thekev.in{{ url_for('blog_page', name=post.path) }}</guid>
     <pubDate>{{ post.pub_date }}</pubDate>
-    <description>[CDATA[ {{ post.description }}. ]]</description>
+    <description>{{ post.description }}</description>
 </item>
 {% endfor %}
 

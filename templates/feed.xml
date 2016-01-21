@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+<channel>
+
+<atom:link href='http://thekev.in/blog' rel='self' type='application/rss+xml' />
+
+<title>Kevin James' Blog</title>
+<link>http://www.thekev.in/blog</link>
+<description>Almost-Software-Engineer @uWaterloo; @AeroFS Intern and former @Talk_IQ, @AtomicLabs, @Oracle, @WriberInc, and @Enflick Intern; Coder; Investor; Musician; Writer</description>
+
+{% for post in posts %}
+<item>
+    <title>{{ post.title }}</title>
+    <link>http://thekev.in{{ url_for('blog_page', name=post.path) }}</link>
+    <guid>http://thekev.in{{ url_for('blog_page', name=post.path) }}</guid>
+    <pubDate>{{ post.pub_date }}</pubDate>
+    <description>[CDATA[ {{ post.description }}. ]]</description>
+</item>
+{% endfor %}
+
+</channel>
+</rss>

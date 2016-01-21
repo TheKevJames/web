@@ -18,7 +18,7 @@
                 <div id='post-{{ post.path }}'>
                     <h3>{{ post.title }}</h3>
                     <p class='date'>{{ post.date }}</p>
-                    <a class='live' href="{{ url_for('post_page', name=post.path.replace('pages/', '')) }}">View</a>
+                    <a class='live' href="{{ url_for('blog_page', name=post.path) }}">View</a>
                 </div>
             {% endfor %}
             </div>
@@ -33,7 +33,7 @@
                 <ul>
                 {% for post in grouped %}
                     <li>
-                        <a href="{{ url_for('post_page', name=post.path.replace('pages/', '')) }}">{{ post.title }}</a>
+                        <a href="{{ url_for('blog_page', name=post.path) }}">{{ post.title }}</a>
                     </li>
                 {% endfor %}
                 </ul>

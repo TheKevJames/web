@@ -9,7 +9,7 @@ import sys
 
 import requests
 
-from flask import Flask, render_template, url_for
+from flask import Flask, make_response, render_template, url_for
 from flask_flatpages import FlatPages
 
 
@@ -38,6 +38,7 @@ def refresh():
     return access_token
 
 
+# TODO: investigate flask-frozen
 app = Flask(__name__, static_url_path='')
 flatpages = FlatPages(app)
 app.config.from_object(__name__)
@@ -61,9 +62,25 @@ def blog():
     return render_template('blog.html', indexed=indexed, posts=posts)
 
 @app.route('/blog/<name>/')
-def post_page(name):
+def blog_page(name):
     post = flatpages.get_or_404(name)
     return render_template(url_for('static', filename='post.html'), post=post)
+
+@app.route('/feed.xml')
+def blog_rss():
+    posts = [p for p in flatpages]
+    posts.sort(key=operator.itemgetter('date'))
+    for post in posts:
+        post.meta['pub_date'] = post.meta['date'].strftime(
+            '%a, %d %b %Y 12:%M:%S GMT')
+
+        if not 'description' in post.meta:
+            post.meta['description'] = post.meta['title']
+
+    feed = render_template('feed.xml', posts=posts[-10:])
+    response = make_response(feed)
+    response.headers['Content-Type'] = 'application/xml'
+    return response
 
 @app.route('/hexclock')
 def hexclock():

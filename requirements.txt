@@ -1,5 +1,5 @@
 Flask==0.10.1
-Flask-FlatPages==0.5
+Flask-FlatPages==0.6
 itsdangerous==0.24
 Jinja2==2.7.3
 Markdown==2.6.5

@@ -28,7 +28,7 @@
             <h2>All Posts</h2>
 
             <ul class='list'>
-            {% for year, grouped in indexed.iteritems() %}
+            {% for year, grouped in indexed.items() %}
                 <li>{{ year }}</li>
                 <ul>
                 {% for post in grouped %}

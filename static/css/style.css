@@ -116,7 +116,7 @@ nav {
         z-index: 3;
         border: 1px solid #99b7d1;
         border-radius: 50%;
-        background-image: url("../img/icon.jpg");
+        background-image: url("/img/icon.jpg");
         background-size: 100% 100%; }
       #headline #map-container .marker-container .marker .label {
         display: block;

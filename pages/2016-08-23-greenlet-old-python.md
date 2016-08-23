@@ -6,7 +6,7 @@ has to do mostly with `greenlet` on old systems as well as any packages such as
 `gevent` which rely on this.
 
 More specifically, for Python 2.7.3 and older only, projects requiring
-`greenlet` may throuw an error on attempting to run them
+`greenlet` may throw an error on attempting to run them
 
     #!python
     ImportError: greenlet.so: undefined symbol: _PyTrash_thread_deposit_object

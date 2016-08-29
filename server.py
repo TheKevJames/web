@@ -75,7 +75,7 @@ def blog_rss():
             '%a, %d %b %Y 12:%M:%S GMT')
 
         if not 'description' in post.meta:
-            post.meta['description'] = post.html
+            post.meta['description'] = post.body
 
     feed = render_template('feed.xml', posts=posts[-10:])
     response = make_response(feed)

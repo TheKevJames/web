@@ -5,7 +5,6 @@ from collections import deque, OrderedDict
 import json
 import operator
 import os
-import sys
 
 import requests
 
@@ -16,24 +15,31 @@ from flask_flatpages import FlatPages
 FLATPAGES_EXTENSION = '.md'
 MOVES_URL = 'https://api.moves-app.com'
 
+MOVES_ACCESS_TOKEN = os.environ['MOVES_ACCESS_TOKEN']
+MOVES_CLIENT_ID = os.environ['MOVES_CLIENT_ID']
+MOVES_CLIENT_SECRET = os.environ['MOVES_CLIENT_SECRET']
+MOVES_REFRESH_TOKEN = os.environ['MOVES_REFRESH_TOKEN']
+
 
 def refresh():
     url = '%s/oauth/v1/access_token' % MOVES_URL
     data = json.dumps({
         'grant_type': 'refresh_token',
-        'client_id': os.environ['MOVES_CLIENT_ID'],
-        'client_secret': os.environ['MOVES_CLIENT_SECRET'],
-        'refresh_token': os.environ['MOVES_REFRESH_TOKEN'],
+        'client_id': MOVES_CLIENT_ID,
+        'client_secret': MOVES_CLIENT_SECRET,
+        'refresh_token': MOVES_REFRESH_TOKEN,
     })
     response = requests.post(url, data)
 
     access_token = response.json()['access_token']
-    os.environ['MOVES_ACCESS_TOKEN'] = access_token
-    print('New Moves access token: %s' % access_token, file=sys.stderr)
-
     refresh_token = response.json()['refresh_token']
+
+    os.environ['MOVES_ACCESS_TOKEN'] = access_token
     os.environ['MOVES_REFRESH_TOKEN'] = refresh_token
-    print('New Moves refresh_token token: %s' % refresh_token, file=sys.stderr)
+
+    with open('new_tokens.key', 'w') as f:
+        f.write('MOVES_ACCESS_TOKEN={}'.format(access_token))
+        f.write('MOVES_REFRESH_TOKEN={}'.format(refresh_token))
 
     return access_token
 
@@ -86,6 +92,10 @@ def blog_rss():
 def hexclock():
     return render_template('hexclock.html')
 
+@app.route('/ping')
+def ping():
+    return 'ok'
+
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
@@ -113,4 +123,4 @@ def moves_api():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')

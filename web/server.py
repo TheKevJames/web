@@ -9,7 +9,7 @@ import os
 
 import requests
 
-from flask import Flask, make_response, render_template, url_for
+from flask import Flask, make_response, render_template, request, url_for
 from flask_flatpages import FlatPages
 
 
@@ -30,6 +30,21 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
+def write_token(response):
+    logger.info('Writing new access token')
+    access_token = response.json()['access_token']
+    refresh_token = response.json()['refresh_token']
+
+    os.environ['MOVES_ACCESS_TOKEN'] = access_token
+    os.environ['MOVES_REFRESH_TOKEN'] = refresh_token
+
+    with open('/new_tokens.key', 'w') as f:
+        f.write('MOVES_ACCESS_TOKEN={}'.format(access_token))
+        f.write('MOVES_REFRESH_TOKEN={}'.format(refresh_token))
+
+    logger.info('Wrote new access token')
+    return access_token
+
 def refresh():
     logger.info('Refreshing Moves API token')
     data = json.dumps({
@@ -42,17 +57,7 @@ def refresh():
     logger.info('Got response: %s %s', response.status_code,
                 str(response.json()))
 
-    access_token = response.json()['access_token']
-    refresh_token = response.json()['refresh_token']
-
-    os.environ['MOVES_ACCESS_TOKEN'] = access_token
-    os.environ['MOVES_REFRESH_TOKEN'] = refresh_token
-
-    with open('new_tokens.key', 'w') as f:
-        f.write('MOVES_ACCESS_TOKEN={}'.format(access_token))
-        f.write('MOVES_REFRESH_TOKEN={}'.format(refresh_token))
-
-    logger.info('Wrote new access token')
+    access_token = write_token(response)
     return access_token
 
 
@@ -113,10 +118,32 @@ def projects():
     return render_template('projects.html')
 
 @app.route('/moves-api')
-def moves_api():
+def moves_api(code=None):
     def get_url(token, num_days=2):
         return '{}?pastDays={}&access_token={}'.format(
             MOVES_URL_DAILY, num_days, token)
+
+    # https://api.moves-app.com/oauth/v1/authorize?response_type=code&client_id
+    # =xxx&scope=activity%20location
+    code = request.args.get('code')
+    if code:
+        logger.info('Authenticating new Moves integration')
+        data = json.dumps({
+            'grant_type': 'authorization_code',
+            'code': code,
+            'client_id': MOVES_CLIENT_ID,
+            'client_secret': MOVES_CLIENT_SECRET,
+            'redirect_uri': 'http://thekev.in/moves-api',
+        })
+        response = requests.post(MOVES_URL_OAUTH, data)
+        if response.status_code != 200:
+            logger.warning('Could not authenticate with Moves API: %s %s',
+                           response.status_code, str(response.json()))
+            return
+
+        write_token(response)
+        logger.info('Successfully authenticated new Moves token')
+        return
 
     response = requests.get(get_url(os.environ['MOVES_ACCESS_TOKEN']))
     if response.status_code != 200:

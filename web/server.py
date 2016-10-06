@@ -47,12 +47,12 @@ def write_token(response):
 
 def refresh():
     logger.info('Refreshing Moves API token')
-    data = json.dumps({
+    data = {
         'grant_type': 'refresh_token',
         'client_id': MOVES_CLIENT_ID,
         'client_secret': MOVES_CLIENT_SECRET,
         'refresh_token': MOVES_REFRESH_TOKEN,
-    })
+    }
     response = requests.post(MOVES_URL_OAUTH, data)
     logger.info('Got response: %s %s', response.status_code,
                 str(response.json()))
@@ -128,13 +128,13 @@ def moves_api(code=None):
     code = request.args.get('code')
     if code:
         logger.info('Authenticating new Moves integration')
-        data = json.dumps({
+        data = {
             'grant_type': 'authorization_code',
             'code': code,
             'client_id': MOVES_CLIENT_ID,
             'client_secret': MOVES_CLIENT_SECRET,
             'redirect_uri': 'http://thekev.in/moves-api',
-        })
+        }
         response = requests.post(MOVES_URL_OAUTH, params=data)
         if response.status_code != 200:
             logger.warning('Could not authenticate with Moves API: %s %s',

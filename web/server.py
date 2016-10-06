@@ -135,7 +135,7 @@ def moves_api(code=None):
             'client_secret': MOVES_CLIENT_SECRET,
             'redirect_uri': 'http://thekev.in/moves-api',
         })
-        response = requests.post(MOVES_URL_OAUTH, data)
+        response = requests.post(MOVES_URL_OAUTH, params=data)
         if response.status_code != 200:
             logger.warning('Could not authenticate with Moves API: %s %s',
                            response.status_code, str(response.json()))

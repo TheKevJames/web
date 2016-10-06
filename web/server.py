@@ -3,6 +3,7 @@ from __future__ import print_function
 
 from collections import deque, OrderedDict
 import json
+import logging
 import operator
 import os
 
@@ -14,6 +15,8 @@ from flask_flatpages import FlatPages
 
 FLATPAGES_EXTENSION = '.md'
 MOVES_URL = 'https://api.moves-app.com'
+MOVES_URL_DAILY = '{}/api/1.1/user/places/daily'.format(MOVES_URL)
+MOVES_URL_OAUTH = '{}/oauth/v1/access_token'.format(MOVES_URL)
 
 MOVES_ACCESS_TOKEN = os.environ['MOVES_ACCESS_TOKEN']
 MOVES_CLIENT_ID = os.environ['MOVES_CLIENT_ID']
@@ -21,15 +24,23 @@ MOVES_CLIENT_SECRET = os.environ['MOVES_CLIENT_SECRET']
 MOVES_REFRESH_TOKEN = os.environ['MOVES_REFRESH_TOKEN']
 
 
+logging.basicConfig(format='%(asctime)-15s %(levelname)-6s %(message)s')
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+
 def refresh():
-    url = '%s/oauth/v1/access_token' % MOVES_URL
+    logger.info('Refreshing Moves API token')
     data = json.dumps({
         'grant_type': 'refresh_token',
         'client_id': MOVES_CLIENT_ID,
         'client_secret': MOVES_CLIENT_SECRET,
         'refresh_token': MOVES_REFRESH_TOKEN,
     })
-    response = requests.post(url, data)
+    response = requests.post(MOVES_URL_OAUTH, data)
+    logger.info('Got response: %s %s', response.status_code,
+                str(response.json()))
 
     access_token = response.json()['access_token']
     refresh_token = response.json()['refresh_token']
@@ -41,6 +52,7 @@ def refresh():
         f.write('MOVES_ACCESS_TOKEN={}'.format(access_token))
         f.write('MOVES_REFRESH_TOKEN={}'.format(refresh_token))
 
+    logger.info('Wrote new access token')
     return access_token
 
 
@@ -102,17 +114,19 @@ def projects():
 
 @app.route('/moves-api')
 def moves_api():
-    url = lambda token: '%s/api/1.1/user/places/daily?pastDays=%s&access_token=%s' % (
-        MOVES_URL,
-        2,
-        token
-    )
+    def get_url(token, num_days=2):
+        return '{}?pastDays={}&access_token={}'.format(
+            MOVES_URL_DAILY, num_days, token)
 
-    response = requests.get(url(os.environ['MOVES_ACCESS_TOKEN']))
+    response = requests.get(get_url(os.environ['MOVES_ACCESS_TOKEN']))
     if response.status_code != 200:
+        logger.info('Moves API request failed, regenerating access token...')
         new_token = refresh()
 
-        response = requests.get(url(new_token))
+        logger.info('Replaying request with new token')
+        response = requests.get(get_url(new_token))
+        logger.info('Got response: %s %s', response.status_code,
+                    str(response.json()))
 
     location_data = response.json()[-1]['segments'][-1]['place']
     return json.dumps({

@@ -27,7 +27,7 @@ MOVES_REFRESH_TOKEN = os.environ['MOVES_REFRESH_TOKEN']
 logging.basicConfig(format='%(asctime)-15s %(levelname)-6s %(message)s')
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 
 def write_token(response):
@@ -155,7 +155,9 @@ def moves_api(code=None):
         logger.debug('Got response: %s %s', response.status_code,
                      str(response.json()))
 
-    location_data = response.json()[-1]['segments'][-1]['place']
+    response = response.json()
+    logger.debug('Got response: %s', str(response))
+    location_data = response[-1]['segments'][-1]['place']
     logger.debug('Got Moves location data: %s', str(location_data))
     return json.dumps({
         'lat': location_data['location']['lat'],

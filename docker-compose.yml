@@ -3,6 +3,7 @@ version: '2'
 services:
   web:
     build: web/.
+    image: thekevjames/thekev.in
     environment:
       - MOVES_ACCESS_TOKEN=${MOVES_ACCESS_TOKEN}
       - MOVES_CLIENT_ID=${MOVES_CLIENT_ID}

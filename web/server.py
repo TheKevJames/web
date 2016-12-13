@@ -66,6 +66,7 @@ def refresh():
 app = Flask(__name__, static_url_path='')
 flatpages = FlatPages(app)
 app.config.from_object(__name__)
+sentry = Sentry(app, logging=True, level=logging.WARNING)
 
 
 @app.route('/')
@@ -169,4 +170,3 @@ def moves_api(code=None):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-    sentry = Sentry(app)

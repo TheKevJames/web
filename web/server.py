@@ -11,6 +11,7 @@ import requests
 
 from flask import Flask, make_response, render_template, request, url_for
 from flask_flatpages import FlatPages
+from raven.contrib.flask import Sentry
 
 
 FLATPAGES_EXTENSION = '.md'
@@ -168,3 +169,4 @@ def moves_api(code=None):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
+    sentry = Sentry(app)

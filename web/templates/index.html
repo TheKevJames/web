@@ -5,8 +5,8 @@
 {% block head %}
     {{ super() }}
 
-    <script src='/js/mapbox-2.1.9.min.js'></script>
-    <link href='/css/mapbox-2.1.5.min.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
 {% endblock %}
@@ -75,7 +75,7 @@
 {% endblock %}
 
 {% block js %}
-<script src='/js/d3-3.5.5.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
 <script>
 quotes = [
     '"Be better than you were yesterday."',
@@ -110,5 +110,5 @@ change_quote();
 setInterval(change_quote, 1000 * 8);
 </script>
 
-<script src='js/map.js'></script>
+<script src='/js/map.js'></script>
 {% endblock %}

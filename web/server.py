@@ -159,8 +159,13 @@ def moves_api(code=None):
 
     response = response.json()
     logger.debug('Got response: %s', str(response))
-    location_data = response[-1]['segments'][-1]['place']
+
+    segments = [block['segments'] for block in response if block['segments']]
+    logger.debug('Parsed segments: %s', str(segments))
+
+    location_data = segments[-1][-1]['place']
     logger.debug('Got Moves location data: %s', str(location_data))
+
     return json.dumps({
         'lat': location_data['location']['lat'],
         'lng': location_data['location']['lon'],

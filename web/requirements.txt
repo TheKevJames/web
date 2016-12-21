@@ -1,4 +1,4 @@
-Flask==0.10.1
+Flask==0.12
 Flask-FlatPages==0.6
 pygments==2.1.3
 raven[flask]==5.32.0

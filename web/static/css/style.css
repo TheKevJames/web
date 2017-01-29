@@ -31,7 +31,7 @@
   letter-spacing: -1px;
   color: #191919; }
 
-.font-body, .font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #headline #map-container .marker-container .marker .label .last-spotted, #headline #map-container .marker-container .marker .label .location, #content div h4, #content div p, .job-review p {
+.font-body, .font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #content div h4, #content div p, .job-review p {
   font-family: 'Cantarell', sans-serif;
   font-size: 17px;
   line-height: 23px;
@@ -72,69 +72,27 @@ nav {
     nav div#cv {
       float: right; }
 
-#spacer {
-  margin-top: 120px; }
+#symbol {
+  margin-top: 40px;
+  min-height: 180px;
+  min-width: 180px;
+  max-height: 240px;
+  max-width: 240px; }
 
 #headline {
-  margin: 0 50px; }
-  #headline #symbol {
-    padding: 0;
-    margin-bottom: 20px;
-    min-height: 180px;
-    min-width: 180px;
-    max-height: 240px;
-    max-width: 240px; }
-  #headline #bio #name {
-    font-size: 57px;
-    line-height: 60px;
-    color: #191919;
-    cursor: default;
-    padding-top: 50px; }
-  #headline #bio #quote {
-    line-height: 30px;
-    color: #4978a2;
-    cursor: default;
-    padding-top: 10px; }
-  #headline #map-container {
-    height: 250px;
-    float: right;
-    margin-bottom: 20px;
-    padding: 0;
-    border: 1px solid #191919; }
-    #headline #map-container #map {
-      width: 100%;
-      height: 100%; }
-    #headline #map-container .marker-container .marker {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -25px; }
-      #headline #map-container .marker-container .marker .icon {
-        width: 48px;
-        height: 48px;
-        margin-left: -24px;
-        z-index: 3;
-        border: 1px solid #99b7d1;
-        border-radius: 50%;
-        background-image: url("/img/icon.jpg");
-        background-size: 100% 100%; }
-      #headline #map-container .marker-container .marker .label {
-        display: block;
-        padding: 4px 20px;
-        margin-top: 10px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 4px;
-        color: #191919; }
-        #headline #map-container .marker-container .marker .label .last-spotted {
-          font-size: 9px;
-          line-height: 15px;
-          text-transform: uppercase;
-          margin: 0; }
-        #headline #map-container .marker-container .marker .label .location {
-          font-size: 16px;
-          line-height: 20px;
-          font-weight: bold;
-          margin: 0; }
+  margin: 0 50px;
+  text-align: center; }
+  #headline #bio { }
+    #headline #bio #name {
+      font-size: 57px;
+      line-height: 60px;
+      color: #191919;
+      cursor: default; }
+    #headline #bio #quote {
+      line-height: 30px;
+      color: #4978a2;
+      cursor: default;
+      padding-bottom: 10px; }
 
 #social {
   text-align: center; }

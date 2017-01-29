@@ -15,51 +15,12 @@ from raven.contrib.flask import Sentry
 
 
 FLATPAGES_EXTENSION = '.md'
-MOVES_URL = 'https://api.moves-app.com'
-MOVES_URL_DAILY = '{}/api/1.1/user/places/daily'.format(MOVES_URL)
-MOVES_URL_OAUTH = '{}/oauth/v1/access_token'.format(MOVES_URL)
-
-MOVES_ACCESS_TOKEN = os.environ['MOVES_ACCESS_TOKEN']
-MOVES_CLIENT_ID = os.environ['MOVES_CLIENT_ID']
-MOVES_CLIENT_SECRET = os.environ['MOVES_CLIENT_SECRET']
-MOVES_REFRESH_TOKEN = os.environ['MOVES_REFRESH_TOKEN']
 
 
 logging.basicConfig(format='%(asctime)-15s %(levelname)-6s %(message)s')
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
-
-
-def write_token(response):
-    logger.info('Writing new access token')
-    access_token = response.json()['access_token']
-    refresh_token = response.json()['refresh_token']
-
-    os.environ['MOVES_ACCESS_TOKEN'] = access_token
-    os.environ['MOVES_REFRESH_TOKEN'] = refresh_token
-
-    with open('/new_tokens.key', 'w') as f:
-        f.write('MOVES_ACCESS_TOKEN={}'.format(access_token))
-        f.write('MOVES_REFRESH_TOKEN={}'.format(refresh_token))
-
-    logger.info('Wrote new access token')
-    return access_token
-
-def refresh():
-    logger.info('Refreshing Moves API token')
-    data = {
-        'grant_type': 'refresh_token',
-        'client_id': MOVES_CLIENT_ID,
-        'client_secret': MOVES_CLIENT_SECRET,
-        'refresh_token': MOVES_REFRESH_TOKEN,
-    }
-    response = requests.post(MOVES_URL_OAUTH, data)
-    logger.debug('Got response: %s %s', response.status_code,
-                 str(response.json()))
-
-    access_token = write_token(response)
-    return access_token
 
 
 # TODO: investigate flask-frozen
@@ -118,59 +79,6 @@ def ping():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
-
-@app.route('/moves-api')
-def moves_api(code=None):
-    def get_url(token, num_days=2):
-        return '{}?pastDays={}&access_token={}'.format(
-            MOVES_URL_DAILY, num_days, token)
-
-    # https://api.moves-app.com/oauth/v1/authorize?response_type=code&client_id
-    # =xxx&scope=activity%20location
-    code = request.args.get('code')
-    if code:
-        logger.info('Authenticating new Moves integration')
-        data = {
-            'grant_type': 'authorization_code',
-            'code': code,
-            'client_id': MOVES_CLIENT_ID,
-            'client_secret': MOVES_CLIENT_SECRET,
-            'redirect_uri': 'http://thekev.in/moves-api',
-        }
-        response = requests.post(MOVES_URL_OAUTH, params=data)
-        if response.status_code != 200:
-            logger.warning('Could not authenticate with Moves API: %s %s',
-                           response.status_code, str(response.json()))
-            return
-
-        write_token(response)
-        logger.info('Successfully authenticated new Moves token')
-        return
-
-    response = requests.get(get_url(os.environ['MOVES_ACCESS_TOKEN']))
-    if response.status_code != 200:
-        logger.info('Moves API request failed, regenerating access token...')
-        new_token = refresh()
-
-        logger.info('Replaying request with new token')
-        response = requests.get(get_url(new_token))
-        logger.debug('Got response: %s %s', response.status_code,
-                     str(response.json()))
-
-    response = response.json()
-    logger.debug('Got response: %s', str(response))
-
-    segments = [block['segments'] for block in response if block['segments']]
-    logger.debug('Parsed segments: %s', str(segments))
-
-    location_data = segments[-1][-1]['place']
-    logger.debug('Got Moves location data: %s', str(location_data))
-
-    return json.dumps({
-        'lat': location_data['location']['lat'],
-        'lng': location_data['location']['lon'],
-        'name': location_data.get('name', 'Unknown Location'),
-    })
 
 
 if __name__ == '__main__':

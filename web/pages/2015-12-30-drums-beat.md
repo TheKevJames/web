@@ -2,9 +2,9 @@ title: The Drums Beat
 date: 2015-12-30
 
 Its been a while since I've had more than a passing moment to write. University
-has been time-consuming and my hobbies has suffered. That said, it (writing) is
-certainly something I want to get back into. Here's hoping that posting some of
-my previous works will be enough to motivate me.
+has been time-consuming and my hobbies have suffered. That said, it (writing)
+is certainly something I want to get back into. Here's hoping that posting some
+of my previous works will be enough to motivate me.
 
 ---
 

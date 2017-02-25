@@ -55,7 +55,7 @@ def blog_page(name):
 @app.route('/feed.xml')
 def blog_rss():
     posts = [p for p in flatpages]
-    posts.sort(key=operator.itemgetter('date'))
+    posts.sort(key=operator.itemgetter('date'), reverse=True)
     for post in posts:
         post.meta['pub_date'] = post.meta['date'].strftime(
             '%a, %d %b %Y 12:%M:%S GMT')
@@ -63,7 +63,7 @@ def blog_rss():
         if not 'description' in post.meta:
             post.meta['description'] = post.body
 
-    feed = render_template('feed.xml', posts=posts[-10:])
+    feed = render_template('feed.xml', posts=posts[:10])
     response = make_response(feed)
     response.headers['Content-Type'] = 'application/xml'
     return response

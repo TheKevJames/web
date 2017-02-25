@@ -4,7 +4,6 @@
 <title>Kevin James' Blog</title>
 <link>https://www.thekev.in/blog</link>
 <description>TalkIQ and AtomicLabs engineer; University of Waterloo Software Engineer; occasional investor, musician, and writer</description>
-<atom:link href='https://thekev.in/feed.xml' rel='self' type='application/rss+xml'/>
 
 <docs>http://cyber.harvard.edu/rss/rss.html</docs>
 <language>en-us</language>

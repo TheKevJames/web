@@ -17,4 +17,4 @@ Enjoy!
 
 ---
 
-[Link to PDF (3.4 MB)](/resource/curse_of_strahd.pdf)
+[Link to PDF (3.4 MB)](https://circleci.com/api/v1/project/TheKevJames/curse_of_strahd/latest/artifacts/0/$CIRCLE_ARTIFACTS/journal.pdf?branch=master&filter=successful)

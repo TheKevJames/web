@@ -2,14 +2,10 @@
 from __future__ import print_function
 
 from collections import deque, OrderedDict
-import json
 import logging
 import operator
-import os
 
-import requests
-
-from flask import Flask, make_response, render_template, request, url_for
+from flask import Flask, make_response, render_template, url_for
 from flask_flatpages import FlatPages
 from raven.contrib.flask import Sentry
 

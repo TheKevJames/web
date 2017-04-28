@@ -1,5 +1,6 @@
 title: Jarvis, More Over-Engineered Than Ever Before
 date: 2016-01-19
+tags: Technology
 
 I first introduced Jarvis in [a blog post](/blog/2015-10-17-jarvis) almost
 three months ago. Since then, he's undergone a few upgrades.

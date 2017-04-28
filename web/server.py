@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 from __future__ import print_function
 
-from collections import deque, OrderedDict
+from collections import OrderedDict
 import logging
 import operator
 
-from flask import Flask, make_response, render_template, url_for
+from flask import Flask, make_response, render_template, request, url_for
 from flask_flatpages import FlatPages
 from raven.contrib.flask import Sentry
 
@@ -35,17 +35,32 @@ def blog():
     posts = [p for p in flatpages]
     posts.sort(key=operator.itemgetter('date'), reverse=True)
 
-    indexed = OrderedDict()
+    by_date = OrderedDict()
+    by_tag = dict()
     for post in posts:
-        if post['date'].year not in indexed:
-            indexed[post['date'].year] = deque()
-        indexed[post['date'].year].appendleft(post)
+        for tag in post.meta.get('tags', '').split(', '):
+            tag = tag or 'Untagged'
+            by_tag[tag] = by_tag.get(tag, list())
+            by_tag[tag].append(post)
 
-    return render_template('blog.html', indexed=indexed, posts=posts)
+        by_date[post['date'].year] = by_date.get(post['date'].year, list())
+        by_date[post['date'].year].append(post)
+
+    filter_tag = request.args.get('tag')
+    if by_tag.get(filter_tag):
+        return render_template('blog.html', by_date=by_date, by_tag=by_tag,
+                               filter_tag=filter_tag,
+                               recent=by_tag[filter_tag])
+    # TODO: handle bad tag filter
+    # elif filter_tag: flask.abort(404)
+
+    return render_template('blog.html', by_date=by_date, by_tag=by_tag,
+                           filter_tag=None, recent=posts[:6])
 
 @app.route('/blog/<name>/')
 def blog_page(name):
     post = flatpages.get_or_404(name)
+    post.meta['tag_list'] = post.meta.get('tags', '').split(', ')
     return render_template(url_for('static', filename='post.html'), post=post)
 
 @app.route('/feed.xml')
@@ -56,8 +71,7 @@ def blog_rss():
         post.meta['pub_date'] = post.meta['date'].strftime(
             '%a, %d %b %Y 12:%M:%S GMT')
 
-        if not 'description' in post.meta:
-            post.meta['description'] = post.body
+        post.meta['description'] = post.meta.get('description', post.body)
 
     feed = render_template('feed.xml', posts=posts[:10])
     response = make_response(feed)

@@ -1,5 +1,6 @@
 title: Darkest Nights
 date: 2017-02-21
+tags: Writing, Poetry
 
 Here's another one of my old works from years back. Still working on getting
 motivated enough to write something new.

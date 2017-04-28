@@ -1,5 +1,6 @@
 title: The Diary of a Confused Sorcerer
 date: 2017-04-07
+tags: Writing, Dungeons and Dragons
 
 As of this week, we've finally finished playing through a long-running
 [Curse of Strahd](//dnd.wizards.com/products/tabletop-games/rpg-products/curse-strahd)

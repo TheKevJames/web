@@ -2,4 +2,4 @@ Flask==0.12.1
 Flask-FlatPages==0.6
 pygments==2.2.0
 raven[flask]==6.0.0
-requests==2.13.0
+requests==2.14.2

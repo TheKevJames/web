@@ -2,14 +2,18 @@
 from __future__ import print_function
 
 from collections import OrderedDict
+import csv
 import logging
 import operator
+import os
 
+from dropbox import Dropbox
 from flask import Flask, make_response, render_template, request, url_for
 from flask_flatpages import FlatPages
 from raven.contrib.flask import Sentry
 
 
+DROPBOX_TOKEN = os.environ['DROPBOX_TOKEN']
 FLATPAGES_EXTENSION = '.md'
 
 
@@ -86,9 +90,31 @@ def hexclock():
 def ping():
     return 'ok'
 
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
+@app.route('/stats')
+def stats():
+    # TODO: async
+    dbx = Dropbox(DROPBOX_TOKEN)
+    _, response = dbx.files_download('/vimwiki/fitness.wiki')
+    fitness = csv.reader(response.text.splitlines()[3:])
+
+    # two weeks plus one month of context
+    days = 14 + 28
+    # TODO: numeric indices from csv header
+    fitness = [{
+        'date': f[0],
+        'calories': int(f[1]),
+        'exercise': int(f[2]),
+        'weight': int(f[3] or 0), # TODO: no default here
+        'coffees': int(f[4]),
+        'drinks': int(f[5]),
+    } for f in fitness][:days + 1][::-1]
+
+    dates = [f['date'] for f in fitness]
+    calories = [f['calories'] for f in fitness]
+    coffees = [f['coffees'] for f in fitness]
+    drinks = [f['drinks'] for f in fitness]
+    return render_template('stats.html', dates=dates, calories=calories,
+                           coffees=coffees, drinks=drinks)
 
 
 if __name__ == '__main__':

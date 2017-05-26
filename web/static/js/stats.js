@@ -80,11 +80,13 @@ drawChart = function(xValues, yValues, div, config) {
         .text(config.yLabel);
 
     // target value
-    chart.append("line")
-        .attr("y1", y(config.yTarget))
-        .attr("y2", y(config.yTarget))
-        .attr("x1", x(xMin))
-        .attr("x2", x(xMax));
+    if (config.yTarget != null) {
+        chart.append("line")
+            .attr("y1", y(config.yTarget))
+            .attr("y2", y(config.yTarget))
+            .attr("x1", x(xMin))
+            .attr("x2", x(xMax));
+    }
 }
 
 drawCalorieChart = function(dates, calories, div) {
@@ -97,8 +99,38 @@ drawCalorieChart = function(dates, calories, div) {
 
         margin: {top: 20, right: 50, bottom: 50, left: 60},
         height: 160,
-        width: 700,
+        width: 800,
     };
 
     drawChart(dates, calories, div, config);
+}
+
+drawCoffeeChart = function(dates, coffees, div) {
+    let config = {
+        days: 14,
+
+        yIncr: 1,
+        yLabel: "Coffees",
+
+        margin: {top: 20, right: 50, bottom: 50, left: 60},
+        height: 160,
+        width: 800,
+    };
+
+    drawChart(dates, coffees, div, config);
+}
+
+drawDrinksChart = function(dates, drinks, div) {
+    let config = {
+        days: 14,
+
+        yIncr: 1,
+        yLabel: "Drinks",
+
+        margin: {top: 20, right: 50, bottom: 50, left: 60},
+        height: 160,
+        width: 800,
+    };
+
+    drawChart(dates, drinks, div, config);
 }

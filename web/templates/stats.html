@@ -34,7 +34,7 @@ var drinks = {{ drinks }};
 window.onload = function() {
     drawCalorieChart(dates, calories, d3.select("#calorie-chart"));
     drawCoffeeChart(dates, coffees, d3.select("#coffee-chart"));
-    drawDrinksChart(dates, coffees, d3.select("#drinks-chart"));
+    drawDrinksChart(dates, drinks, d3.select("#drinks-chart"));
 }
 </script>
 {% endblock %}

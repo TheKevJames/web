@@ -15,6 +15,10 @@
         </div>
 
         <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center' id='calorie-chart'></div>
+
+        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center' id='coffee-chart'></div>
+
+        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center' id='drinks-chart'></div>
     </div>
 {% endblock %}
 
@@ -24,9 +28,13 @@
 <script>
 var dates = {{ dates|safe }};
 var calories = {{ calories }};
+var coffees = {{ coffees }};
+var drinks = {{ drinks }};
 
 window.onload = function() {
     drawCalorieChart(dates, calories, d3.select("#calorie-chart"));
+    drawCoffeeChart(dates, coffees, d3.select("#coffee-chart"));
+    drawDrinksChart(dates, coffees, d3.select("#drinks-chart"));
 }
 </script>
 {% endblock %}

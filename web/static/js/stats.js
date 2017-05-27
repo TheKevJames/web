@@ -2,13 +2,14 @@ var parseTime = d3.timeParse("%Y-%m-%d");
 
 movingAvg = function(data, neighbors) {
     return data.map((val, idx, arr) => {
-        let start = Math.max(0, idx - neighbors), end = idx/* + neighbors*/;
-        let subset = arr.slice(start, end + 1);
+        let start = Math.max(0, idx - neighbors);
+        let subset = arr.slice(start, idx + 1);
         let sum = subset.reduce((a, b) => a + b);
         return sum / subset.length;
     })
 }
 
+// TODO: allow updating graph
 drawChart = function(xValues, yValues, div, config) {
     var dates = xValues.slice(-config.days).map(parseTime);
 
@@ -18,8 +19,8 @@ drawChart = function(xValues, yValues, div, config) {
     var weekly = movingAvg(yValues, 7).slice(-config.days);
     var weekly = dates.map((e, i) => ({date: e, data: +weekly[i]}));
 
-    var monthly = movingAvg(yValues, 28).slice(-config.days);
-    var monthly = dates.map((e, i) => ({date: e, data: +monthly[i]}));
+    // var monthly = movingAvg(yValues, 28).slice(-config.days);
+    // var monthly = dates.map((e, i) => ({date: e, data: +monthly[i]}));
 
     var x = d3.scaleTime().range([0, config.width]);
     var y = d3.scaleLinear().rangeRound([config.height, 0]);
@@ -38,13 +39,16 @@ drawChart = function(xValues, yValues, div, config) {
     var yMax = Math.ceil(d3.max(daily.map(d => d.data)) / config.yIncr) * config.yIncr;
     y.domain([0, yMax]);
 
-    var chart = div
-        .append("svg")
-            .attr("class", "chart")
-            .attr("width", config.width + config.margin.left + config.margin.right)
-            .attr("height", config.height + config.margin.top + config.margin.bottom)
-        .append("g")
-            .attr("transform", "translate(" + config.margin.left + "," + config.margin.top + ")");
+    var chart = div.select("svg > g");
+    if (chart.empty()) {
+        chart = div
+            .append("svg")
+                .attr("class", "chart")
+                .attr("width", config.width + config.margin.left + config.margin.right)
+                .attr("height", config.height + config.margin.top + config.margin.bottom)
+            .append("g")
+                .attr("transform", "translate(" + config.margin.left + "," + config.margin.top + ")");
+    }
 
     // lines
     chart.append('path')
@@ -80,7 +84,7 @@ drawChart = function(xValues, yValues, div, config) {
         .text(config.yLabel);
 
     // target value
-    if (config.yTarget != null) {
+    if (config.yTarget != null && dates.length > 0) {
         chart.append("line")
             .attr("y1", y(config.yTarget))
             .attr("y2", y(config.yTarget))

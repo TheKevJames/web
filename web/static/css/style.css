@@ -200,8 +200,8 @@ svg path {
   fill: none; }
   .weekly {
     stroke: #7ba284; }
-  /* .monthly {
-    stroke: red; } */
+  /*.monthly {
+    stroke: #99b7d1; }*/
 
 svg line {
   stroke: #99b7d1;

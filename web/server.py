@@ -8,7 +8,8 @@ import operator
 import os
 
 from dropbox import Dropbox
-from flask import Flask, make_response, render_template, request, url_for
+from flask import Flask
+from flask import jsonify, make_response, render_template, request, url_for
 from flask_flatpages import FlatPages
 from raven.contrib.flask import Sentry
 
@@ -92,7 +93,11 @@ def ping():
 
 @app.route('/stats')
 def stats():
-    # TODO: async
+    return render_template('stats.html')
+
+# TODO: cache response
+@app.route('/stats/fitness')
+def stats_fitness():
     dbx = Dropbox(DROPBOX_TOKEN)
     _, response = dbx.files_download('/vimwiki/fitness.wiki')
     fitness = csv.reader(response.text.splitlines()[3:])
@@ -104,17 +109,12 @@ def stats():
         'date': f[0],
         'calories': int(f[1]),
         'exercise': int(f[2]),
-        'weight': int(f[3] or 0), # TODO: no default here
+        'weight': int(f[3]) if f[3] else None,
         'coffees': int(f[4]),
         'drinks': int(f[5]),
     } for f in fitness][:days + 1][::-1]
 
-    dates = [f['date'] for f in fitness]
-    calories = [f['calories'] for f in fitness]
-    coffees = [f['coffees'] for f in fitness]
-    drinks = [f['drinks'] for f in fitness]
-    return render_template('stats.html', dates=dates, calories=calories,
-                           coffees=coffees, drinks=drinks)
+    return jsonify(fitness)
 
 
 if __name__ == '__main__':

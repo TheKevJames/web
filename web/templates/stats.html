@@ -26,15 +26,42 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js'></script>
 <script src='/js/stats.js'></script>
 <script>
-var dates = {{ dates|safe }};
-var calories = {{ calories }};
-var coffees = {{ coffees }};
-var drinks = {{ drinks }};
+var dates = [];
+var calories = [];
+var coffees = [];
+var drinks = [];
+
+rerender = function() {
+    $.ajax({
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        url: "/stats/fitness",
+        dataType: "json",
+        async: true,
+        success: function(data) {
+            dates = data.map(d => d.date);
+            calories = data.map(d => d.calories);
+            coffees = data.map(d => d.coffees);
+            drinks = data.map(d => d.drinks);
+
+            drawCalorieChart(dates, calories, d3.select("#calorie-chart"));
+            drawCoffeeChart(dates, coffees, d3.select("#coffee-chart"));
+            drawDrinksChart(dates, drinks, d3.select("#drinks-chart"));
+        },
+        error: function(result) {
+            console.log(result);
+
+            setTimeout(rerender, 5000);
+        }
+    });
+}
 
 window.onload = function() {
     drawCalorieChart(dates, calories, d3.select("#calorie-chart"));
     drawCoffeeChart(dates, coffees, d3.select("#coffee-chart"));
     drawDrinksChart(dates, drinks, d3.select("#drinks-chart"));
+
+    rerender();
 }
 </script>
 {% endblock %}

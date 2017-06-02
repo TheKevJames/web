@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang='en'>
 <head>
-{% block head %}
     <meta charset='utf-8'>
     <meta name='author' content='Kevin James'>
-    <meta name='description' content='Homepage of Kevin James | Almost-Software-Engineer @uWaterloo; @AeroFS Intern and former @Talk_IQ, @AtomicLabs, @Oracle, @WriberInc, and @Enflick Intern; Coder; Investor; Musician; Writer'>
+    <meta name='description' content='Homepage of Kevin James | TalkIQ and AtomicLabs engineer; former Oracle, AeroFS, Wriber, and Enflick intern; uWaterloo software engineer; investor; musician; writer'>
     <meta name='keywords' content='Kevin,James'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
@@ -12,12 +11,12 @@
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' />
     <link rel='stylesheet' href='/css/style.css' />
     <link rel='stylesheet' href='https://cdn.rawgit.com/richleland/pygments-css/master/emacs.css' />
 
     <link rel='icon' href='/img/favicon.png' />
     <link rel='alternate' type='application/rss+xml' title='RSS Feed' href='http://thekev.in/feed.xml' />
-{% endblock %}
 </head>
 
 <body>
@@ -34,9 +33,15 @@
         <div>
             <a href="{{ url_for('stats') }}">Stats</a>
         </div>
+        <div class='dropdown'>
+            <button><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+            <div class='dropdown-content'>
+                <a href="{{ url_for('hexclock') }}">Hexclock</a>
+            </div>
+        </div>
 
         <div id='cv'>
-            <a href='/resource/cv.pdf'>R&eacute;sum&eacute;</a>
+            <a href='/resource/cv.pdf'>C.V.</a>
         </div>
     </nav>
 {% endblock %}

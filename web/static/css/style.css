@@ -61,6 +61,7 @@ nav {
   padding: 0 10px;
   margin-bottom: 30px;
   background-color: #7ba284; }
+
   nav div {
     display: inline;
     height: 40px;
@@ -74,6 +75,27 @@ nav {
         color: #e6e6e6; }
     nav div#cv {
       float: right; }
+
+  nav .dropdown {
+    display: inline-block; }
+    nav .dropdown > button {
+      line-height: 36px; /* 40px - 2 * 2px */
+      color: white;
+      background-color: #7ba284;
+      border: none;
+      cursor: pointer; }
+    nav .dropdown .dropdown-content {
+      display: none;
+      background-color: #7ba284;
+      position: absolute;
+      margin-left: 0;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1; }
+      nav .dropdown .dropdown-content a {
+        display: block;
+        padding: 0 10px; }
+    nav .dropdown:hover .dropdown-content {
+      display: block; }
 
 #symbol {
   margin-top: 40px;

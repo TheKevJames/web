@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 100;
   src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWIX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); }
+
 #hexclock-time {
   font: 110px/110px 'Raleway';
   color: white;

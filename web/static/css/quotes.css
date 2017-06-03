@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWIX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); }
+
+body {
+  background-color: rgb(121, 165, 242);
+  overflow: hidden;
+  transition: background-color 1000ms linear;
+}
+
+#quote, #quote-next {
+  font: 48px/48px 'Raleway';
+  text-align: center;
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: 0; /* line-height / 2 */
+  margin-left: 0;
+  opacity: 1; }
+#quote-old, #quote-next {
+  margin-top: 100px;
+  margin-left: -100px;
+  opacity: 0; }
+
+@media (max-width: 1000px) {
+  #quote, #quote-next {
+    padding: 0 36px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1800px) {
+  #quote, #quote-next {
+    padding: 0 72px;
+  }
+}
+@media (min-width: 1800px) {
+  #quote, #quote-next {
+    padding: 0 144px;
+  }
+}

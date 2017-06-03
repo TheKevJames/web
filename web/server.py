@@ -116,6 +116,16 @@ def stats_fitness():
 
     return jsonify(fitness)
 
+@app.route('/quotes')
+def quotes():
+    return render_template('quotes.html')
+
+@app.route('/quotes/json')
+def quotes_json():
+    dbx = Dropbox(DROPBOX_TOKEN)
+    _, response = dbx.files_download('/vimwiki/quotes.wiki')
+    return jsonify(list(response.text.splitlines()))
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

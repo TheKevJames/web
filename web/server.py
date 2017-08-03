@@ -104,39 +104,16 @@ def stats_fitness():
 
     # two weeks plus one month of context
     days = 14 + 28
-    try:
-        # TODO: numeric indices from csv header
-        fitness = [{
-            'date': f[0],
-            'calories': int(f[1]),
-            'exercise': int(f[2]),
-            'weight': int(f[3]) if f[3] else None,
-            'coffees': int(f[4]),
-            'drinks': int(f[5]),
-        } for f in fitness][:days + 1][::-1]
-    except ValueError:
-        for f in fitness:
-            try:
-                {
-                    'date': f[0],
-                    'calories': int(f[1]),
-                    'exercise': int(f[2]),
-                    'weight': int(f[3]) if f[3] else None,
-                    'coffees': int(f[4]),
-                    'drinks': int(f[5]),
-                }
-            except ValueError:
-                logger.error('malformed fitness data')
-                logger.error({
-                    'date': f[0],
-                    'calories': f[1],
-                    'exercise': f[2],
-                    'weight': f[3],
-                    'coffees': f[4],
-                    'drinks': f[5],
-                })
-                raise
-        raise
+
+    # TODO: numeric indices from csv header
+    fitness = [{
+        'date': f[0],
+        'calories': int(f[1]),
+        'exercise': int(f[2]),
+        'weight': int(f[3]) if f[3] else None,
+        'coffees': int(f[4]),
+        'drinks': int(f[5]),
+    } for f in fitness][:days + 1][::-1]
 
     return jsonify(fitness)
 

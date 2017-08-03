@@ -79,7 +79,6 @@ nav {
   nav .dropdown {
     display: inline-block; }
     nav .dropdown > button {
-      line-height: 36px; /* 40px - 2 * 2px */
       color: white;
       background-color: #7ba284;
       border: none;

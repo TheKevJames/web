@@ -104,6 +104,7 @@ def stats_fitness():
 
     # two weeks plus one month of context
     days = 14 + 28
+
     # TODO: numeric indices from csv header
     fitness = [{
         'date': f[0],

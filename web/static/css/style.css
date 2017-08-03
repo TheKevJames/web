@@ -34,7 +34,7 @@ em, i {
   letter-spacing: -1px;
   color: #191919; }
 
-.font-body, .font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #content div h4, #content div p {
+.font-body, .font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #content div h4, #content div p, #content div li {
   font-family: 'Cantarell', sans-serif;
   font-size: 17px;
   line-height: 23px;
@@ -151,6 +151,13 @@ nav {
   text-align: center; }
 #content div h4 {
   font-style: italic; }
+#content ol {
+  list-style: decimal inside; }
+#content ul {
+  list-style: disc inside; }
+#content ul ul {
+  list-style: circle inside;
+  margin-left: 15px; }
 
 .list {
   width: 100%; }

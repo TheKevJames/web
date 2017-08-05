@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-from __future__ import print_function
-
-from collections import OrderedDict
+import collections
 import csv
 import logging
 import operator
@@ -40,7 +38,7 @@ def blog():
     posts = [p for p in flatpages]
     posts.sort(key=operator.itemgetter('date'), reverse=True)
 
-    by_date = OrderedDict()
+    by_date = collections.OrderedDict()
     by_tag = dict()
     for post in posts:
         for tag in post.meta.get('tags', '').split(', '):

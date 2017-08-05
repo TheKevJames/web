@@ -1,0 +1,41 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+
+    steps:
+      - checkout
+      - setup_remote_docker
+
+      - run:
+          name: install dependencies
+          command: |
+            apk add --no-cache py-pip=9.0.0-r1
+            pip install docker-compose==1.15.0 pre-commit
+
+      - run:
+          name: run pre-build tests
+          command: |
+            pre-commit run --all-files
+
+      - run:
+          name: build image
+          command: |
+            docker-compose build
+
+      # - run:
+      #     name: run post-build tests
+      #     command: |
+      #       docker-compose up
+
+      # - deploy:
+      #     name: push image
+      #     command: |
+      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
+      #         docker login
+      #         docker tag app "thekevjames/thekev.in:${CIRCLE_SHA1}"
+      #         docker push "thekevjames/thekev.in:${CIRCLE_SHA1}"
+      #       fi

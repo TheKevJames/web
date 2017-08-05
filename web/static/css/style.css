@@ -105,9 +105,9 @@ nav {
   max-width: 240px; }
 
 #headline {
-  margin: 0 50px;
   text-align: center; }
-  #headline #bio { }
+  #headline #bio {
+    margin-bottom: 25px; }
     #headline #bio #name {
       font-size: 57px;
       line-height: 60px;
@@ -116,9 +116,6 @@ nav {
 
 #social {
   text-align: center; }
-  @media (min-width: 768px) {
-    #social {
-      padding-top: 20px; } }
   #social i {
     font-size: 72px;
     color: black;
@@ -128,6 +125,8 @@ nav {
     line-height: 0.88;
     border-radius: 16px;
     margin-left: 15.5px; }
+    #social i.fa {
+      margin-bottom: 10px; }
     #social i.fa-facebook-square:hover {
       background-color: #3b5998; }
     #social i.fa-twitter-square:hover {

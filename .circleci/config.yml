@@ -38,3 +38,10 @@ jobs:
               docker push "thekevjames/thekev.in:${CIRCLE_SHA1}"
               docker push "thekevjames/thekev.in:latest"
             fi
+
+      - deploy:
+          name: deploy image
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ssh ubuntu@thekev.in "cd thekev.in && docker-compose pull && docker-compose up -d"
+            fi

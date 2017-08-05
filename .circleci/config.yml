@@ -14,7 +14,7 @@ jobs:
           name: install dependencies
           command: |
             apk add --no-cache py-pip=9.0.0-r1
-            pip install docker-compose==1.15.0 pre-commit
+            pip install pre-commit
 
       - run:
           name: run pre-build tests
@@ -24,18 +24,15 @@ jobs:
       - run:
           name: build image
           command: |
-            docker-compose build
+            docker build -t web web/
 
-      # - run:
-      #     name: run post-build tests
-      #     command: |
-      #       docker-compose up
+      - deploy:
+          name: push image
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker tag web "thekevjames/thekev.in:${CIRCLE_SHA1}"
+              docker tag web "thekevjames/thekev.in:latest"
 
-      # - deploy:
-      #     name: push image
-      #     command: |
-      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
-      #         docker login
-      #         docker tag app "thekevjames/thekev.in:${CIRCLE_SHA1}"
-      #         docker push "thekevjames/thekev.in:${CIRCLE_SHA1}"
-      #       fi
+              docker push "thekevjames/thekev.in:${CIRCLE_SHA1}"
+              docker push "thekevjames/thekev.in:latest"
+            fi

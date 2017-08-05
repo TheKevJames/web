@@ -3,16 +3,18 @@ import collections
 import csv
 import logging
 import operator
-import os
 
 from dropbox import Dropbox
 from flask import Flask
 from flask import jsonify, make_response, render_template, request, url_for
 from flask_flatpages import FlatPages
 from raven.contrib.flask import Sentry
+from raven.exceptions import InvalidDsn
 
 
-DROPBOX_TOKEN = os.environ['DROPBOX_TOKEN']
+DROPBOX_TOKEN = open('/run/secrets/dropbox_token').read().rstrip()
+SENTRY_DSN = open('/run/secrets/sentry_dsn_thekevin').read().rstrip()
+
 FLATPAGES_EXTENSION = '.md'
 
 
@@ -26,7 +28,10 @@ logger.setLevel(logging.DEBUG)
 app = Flask(__name__, static_url_path='')
 flatpages = FlatPages(app)
 app.config.from_object(__name__)
-sentry = Sentry(app, logging=True, level=logging.WARNING)
+try:
+    sentry = Sentry(app, dsn=SENTRY_DSN, logging=True, level=logging.WARNING)
+except InvalidDsn:
+    logger.warning('Invalid Sentry DSN: "%s"', SENTRY_DSN)
 
 
 @app.route('/')

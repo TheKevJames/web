@@ -43,5 +43,7 @@ jobs:
           name: deploy image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ssh -o "StrictHostKeyChecking no" ubuntu@thekev.in "docker service update --force thekevjames_thekevin"
+              ssh -oStrictHostKeyChecking=no ubuntu@thekev.in "
+                docker service update --image thekevjames/thekev.in:latest thekevjames_thekevin
+              "
             fi

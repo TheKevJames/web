@@ -1,11 +1,26 @@
-version: '2'
+version: '3.2'
 
 services:
-  web:
-    build: web/.
-    image: thekevjames/thekev.in
-    environment:
-      - DROPBOX_TOKEN=${DROPBOX_TOKEN}
-      - SENTRY_DSN=${SENTRY_DSN_THEKEVIN}
+  thekevin:
+    image: thekevjames/thekev.in:latest
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        window: 20s
+      update_config:
+        parallelism: 1
+        monitor: 20s
     ports:
       - "28005:5000"
+    secrets:
+      - dropbox_token
+      - sentry_dsn_thekevin
+
+secrets:
+  dropbox_token:
+    external: true
+  sentry_dsn_thekevin:
+    external: true

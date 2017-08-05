@@ -25,7 +25,7 @@ em, i {
   line-height: 40px;
   color: #191919; }
 
-.font-subheader, nav div a, #headline #bio #quote, #content div h2, .list div p, .list div .live, .list div .code, .list div .read-more {
+.font-subheader, nav div a, #content div h2, .list div p, .list div .live, .list div .code, .list div .read-more {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -113,11 +113,6 @@ nav {
       line-height: 60px;
       color: #191919;
       cursor: default; }
-    #headline #bio #quote {
-      line-height: 30px;
-      color: #4978a2;
-      cursor: default;
-      padding-bottom: 10px; }
 
 #social {
   text-align: center; }

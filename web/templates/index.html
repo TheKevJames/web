@@ -10,12 +10,10 @@
 
         <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' id='bio'>
             <h1 id='name'>Kevin James</h1>
-            <h2 id='quote'></h2>
         </div>
     </div>
 
     <div id='social'>
-        <!-- TODO: fix small screens -->
         <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' id='social-container'>
             <a href='https://github.com/TheKevJames'>
                 <i class='fa fa-github-square'></i>
@@ -37,55 +35,4 @@
             </a>
         </div>
     </div>
-
-    <!-- TODO -->
-    <!-- <div id='online-courses'></div> -->
-    <!-- <div id='certifications'></div> -->
-    <!-- WBI Social Innovator -->
-    <!-- Inaugural Stanford ML -->
-    <!-- Fundamentals of Scala -->
-    <!-- <div id='awards'></div> -->
-    <!-- Software Engineering Entrance Scholarship -->
-    <!-- National AP with Distinction -->
-    <!-- Governer's Honour Roll 2009-2012 -->
-    <!-- Honours highschool graduate -->
-{% endblock %}
-
-{% block js %}
-<!-- TODO: update to d3 v4 (see stats.html) -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
-<script>
-quotes = [
-    '"Be better than you were yesterday."',
-    '"No smooth sea ever birthed a skillful sailor."',
-    '"Failure is not an option. It\'s bundled with your software."',
-    '"Life is about kicking ass, not kissing it."',
-    '"Live forever or die trying."',
-    '"Tail Recursion is its own reward."',
-    '"Treat each day as your last; one day you\'ll be right."',
-    '"The master has failed more times than the beginner has even tried."',
-    '"I\'ve never feared death or dying; I only fear never trying."',
-    '"The amount of persuasion required with your users usually correlates positively with the stupidness of your idea."',
-]
-quote_ptr = -1;
-
-function change_quote() {
-    quote_ptr = (quote_ptr + 1) % quotes.length;
-    d3.select('#quote')
-        .transition()
-        .duration(200)
-        .style('opacity', 0);
-
-    d3.select('#quote')
-        .transition()
-        .duration(200)
-        .text(quotes[quote_ptr])
-        .delay(200)
-        .style('opacity', 1);
-};
-
-change_quote();
-setInterval(change_quote, 1000 * 8);
-</script>
-
 {% endblock %}

@@ -30,6 +30,8 @@ jobs:
           name: push image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker login -e ${DOCKER_EMAIL} -u ${DOCKER_USER} -p ${DOCKER_PASS}
+
               docker tag web "thekevjames/thekev.in:${CIRCLE_SHA1}"
               docker tag web "thekevjames/thekev.in:latest"
 

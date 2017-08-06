@@ -1,6 +1,6 @@
 FROM python:3.6.2-alpine3.6
 
-EXPOSE 5000
+EXPOSE 80
 
 COPY requirements.txt /src/requirements.txt
 RUN pip install --upgrade pip && \

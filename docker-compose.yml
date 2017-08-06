@@ -13,8 +13,6 @@ services:
       update_config:
         parallelism: 1
         monitor: 20s
-    ports:
-      - "28005:5000"
     secrets:
       - dropbox_token
       - sentry_dsn_thekevin

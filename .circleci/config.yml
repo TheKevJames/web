@@ -1,49 +1,69 @@
 version: 2
 
 jobs:
-  build:
-    working_directory: /app
+  check:
     docker:
       - image: docker:17.05.0-ce-git
-
     steps:
       - checkout
-      - setup_remote_docker
-
       - run:
           name: install dependencies
           command: |
             apk add --no-cache py-pip=9.0.0-r1
             pip install pre-commit
-
       - run:
           name: run pre-build tests
           command: |
             pre-commit run --all-files
 
+  thekevin:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
       - run:
           name: build image
           command: |
             docker build -t web web/
-
+            docker tag web "thekevjames/thekev.in:${CIRCLE_SHA1}"
+            docker tag web "thekevjames/thekev.in:latest"
       - deploy:
           name: push image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
 
-              docker tag web "thekevjames/thekev.in:${CIRCLE_SHA1}"
-              docker tag web "thekevjames/thekev.in:latest"
-
               docker push "thekevjames/thekev.in:${CIRCLE_SHA1}"
               docker push "thekevjames/thekev.in:latest"
             fi
 
+  deploy:
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
       - deploy:
           name: deploy image
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ssh -oStrictHostKeyChecking=no ubuntu@thekev.in "
-                docker service update --image thekevjames/thekev.in:latest thekevjames_thekevin
-              "
-            fi
+            ssh -oStrictHostKeyChecking=no ubuntu@thekev.in "
+              docker service update --image thekevjames/thekev.in:latest thekevjames_thekevin
+            "
+
+workflows:
+  version: 2
+  check-build-and-deploy:
+    jobs:
+      - check
+
+      - thekevin:
+          context: org-global
+          requires:
+            - check
+
+      - deploy:
+          requires:
+            - thekevin
+          filters:
+            branches:
+              only: master

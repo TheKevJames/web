@@ -9,7 +9,6 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            apk add --no-cache py-pip=9.0.0-r1
             pip install pre-commit
       - run:
           name: run pre-build tests

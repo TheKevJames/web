@@ -12,13 +12,9 @@ jobs:
           name: install dependencies
           command: |
             pip install pre-commit
-      - run:
-          name: run pre-build tests
-          command: |
-            pre-commit run --all-files
+      - run: pre-commit run --all-files
 
   thekevin:
-    working_directory: /app
     docker:
       - image: docker:17.05.0-ce-git
     steps:

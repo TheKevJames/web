@@ -3,7 +3,7 @@ version: 2
 jobs:
   check:
     docker:
-      - image: docker:17.05.0-ce-git
+      - image: python:3.6.2-alpine3.6
     steps:
       - checkout
       - run:

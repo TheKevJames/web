@@ -8,10 +8,7 @@ jobs:
       - image: python:3.6.2
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-            pip install pre-commit
+      - run: pip install pre-commit
       - run: pre-commit run --all-files
 
   thekevin:

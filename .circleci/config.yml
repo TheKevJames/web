@@ -9,6 +9,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            apk install --no-cache git
             pip install pre-commit
       - run:
           name: run pre-build tests

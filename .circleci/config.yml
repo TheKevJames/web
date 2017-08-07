@@ -3,7 +3,9 @@ version: 2
 jobs:
   check:
     docker:
-      - image: python:3.6.2-alpine3.6
+      # https://github.com/docker-library/python/issues/155
+      # - image: python:3.6.2-alpine3.6
+      - image: python:3.6.2
     steps:
       - checkout
       - run:

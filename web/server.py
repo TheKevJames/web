@@ -111,11 +111,11 @@ def stats_fitness():
     # TODO: numeric indices from csv header
     fitness = [{
         'date': f[0],
-        'calories': int(f[1]),
-        'exercise': int(f[2]),
-        'weight': int(f[3]) if f[3] else None,
-        'coffees': int(f[4]),
-        'drinks': int(f[5]),
+        'calories': float(f[1]),
+        'exercise': float(f[2]),
+        'weight': float(f[3]) if f[3] else None,
+        'coffees': float(f[4]),
+        'drinks': float(f[5]),
     } for f in fitness][:days + 1][::-1]
 
     return jsonify(fitness)

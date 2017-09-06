@@ -9,18 +9,17 @@
 {% block body %}
     {{ super() }}
 
-    <div class='container-fluid' id='content'>
-        <div class='col-lg-1 col-md-1 hidden-sm hidden-xs'></div>
-        <div class='col-lg-10 col-md-10 col-sm-12 col-xs-12' id='blog-page'>
-            <div class='row'>
+    <div class='blog-wrapper' id='content'>
+        <div id='blog-page'>
+            <div>
                 <h2>{{ post.title }}</h2>
             </div>
 
-            <div class='row'>
-                <div class='col-lg-4 col-md-4 col-sm-5 col-xs-5'>
+            <div id='post-metadata'>
+                <div id='post-date'>
                     <h4>{{ post.date }}</h4>
                 </div>
-                <div class='col-lg-4 col-md-4 hidden-sm hidden-xs text-center'>
+                <div id='post-tags'>
                     <h4>
                     {% for tag in post.tag_list %}
                         {% if loop.index0 != 0 %}
@@ -30,27 +29,14 @@
                     {% endfor %}
                     </h4>
                 </div>
-                <div class='col-lg-4 col-md-4 col-sm-7 col-xs-7 text-right' >
+                <div id='post-rss' >
                     <h4><a href="{{ url_for('blog_rss') }}">Subscribe with RSS</a></h4>
-                </div>
-
-                <div class='hidden-lg hidden-md col-sm-12 col-xs-12 text-center'>
-                    <h4>
-                    {% for tag in post.tag_list %}
-                        {% if loop.index0 != 0 %}
-                            <span>- </span>
-                        {% endif %}
-                        <a class='blog-tag' href="{{ url_for('blog') }}?tag={{ tag|urlencode }}">{{ tag }}</a>
-                    {% endfor %}
-                    </h4>
                 </div>
             </div>
 
-
-            <div class='row'>
+            <div>
                 {{ post.html|safe }}
             </div>
         </div>
-        <div class='col-lg-1 col-md-1 hidden-sm hidden-xs'></div>
     </div>
 {% endblock %}

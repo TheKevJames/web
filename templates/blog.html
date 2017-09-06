@@ -5,12 +5,12 @@
 {% block body %}
     {{ super() }}
 
-    <div class='container-fluid' id='content'>
-        <div class='col-lg-8 col-md-8 col-sm-12 col-xs-12' id='blog-recent'>
+    <div id='content'>
+        <div id='blog-recent'>
             {% if not filter_tag %}
                 <h2>Recent Posts</h2>
             {% else %}
-                <h2><span class='hidden-sm hidden-xs'>Posts Tagged With </span>"{{ filter_tag }}" (<a href="{{ url_for('blog') }}">view all</a>)</h2>
+                <h2><span class='hidden-small'>Posts Tagged With </span>"{{ filter_tag }}" (<a href="{{ url_for('blog') }}">view all</a>)</h2>
             {% endif %}
 
             <div class='list'>
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12' id='blog-entries'>
+        <div id='blog-entries'>
             <div class='row' id='blog-entries-date'>
                 <h2>All Posts (by date)</h2>
 
@@ -42,7 +42,7 @@
                 </ul>
             </div>
 
-            <div class='row' id='blog-entries-tags'>
+            <div id='blog-entries-tags'>
                 <h2>All Tags</h2>
 
                 <ul class='list'>

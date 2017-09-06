@@ -3,33 +3,38 @@
   display: table;
   clear: both; }
 
-.font-header, #headline #bio #name, .list div h3 {
+body {
+  overflow-x: hidden;
+  /* default font config */
   font-family: 'Helvetica Neue', 'Calibri Light', 'Roboto', sans-serif;
+  color: #191919;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.02em; }
+
+.font-header, #headline #bio #name, .list div h3 {
   font-weight: normal;
   text-transform: uppercase;
   font-size: 28px;
-  line-height: 40px;
-  color: #191919; }
+  line-height: 40px; }
 
-.font-subheader, nav div a, #content div h2, .list div p, .list div .live {
-  font-family: 'Helvetica Neue', 'Calibri Light', 'Roboto', sans-serif;
-  font-size: 17px;
+#content div h2 {
+  font-size: 22px;
   line-height: 30px;
-  text-transform: uppercase;
-  color: #191919; }
+  text-transform: uppercase; }
+
+.font-subheader, nav div a, .list div p, .list div .live {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase; }
 
 .font-body, .font-single, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #content div h4, #content div p, #content div li {
-  font-family: 'Helvetica Neue', 'Calibri Light', 'Roboto', sans-serif;
   font-size: 17px;
   line-height: 23px;
-  margin: 0 0 23px 0;
-  color: #191919; }
+  margin: 0 0 23px 0; }
 
 .font-single, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post {
   margin: 0 0 10px 0 !important; }
-
-body {
-  overflow-x: hidden; }
 
 #line {
   position: absolute;

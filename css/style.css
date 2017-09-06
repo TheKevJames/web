@@ -58,9 +58,11 @@ nav {
     margin-right: 10px; }
     nav div a {
       line-height: 40px;
+      text-decoration: none !important;
       color: white; }
-      nav div a:hover {
-        text-decoration: none;
+      nav div a:link, nav div a:visited {
+        color: white; }
+      nav div a:hover, nav div a:active {
         color: #e6e6e6; }
     nav div#cv {
       float: right; }
@@ -105,29 +107,32 @@ nav {
 
 #social {
   text-align: center; }
-  #social i {
-    font-size: 72px;
-    color: black;
+  #social a {
+    text-decoration: none !important;
+    color: white !important; }
+  #social a svg {
     height: 62px;
     width: 62px;
     vertical-align: middle;
-    line-height: 0.88;
-    border-radius: 16px;
-    margin-left: 15.5px; }
-    #social i.fa {
-      margin-bottom: 10px; }
-    #social i.fa-facebook-square:hover {
-      background-color: #3b5998; }
-    #social i.fa-twitter-square:hover {
-      background-color: #55acee; }
-    #social i.fa-github-square:hover {
-      background-color: #999999; }
-    #social i.fa-linkedin-square:hover {
-      background-color: #0077b5; }
-    #social i.fa-envelope-square:hover {
-      background-color: #db4437; }
-    #social i.fa-rss-square:hover {
-      background-color: #ff6600; }
+    margin-bottom: 10px;
+
+    transform: scale(1);
+    transition: transform .5s ease-out;  }
+  #social a svg:hover {
+    transform: scale(1.25);
+    transition: transform .5s ease-out; }
+  #social #icon-email path {
+    fill: #db4437; }
+  #social #icon-facebook path {
+    fill: #3b5998; }
+  #social #icon-github path {
+    fill: #333333; }
+  #social #icon-linkedin path {
+    fill: #0077b5; }
+  #social #icon-rss path {
+    fill: #f26522; }
+  #social #icon-twitter path {
+    fill: #1da1f2; }
 
 #content div h2 {
   text-align: center; }

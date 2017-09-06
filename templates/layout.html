@@ -13,7 +13,6 @@
     <link rel='alternate' type='application/rss+xml' title='RSS Feed' href='http://thekev.in/feed.xml' />
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css' />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
     <link rel='stylesheet' href='/css/style.css' />
     {% block css %}{% endblock %}
 </head>
@@ -33,7 +32,7 @@
             <a href="{{ url_for('stats') }}">Stats</a>
         </div>
         <div class='dropdown'>
-            <button><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+            <button>&#x25BC;</button>
             <div class='dropdown-content'>
                 <a href="{{ url_for('hexclock') }}">Hexclock</a>
                 <!-- TODO: jarvis-api docs -->

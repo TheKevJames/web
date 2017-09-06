@@ -3,6 +3,7 @@ import collections
 import csv
 import logging
 import operator
+import os
 
 from dropbox import Dropbox
 from flask import Flask
@@ -12,8 +13,16 @@ from raven.contrib.flask import Sentry
 from raven.exceptions import InvalidDsn
 
 
-DROPBOX_TOKEN = open('/run/secrets/dropbox_token').read().rstrip()
-SENTRY_DSN = open('/run/secrets/sentry_dsn_thekevin').read().rstrip()
+try:
+    DROPBOX_TOKEN = open('/run/secrets/dropbox_token').read().rstrip()
+except FileNotFoundError:
+    DROPBOX_TOKEN = os.environ.get('DROPBOX_TOKEN')
+    if not DROPBOX_TOKEN:
+        raise
+try:
+    SENTRY_DSN = open('/run/secrets/sentry_dsn_thekevin').read().rstrip()
+except FileNotFoundError:
+    SENTRY_DSN = os.environ.get('SENTRY_DSN')
 
 FLATPAGES_EXTENSION = '.md'
 

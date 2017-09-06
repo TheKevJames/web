@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+  thekevin:
+    build: web/
+    environment:
+      - DROPBOX_TOKEN=${DROPBOX_TOKEN}
+      - SENTRY_DSN=${SENTRY_DSN}
+    ports:
+      - "8080:80"

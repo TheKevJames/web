@@ -16,7 +16,7 @@
   line-height: 40px;
   color: #191919; }
 
-.font-subheader, nav div a, #content div h2, .list div p, .list div .live, .list div .code, .list div .read-more {
+.font-subheader, nav div a, #content div h2, .list div p, .list div .live {
   font-family: 'Cantarell', sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -25,14 +25,14 @@
   letter-spacing: -1px;
   color: #191919; }
 
-.font-body, .font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #content div h4, #content div p, #content div li {
+.font-body, .font-single, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #content div h4, #content div p, #content div li {
   font-family: 'Cantarell', sans-serif;
   font-size: 17px;
   line-height: 23px;
   margin: 0 0 23px 0;
   color: #191919; }
 
-.font-single, .list div p.description, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post {
+.font-single, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post {
   margin: 0 0 10px 0 !important; }
 
 body {
@@ -157,14 +157,12 @@ nav {
     .list div p {
       text-transform: none;
       padding: 5px; }
-      .list div p.overview {
-        display: none; }
-      .list div p.description, .list div p.date {
+      .list div p.date {
         text-align: center; }
       .list div p.title {
         text-align: center;
         margin-bottom: 0; }
-    .list div .live, .list div .code, .list div .read-more {
+    .list div .live {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -175,14 +173,10 @@ nav {
       color: white;
       text-decoration: none;
       text-align: center; }
-      .list div .live:hover, .list div .code:hover, .list div .read-more:hover {
+      .list div .live:hover {
         opacity: 0.9; }
     .list div .live {
       background-color: #99b7d1; }
-    .list div .code {
-      background-color: #7ba284; }
-    .list div .read-more {
-      background-color: #727272; }
     .list div :last-child {
       border-radius: 0 0 4px 4px; }
 

@@ -2,6 +2,10 @@
 
 {% block title %}{{ post.title }}{% endblock %}
 
+{% block css %}
+<link rel='stylesheet' href='/css/emacs.css' />
+{% endblock %}
+
 {% block body %}
     {{ super() }}
 
@@ -49,8 +53,4 @@
         </div>
         <div class='col-lg-1 col-md-1 hidden-sm hidden-xs'></div>
     </div>
-{% endblock %}
-
-{% block css %}
-<link rel='stylesheet' href='/css/emacs.css' />
 {% endblock %}

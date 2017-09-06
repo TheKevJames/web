@@ -18,7 +18,6 @@ jobs:
       - checkout
       - setup_remote_docker:
           version: 17.05.0-ce
-      - run: docker version
       - run:
           name: build image
           command: |

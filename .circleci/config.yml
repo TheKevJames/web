@@ -20,7 +20,7 @@ jobs:
       - run:
           name: build image
           command: |
-            docker build -t web web/
+            docker build -t web .
             docker tag web "thekevjames/thekev.in:${CIRCLE_SHA1}"
             docker tag web "thekevjames/thekev.in:latest"
       - deploy:

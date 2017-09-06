@@ -18,20 +18,26 @@ jobs:
       - checkout
       - setup_remote_docker:
           version: 17.05.0-ce
-      - run:
-          name: build image
-          command: |
-            docker build -t web .
-            docker tag web "thekevjames/thekev.in:${CIRCLE_SHA1}"
-            docker tag web "thekevjames/thekev.in:latest"
+      - run: docker build -t web .
       - deploy:
-          name: push image
+          name: login to dockerhub
+          command: docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+      - deploy:
+          name: push image (hash)
+          command: |
+            docker tag web "thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8}"
+            docker push "thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8}"
+      - deploy:
+          name: push image (branch)
+          command: |
+            docker tag web "thekevjames/thekev.in:${CIRCLE_BRANCH}"
+            docker push "thekevjames/thekev.in:${CIRCLE_BRANCH}"
+      - deploy:
+          name: push image (latest)
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-
-              docker push "thekevjames/thekev.in:${CIRCLE_SHA1}"
-              docker push "thekevjames/thekev.in:latest"
+              docker tag web thekevjames/thekev.in:latest
+              docker push thekevjames/thekev.in:latest
             fi
 
   deploy:
@@ -42,7 +48,7 @@ jobs:
           name: deploy image
           command: |
             ssh -oStrictHostKeyChecking=no ubuntu@thekev.in "
-              docker service update --image thekevjames/thekev.in:${CIRCLE_SHA1} thekevjames_thekevin
+              docker service update --image "thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8}" thekevjames_thekevin
             "
 
 workflows:

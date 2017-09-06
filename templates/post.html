@@ -2,41 +2,87 @@
 
 {% block title %}{{ post.title }}{% endblock %}
 
-{% block css %}
-<link rel='stylesheet' href='/css/emacs.css' />
-{% endblock %}
-
 {% block body %}
-    {{ super() }}
+<div class='blog-wrapper' id='content'>
+    <div id='blog-page'>
+        <div>
+            <h2>{{ post.title }}</h2>
+        </div>
 
-    <div class='blog-wrapper' id='content'>
-        <div id='blog-page'>
-            <div>
-                <h2>{{ post.title }}</h2>
+        <div id='post-metadata'>
+            <div id='post-date'>
+                <h4>{{ post.date }}</h4>
             </div>
-
-            <div id='post-metadata'>
-                <div id='post-date'>
-                    <h4>{{ post.date }}</h4>
-                </div>
-                <div id='post-tags'>
-                    <h4>
-                    {% for tag in post.tag_list %}
-                        {% if loop.index0 != 0 %}
-                            <span>- </span>
-                        {% endif %}
-                        <a class='blog-tag' href="{{ url_for('blog') }}?tag={{ tag|urlencode }}">{{ tag }}</a>
-                    {% endfor %}
-                    </h4>
-                </div>
-                <div id='post-rss' >
-                    <h4><a href="{{ url_for('blog_rss') }}">Subscribe with RSS</a></h4>
-                </div>
+            <div id='post-tags'>
+                <h4>
+                {% for tag in post.tag_list %}
+                    {% if loop.index0 != 0 %}
+                        <span>- </span>
+                    {% endif %}
+                    <a class='blog-tag' href="{{ url_for('blog') }}?tag={{ tag|urlencode }}">{{ tag }}</a>
+                {% endfor %}
+                </h4>
             </div>
-
-            <div>
-                {{ post.html|safe }}
+            <div id='post-rss' >
+                <h4><a href="{{ url_for('blog_rss') }}">Subscribe with RSS</a></h4>
             </div>
         </div>
+
+        <div>
+            {{ post.html|safe }}
+        </div>
     </div>
+</div>
+{% endblock %}
+
+{% block css %}
+<link rel='stylesheet' href='/css/emacs.css' />
+<style>
+/* positioning */
+.blog-wrapper {
+  text-align: center; }
+#blog-page {
+  display: inline-block;
+  width: 92%;
+  text-align: justify; }
+@media (min-width:600px) { #blog-page {
+  width: 88%; } }
+
+/* arrows */
+.next-post {
+  float: right; }
+  .next-post:after {
+    content: " \2192"; }
+.prev-post {
+  float: left; }
+  .prev-post:before {
+    content: "\2190  "; }
+
+/* metadata */
+#post-metadata div h4 {
+  font-weight: 300; }
+#post-date {
+  width: 33%;
+  float: left; }
+  #post-date h4 {
+    padding-left: 20px; }
+#post-tags {
+  width: 34%;
+  float: left;
+  text-align: center; }
+#post-rss {
+  width: 33%;
+  float: right;
+  text-align: right; }
+
+/* misc */
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px; }
+hr {
+  margin: 20px 5px;
+  border: 0;
+  border-top: 1px solid #eee; }
+</style>
 {% endblock %}

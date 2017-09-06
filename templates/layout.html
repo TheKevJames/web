@@ -1,53 +1,146 @@
 <!doctype html>
 <html lang='en'>
 <head>
-    <meta charset='utf-8'>
-    <meta name='author' content='Kevin James'>
-    <meta name='description' content='Homepage of Kevin James | TalkIQ and AtomicLabs engineer; former Oracle, AeroFS, Wriber, and Enflick intern; uWaterloo software engineer; investor; musician; writer'>
-    <meta name='keywords' content='Kevin,James'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta charset='utf-8'>
+<meta name='author' content='Kevin James'>
+<meta name='description' content='Homepage of Kevin James | TalkIQ and AtomicLabs engineer; former Oracle, AeroFS, Wriber, and Enflick intern; uWaterloo software engineer; investor; musician; writer'>
+<meta name='keywords' content='Kevin,James'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <title>{% block title %}{% endblock %} | Kevin James</title>
+<title>{% block title %}{% endblock %} | Kevin James</title>
 
-    <link rel='icon' href='/img/favicon.png' />
-    <link rel='alternate' type='application/rss+xml' title='RSS Feed' href='https://thekev.in/feed.xml' />
+<link rel='icon' href='/img/favicon.png' />
+<link rel='alternate' type='application/rss+xml' title='RSS Feed' href='https://thekev.in/feed.xml' />
 </head>
 
 <body>
-    <link rel='stylesheet' href='/css/style.css' />
-    {% block css %}{% endblock %}
+<style>
+a {
+  color: #337ab7;
+  text-decoration: none; }
 
-{% block body %}
-    <div id='line'></div>
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Helvetica Neue', 'Calibri Light', 'Roboto', sans-serif;
+  color: #191919;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.02em; }
 
-    <nav>
-        <div>
-            <a href="{{ url_for('index') }}">Home</a>
-        </div>
-        <div>
-            <a href="{{ url_for('blog') }}">Blog</a>
-        </div>
-        <div>
-            <a href="{{ url_for('stats') }}">Stats</a>
-        </div>
-        <div class='dropdown'>
-            <button>&#x25BC;</button>
-            <div class='dropdown-content'>
-                <a href="{{ url_for('hexclock') }}">Hexclock</a>
-                <!-- TODO: jarvis-api docs -->
-                <!-- <a href="https://jarvis.thekev.in/">Jarvis API</a> -->
-                <!-- TODO: league-api docs -->
-                <!-- <a href="https://league.thekev.in/">LoL API</a> -->
-                <a href="{{ url_for('quotes') }}">Quotes</a>
-                <a href="https://status.thekev.in/">Status</a>
-            </div>
-        </div>
+.font-header, #headline #bio #name {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 40px; }
 
-        <div id='cv'>
-            <a href='/resource/cv.pdf'>C.V.</a>
+#content div h2 {
+  font-size: 22px;
+  line-height: 30px;
+  text-transform: uppercase; }
+
+.font-subheader, nav div a, .list div p, .list div .live {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase; }
+
+.font-body, .font-single, .list div p.date, #blog-entries ul li, #blog-page .next-post, #blog-page .prev-post, #content div h4, #content div p, #content div li {
+  font-size: 17px;
+  line-height: 23px;
+  margin: 0 0 23px 0; }
+
+.font-single, .list div p.date, #blog-page .next-post, #blog-page .prev-post {
+  margin: 0 0 10px 0 !important; }
+
+#content div h2 {
+  text-align: center; }
+#content div h4 {
+  font-style: italic; }
+
+#line {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  z-index: 99;
+  background-color: #99b7d1; }
+
+nav {
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 30px;
+  background-color: #7ba284; }
+
+  nav div {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px; }
+    nav div a {
+      line-height: 40px;
+      text-decoration: none !important;
+      color: white; }
+      nav div a:link, nav div a:visited {
+        color: white; }
+      nav div a:hover, nav div a:active {
+        color: #e6e6e6; }
+    nav div#cv {
+      float: right;
+      margin-right: 30px; }
+
+  nav .dropdown {
+    display: inline-block; }
+    nav .dropdown > button {
+      font-size: 18px;
+      color: white;
+      background-color: #7ba284;
+      border: none; }
+    nav .dropdown .dropdown-content {
+      display: none;
+      background-color: #7ba284;
+      height: initial;
+      position: absolute;
+      margin-left: 0;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1; }
+      nav .dropdown .dropdown-content a {
+        display: block;
+        padding: 0 10px; }
+    nav .dropdown:hover .dropdown-content {
+      display: block; }
+</style>
+{% block css %}{% endblock %}
+
+<div id='line'></div>
+
+<nav>
+    <div>
+        <a href="{{ url_for('index') }}">Home</a>
+    </div>
+    <div>
+        <a href="{{ url_for('blog') }}">Blog</a>
+    </div>
+    <div>
+        <a href="{{ url_for('stats') }}">Stats</a>
+    </div>
+    <div class='dropdown'>
+        <button>&#x25BC;</button>
+        <div class='dropdown-content'>
+            <a href="{{ url_for('hexclock') }}">Hexclock</a>
+            <!-- TODO: jarvis-api docs -->
+            <!-- <a href="https://jarvis.thekev.in/">Jarvis API</a> -->
+            <!-- TODO: league-api docs -->
+            <!-- <a href="https://league.thekev.in/">LoL API</a> -->
+            <a href="{{ url_for('quotes') }}">Quotes</a>
+            <a href="https://status.thekev.in/">Status</a>
         </div>
-    </nav>
-{% endblock %}
+    </div>
+
+    <div id='cv'>
+        <a href='/resource/cv.pdf'>C.V.</a>
+    </div>
+</nav>
+{% block body %}{% endblock %}
 
 {% block js %}{% endblock %}
 </body>

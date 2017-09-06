@@ -3,17 +3,34 @@
 {% block title %}Stats{% endblock %}
 
 {% block body %}
-    {{ super() }}
-
-    <div id='content'>
-        <div>
-            <h2>Personal Stats</h2>
-        </div>
-
-        <div id='calorie-chart'></div>
-        <div id='coffee-chart'></div>
-        <div id='drinks-chart'></div>
+<div id='content'>
+    <div>
+        <h2>Personal Stats</h2>
     </div>
+
+    <div id='calorie-chart'></div>
+    <div id='coffee-chart'></div>
+    <div id='drinks-chart'></div>
+</div>
+{% endblock %}
+
+{% block css %}
+<style>
+#calorie-chart, #coffee-chart, #drinks-chart {
+  text-align: center; }
+
+svg path {
+  stroke: black;
+  fill: none; }
+  .weekly {
+    stroke: #7ba284; }
+  /* .monthly {
+    stroke: #99b7d1; } */
+
+svg line {
+  stroke: #99b7d1;
+  stroke-dasharray: 10, 5; }
+</style>
 {% endblock %}
 
 {% block js %}

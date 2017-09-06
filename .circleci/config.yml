@@ -13,10 +13,11 @@ jobs:
 
   thekevin:
     docker:
-      - image: docker:17.07.0-ce-git
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
-      - setup_remote_docker
+      - setup_remote_docker:
+          version: 17.05.0-ce
       - run:
           name: build image
           command: |

@@ -41,7 +41,7 @@ jobs:
           name: deploy image
           command: |
             ssh -oStrictHostKeyChecking=no ubuntu@thekev.in "
-              docker service update --image thekevjames/thekev.in:latest thekevjames_thekevin
+              docker service update --image thekevjames/thekev.in:${CIRCLE_SHA1} thekevjames_thekevin
             "
 
 workflows:

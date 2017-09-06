@@ -9,10 +9,6 @@
 
     <title>{% block title %}{% endblock %} | Kevin James</title>
 
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css' />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
-    <link rel='stylesheet' href='/css/style.css' />
-
     <link rel='icon' href='/img/favicon.png' />
     <link rel='alternate' type='application/rss+xml' title='RSS Feed' href='http://thekev.in/feed.xml' />
 </head>
@@ -49,6 +45,11 @@
         </div>
     </nav>
 {% endblock %}
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css' />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+<link rel='stylesheet' href='/css/style.css' />
+{% block css %}{% endblock %}
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js'></script>

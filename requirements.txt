@@ -1,4 +1,4 @@
-dropbox==8.0.0
+dropbox==8.2.0
 flask==0.12.2
 flask-flatpages==0.6
 pygments==2.2.0

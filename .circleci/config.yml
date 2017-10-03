@@ -47,8 +47,8 @@ jobs:
       - deploy:
           name: deploy image
           command: |
-            ssh -oStrictHostKeyChecking=no ubuntu@thekev.in "
-              docker service update --image thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8} thekevjames_thekevin
+            ssh -oStrictHostKeyChecking=no kevin@thekev.in "
+              sudo docker service update --image thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8} thekevjames_thekevin
             "
 
 workflows:

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import collections
-import csv
 import logging
 import operator
 import os
@@ -103,32 +102,6 @@ def hexclock():
 def ping():
     return 'ok'
 
-@app.route('/stats')
-def stats():
-    return render_template('stats.html')
-
-# TODO: cache response
-@app.route('/stats/fitness')
-def stats_fitness():
-    dbx = Dropbox(DROPBOX_TOKEN)
-    _, response = dbx.files_download('/vimwiki/fitness.wiki')
-    fitness = csv.reader(response.text.splitlines()[3:])
-
-    # two weeks plus one month of context
-    days = 14 + 28
-
-    # TODO: numeric indices from csv header
-    fitness = [{
-        'date': f[0],
-        'calories': float(f[1]),
-        'exercise': float(f[2]),
-        'weight': float(f[3]) if f[3] else None,
-        'coffees': float(f[4]),
-        'drinks': float(f[5]),
-    } for f in fitness][:days + 1][::-1]
-
-    return jsonify(fitness)
-
 @app.route('/quotes')
 def quotes():
     return render_template('quotes.html')
@@ -141,4 +114,4 @@ def quotes_json():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='80')
+    app.run(host='0.0.0.0', port=80)

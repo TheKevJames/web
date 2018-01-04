@@ -24,6 +24,7 @@ except FileNotFoundError:
     SENTRY_DSN = os.environ.get('SENTRY_DSN')
 
 FLATPAGES_EXTENSION = '.md'
+FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'tables']
 
 
 logging.basicConfig(format='%(asctime)-15s %(levelname)-6s %(message)s')

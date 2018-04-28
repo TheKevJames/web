@@ -6,7 +6,12 @@ import os
 
 from dropbox import Dropbox
 from flask import Flask
-from flask import jsonify, make_response, render_template, request, url_for
+from flask import jsonify
+from flask import make_response
+from flask import redirect
+from flask import render_template
+from flask import request
+from flask import url_for
 from flask_flatpages import FlatPages
 from raven.contrib.flask import Sentry
 from raven.exceptions import InvalidDsn
@@ -46,6 +51,10 @@ except InvalidDsn:
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/cv')
+def cv():
+    return redirect('https://storage.googleapis.com/thekevjames-cv/cv.pdf')
 
 @app.route('/blog')
 def blog():

@@ -1,5 +1,5 @@
 dropbox==8.7.1
-flask==0.12.2
+flask==1.0.1
 flask-flatpages==0.6
 pygments==2.2.0
 raven[flask]==6.6.0

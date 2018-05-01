@@ -1,6 +1,6 @@
 // util
 function shuffle(a) {
-    for (let i = a.length; i; i--) {
+    for (let i = a.length; i; i -= 1) {
         let j = Math.floor(Math.random() * i);
         [a[i - 1], a[j]] = [a[j], a[i - 1]];
     }
@@ -98,7 +98,7 @@ async function update(eid, qid, qnid, quote, step_delay) {
 
 async function update_from_list(eid, qid, qnid, quotes, delay) {
     shuffle(quotes);
-    for (let i = 0; i < quotes.length; i++) {
+    for (let i = 0; i < quotes.length; i += 1) {
         await update(eid, qid, qnid, quotes[i], delay / 5);
         await sleep(delay);
     }

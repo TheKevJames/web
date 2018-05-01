@@ -63,7 +63,7 @@ def blog():
     posts.sort(key=operator.itemgetter('date'), reverse=True)
 
     by_date = collections.OrderedDict()
-    by_tag = dict()
+    by_tag = {}
     for post in posts:
         for tag in post.meta.get('tags', '').split(', '):
             tag = tag or 'Untagged'

@@ -28,6 +28,7 @@ try:
 except FileNotFoundError:
     SENTRY_DSN = os.environ.get('SENTRY_DSN')
 
+ARTIFACTS_URL = 'https://storage.googleapis.com/thekevjames-artifacts'
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'tables']
 
@@ -54,7 +55,7 @@ def index():
 
 @app.route('/cv')
 def cv():
-    return redirect('https://storage.googleapis.com/thekevjames-cv/cv.pdf')
+    return redirect(f'{ARTIFACTS_URL}/cv.pdf')
 
 @app.route('/blog')
 def blog():

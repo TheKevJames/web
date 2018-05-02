@@ -1,6 +1,5 @@
 FROM mysocialobservations/docker-tdewolff-minify as static
 
-COPY resource /static/resource
 COPY img /static/img
 
 COPY js /static/js

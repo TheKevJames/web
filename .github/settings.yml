@@ -1,6 +1,6 @@
 repository:
-  name: thekev.in
-  description: personal homepage
+  name: web
+  description: personal homepage and various web apps
   homepage: https://thekev.in
   private: false
 

@@ -16,12 +16,6 @@ from raven.exceptions import InvalidDsn
 
 
 try:
-    DROPBOX_TOKEN = open('/run/secrets/dropbox_token').read().rstrip()
-except FileNotFoundError:
-    DROPBOX_TOKEN = os.environ.get('DROPBOX_TOKEN')
-    if not DROPBOX_TOKEN:
-        raise
-try:
     SENTRY_DSN = open('/run/secrets/sentry_dsn_thekevin').read().rstrip()
 except FileNotFoundError:
     SENTRY_DSN = os.environ.get('SENTRY_DSN')

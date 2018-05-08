@@ -10,8 +10,8 @@
     <title>Quotes</title>
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' />
-    <link rel='stylesheet' href='/css/quotes.css' />
-    <link rel='icon' href='/img/favicon.png' />
+    <link rel='stylesheet' href='./quotes.css' />
+    <link rel='icon' href='./favicon.png' />
 </head>
 
 <body>
@@ -19,10 +19,10 @@
     <h1 id='quote-next'></h1>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
-<script src='/js/quotes.js'></script>
+<script src='./quotes.js'></script>
 <script>
 async function rerender() {
-    let quotes = await fetch(new Request('/quotes/json', {
+    let quotes = await fetch(new Request('https://thekev.in/quotes/json', {
         method: 'GET',
         headers: new Headers({
             'Content-Type': 'application/json; charset=utf-8'

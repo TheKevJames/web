@@ -109,10 +109,6 @@ def blog_rss():
 def ping():
     return 'ok'
 
-@app.route('/quotes')
-def quotes():
-    return render_template('quotes.html')
-
 @app.route('/quotes/json')
 def quotes_json():
     dbx = Dropbox(DROPBOX_TOKEN)
@@ -123,6 +119,10 @@ def quotes_json():
 @app.route('/hexclock')
 def hexclock():
     return redirect(f'{ARTIFACTS_URL}/hexclock/hexclock.html')
+
+@app.route('/quotes')
+def quotes():
+    return redirect(f'{ARTIFACTS_URL}/quotes/quotes.html')
 
 
 if __name__ == '__main__':

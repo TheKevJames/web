@@ -1,6 +1,6 @@
 FROM mysocialobservations/docker-tdewolff-minify as static
 
-COPY img /static/img
+COPY shared /static/img
 
 COPY js /static/js
 RUN minify --match=".*.js" --type=js --output /static/js /static/js

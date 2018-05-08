@@ -105,10 +105,6 @@ def blog_rss():
     response.headers['Content-Type'] = 'application/xml'
     return response
 
-@app.route('/hexclock')
-def hexclock():
-    return render_template('hexclock.html')
-
 @app.route('/ping')
 def ping():
     return 'ok'
@@ -122,6 +118,11 @@ def quotes_json():
     dbx = Dropbox(DROPBOX_TOKEN)
     _, response = dbx.files_download('/vimwiki/quotes.wiki')
     return jsonify(list(response.text.splitlines()))
+
+# "make don't break"
+@app.route('/hexclock')
+def hexclock():
+    return redirect(f'{ARTIFACTS_URL}/hexclock/hexclock.html')
 
 
 if __name__ == '__main__':

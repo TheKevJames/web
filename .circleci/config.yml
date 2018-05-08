@@ -38,6 +38,42 @@ jobs:
               docker push thekevjames/thekev.in:latest
             fi
 
+  hexclock:
+    docker:
+      - image: mysocialobservations/docker-tdewolff-minify
+    steps:
+      - run:
+          name: install dependencies
+          command: |
+            apk add --update ca-certificates openssl
+            update-ca-certificates
+      - checkout
+      - run: mkdir -p build/hexclock
+      - run: cp shared/* build/hexclock/
+      - run: cp hexclock/* build/hexclock/
+      - run: minify --recursive --match=".*.css" --type=css --output build/ build/
+      - run: minify --recursive --match=".*.js" --type=js --output build/ build/
+      - persist_to_workspace:
+          root: build
+          paths:
+            - hexclock/
+
+  upload:
+    docker:
+      - image: google/cloud-sdk
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /gcloud-service-key.json
+    steps:
+      - run:
+          name: authenticate with google cloud
+          command: |
+            echo "${GCLOUD_SERVICE_KEY}" > "${GOOGLE_APPLICATION_CREDENTIALS}"
+            gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
+            gcloud config set project "thekevjames-175823"
+      - attach_workspace:
+          at: build
+      - run: gsutil -m cp -r build/hexclock gs://thekevjames-artifacts
+
   deploy:
     docker:
       - image: docker:17.05.0-ce-git
@@ -58,9 +94,17 @@ workflows:
           context: org-global
           requires:
             - lint
+      - hexclock
+      - upload:
+          requires:
+            - hexclock
+          filters:
+            branches:
+              only: master
       - deploy:
           requires:
             - thekevin
+            - upload
           filters:
             branches:
               only: master

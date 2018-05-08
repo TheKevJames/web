@@ -113,7 +113,9 @@ def ping():
 def quotes_json():
     dbx = Dropbox(DROPBOX_TOKEN)
     _, response = dbx.files_download('/vimwiki/quotes.wiki')
-    return jsonify(list(response.text.splitlines()))
+    response = jsonify(list(response.text.splitlines()))
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
 
 # "make don't break"
 @app.route('/hexclock')

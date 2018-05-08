@@ -18,5 +18,4 @@ You can update to the latest build with:
 
 This project requires access to some secret keys; you can set these with:
 
-    echo "my-dropbox-token" | docker secret create dropbox_token -
     echo "my-sentry-dsn" | docker secret create sentry_dsn_thekevin -

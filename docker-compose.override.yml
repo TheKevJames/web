@@ -4,7 +4,6 @@ services:
   thekevin:
     build: .
     environment:
-      - DROPBOX_TOKEN=${DROPBOX_TOKEN}
       - SENTRY_DSN=${SENTRY_DSN}
     ports:
       - "8080:80"

@@ -14,11 +14,8 @@ services:
         parallelism: 1
         monitor: 20s
     secrets:
-      - dropbox_token
       - sentry_dsn_thekevin
 
 secrets:
-  dropbox_token:
-    external: true
   sentry_dsn_thekevin:
     external: true

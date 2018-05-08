@@ -4,9 +4,7 @@ import logging
 import operator
 import os
 
-from dropbox import Dropbox
 from flask import Flask
-from flask import jsonify
 from flask import make_response
 from flask import redirect
 from flask import render_template
@@ -109,20 +107,13 @@ def blog_rss():
 def ping():
     return 'ok'
 
-@app.route('/quotes/json')
-def quotes_json():
-    dbx = Dropbox(DROPBOX_TOKEN)
-    _, response = dbx.files_download('/vimwiki/quotes.wiki')
-    response = jsonify(list(response.text.splitlines()))
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    return response
-
 # "make don't break"
 @app.route('/hexclock')
 def hexclock():
     return redirect(f'{ARTIFACTS_URL}/hexclock/hexclock.html')
 
 @app.route('/quotes')
+@app.route('/quotes/json')
 def quotes():
     return redirect(f'{ARTIFACTS_URL}/quotes/quotes.html')
 

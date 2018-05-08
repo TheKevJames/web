@@ -69,11 +69,19 @@ jobs:
     steps:
       - run:
           name: install dependencies
-          command: apk add --update ca-certificates openssl
+          command: apk add --update ca-certificates curl jq openssl
       - checkout
       - run: mkdir -p build/quotes
       - run: cp shared/* build/quotes/
       - run: cp quotes/* build/quotes/
+      - run:
+          name: get quotes
+          command: |
+            curl -X POST https://content.dropboxapi.com/2/files/download \
+                -H "Authorization: Bearer ${DROPBOX_TOKEN}" \
+                -H "Dropbox-API-Arg: {\"path\": \"/vimwiki/quotes.wiki\"}" \
+                -o /quotes.wiki
+            jq -n --arg x "$(cat /quotes.wiki)" '$x | split("\n")' > build/quotes/quotes.json
       - run: minify --recursive --match=".*.css" --type=css --output build/ build/
       - run: minify --recursive --match=".*.js" --type=js --output build/ build/
       - persist_to_workspace:

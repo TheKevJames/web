@@ -22,7 +22,7 @@
 <script src='./quotes.js'></script>
 <script>
 async function rerender() {
-    let quotes = await fetch(new Request('https://thekev.in/quotes/json', {
+    let quotes = await fetch(new Request('./quotes.json', {
         method: 'GET',
         headers: new Headers({
             'Content-Type': 'application/json; charset=utf-8'

@@ -12,7 +12,7 @@
 <image>
     <title>Kevin James' Blog</title>
     <link>https://www.thekev.in/blog</link>
-    <url>https://thekev.in/img/favicon.png</url>
+    <url>https://thekev.in/favicon.png</url>
 </image>
 
 {% for post in posts %}

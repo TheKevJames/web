@@ -46,7 +46,7 @@
             <ul class='list'>
             {% for tag in by_tag|sort %}
                 <li>
-                    <a href="{{ url_for('blog') }}?tag={{ tag|urlencode }}">{{ tag }}</a>
+                    <a href="{{ url_for('blog_tagged', tag=tag.replace(' ', '_')) }}">{{ tag }}</a>
                 </li>
             {% endfor %}
             </ul>

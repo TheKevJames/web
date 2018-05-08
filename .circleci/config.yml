@@ -16,35 +16,6 @@ jobs:
           paths:
             - ~/.cache/pre-commit
 
-  thekevin:
-    docker:
-      - image: docker:17.05.0-ce-git
-    steps:
-      - checkout
-      - setup_remote_docker:
-          version: 17.05.0-ce
-      - run: docker build -t web .
-      - deploy:
-          name: login to dockerhub
-          command: docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-      - deploy:
-          name: push image (hash)
-          command: |
-            docker tag web "thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8}"
-            docker push "thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8}"
-      - deploy:
-          name: push image (branch)
-          command: |
-            docker tag web "thekevjames/thekev.in:${CIRCLE_BRANCH}"
-            docker push "thekevjames/thekev.in:${CIRCLE_BRANCH}"
-      - deploy:
-          name: push image (latest)
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              docker tag web thekevjames/thekev.in:latest
-              docker push thekevjames/thekev.in:latest
-            fi
-
   hexclock:
     docker:
       - image: mysocialobservations/docker-tdewolff-minify
@@ -89,6 +60,21 @@ jobs:
           paths:
             - quotes/
 
+  site:
+    docker:
+      - image: python:3.6.4
+    steps:
+      - checkout
+      - run: python3 -m pip install -r site/requirements.txt
+      - run: cp shared/* site/static/
+      - run: python3 site/build.py
+      - run: mv site/build build/
+      - run: pygmentize -S emacs -f html -a .highlight > build/site/emacs.css
+      - persist_to_workspace:
+          root: build
+          paths:
+            - site/
+
   upload:
     docker:
       - image: google/cloud-sdk
@@ -105,39 +91,19 @@ jobs:
           at: build
       - run: gsutil -m cp -r build/* gs://thekevjames-artifacts
 
-  deploy:
-    docker:
-      - image: docker:17.05.0-ce-git
-    steps:
-      - deploy:
-          name: deploy image
-          command: |
-            ssh -oStrictHostKeyChecking=no kevin@thekev.in "
-              sudo docker service update --image thekevjames/thekev.in:${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:8} thekevjames_thekevin
-            "
-
 workflows:
   version: 2
   run-jobs:
     jobs:
       - lint
-      - thekevin:
-          context: org-global
-          requires:
-            - lint
       - hexclock
       - quotes
+      - site
       - upload:
           requires:
             - hexclock
             - quotes
-          filters:
-            branches:
-              only: master
-      - deploy:
-          requires:
-            - thekevin
-            - upload
+            - site
           filters:
             branches:
               only: master

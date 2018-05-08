@@ -1,5 +1,4 @@
 flask==1.0.2
 flask-flatpages==0.6
+frozen-flask==0.15
 pygments==2.2.0
-raven[flask]==6.7.0
-requests==2.18.4

@@ -87,6 +87,22 @@ jobs:
           paths:
             - build/
 
+  www-redir:
+    docker:
+      - image: mysocialobservations/docker-tdewolff-minify
+    steps:
+      - run:
+          name: install dependencies
+          command: apk add --update ca-certificates openssl
+      - checkout
+      - run: mkdir -p www/redir
+      - run: cp www-redir/* www/redir/
+      - run: minify --recursive --html-keep-document-tags --output www/redir/ www/redir/
+      - persist_to_workspace:
+          root: www
+          paths:
+            - redir/
+
   upload:
     docker:
       - image: google/cloud-sdk
@@ -105,6 +121,9 @@ jobs:
       - attach_workspace:
           at: site
       - run: gsutil -m cp -r site/build/* gs://thekev.in
+      - attach_workspace:
+          at: www
+      - run: gsutil -m cp -r www/redir/* gs://www.thekev.in
 
 workflows:
   version: 2
@@ -123,11 +142,15 @@ workflows:
       - site-minify:
           requires:
             - site
+      - www-redir:
+          requires:
+            - lint
       - upload:
           requires:
             - hexclock
             - quotes
             - site-minify
+            - www-redir
           filters:
             branches:
               only: master

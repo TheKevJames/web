@@ -27,10 +27,9 @@ jobs:
       - run: mkdir -p build/hexclock
       - run: cp shared/* build/hexclock/
       - run: cp hexclock/* build/hexclock/
-      - run: minify --recursive --match=".*.css" --type=css --output build/ build/
-      - run: minify --recursive --match=".*.js" --type=js --output build/ build/
+      - run: minify --recursive --output build/ build/
       - persist_to_workspace:
-          root: build
+          root: artifacts
           paths:
             - hexclock/
 
@@ -53,10 +52,9 @@ jobs:
                 -H "Dropbox-API-Arg: {\"path\": \"/vimwiki/quotes.wiki\"}" \
                 -o /quotes.wiki
             jq -n --arg x "$(cat /quotes.wiki)" '$x | split("\n")' > build/quotes/quotes.json
-      - run: minify --recursive --match=".*.css" --type=css --output build/ build/
-      - run: minify --recursive --match=".*.js" --type=js --output build/ build/
+      - run: minify --recursive --output build/ build/
       - persist_to_workspace:
-          root: build
+          root: artifacts
           paths:
             - quotes/
 
@@ -69,6 +67,21 @@ jobs:
       - run: cp shared/* site/static/
       - run: python3 site/build.py
       - run: pygmentize -S emacs -f html -a .highlight > site/build/emacs.css
+      - persist_to_workspace:
+          root: site
+          paths:
+            - build/
+
+  site-minify:
+    docker:
+      - image: mysocialobservations/docker-tdewolff-minify
+    steps:
+      - run:
+          name: install dependencies
+          command: apk add --update ca-certificates openssl
+      - attach_workspace:
+          at: site
+      - run: minify --recursive --html-keep-document-tags --output site/build/ site/build/
       - persist_to_workspace:
           root: site
           paths:
@@ -87,8 +100,8 @@ jobs:
             gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
             gcloud config set project "thekevjames-175823"
       - attach_workspace:
-          at: build
-      - run: gsutil -m cp -r build/* gs://thekevjames-artifacts
+          at: artifacts
+      - run: gsutil -m cp -r artifacts/* gs://thekevjames-artifacts
       - attach_workspace:
           at: site
       - run: gsutil -m cp -r site/build/* gs://thekev.in
@@ -101,11 +114,14 @@ workflows:
       - hexclock
       - quotes
       - site
+      - site-minify:
+          requires:
+            - site
       - upload:
           requires:
             - hexclock
             - quotes
-            - site
+            - site-minify
           filters:
             branches:
               only: master

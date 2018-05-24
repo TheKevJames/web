@@ -24,10 +24,10 @@ jobs:
           name: install dependencies
           command: apk add --update ca-certificates openssl
       - checkout
-      - run: mkdir -p build/hexclock
-      - run: cp shared/* build/hexclock/
-      - run: cp hexclock/* build/hexclock/
-      - run: minify --recursive --output build/ build/
+      - run: mkdir -p artifacts/hexclock
+      - run: cp shared/* artifacts/hexclock/
+      - run: cp hexclock/* artifacts/hexclock/
+      - run: minify --recursive --output artifacts/ artifacts/
       - persist_to_workspace:
           root: artifacts
           paths:
@@ -41,9 +41,9 @@ jobs:
           name: install dependencies
           command: apk add --update ca-certificates curl jq openssl
       - checkout
-      - run: mkdir -p build/quotes
-      - run: cp shared/* build/quotes/
-      - run: cp quotes/* build/quotes/
+      - run: mkdir -p artifacts/quotes
+      - run: cp shared/* artifacts/quotes/
+      - run: cp quotes/* artifacts/quotes/
       - run:
           name: get quotes
           command: |
@@ -51,8 +51,8 @@ jobs:
                 -H "Authorization: Bearer ${DROPBOX_TOKEN}" \
                 -H "Dropbox-API-Arg: {\"path\": \"/vimwiki/quotes.wiki\"}" \
                 -o /quotes.wiki
-            jq -n --arg x "$(cat /quotes.wiki)" '$x | split("\n")' > build/quotes/quotes.json
-      - run: minify --recursive --output build/ build/
+            jq -n --arg x "$(cat /quotes.wiki)" '$x | split("\n")' > artifacts/quotes/quotes.json
+      - run: minify --recursive --output artifacts/ artifacts/
       - persist_to_workspace:
           root: artifacts
           paths:
@@ -111,9 +111,15 @@ workflows:
   run-jobs:
     jobs:
       - lint
-      - hexclock
-      - quotes
-      - site
+      - hexclock:
+          requires:
+            - lint
+      - quotes:
+          requires:
+            - lint
+      - site:
+          requires:
+            - lint
       - site-minify:
           requires:
             - site

@@ -1,0 +1,42 @@
+.app {
+  padding-top: 2%;
+}
+
+.container {
+  display: inline-block;
+  height: 450px;
+  width: 46.25%;
+  margin: 1.25% 2.5%;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.container-left {
+  float: left;
+  margin-right: 1.25% !important;
+}
+
+.container-right {
+  float: right;
+  margin-left: 1.25% !important;
+}
+
+.container .table-list-header {
+  margin-top: 0;
+  padding: 5px;
+}
+
+.container .issues-listing {
+  height: 408px;
+  overflow-y: auto;
+}
+
+.IssueLabel {
+  margin-left: 5px;
+}
+
+.label-text {
+  background: inherit;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: invert(1) grayscale(1) contrast(9);
+}

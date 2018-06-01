@@ -37,6 +37,9 @@ jobs:
     docker:
       - image: node:10.3.0-alpine
     steps:
+      - run:
+          name: install dependencies
+          command: apk add --update ca-certificates openssl
       - checkout
       - run: cd octodash && npm install
       - run: cd octodash && npm run build

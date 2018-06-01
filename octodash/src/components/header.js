@@ -4,7 +4,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        accounts: JSON.parse(localStorage.getItem('octodash-accounts')),
+        accounts: JSON.parse(localStorage.getItem('octodash-accounts')) || [],
     }
     this.handleCreate = this.handleCreate.bind(this);
   }
@@ -43,10 +43,9 @@ class Header extends React.Component {
     window.confirm('Are you sure you want to delete this?');
 
     this.setState({
-        accounts: this.state.accounts.filter(function(account) {
-          return account.name !== name;
-        }),
+        accounts: this.state.accounts.filter(account => account.name !== name),
     });
+    // TODO: this doesn't seem to allow you to remove the last item?
     localStorage.setItem('octodash-accounts', JSON.stringify(this.state.accounts));
 
     return false;

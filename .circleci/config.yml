@@ -33,6 +33,20 @@ jobs:
           paths:
             - hexclock/
 
+  octodash:
+    docker:
+      - image: node:10.3.0-alpine
+    steps:
+      - checkout
+      - run: cd octodash && npm install
+      - run: cd octodash && npm run build
+      - run: mkdir -p artifacts
+      - run: mv octodash/build artifacts/octodash
+      - persist_to_workspace:
+          root: artifacts
+          paths:
+            - octodash/
+
   quotes:
     docker:
       - image: mysocialobservations/docker-tdewolff-minify
@@ -133,6 +147,9 @@ workflows:
       - hexclock:
           requires:
             - lint
+      - octodash:
+          requires:
+            - lint
       - quotes:
           requires:
             - lint
@@ -148,6 +165,7 @@ workflows:
       - upload:
           requires:
             - hexclock
+            - octodash
             - quotes
             - site-minify
             - www-redir

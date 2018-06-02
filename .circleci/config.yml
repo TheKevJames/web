@@ -56,7 +56,7 @@ jobs:
     steps:
       - run:
           name: install dependencies
-          command: apk add --update ca-certificates openssl jq
+          command: apk add --update ca-certificates openssl jq zip
       - checkout
       - attach_workspace:
           at: artifacts

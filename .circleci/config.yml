@@ -61,7 +61,7 @@ jobs:
       - attach_workspace:
           at: artifacts
       - run: cp octodash/src/extension/* artifacts/octodash/
-      - run: jq ".version = \"${CIRCLECI_SHA1}\"" artifacts/octodash/manifest.json | sponge artifacts/octodash/manifest.json
+      - run: jq ".version = \"${CIRCLECI_SHA1}\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
       - run: git archive -o artifacts/octodash.zip HEAD octodash/build/
       # - persist_to_workspace:
       #     root: artifacts

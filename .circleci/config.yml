@@ -61,15 +61,14 @@ jobs:
       - attach_workspace:
           at: artifacts
       - run: cp octodash/src/extension/* artifacts/octodash/
-      - run: jq ".version = \"${CIRCLECI_SHA1}\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
-      - run: git archive -o artifacts/octodash.zip HEAD octodash/build/
-      # - persist_to_workspace:
-      #     root: artifacts
-      #     paths:
-      #       - octodash.zip
-      # TODO: verify, then publish
-      - store_artifacts:
-          path: ./artifacts/octodash.zip
+      # TODO: how should we increment the version? Has to be semver.
+      # - run: jq ".version = \"${CIRCLECI_SHA1}\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
+      - run: mkdir -p extensions
+      - run: zip -r extensions/octodash.zip artifacts/octodash/*
+      - persist_to_workspace:
+          root: extensions
+          paths:
+            - octodash.zip
 
   quotes:
     docker:
@@ -163,6 +162,16 @@ jobs:
           at: www
       - run: gsutil -m cp -r www/redir/* gs://www.thekev.in
 
+  publish:
+    docker:
+      - image: cibuilds/chrome-extension:latest
+    environment:
+      OCTODASH_APP_ID: gpdoaoigpdmgpfebclknegmdkaamcdpf
+    steps:
+      - attach_workspace:
+          at: extensions
+      - run: APP_ID=${OCTODASH_APP_ID} publish extensions/octodash.zip
+
 workflows:
   version: 2
   run-jobs:
@@ -196,6 +205,12 @@ workflows:
             - quotes
             - site-minify
             - www-redir
+          filters:
+            branches:
+              only: master
+      - publish:
+          requires:
+            - octodash-extension
           filters:
             branches:
               only: master

@@ -52,17 +52,25 @@ jobs:
 
   octodash-extension:
     docker:
-      - image: node:10.3.0-alpine
+      - image: node:10.3.0
+    environment:
+      OCTODASH_APP_ID: gpdoaoigpdmgpfebclknegmdkaamcdpf
     steps:
       - run:
           name: install dependencies
-          command: apk add --update ca-certificates openssl jq zip
+          command: |
+            apt-get update
+            apt-get install -y jq zip
+            npm install -g chrome-web-store-item-property-cli
       - checkout
       - attach_workspace:
           at: artifacts
       - run: cp octodash/src/extension/* artifacts/octodash/
-      # TODO: how should we increment the version? Has to be semver.
-      # - run: jq ".version = \"${CIRCLECI_SHA1}\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
+      - run:
+          name: increment patch version
+          command:
+            IFS="." read -ra ver <<<"$(chrome-web-store-item-property "${OCTODASH_APP_ID}" | jq '.version' | tr -d '"')"
+            jq ".version = \"${ver[0]}.${ver[1]}.$((ver[2]+1))\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
       - run: mkdir -p extensions
       - run: zip -r extensions/octodash.zip artifacts/octodash/*
       - persist_to_workspace:

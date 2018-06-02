@@ -68,7 +68,7 @@ jobs:
       - run: cp octodash/src/extension/* artifacts/octodash/
       - run:
           name: increment patch version
-          command:
+          command: |
             IFS="." read -ra ver <<<"$(chrome-web-store-item-property "${OCTODASH_APP_ID}" | jq '.version' | tr -d '"')"
             jq ".version = \"${ver[0]}.${ver[1]}.$((ver[2]+1))\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
       - run: mkdir -p extensions

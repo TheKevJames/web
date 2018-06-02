@@ -1,0 +1,22 @@
+{
+  "name": "Octodash",
+  "description": "TODO page for GitHub Issues & PRs",
+  "version": "0.0.0",
+  "author": "Kevin James",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Octodash",
+    "default_icon": "favicon.ico"
+  },
+  "icons": {
+    "16": "favicon.ico",
+    "32": "favicon.ico",
+    "48": "favicon.ico",
+    "128": "favicon.ico"
+  },
+  "permissions": ["tabs"],
+  "manifest_version": 2
+}

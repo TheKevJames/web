@@ -50,6 +50,27 @@ jobs:
           paths:
             - octodash/
 
+  octodash-extension:
+    docker:
+      - image: node:10.3.0-alpine
+    steps:
+      - run:
+          name: install dependencies
+          command: apk add --update ca-certificates openssl jq
+      - checkout
+      - attach_workspace:
+          at: artifacts
+      - run: cp octodash/src/extension/* artifacts/octodash/
+      - run: jq ".version = \"${CIRCLECI_SHA1}\"" artifacts/octodash/manifest.json | sponge artifacts/octodash/manifest.json
+      - run: git archive -o artifacts/octodash.zip HEAD octodash/build/
+      # - persist_to_workspace:
+      #     root: artifacts
+      #     paths:
+      #       - octodash.zip
+      # TODO: verify, then publish
+      - store_artifacts:
+          path: ./artifacts/octodash.zip
+
   quotes:
     docker:
       - image: mysocialobservations/docker-tdewolff-minify
@@ -153,6 +174,9 @@ workflows:
       - octodash:
           requires:
             - lint
+      - octodash-extension:
+          requires:
+            - octodash
       - quotes:
           requires:
             - lint

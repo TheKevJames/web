@@ -68,6 +68,7 @@ jobs:
           command: |
             IFS="." read -ra ver <<<"$(jq '.version' octodash/src/extension/manifest.json | tr -d '"')"
             jq ".version = \"${ver[0]}.${ver[1]}.$(date +'%s')\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
+            cat artifacts/octodash/manifest.json
       - run: mkdir -p extensions
       - run: zip -r extensions/octodash.zip artifacts/octodash/*
       - persist_to_workspace:

@@ -5,7 +5,6 @@ class Base extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: null,
       items: [],
       loaded: false,
     };
@@ -26,18 +25,16 @@ class Base extends React.Component {
           .then(res => res.json())
           .then((result) => result.items,
                 (error) => { throw Error(error) })
+          .catch(err => { console.log(err); return [] })
       }))
-      .catch(err => this.setState({error: err, loaded: true}))
       // TODO: sort order
       .then(results => this.setState({loaded: true, items: [].concat.apply([], results)}));
   }
 
   render() {
-    const { error, items, loaded } = this.state;
+    const { items, loaded } = this.state;
     if (!loaded) {
       return <div>Loading...</div>;
-    } else if (error) {
-      return <div>Error: {error.message}</div>;
     } else {
       return (
         <div className="issues-listing">

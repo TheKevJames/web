@@ -62,12 +62,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: artifacts
-      - run: cp octodash/src/extension/* artifacts/octodash/
       - run:
           name: increment patch version
           command: |
-            IFS="." read -ra ver <<<"$(jq '.version' octodash/src/extension/manifest.json | tr -d '"')"
-            jq ".version = \"${ver[0]}.${ver[1]}.$(date +'%s')\"" octodash/src/extension/manifest.json > artifacts/octodash/manifest.json
+            IFS="." read -ra ver <<<"$(jq '.version' octodash/public/manifest.json | tr -d '"')"
+            jq ".version = \"${ver[0]}.${ver[1]}.$(date +'%s')\"" octodash/public/manifest.json > artifacts/octodash/manifest.json
             cat artifacts/octodash/manifest.json
       - run: mkdir -p extensions
       - run: zip -r extensions/octodash.zip artifacts/octodash/*

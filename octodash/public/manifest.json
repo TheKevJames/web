@@ -1,15 +1,23 @@
 {
-  "short_name": "Octodash",
   "name": "Octodash",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "description": "TODO page for GitHub Issues & PRs",
+  "version": "0.1.0",
+  "author": "Kevin James",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Octodash",
+    "default_icon": "favicon.png"
+  },
+  "icons": {
+    "16": "icons/favicon16.png",
+    "32": "icons/favicon32.png",
+    "48": "icons/favicon48.png",
+    "64": "icons/favicon64.png",
+    "128": "icons/favicon128.png"
+  },
+  "permissions": ["tabs"],
+  "manifest_version": 2
 }

@@ -1,7 +1,7 @@
 {
   "name": "Octodash",
   "description": "TODO page for GitHub Issues & PRs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Kevin James",
   "background": {
     "scripts": ["background.js"],

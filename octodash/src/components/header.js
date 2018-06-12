@@ -23,7 +23,7 @@ class Header extends React.Component {
         'User-Agent': 'octodash',
       }})
       .then(result => {
-        if (!result.ok) { throw Error('GitHub could not validate token'); }
+        if (!result.ok) { throw Error('GitHub could not validate token.'); }
         return result;
       })
       .then(result => result.json())
@@ -78,7 +78,7 @@ class Header extends React.Component {
                         </svg>
                         <span className="dropdown-caret mt-1"></span>
                       </summary>
-                      <div className="dropdown-menu dropdown-menu-sw show-more-popover text-gray-dark anim-scale-in">
+                      <div className="dropdown-menu dropdown-menu-sw show-more-popover text-gray-dark anim-scale-in" style={{width: "425px"}}>
                           {accounts.map(account => (
                             <div key={account.name} className="width-full inline-form js-comment-delete" >
                               <button className="dropdown-item menu-item-danger btn-link" onClick={() => this.handleDelete(account.name)}>
@@ -87,7 +87,7 @@ class Header extends React.Component {
                             </div>
                           ))}
                           <label className="dropdown-item btn-link js-comment-edit-button">
-                            Add: <input type="text" value={this.state.newTokenValue} onKeyPress={this.handleCreate} />
+                            Add: <input type="text" size="44" value={this.state.newTokenValue} onKeyPress={this.handleCreate} />
                           </label>
                       </div>
                     </details>

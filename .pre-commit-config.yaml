@@ -54,3 +54,7 @@ repos:
     sha: v2.0.0
     hooks:
     -   id: fixmyjs
+-   repo: git://github.com/Lucas-C/pre-commit-hooks-markup
+    sha: v1.0.0
+    hooks:
+    -   id: rst-linter

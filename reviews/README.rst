@@ -5,7 +5,7 @@
 Title                                           Tags                                    Description
 ==============================================  ======================================  ===========
 `A Bluer Shade of White`_                       FanFic(Frozen), RatFic                  The story of a post-Frozen Elsa using her powers to rule and improve the country. Short, good read.
-`Animorphs- The Reckoning`_                     FanFic(Animorphs), RatFic, ONGOING      A fantastically written re-telling of the Animorphs. Wonderful story, would highly recommend.
+`Animorphs\: The Reckoning`_                    FanFic(Animorphs), RatFic, ONGOING      A fantastically written re-telling of the Animorphs. Wonderful story, would highly recommend.
 `Branches on the Tree of Time`_                 FanFic(Terminator), RatFic              THE Terminator rational re-write. Excellelently written, fantastic use of time travel, definitely worth reading.
 `Friendship is Optimal`_                        FanFic(MLP), RatFic                     The MLP RatFic which spawned any others. Well-written and interesting take, but I've never really been able to get into the MLP fandom even for adjacent material like this. Worth a read, especially if you feel differently.
 `Harry Potter and the Methods of Rationality`_  FanFic(HP), RatFic                      The story which defined the RatFic genre. Read this.
@@ -13,7 +13,7 @@ Title                                           Tags                            
 `Kaleidoscope`_                                 FanFic(Naruto), SI                      The author is born into the Uchiha family before the massacre. A frantic struggle to survive ensues. Enjoyable read, bit of a power-up fantasy.
 `Luminosity`_                                   FanFic(Twilight), RatFic                What if Bella was not an idiot? Well written, interesting story, highly acclaimed on `/r/rational`_. Personally, though, I've picked up and abandoned this a couple times now but can't quite put my finger on why. My current best guess is timing -- someday soon I'll set aside the time to read this in one go and see if that changes things.
 `Mother of Learning`_                           Fantasy, RatFic, ONGOING                Interesting time loop story about a wizard. The catch? Its not his time-loop and he's completely out of his depth. Very well-written story with well-managed power creep and interesting twists and turns. Disclaimer: still in-progress, but nearing completion.
-`Pokemon- The Origin of Species`_               FanFic(Pokemon), RatFic, ONGOING        Red as a professor-in-training. Lovely re-imagining of the universe, worth a read.
+`Pokemon\: The Origin of Species`_              FanFic(Pokemon), RatFic, ONGOING        Red as a professor-in-training. Lovely re-imagining of the universe, worth a read.
 `Professor Arc`_                                FanFic(RWBY), Humor                     Jaune Arc finds he faked his credentials so well that he is offered a teaching position. Hilarity ensues. Well-written and very funny read, definitely worth checking out.
 `Ra`_                                           Fantasy, RatFic                         Magic as Engineering. Very well-written, worth checking out.
 `Shadows of the Limelight`_                     Superheroes, RatFic                     A story about superheroes whose powers are defined by stories. Very interesting take on the genre, worth a read.
@@ -33,7 +33,7 @@ Title                                           Tags                            
 
 .. _/r/rational: https://www.reddit.com/r/rational/wiki/index
 .. _A Bluer Shade of White: https://fictionhub.io/story/a-bluer-shade-of-white/
-.. _Animorphs- The Reckoning: https://www.fanfiction.net/s/11090259/1/r-Animorphs-The-Reckoning
+.. _Animorphs\: The Reckoning: https://www.fanfiction.net/s/11090259/1/r-Animorphs-The-Reckoning
 .. _Branches on the Tree of Time: https://fictionhub.io/story/branches-on-the-tree-of-time/
 .. _Friendship is Optimal: https://www.fimfiction.net/story/62074/friendship-is-optimal
 .. _Harry Potter and the Methods of Rationality: http://www.hpmor.com/
@@ -41,7 +41,7 @@ Title                                           Tags                            
 .. _Kaleidoscope: https://archiveofourown.org/works/10531500
 .. _Luminosity: http://luminous.elcenia.com/story.shtml
 .. _Mother of Learning: https://www.fictionpress.com/s/2961893/1/Mother-of-Learning
-.. _Pokemon- The Origin of Species: https://www.fanfiction.net/s/9794740/1/Pokemon-The-Origin-of-Species
+.. _Pokemon\: The Origin of Species: https://www.fanfiction.net/s/9794740/1/Pokemon-The-Origin-of-Species
 .. _Professor Arc: https://www.fanfiction.net/s/10898868
 .. _Ra: https://qntm.org/ra
 .. _Shadows of the Limelight: http://alexanderwales.com/shadows/

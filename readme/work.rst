@@ -20,22 +20,25 @@ up-to-date with them all, but its inevitable that some will fall through the
 cracks. For any unscheduled communication, my preference is the following:
 
 - face-to-face/video for **high bandwidth** communication. If another
-communication channel seems to be producing confusion or misunderstandings,
-moving to this channel is a good way to fix that. Also fantastic for
-rubber-ducking and brainstorming.
+  communication channel seems to be producing confusion or misunderstandings,
+  moving to this channel is a good way to fix that. Also fantastic for
+  rubber-ducking and brainstorming.
+
 - emails for **low priority or long-term** messaging. I would love to move away
-from email entirely, but I've long-since accepted that isn't going to happen
-any time soon. In the meantime, I make sure to check email regularly and keep
-up-to-date, but will often prefer to treat it as an "action item" and respond
-via some channel I think is more relevant to the problem at hand (eg. have a
-conversation, set a meeting, fix a bug...).
+  from email entirely, but I've long-since accepted that isn't going to happen
+  any time soon. In the meantime, I make sure to check email regularly and keep
+  up-to-date, but will often prefer to treat it as an "action item" and respond
+  via some channel I think is more relevant to the problem at hand (eg. have a
+  conversation, set a meeting, fix a bug...).
+
 - Slack for **everything else**. I believe that -- so long as you we put some
-effort into ensuring we keep channels fairly organized and each person
-configures their notifications to fit their preferences -- Slack is a great
-solution for anything from **urgent, high-priority** issues to **general RFCs**
-to **long-lived info tidbits** and everything in-between. If you Slack me, you
-can generally expect a very quick turnaround time; I work best while juggling
-multiple things at once and *enjoy* context-switching to respond quickly.
+  effort into ensuring we keep channels fairly organized and each person
+  configures their notifications to fit their preferences -- Slack is a great
+  solution for anything from **urgent, high-priority** issues to **general
+  RFCs** to **long-lived info tidbits** and everything in-between. If you Slack
+  me, you can generally expect a very quick turnaround time; I work best while
+  juggling multiple things at once and *enjoy* context-switching to respond
+  quickly.
 
 Availability
 ------------
@@ -57,18 +60,21 @@ systems. At the end of the day, I care less about the framework and much more
 about the following:
 
 - I value speed of development -- including proactive efforts such as
-writing/improving tests, refactoring legacy systems, and dissemenation of
-knowledge either through pairing or improving documentation.
+  writing/improving tests, refactoring legacy systems, and dissemenation of
+  knowledge either through pairing or improving documentation.
+
 - I value learning -- exploring new ideas, trying new methods/libraries/sytems,
-and being willing to discard and prune exploratory code once we settle into
-something which works. Re-exploring the status quo semi-regularly, especially
-with regards to legacy systems and pain points, is a fantastic way to build a
-reliable and easy-to-work-with system.
+  and being willing to discard and prune exploratory code once we settle into
+  something which works. Re-exploring the status quo semi-regularly, especially
+  with regards to legacy systems and pain points, is a fantastic way to build a
+  reliable and easy-to-work-with system.
+
 - I value our time as employees -- automating our workflows, simplifying our
-systems, pruning unnecessary meetings, etc. are all fantastic ways to give us
-the time to *actually do our jobs* rather than talk about doing them.
+  systems, pruning unnecessary meetings, etc. are all fantastic ways to give us
+  the time to *actually do our jobs* rather than talk about doing them.
+
 - I value doing things right rather than quick -- cutting corners now is an
-excellent way to have more work to do next week.
+  excellent way to have more work to do next week.
 
 Code Reviews
 ^^^^^^^^^^^^
@@ -81,23 +87,23 @@ especially when the feature under review is something I am not experienced with
 Here's a few of my thoughts around code reviews:
 
 - often, review comments can lead to interesting conversations as we explore
-new options, alternate libraries, and differing methodology choices. I am more
-than happy to move any conversation to Slack or some other form of
-communication -- in fact, I've found some of the best new ideas have come from
-conversations like that!
+  new options, alternate libraries, and differing methodology choices. I am
+  more than happy to move any conversation to Slack or some other form of
+  communication -- in fact, I've found some of the best new ideas have come
+  from conversations like that!
 
 - I believe strongly in code consistency, since it makes future maintenance
-significantly easier. I try to set up tools for the vast majority of these
-sorts of issues, but will often comment with "nitpicks". If I begin any review
-comment with "nitpick: ", you are welcome to avoid addressing that issue if you
-believe its worth getting the code out more quickly. These things should be
-addressed at some point, but there's a trade-off between "perfect" and "fast";
-"good enough" is a worthy goal.
+  significantly easier. I try to set up tools for the vast majority of these
+  sorts of issues, but will often comment with "nitpicks". If I begin any
+  review comment with "nitpick: ", you are welcome to avoid addressing that
+  issue if you believe its worth getting the code out more quickly. These
+  things should be addressed at some point, but there's a trade-off between
+  "perfect" and "fast"; "good enough" is a worthy goal.
 
 - if we've chatted about it already, or its a "one-liner", or if its
-config-only, it might be a candidate for going "straight to master". Use your
-best judgement! Despite what I said above, there's a time-and-place for
-inundating each other with PRs.
+  config-only, it might be a candidate for going "straight to master". Use your
+  best judgement! Despite what I said above, there's a time-and-place for
+  inundating each other with PRs.
 
 Feedback
 --------

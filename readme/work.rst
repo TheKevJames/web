@@ -123,9 +123,34 @@ free to give it to someone above me to-be relayed anonymously.
 Let me know if and how you would like to receive any feedback to me -- I'm more
 than happy to return the favour!
 
+One-Liners
+----------
+
+Various one-liners embodying my favorite axioms and architectural principles:
+
+- Design for 10x scale. Re-design when you get to 20x.
+
+- Reuse components. Corollary: build reusable components.
+
+- Use *boring* software. Alpha is exciting but easily breakable.
+
+- *Use* boring software. `Not Invented Here`_ is a poison.
+
+- You either have a single source of truth or multiple sources of lies.
+
+- Similarly, but to be clear: you either have a single schema or many implicit
+  ones defined throughout your codebase.
+
+- Do it decently the first time. The second try will be when it catches fire.
+
+- Migrations should be easy. Plan for disaster, build for failure, lower the
+  risk.
+
 Your Philosophies
 -----------------
 
 Though I've written a lot here about working with me, I'm much more interested
 in how you'd like me to work with you -- if there's anything I could be doing
 to better work with you, let's chat!
+
+.. _Not Invented Here: https://en.wikipedia.org/wiki/Not_invented_here

@@ -22,6 +22,7 @@ Title                                           Tags                            
 `The Fable of the Dragon-Tyrant`_               RatFic                                  Hard to describe without giving the story away -- very short read, "makes you think". Check it out!
 `The Last Christmas`_                           RatFic                                  Short story about the mantle of Santa Claus being passed down to an industrial engineer. Short story, interesting read.
 `The Metropolitan Man`_                         FanFic(Superman), RatFic                Fantastically written story which pits Lex Luther as the villain protagonist to a newly arrived alien God. Highly recommended.
+`The Truth of the Sith`_                        FanFic(Star Wars), RatFic               A five-minute read -- Palpatine tells Anakin a story about the force. Very interesting take on the Force / Dark Side / Light Side / etc.
 `The Two Year Emperor`_                         FanFic(D&D), RatFic                     A guy gets thrown into a D&D universe to act as the emperor of a country. Fun, munchkin-ey story.
 `The Waves Arisen`_                             FanFic(Naruto), Rational                What if Naruto grew up smart and curious? A defining work of the RatFic genre, absolutely worth a read.
 `Threadbare`_                                   LitRPG                                  A cute story about a teddy-bear who gains sentience in a LitRPG world. Very light-hearted, fun read.
@@ -69,6 +70,7 @@ Title                                           Tags                            
 .. _The Fable of the Dragon-Tyrant: https://nickbostrom.com/fable/dragon.html
 .. _The Last Christmas: https://fictionhub.io/story/the-last-christmas/
 .. _The Metropolitan Man: https://fictionhub.io/story/the-metropolitan-man/
+.. _The Truth of the Sith: https://archive.is/WNfW5
 .. _The Two Year Emperor: https://www.reddit.com/r/rational/comments/3xe9fn/ffrt_the_two_year_emperor_is_back_and_free/
 .. _The Waves Arisen: https://wertifloke.wordpress.com/about/
 .. _Threadbare: https://www.royalroadl.com/fiction/15130/threadbare

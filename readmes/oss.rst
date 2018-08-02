@@ -14,7 +14,7 @@ Active OSS Projects
 These are the "brag-worthy" ones. Recruiters, look here.
 
 - I am the primary maintainer of the `coveralls-python`_ project used by ~6.5k
-  OSS projects on GitHub. No affiliation with `Coveralls`_.
+  OSS projects on GitHub. No affiliation with `Coveralls`_. Over 6M downloads.
 
 - I am the maintainer of the `Puppet`_ `Homebrew`_ plugin `puppet-homebrew`_.
   Over 50k downloads.

@@ -8,6 +8,7 @@ Title                                           Tags                            
 `Branches on the Tree of Time`_                 FanFic(Terminator), RatFic              THE Terminator rational re-write. Excellelently written, fantastic use of time travel, definitely worth reading.
 `Break Them All`_                               SI                                      The prequel to `Heromaker\'s Legacy`_, a Worm fanfic, this is a story about exploring and learning a magic system. Interesting power growth story about applying real-world ideas to munchkining a magic system, but unfortunately the goal of this story is just to support Heromaker's Legacy, which I didn't really enjoy, rather than to exist in its own right. Interesting, but unsatisfyingly unfinished.
 `Death By Water`_                               FanFic(HP)xFanFic(Culture)              Harry Potter raised by The Culture. Interesting to see how the Culture universe interacts with a planet of magic, but not overly compelling. Seems to be abandoned.
+`Dream Drive`_                                  LitRPG                                  A near-future LitRPG with an interesting protagnosit and interaction between game-world and real-world. The author posted this to a Erotic Writing site since it contains sexual eliments, but those don't feel like they're "the point of the story".
 `Dungeon Keeper Ami`_                           FanFic(Sailor Moon), LitRPG             A "Dungeon Core" LitRPG featuring Sailor Mercury. I was initially interested in this story for the interesting take on "good guy forced to be evil", but the MC's constant poor decision making and naivete eventually got on my nerves. Unfortunately, it felt like the story fell into a loop of the protagonist thinking "what could go wrong? I know everything about this thing I know nothing about, this can't go badly" then that thing going badly.
 `Friendship is Optimal`_                        FanFic(MLP), RatFic                     The MLP RatFic which spawned any others. Well-written and interesting take, but I've never really been able to get into the MLP fandom even for adjacent material like this. Worth a read, especially if you feel differently.
 `Harry Potter and the Methods of Rationality`_  FanFic(HP), RatFic                      The story which defined the RatFic genre. Read this.
@@ -53,6 +54,7 @@ Title                                           Tags                            
 .. _Branches on the Tree of Time: https://fictionhub.io/story/branches-on-the-tree-of-time/
 .. _Break Them All: https://forums.sufficientvelocity.com/threads/break-them-all-original-precross.12960/
 .. _Death By Water: https://forums.sufficientvelocity.com/threads/death-by-water-harry-potter-the-culture.44788/page-9
+.. _Dream Drive: https://www.literotica.com/s/dream-drive-ch-01
 .. _Dungeon Keeper Ami: https://forums.sufficientvelocity.com/threads/dungeon-keeper-ami-sailor-moon-dungeon-keeper-story-only-thread.30066/
 .. _Friendship is Optimal: https://www.fimfiction.net/story/62074/friendship-is-optimal
 .. _Harry Potter and the Methods of Rationality: http://www.hpmor.com/

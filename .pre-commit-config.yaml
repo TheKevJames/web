@@ -43,13 +43,13 @@ repos:
     sha: v1.0.1
     hooks:
     -   id: reorder-python-imports
-        language_version: python3.6
-        args: [--py3-plus]
+        language_version: python3.7
+        args: [--py37-plus]
 -   repo: git://github.com/asottile/pyupgrade
     sha: v1.2.0
     hooks:
     -   id: pyupgrade
-        args: [--py3-plus]
+        args: [--py36-plus]
 -   repo: git://github.com/pre-commit/mirrors-fixmyjs
     sha: v2.0.0
     hooks:

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}404{% endblock %}
+
+{% block body %}
+<div id='body-404'>
+    <h1 id='nope'>Nope</h1>
+    <p>This one's a 404. Sorry!</p>
+</div>
+{% endblock %}
+
+{% block css %}
+<style>
+body {
+  height: 100vh; }
+
+div#body-404 {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%); }
+  div h1#nope { }
+</style>
+{% endblock %}

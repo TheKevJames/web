@@ -95,6 +95,10 @@ def blog_rss():
     response.headers['Content-Type'] = 'application/xml'
     return response
 
+@app.route('/404.html')
+def err404():
+    return flask.render_template('404.html')
+
 @app.route('/ping')
 def ping():
     return 'ok'

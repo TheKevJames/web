@@ -91,12 +91,6 @@ nav {
 
   nav .dropdown {
     display: inline-block; }
-    nav .dropdown > button {
-      font-size: 16px;
-      color: white;
-      background-color: #7ba284;
-      border: none;
-      padding: 0; }
     nav .dropdown .dropdown-content {
       display: none;
       background-color: #7ba284;
@@ -107,6 +101,7 @@ nav {
       z-index: 1; }
       nav .dropdown .dropdown-content a {
         display: block;
+        line-height: 30px;
         padding: 0 10px; }
     nav .dropdown:hover .dropdown-content {
       display: block; }
@@ -123,7 +118,7 @@ nav {
         <a href="{{ url_for('blog') }}">Blog</a>
     </div>
     <div class='dropdown'>
-        <button>Me &#x25BC;</button>
+        <a href='#'>Me &#x25BC;</a>
         <div class='dropdown-content'>
             <a href='https://github.com/TheKevJames/web/blob/master/reviews/README.rst'>Book Reviews</a>
             <a href='https://github.com/TheKevJames/web/blob/master/readmes/personal.rst'>README</a>
@@ -133,7 +128,7 @@ nav {
         </div>
     </div>
     <div class='dropdown'>
-        <button>Apps &#x25BC;</button>
+        <a href='#'>Apps &#x25BC;</a>
         <div class='dropdown-content'>
             <a href='https://storage.googleapis.com/thekevjames-artifacts/hexclock/hexclock.html'>Hexclock</a>
             <a href='https://storage.googleapis.com/thekevjames-artifacts/quotes/quotes.html'>Quotes</a>

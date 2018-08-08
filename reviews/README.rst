@@ -19,6 +19,7 @@ Title                                           Tags                            
 `Ra`_                                           Fantasy, RatFic                         Magic as Engineering. Very well-written, worth checking out.
 `Sasuke Uchiha and the Power of Lies`_          FanFic(Naruto), Humor                   A parody of Naruto, with a focus on absurdity and self-delusion. Fun and silly read.
 `Shadows of the Limelight`_                     Superheroes, RatFic                     A story about superheroes whose powers are defined by stories. Very interesting take on the genre, worth a read.
+`The Arithmancer`_                              FanFic(HP)                              The Arithmancer, as well as its sequel(s?), follow a scientifically-minded Hermione as she munchkins her way through life. Its no HPMOR, but its definitely entertaining!
 `The Bridge`_                                   SciFi                                   Interesting story about life on a colony ship hundreds of years after understanding of our own technology has been lost. Very interesting, definitely worth a read.
 `The Fable of the Dragon-Tyrant`_               RatFic                                  Hard to describe without giving the story away -- very short read, "makes you think". Check it out!
 `The Last Christmas`_                           RatFic                                  Short story about the mantle of Santa Claus being passed down to an industrial engineer. Short story, interesting read.
@@ -69,6 +70,7 @@ Title                                           Tags                            
 .. _Ra: https://qntm.org/ra
 .. _Sasuke Uchiha and the Power of Lies: https://forums.spacebattles.com/threads/sasuke-uchiha-and-the-power-of-lies-naruto-comedy-au.472801/
 .. _Shadows of the Limelight: http://alexanderwales.com/shadows/
+.. _The Arithmancer: https://www.fanfiction.net/s/10070079/1/The-Arithmancer
 .. _The Bridge: https://leonardpetracci.com/the-bridge/
 .. _The Fable of the Dragon-Tyrant: https://nickbostrom.com/fable/dragon.html
 .. _The Last Christmas: https://fictionhub.io/story/the-last-christmas/

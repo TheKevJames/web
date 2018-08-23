@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>Stories</title>
+  </head>
+  <body>
+    <outline text="Comics" title="Comics">
+      <outline text="Daughter of the Lilies" title="Daughter of the Lilies" type="rss" xmlUrl="http://daughterofthelilies.com/rss.php" htmlUrl="http://www.daughterofthelilies.com/"/>
+      <outline text="Molly Beans" title="Molly Beans" type="rss" xmlUrl="http://www.mollybeans.com/feed/" htmlUrl="http://www.mollybeans.com/"/>
+      <outline text="Nimona" title="Nimona" type="rss" xmlUrl="http://gingerhaze.com/nimona/rss.xml" htmlUrl="http://gingerhaze.com/nimona/archive"/>
+      <outline text="Order of the Stick" title="Order of the Stick" type="rss" xmlUrl="http://www.giantitp.com/comics/oots.rss" htmlUrl="http://www.giantitp.com/Comics.html"/>
+      <outline text="The Story of Molly's Boy Chuck" title="The Story of Molly's Boy Chuck" type="rss" xmlUrl="http://callmechuckcomic.com/feed/" htmlUrl="http://callmechuckcomic.com/"/>
+      <outline text="Wilde Life" title="Wilde Life" type="rss" xmlUrl="http://www.wildelifecomic.com/rss.php" htmlUrl="http://www.wildelifecomic.com/"/>
+    </outline>
+    <outline text="Reading" title="Reading">
+      <outline text="Bunkercore" title="Bunkercore" type="rss" xmlUrl="https://royalroadl.com/fiction/syndication/17051" htmlUrl="https://royalroadl.com/fiction/syndication/17051"/>
+      <outline text="Harry Potter and the Methods of Rationality" title="Harry Potter and the Methods of Rationality" type="rss" xmlUrl="http://hpmor.com/feed/" htmlUrl="http://hpmor.com/"/>
+      <outline text="Pact" title="Pact" type="rss" xmlUrl="http://pactwebserial.wordpress.com/feed/" htmlUrl="http://pactwebserial.wordpress.com/"/>
+      <outline text="The Daily Grind" title="The Daily Grind" type="rss" xmlUrl="https://www.royalroadl.com/fiction/syndication/15925" htmlUrl="https://www.royalroadl.com/fiction/syndication/15925"/>
+      <outline text="The Good Student" title="The Good Student" type="rss" xmlUrl="https://www.royalroadl.com/fiction/syndication/10286" htmlUrl="https://www.royalroadl.com/fiction/syndication/10286"/>
+      <outline text="The Legend of Randidly Ghosthound" title="The Legend of Randidly Ghosthound" type="rss" xmlUrl="https://www.royalroadl.com/fiction/syndication/11209" htmlUrl="https://www.royalroadl.com/fiction/syndication/11209"/>
+      <outline text="The Snake Report" title="The Snake Report" type="rss" xmlUrl="https://www.reddit.com/r/thesnakereport/.rss" htmlUrl="https://www.reddit.com/r/thesnakereport/"/>
+    </outline>
+  </body>
+</opml>

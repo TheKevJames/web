@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>Folks I Know</title>
+  </head>
+  <body>
+    <outline text="Misc" title="Misc">
+      <outline text="Josh Goller" title="Josh Goller" type="rss" xmlUrl="https://jsgoller1.tumblr.com/rss" htmlUrl="https://jsgoller1.tumblr.com/"/>
+      <outline text="Mounir" title="Mounir" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=SOIACW" htmlUrl="http://www.youtube.com/channel/UCmlf94lnDNoLxHIjn1jhv7Q"/>
+    </outline>
+    <outline text="Music" title="Music">
+      <outline text="Joshua Furtado" title="Joshua Furtado" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=jamwithjoshfurtado" htmlUrl="http://www.youtube.com/channel/UCSVCUvVeaCh8DflpGTeCjtg"/>
+    </outline>
+    <outline text="Tech" title="Tech">
+      <outline text="Jon Dobson" title="Jon Dobson" type="rss" xmlUrl="http://hashbeat.blogspot.com/feeds/posts/default" htmlUrl="http://hashbeat.blogspot.com/"/>
+      <outline text="Kevin James" title="Kevin James" type="rss" xmlUrl="http://thekev.in/feed.xml" htmlUrl="http://www.thekev.in/blog"/>
+      <outline text="Stephen Cagle" title="Stephen Cagle" type="rss" xmlUrl="http://samedhi.github.io/feed.xml" htmlUrl="http://samedhi.github.io/"/>
+    </outline>
+  </body>
+</opml>

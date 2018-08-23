@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>Music</title>
+  </head>
+  <body>
+    <outline text="Music" title="Music">
+      <outline text="Against the Current" title="Against the Current" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCxMsgwldMZiuFTD6jjv32yQ" htmlUrl="http://www.youtube.com/user/againstthecurrentNY"/>
+      <outline text="Alex Goot" title="Alex Goot" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=gootmusic" htmlUrl="http://www.youtube.com/user/gootmusic"/>
+      <outline text="Chainsmokers" title="Chainsmokers" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCRzzwLpLiUNIs6YOPe33eMg" htmlUrl="http://www.youtube.com/channel/UCRzzwLpLiUNIs6YOPe33eMg"/>
+      <outline text="Daniela Andrade" title="Daniela Andrade" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=DanielaSings" htmlUrl="http://www.youtube.com/channel/UC2vPHIqjFdpPVMa2PGwJuYg/videos"/>
+      <outline text="Dylan Taylor" title="Dylan Taylor" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=dylantaylordrums" htmlUrl="http://www.youtube.com/channel/UCgAZQMB-xcjBEa8LFV0vlqg"/>
+      <outline text="Epic Rap Battles of History" title="Epic Rap Battles of History" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=ERB" htmlUrl="http://www.youtube.com/"/>
+      <outline text="Fueled By Ramen" title="Fueled By Ramen" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UClVrJwcIy7saPcGc1nct80A" htmlUrl="http://www.youtube.com/user/FueledByRamen"/>
+      <outline text="Jack Conte" title="Jack Conte" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=jackcontemusic" htmlUrl="http://www.youtube.com/channel/UCXuc4N_UKi5IXNGtHZY8qQA/videos"/>
+      <outline text="Kurt Hugo Schneider" title="Kurt Hugo Schneider" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=KurtHugoSchneider" htmlUrl="http://www.youtube.com/channel/UCplkk3J5wrEl0TNrthHjq4Q/videos"/>
+      <outline text="Lonely Island" title="Lonely Island" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=thelonelyisland" htmlUrl="http://www.youtube.com/"/>
+      <outline text="Lukas Graham" title="Lukas Graham" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCs8ynQgjoKZblUXosXoeOEQ" htmlUrl="http://www.youtube.com/channel/UCs8ynQgjoKZblUXosXoeOEQ"/>
+      <outline text="Noah Guthrie" title="Noah Guthrie" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=only1noah" htmlUrl="http://www.youtube.com/channel/UC10EcWjwbU79-6dc4WO-bDQ"/>
+      <outline text="OfficialENGR" title="OfficialENGR" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=officialengr" htmlUrl="http://www.youtube.com/channel/UCIf3VxnSyMI6Aci1Twteqsw"/>
+      <outline text="Pentatonix" title="Pentatonix" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=PTXofficial" htmlUrl="http://www.youtube.com/"/>
+      <outline text="Sam Tsui" title="Sam Tsui" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=TheSamTsui" htmlUrl="http://www.youtube.com/channel/UCWrtsravWX0ANhHiJXNlyXw/videos"/>
+      <outline text="TheFatRat" title="TheFatRat" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa_UMppcMsHIzb5LDx1u9zQ" htmlUrl="http://www.youtube.com/user/ThisIsTheFatRat"/>
+      <outline text="Walk Off the Earth" title="Walk Off the Earth" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=walkofftheearth" htmlUrl="http://www.youtube.com/channel/UCMDQxm7cUx3yXkfeHa5zJIQ/videos"/>
+    </outline>
+  </body>
+</opml>

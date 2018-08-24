@@ -17,7 +17,7 @@ These are the "brag-worthy" ones. Recruiters, look here.
   OSS projects on GitHub. No affiliation with `Coveralls`_. Over 6M downloads.
 
 - I am the maintainer of the `Puppet`_ `Homebrew`_ plugin `puppet-homebrew`_.
-  Over 50k downloads.
+  Over 60k downloads.
 
 - I maintain the GNOME Shell extension for interfacing with a `Transmission`_
   daemon/gtk instance: `gnome-shell-extension-transmission-daemon`_.

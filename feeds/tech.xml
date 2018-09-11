@@ -9,11 +9,13 @@
       <outline text="Alan Shreve (Inconshreveable)" title="Alan Shreve (Inconshreveable)" type="rss" xmlUrl="https://inconshreveable.com/feed.xml" htmlUrl="http://inconshreveable.com/"/>
       <outline text="Alex Clemmer" title="Alex Clemmer" type="rss" xmlUrl="http://blog.nullspace.io/feed.xml" htmlUrl="http://blog.nullspace.io/"/>
       <outline text="Allison Kaptur" title="Allison Kaptur" type="rss" xmlUrl="http://akaptur.com/atom.xml" htmlUrl="http://akaptur.github.com/"/>
+      <outline text="Andrew Fallant (burntsushi)" title="Andrew Fallant (burntsushi)" type="rss" xmlUrl="https://blog.burntsushi.net/index.xml" htmlUrl="https://blog.burntsushi.net/"/>
       <outline text="Armin Ronacher" title="Armin Ronacher" type="rss" xmlUrl="http://lucumr.pocoo.org/feed.atom" htmlUrl="http://lucumr.pocoo.org/"/>
       <outline text="Bruce Dawson (Random ASCII)" title="Bruce Dawson (Random ASCII)" type="rss" xmlUrl="https://randomascii.wordpress.com/feed/" htmlUrl="http://randomascii.wordpress.com/"/>
       <outline text="Charity Majors (charity.wtf)" title="Charity Majors (charity.wtf)" type="rss" xmlUrl="https://charity.wtf/feed/" htmlUrl="https://charity.wtf/"/>
       <outline text="David MacIver" title="David MacIver" type="rss" xmlUrl="https://www.drmaciver.com/feed/" htmlUrl="https://www.drmaciver.com/"/>
       <outline text="Drew DeVault" title="Drew DeVault" type="rss" xmlUrl="https://drewdevault.com/feed.xml" htmlUrl="https://drewdevault.com/"/>
+      <outline text="Gustavo Duarte (Many But Infinite)" title="Gustavo Duarte (Many But Infinite)" type="rss" xmlUrl="https://manybutinfinite.com/feed.xml" htmlUrl="https://manybutinfinite.com/"/>
       <outline text="Hillel Wayne" title="Hillel Wayne" type="rss" xmlUrl="https://www.hillelwayne.com/post/index.xml" htmlUrl="https://www.hillelwayne.com/post/"/>
       <outline text="Jeff Atwood (Coding Horror)" title="Jeff Atwood (Coding Horror)" type="rss" xmlUrl="http://feeds.feedburner.com/codinghorror?format=xml" htmlUrl="http://blog.codinghorror.com/"/>
       <outline text="Joe Beda (80%)" title="Joe Beda (80%)" type="rss" xmlUrl="https://www.eightypercent.net/index.xml" htmlUrl="http://www.eightypercent.net/"/>
@@ -23,13 +25,15 @@
       <outline text="Kevin James" title="Kevin James" type="rss" xmlUrl="http://thekev.in/feed.xml" htmlUrl="http://www.thekev.in/blog"/>
       <outline text="Martin Thompson (Mechanical Sympathy)" title="Martin Thompson (Mechanical Sympathy)" type="rss" xmlUrl="https://mechanical-sympathy.blogspot.com/feeds/posts/default" htmlUrl="http://mechanical-sympathy.blogspot.com/"/>
       <outline text="Michael Lopp (Rands in Repose)" title="Michael Lopp (Rands in Repose)" type="rss" xmlUrl="http://randsinrepose.com/feed/" htmlUrl="http://randsinrepose.com/blog/"/>
+      <outline text="Nelson Elhage (Made of Bugs)" title="Nelson Elhage (Made of Bugs)" type="rss" xmlUrl="https://blog.nelhage.com/atom.xml" htmlUrl="https://blog.nelhage.com/"/>
       <outline text="One Thing Well" title="One Thing Well" type="rss" xmlUrl="http://onethingwell.org/rss" htmlUrl="http://onethingwell.org/"/>
       <outline text="Rachel Kroll (rachelbythebay)" title="Rachel Kroll (rachelbythebay)" type="rss" xmlUrl="http://rachelbythebay.com/w/atom.xml" htmlUrl="http://rachelbythebay.com/w/"/>
       <outline text="Salvatore Sanfilippo (Antirez)" title="Salvatore Sanfilippo (Antirez)" type="rss" xmlUrl="http://antirez.com/rss" htmlUrl="http://antirez.com/"/>
-      <outlint text="Sinclair Target (0b10 History)" title="Sinclair Target (0b10 History)" xmlUrl="https://twobithistory.org/feed.xml" htmlUrl="https://twobithistory.org/"/>
+      <outline text="Sinclair Target (0b10 History)" title="Sinclair Target (0b10 History)" xmlUrl="https://twobithistory.org/feed.xml" htmlUrl="https://twobithistory.org/"/>
       <outline text="Stephen Mann" title="Stephen Mann" type="rss" xmlUrl="https://stephenmann.io/index.xml" htmlUrl="https://stephenmann.io/"/>
       <outline text="Todd Hoff (High Scalability)" title="Todd Hoff (High Scalability)" type="rss" xmlUrl="http://feeds.feedburner.com/HighScalability" htmlUrl="http://highscalability.com/blog/"/>
       <outline text="Troy Hunt" title="Troy Hunt" type="rss" xmlUrl="http://feeds.feedburner.com/TroyHunt?format=xml" htmlUrl="http://www.troyhunt.com/"/>
+      <outline text="Steve Losh" title="Steve Losh" type="rss" xmlUrl="https://feeds.feedburner.com/stevelosh" htmlUrl="http://stevelosh.com/blog/"/>
     </outline>
   </body>
 </opml>

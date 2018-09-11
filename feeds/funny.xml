@@ -7,7 +7,6 @@
     <outline text="Funny" title="Funny">
       <outline text="Abstruse Goose" title="Abstruse Goose" type="rss" xmlUrl="http://feeds.feedburner.com/AbstruseGoose" htmlUrl="http://abstrusegoose.com/"/>
       <outline text="AmazingSuperPowers" title="AmazingSuperPowers" type="rss" xmlUrl="http://www.amazingsuperpowers.com/category/comics/feed/" htmlUrl="http://www.amazingsuperpowers.com/"/>
-      <outline text="Balls 2 That" title="Balls 2 That" type="rss" xmlUrl="http://balls2that.com/feed/" htmlUrl="http://balls2that.com/"/>
       <outline text="Cheer Up, Emo Kid" title="Cheer Up, Emo Kid" type="rss" xmlUrl="http://feeds.feedburner.com/cheerupemokid/hEwX" htmlUrl="http://www.cheerupemokid.com/"/>
       <outline text="CommitStrip" title="CommitStrip" type="rss" xmlUrl="http://www.commitstrip.com/en/feed/" htmlUrl="http://www.commitstrip.com/"/>
       <outline text="Consolia Comics" title="Consolia Comics" type="rss" xmlUrl="https://consolia-comic.com/rss.xml" htmlUrl="https://consolia-comic.com/"/>

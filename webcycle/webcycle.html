@@ -11,7 +11,7 @@
 
 <script>
 let params = new URLSearchParams(window.location.search);
-let interval = params.get('interval') || 0;
+let interval = parseInt(params.get('interval') || 0);
 
 $("#timer").TimeCircles({
     direction: "Counter-clockwise",

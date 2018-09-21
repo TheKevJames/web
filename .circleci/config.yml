@@ -134,6 +134,23 @@ jobs:
           paths:
             - build/
 
+  webcycle:
+    docker:
+      - image: mysocialobservations/docker-tdewolff-minify
+    steps:
+      - run:
+          name: install dependencies
+          command: apk add --update ca-certificates openssl
+      - checkout
+      - run: mkdir -p artifacts/webcycle
+      - run: cp shared/* artifacts/webcycle/
+      - run: cp webcycle/* artifacts/webcycle/
+      - run: minify --recursive --output artifacts/ artifacts/
+      - persist_to_workspace:
+          root: artifacts
+          paths:
+            - webcycle/
+
   www-redir:
     docker:
       - image: mysocialobservations/docker-tdewolff-minify
@@ -205,6 +222,9 @@ workflows:
       - site-minify:
           requires:
             - site
+      - webcycle:
+          requires:
+            - lint
       - www-redir:
           requires:
             - lint
@@ -214,6 +234,7 @@ workflows:
             - octodash
             - quotes
             - site-minify
+            - webcycle
             - www-redir
           filters:
             branches:

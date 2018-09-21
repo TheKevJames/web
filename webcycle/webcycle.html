@@ -1,0 +1,53 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.css" rel="stylesheet">
+</head>
+
+<body style="overflow-y: hidden; margin: 0">
+<div id="timer" data-timer="10" style="position: absolute; bottom: 0; right: 0; height: 80px; width: 80px"></div>
+
+<script>
+let params = new URLSearchParams(window.location.search);
+let interval = params.get('interval') || 0;
+
+$("#timer").TimeCircles({
+    direction: "Counter-clockwise",
+    start: false,
+    total_duration: interval,
+    time: {
+        Days: { show: false },
+        Hours: { show: false },
+        Minutes: { show: false },
+        Seconds: { color: "#C0C8CF" },
+    },
+});
+
+let frames = params.getAll('url').map((u) => {
+    let frame = document.createElement("embed");
+    frame.src = u;
+    frame.type = "text/html";
+    frame.width = "100%";
+    frame.height = "100%";
+
+    frame.style.display = "none";
+    document.body.appendChild(frame);
+    return frame;
+});
+
+const update_freq = interval * 1000;
+let current_frame = frames.length - 1;
+function cycle() {
+    $("#timer").TimeCircles().restart();
+    frames[current_frame].style.display = "none";
+
+    current_frame = (current_frame + 1) % frames.length;
+    frames[current_frame].style.display = "block";
+    setTimeout(cycle, update_freq);
+}
+
+cycle();
+</script>
+</body>
+</html>

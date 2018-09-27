@@ -27,6 +27,7 @@ Title                                           Tags                            
 `Shadows of the Limelight`_                     Superheroes, RatFic                     A story about superheroes whose powers are defined by stories. Very interesting take on the genre, worth a read.
 `Team Anko`_                                    FanFic(Naruto), RatFic                  "Rationality meets Naruto", a re-write where Naruto and friends get Anko as a Jounin-sensei. From the author of `The Two Year Emperor`_, the writing style is fantastic and the story is great.
 `The Arithmancer`_                              FanFic(HP)                              The Arithmancer, as well as its sequel(s?), follow a scientifically-minded Hermione as she munchkins her way through life. Its no HPMOR, but its definitely entertaining!
+`The Bound Dungeon`_                            LitRPG                                  Decent "Dungeon Core" story with some interesting growth progression and an interesting setting. Promissing, but never really took off -- it felt like it was just hitting its stride when the author disappeared for a while and then eventually came back to say he didn't like how the story was going and abandoned it.
 `The Bridge`_                                   SciFi                                   Interesting story about life on a colony ship hundreds of years after understanding of our own technology has been lost. Very interesting, definitely worth a read.
 `The Fable of the Dragon-Tyrant`_               RatFic                                  Hard to describe without giving the story away -- very short read, "makes you think". Check it out!
 `The Gamer`_                                    LitRPG                                  Probably the first well-known LitRPG, or at least the one that I came across first. Not bad, but eventually starts to drag on and on. I lost interest fairly quickly, but I can't complain too much since it led me into the genre and other works I have greatly enjoyed.
@@ -87,6 +88,7 @@ Title                                           Tags                            
 .. _Shadows of the Limelight: http://alexanderwales.com/shadows/
 .. _Team Anko: https://www.fanfiction.net/s/11087425/1/Team-Anko
 .. _The Arithmancer: https://www.fanfiction.net/s/10070079/1/The-Arithmancer
+.. _The Bound Dungeon: https://www.royalroad.com/fiction/10519/the-bound-dungeon
 .. _The Bridge: https://leonardpetracci.com/the-bridge/
 .. _The Fable of the Dragon-Tyrant: https://nickbostrom.com/fable/dragon.html
 .. _The Gamer: http://mangafox.me/manga/the_gamer/

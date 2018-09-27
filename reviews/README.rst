@@ -22,7 +22,8 @@ Title                                           Tags                            
 `Pact`_                                         Fantasy                                 The protagonist finds himself inheriting an old property with a trove of supernatural knowledge -- magic and demons ensue. Wonderfully written (same author as Worm), but I could never really get into the flow of the story. I've been informed that this one is much better reading in its entirety rather than trying to keep up week-by-week, so I'll likely try again at some point.
 `People Lie`_                                   FanFic(Naruto)                          Darker Naruto world, Naruto/Hinata/Sasuke focus with a darker, more cynical Naruto whose personality spreads to the others. Interestingly written, but abandoned with a couple short spin-offs which seemed to be attempts to resurrect it. Very gratuitous, decent enough read.
 `Professor Arc`_                                FanFic(RWBY), Humor                     Jaune Arc finds he faked his credentials so well that he is offered a teaching position. Hilarity ensues. Well-written and very funny read, definitely worth checking out.
-`Ra`_                                           Fantasy, RatFic                         Magic as Engineering. Very well-written, worth checking out.
+`Ra`_                                           Fantasy, RatFic                         Magic as Engineering. Very well-written, worth checking out. I've been meaning to re-read this.
+`Ruthless`_                                     FanFic(HP)                              Harry Potter as a vicious little shit, fairly short read. There's some gratuitous oddities for sure, but it certainly scratches a certain kind of competence-porn itch. A decent read for how short it is, but its more of a drabble than a story.
 `Sasuke Uchiha and the Power of Lies`_          FanFic(Naruto), Humor                   A parody of Naruto, with a focus on absurdity and self-delusion. Fun and silly read.
 `Shadows of the Limelight`_                     Superheroes, RatFic                     A story about superheroes whose powers are defined by stories. Very interesting take on the genre, worth a read.
 `Team Anko`_                                    FanFic(Naruto), RatFic                  "Rationality meets Naruto", a re-write where Naruto and friends get Anko as a Jounin-sensei. From the author of `The Two Year Emperor`_, the writing style is fantastic and the story is great.
@@ -86,6 +87,7 @@ Title                                           Tags                            
 .. _Pokemon\: The Origin of Species: https://www.fanfiction.net/s/9794740/1/Pokemon-The-Origin-of-Species
 .. _Professor Arc: https://www.fanfiction.net/s/10898868
 .. _Ra: https://qntm.org/ra
+.. _Ruthless: https://www.fanfiction.net/s/10493620/1/
 .. _Sasuke Uchiha and the Power of Lies: https://forums.spacebattles.com/threads/sasuke-uchiha-and-the-power-of-lies-naruto-comedy-au.472801/
 .. _Shadows of the Limelight: http://alexanderwales.com/shadows/
 .. _Team Anko: https://www.fanfiction.net/s/11087425/1/Team-Anko

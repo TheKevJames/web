@@ -42,6 +42,7 @@ Title                                           Tags                            
 `Three Worlds Collide`_                         SciFi, RatFic                           Short and highly recommended. "The kind of classic fifties-era first-contact story that Jonathan Swift might have written, if Jonathan Swift had had a background in game theory." -Peter Watts
 `Time Braid`_                                   FanFic(Naruto), RatFic                  Time-looping power-creep crackfic with some occasional fucked up subject matter. That said, it somehow manages to be a great read despite the previous sentence.
 `Unriddle the Riddle`_                          FanFic(HPMOR)                           A recursive fanfic alternate ending for HPMOR: "What if Harry allied with the Professor?". Meh.
+`Vapors`_ (sequel: `Clarity`_)                  FanFic(Naruto), SI                      The sort of thing I consider a "SI done right" -- the protagonist doesn't start with mythical chosen-one powers, doesn't have game-breaking knowledge-from-outside, and has no encyclopediac knowledge of the source universe. Fantastic read all the way up to a couple chapters before the end, at which point there's a big cliched twist when the story could have just ended in a supremely satisfying way. The sequel is much shorter, deals with that twist, and has a satisfying ending of its own, but the story probably would have hung together better if that twist hadn't occured. All-in-all a great read, though, even with that issue.
 `When In Doubt, Obliviate`_                     FanFic(HP), Humor                       Silly little story about HP being raised by Gilderoy Lockhart. Short read, good for a few giggles.
 `Worm`_                                         Superheroes, RatFic                     One of, if not the, best web serials I've ever read. Could not recommend more highly. Warning: incredibly long. Like, seriously long. As long as the entire "A Song of Ice and Fire" series -- and that's ignoring Worm's recently-published interlude and in-progress follow-up sequel.
 ==============================================  ======================================  ===========
@@ -66,6 +67,7 @@ Title                                           Tags                            
 .. _Benefactor: https://forums.spacebattles.com/threads/benefactor-one-off-original-superhero-fiction.342377/
 .. _Branches on the Tree of Time: https://fictionhub.io/story/branches-on-the-tree-of-time/
 .. _Break Them All: https://forums.sufficientvelocity.com/threads/break-them-all-original-precross.12960/
+.. _Clarity: https://www.fanfiction.net/s/10552144/1/Clarity
 .. _Coding Machines: http://www.teamten.com/lawrence/writings/coding-machines/
 .. _Death By Water: https://forums.sufficientvelocity.com/threads/death-by-water-harry-potter-the-culture.44788/page-9
 .. _Demon: http://www.shigabooks.com/index.php?page=001
@@ -103,6 +105,7 @@ Title                                           Tags                            
 .. _Three Worlds Collide: https://www.lesswrong.com/posts/HawFh7RvDM4RyoJ2d/three-worlds-collide-0-8
 .. _Time Braid: https://www.fanfiction.net/s/5193644
 .. _Unriddle the Riddle: https://www.fanfiction.net/s/12970295
+.. _Vapors: https://www.fanfiction.net/s/9855872/1/Vapors
 .. _When In Doubt, Obliviate: https://www.fanfiction.net/s/6635363
 .. _Worm: https://parahumans.wordpress.com/table-of-contents/
 .. _Worth the Candle: https://archiveofourown.org/works/11478249/chapters/25740126

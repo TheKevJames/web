@@ -10,6 +10,7 @@ Title                                           Tags                            
 `Benefactor`_                                   Superheroes, SciFi                      To describe this one would not do it justice -- its short, its interesting, read it!
 `Branches on the Tree of Time`_                 FanFic(Terminator), RatFic              THE Terminator rational re-write. Excellently written, fantastic use of time travel, definitely worth reading.
 `Break Them All`_                               SI                                      The prequel to `Heromaker\'s Legacy`_, a Worm fanfic, this is a story about exploring and learning a magic system. Interesting power growth story about applying real-world ideas to munchkining a magic system, but unfortunately the goal of this story is just to support Heromaker's Legacy, which I didn't really enjoy, rather than to exist in its own right. Interesting, but unsatisfyingly unfinished.
+`Broken Blades`_                                FanFic(RWBY)                            I couldn't remember why I'd stopped reading this one a while back, so I picked it up again. Note to self for future: the story is an interesting divergence-style fanfic with a good building beginning, but it seems to have been abandoned by the author before getting to the meat of the story. Irrelevant to the story, but if you do check it out: don't read the "author notes" at the end of each chapter. Personally, at least, I thought a good chunk of them devolved into condescending blurbs of "oh man, I put this subtle thing in my writing, but I bet none of you noticed" with reference to blatantly obvious plotlines.
 `Bunkercore`_                                   LitRPG                                  Dungeon Core variation with an interesting setting and plot. The author wiped a good chunk of the online copy in favor of publishing to Amazon, but has indicated he'll be continuing the story online eventually. If you like the teaser chapters he left online, you'll like the rest of the work.
 `Coding Machines`_                              SciFi                                   A horror novel for programmers. Very good.
 `Death By Water`_                               FanFic(HPxCulture)                      Harry Potter raised by The Culture. Interesting to see how the Culture universe interacts with a planet of magic, but not overly compelling. Seems to be abandoned.
@@ -72,6 +73,7 @@ Title                                           Tags                            
 .. _Benefactor: https://forums.spacebattles.com/threads/benefactor-one-off-original-superhero-fiction.342377/
 .. _Branches on the Tree of Time: https://fictionhub.io/story/branches-on-the-tree-of-time/
 .. _Break Them All: https://forums.sufficientvelocity.com/threads/break-them-all-original-precross.12960/
+.. _Broken Blades: https://www.fanfiction.net/s/12466638/1/Broken-Blades
 .. _Bunkercore: https://www.royalroad.com/fiction/17051/bunkercore
 .. _Clarity: https://www.fanfiction.net/s/10552144/1/Clarity
 .. _Coding Machines: http://www.teamten.com/lawrence/writings/coding-machines/

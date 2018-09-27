@@ -5,6 +5,7 @@
 Title                                           Tags                                    Description
 ==============================================  ======================================  ===========
 `A Bluer Shade of White`_                       FanFic(Frozen), RatFic                  The story of a post-Frozen Elsa using her powers to rule and improve the country. Short, good read.
+`Aeromancer`_                                   Fantasy                                 What do I say about this one? Interesting setting, interesting characters, interesting plot, but... well, the story got interrupted extremely suddenly by the author finding religion and deciding he thus could not continue writing. I'd recommend this one only to folks who aren't put off by unfinished stories -- its a great read until that interuption!
 `Ava's Demon`_                                  Comic, SciFi                            A gorgeously-drawn webcomic about a young girl haunted by a demon a thousand years into the future. Worth checking out just for the artwork; and the story is great too.
 `Benefactor`_                                   Superheroes, SciFi                      To describe this one would not do it justice -- its short, its interesting, read it!
 `Branches on the Tree of Time`_                 FanFic(Terminator), RatFic              THE Terminator rational re-write. Excellelently written, fantastic use of time travel, definitely worth reading.
@@ -64,6 +65,7 @@ Title                                           Tags                            
 
 .. _/r/rational: https://www.reddit.com/r/rational/wiki/index
 .. _A Bluer Shade of White: https://fictionhub.io/story/a-bluer-shade-of-white/
+.. _Aeromancer: https://www.fictionpress.com/s/3323184/1/Aeromancer
 .. _Animorphs\: The Reckoning: https://www.fanfiction.net/s/11090259/1/r-Animorphs-The-Reckoning
 .. _Ava's Demon: http://www.avasdemon.com/
 .. _Benefactor: https://forums.spacebattles.com/threads/benefactor-one-off-original-superhero-fiction.342377/

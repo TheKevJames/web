@@ -8,8 +8,9 @@ Title                                           Tags                            
 `Aeromancer`_                                   Fantasy                                 What do I say about this one? Interesting setting, interesting characters, interesting plot, but... well, the story got interrupted extremely suddenly by the author finding religion and deciding he thus could not continue writing. I'd recommend this one only to folks who aren't put off by unfinished stories -- its a great read until that interuption!
 `Ava's Demon`_                                  Comic, SciFi                            A gorgeously-drawn webcomic about a young girl haunted by a demon a thousand years into the future. Worth checking out just for the artwork; and the story is great too.
 `Benefactor`_                                   Superheroes, SciFi                      To describe this one would not do it justice -- its short, its interesting, read it!
-`Branches on the Tree of Time`_                 FanFic(Terminator), RatFic              THE Terminator rational re-write. Excellelently written, fantastic use of time travel, definitely worth reading.
+`Branches on the Tree of Time`_                 FanFic(Terminator), RatFic              THE Terminator rational re-write. Excellently written, fantastic use of time travel, definitely worth reading.
 `Break Them All`_                               SI                                      The prequel to `Heromaker\'s Legacy`_, a Worm fanfic, this is a story about exploring and learning a magic system. Interesting power growth story about applying real-world ideas to munchkining a magic system, but unfortunately the goal of this story is just to support Heromaker's Legacy, which I didn't really enjoy, rather than to exist in its own right. Interesting, but unsatisfyingly unfinished.
+`Bunkercore`_                                   LitRPG                                  Dungeon Core variation with an interesting setting and plot. The author wiped a good chunk of the online copy in favor of publishing to Amazon, but has indicated he'll be continuing the story online eventually. If you like the teaser chapters he left online, you'll like the rest of the work.
 `Coding Machines`_                              SciFi                                   A horror novel for programmers. Very good.
 `Death By Water`_                               FanFic(HPxCulture)                      Harry Potter raised by The Culture. Interesting to see how the Culture universe interacts with a planet of magic, but not overly compelling. Seems to be abandoned.
 `Demon`_                                        Comic                                   A really good webcomic about a guy who makes the sudden realization that he's not just a guy.
@@ -71,6 +72,7 @@ Title                                           Tags                            
 .. _Benefactor: https://forums.spacebattles.com/threads/benefactor-one-off-original-superhero-fiction.342377/
 .. _Branches on the Tree of Time: https://fictionhub.io/story/branches-on-the-tree-of-time/
 .. _Break Them All: https://forums.sufficientvelocity.com/threads/break-them-all-original-precross.12960/
+.. _Bunkercore: https://www.royalroad.com/fiction/17051/bunkercore
 .. _Clarity: https://www.fanfiction.net/s/10552144/1/Clarity
 .. _Coding Machines: http://www.teamten.com/lawrence/writings/coding-machines/
 .. _Death By Water: https://forums.sufficientvelocity.com/threads/death-by-water-harry-potter-the-culture.44788/page-9

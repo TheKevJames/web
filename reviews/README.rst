@@ -19,6 +19,7 @@ Title                                           Tags                            
 `Harry Potter and the Methods of Rationality`_  FanFic(HP), RatFic                      The story which defined the RatFic genre. Read this.
 `Kaleidoscope`_                                 FanFic(Naruto), SI                      The author is born into the Uchiha family before the massacre. A frantic struggle to survive ensues. Enjoyable read, bit of a power-up fantasy.
 `Luminosity`_                                   FanFic(Twilight), RatFic                What if Bella was not an idiot? Well written, interesting story, highly acclaimed on `/r/rational`_. Personally, though, I've picked up and abandoned this a couple times now but can't quite put my finger on why. My current best guess is timing -- someday soon I'll set aside the time to read this in one go and see if that changes things.
+`On Being a Sith Lord`_                         FanFic(Star Wars)                       One-shot KotOR story about how the protag feels about finding out about her previously-amnesiac past (massive spoilers, obviously -- go play KotOR, its great!). Short but sweet, lots of interesting tidbits and fun character interactions.
 `Pact`_                                         Fantasy                                 The protagonist finds himself inheriting an old property with a trove of supernatural knowledge -- magic and demons ensue. Wonderfully written (same author as Worm), but I could never really get into the flow of the story. I've been informed that this one is much better reading in its entirety rather than trying to keep up week-by-week, so I'll likely try again at some point.
 `People Lie`_                                   FanFic(Naruto)                          Darker Naruto world, Naruto/Hinata/Sasuke focus with a darker, more cynical Naruto whose personality spreads to the others. Interestingly written, but abandoned with a couple short spin-offs which seemed to be attempts to resurrect it. Very gratuitous, decent enough read.
 `Professor Arc`_                                FanFic(RWBY), Humor                     Jaune Arc finds he faked his credentials so well that he is offered a teaching position. Hilarity ensues. Well-written and very funny read, definitely worth checking out.
@@ -82,6 +83,7 @@ Title                                           Tags                            
 .. _Kaleidoscope: https://archiveofourown.org/works/10531500
 .. _Luminosity: http://luminous.elcenia.com/story.shtml
 .. _Mother of Learning: https://www.fictionpress.com/s/2961893/1/Mother-of-Learning
+.. _On Being a Sith Lord: https://www.fanfiction.net/s/5759101/1/On-Being-A-Sith-Lord
 .. _Pact: https://pactwebserial.wordpress.com/
 .. _People Lie: https://www.fanfiction.net/s/3745099/1/People-Lie
 .. _Pokemon\: The Origin of Species: https://www.fanfiction.net/s/9794740/1/Pokemon-The-Origin-of-Species

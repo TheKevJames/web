@@ -13,7 +13,8 @@
       <outline text="Wilde Life" title="Wilde Life" type="rss" xmlUrl="http://www.wildelifecomic.com/rss.php" htmlUrl="http://www.wildelifecomic.com/"/>
     </outline>
     <outline text="Reading" title="Reading">
-      <outline text="Bunkercore" title="Bunkercore" type="rss" xmlUrl="https://royalroadl.com/fiction/syndication/17051" htmlUrl="https://royalroadl.com/fiction/syndication/17051"/>
+      <outline text="Bunkercore" title="Bunkercore" type="rss" xmlUrl="https://royalroadl.com/fiction/syndication/17051" htmlUrl="https://royalroadl.com/fiction/17051"/>
+      <outline text="Metaworld Chronicles" title="Metaworld Chronicles" type="rss" xmlUrl="https://www.royalroad.com/fiction/syndication/14167" htmlUrl="https://www.royalroad.com/fiction/14167"/>
       <outline text="Harry Potter and the Methods of Rationality" title="Harry Potter and the Methods of Rationality" type="rss" xmlUrl="http://hpmor.com/feed/" htmlUrl="http://hpmor.com/"/>
       <outline text="Pact" title="Pact" type="rss" xmlUrl="http://pactwebserial.wordpress.com/feed/" htmlUrl="http://pactwebserial.wordpress.com/"/>
       <outline text="The Daily Grind" title="The Daily Grind" type="rss" xmlUrl="https://www.royalroadl.com/fiction/syndication/15925" htmlUrl="https://www.royalroadl.com/fiction/syndication/15925"/>

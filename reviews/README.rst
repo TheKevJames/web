@@ -19,9 +19,11 @@ Title                                           Tags                            
 `Dungeon Keeper Ami`_                           FanFic(Sailor Moon), LitRPG             A "Dungeon Core" LitRPG featuring Sailor Mercury. I was initially interested in this story for the interesting take on "good guy forced to be evil", but the MC's constant poor decision making and naivete eventually got on my nerves. Unfortunately, it felt like the story fell into a loop of the protagonist thinking "what could go wrong? I know everything about this thing I know nothing about, this can't go badly" then that thing going badly.
 `Fleep`_                                        Comic, RatFic                           Fleep is an interesting (short) comic about an insomniac figuring out who and where he is. Great read!
 `Friendship is Optimal`_                        FanFic(MLP), RatFic                     The MLP RatFic which spawned any others. Well-written and interesting take, but I've never really been able to get into the MLP fandom even for adjacent material like this. Worth a read, especially if you feel differently.
+`Greg Vader vs The World`_                      FanFic(Worm), LitRPG                    I *wanted* to like this one, but... man. This one just wasn't good. Maybe I didn't give it enough of a chance, but I do not see how it got the ratings it has. Maybe 4.x stars on RoyalRoad doesn't mean as much as I hoped it would? The first time I've abandoned reading something so early in several months.
 `Harry Potter and the Methods of Rationality`_  FanFic(HP), RatFic                      The story which defined the RatFic genre. Read this.
 `Kaleidoscope`_                                 FanFic(Naruto), SI                      The author is born into the Uchiha family before the massacre. A frantic struggle to survive ensues. Enjoyable read, bit of a power-up fantasy.
 `Luminosity`_                                   FanFic(Twilight), RatFic                What if Bella was not an idiot? Well written, interesting story, highly acclaimed on `/r/rational`_. Personally, though, I've picked up and abandoned this a couple times now but can't quite put my finger on why. My current best guess is timing -- someday soon I'll set aside the time to read this in one go and see if that changes things.
+`Maou no Hisho`_                                Comic                                   Silly manga. Manga is very rarely my thing, but this one is definitely silly and fun.
 `On Being a Sith Lord`_                         FanFic(Star Wars)                       One-shot KotOR story about how the protag feels about finding out about her previously-amnesiac past (massive spoilers, obviously -- go play KotOR, its great!). Short but sweet, lots of interesting tidbits and fun character interactions.
 `Pact`_                                         Fantasy                                 The protagonist finds himself inheriting an old property with a trove of supernatural knowledge -- magic and demons ensue. Wonderfully written (same author as Worm), but I could never really get into the flow of the story. I've been informed that this one is much better reading in its entirety rather than trying to keep up week-by-week, so I'll likely try again at some point.
 `People Lie`_                                   FanFic(Naruto)                          Darker Naruto world, Naruto/Hinata/Sasuke focus with a darker, more cynical Naruto whose personality spreads to the others. Interestingly written, but abandoned with a couple short spin-offs which seemed to be attempts to resurrect it. Very gratuitous, decent enough read.
@@ -31,7 +33,7 @@ Title                                           Tags                            
 `Sasuke Uchiha and the Power of Lies`_          FanFic(Naruto), Humor                   A parody of Naruto, with a focus on absurdity and self-delusion. Fun and silly read.
 `Shadows of the Limelight`_                     Superheroes, RatFic                     A story about superheroes whose powers are defined by stories. Very interesting take on the genre, worth a read.
 `Team Anko`_                                    FanFic(Naruto), RatFic                  "Rationality meets Naruto", a re-write where Naruto and friends get Anko as a Jounin-sensei. From the author of `The Two Year Emperor`_, the writing style is fantastic and the story is great.
-`The Arithmancer`_                              FanFic(HP)                              The Arithmancer, as well as its sequel(s?), follow a scientifically-minded Hermione as she munchkins her way through life. Its no HPMOR, but its definitely entertaining!
+`The Arithmancer`_                              FanFic(HP)                              The Arithmancer, as well as its sequel(s), follow a scientifically-minded Hermione as she munchkins her way through life. Its no HPMOR, but its definitely entertaining!
 `The Bound Dungeon`_                            LitRPG                                  Decent "Dungeon Core" story with some interesting growth progression and an interesting setting. Promissing, but never really took off -- it felt like it was just hitting its stride when the author disappeared for a while and then eventually came back to say he didn't like how the story was going and abandoned it.
 `The Bridge`_                                   SciFi                                   Interesting story about life on a colony ship hundreds of years after understanding of our own technology has been lost. Very interesting, definitely worth a read.
 `The Fable of the Dragon-Tyrant`_               RatFic                                  Hard to describe without giving the story away -- very short read, "makes you think". Check it out!
@@ -43,6 +45,7 @@ Title                                           Tags                            
 `The Truth of the Sith`_                        FanFic(Star Wars), RatFic               A five-minute read -- Palpatine tells Anakin a story about the force. Very interesting take on the Force / Dark Side / Light Side / etc.
 `The Two Year Emperor`_                         FanFic(D&D), RatFic                     A guy gets thrown into a D&D universe to act as the emperor of a country. Fun, munchkin-ey story.
 `The Waves Arisen`_                             FanFic(Naruto), Rational                What if Naruto grew up smart and curious? A defining work of the RatFic genre, absolutely worth a read.
+`The World Waits on Evil`_                      SI                                      An interesting premise -- the SI protagonist gets body-swapped into a Lich Dread Lord of a fantasy realm. It had me going for a while, but I eventually lost interest. It has a lot of good, but also some very dry digressions into boring minutia.
 `Threadbare`_                                   LitRPG                                  A cute story about a teddy-bear who gains sentience in a LitRPG world. Very light-hearted, fun read.
 `Three Worlds Collide`_                         SciFi, RatFic                           Short and highly recommended. "The kind of classic fifties-era first-contact story that Jonathan Swift might have written, if Jonathan Swift had had a background in game theory." -Peter Watts
 `Time Braid`_                                   FanFic(Naruto), RatFic                  Time-looping power-creep crackfic with some occasional fucked up subject matter. That said, it somehow manages to be a great read despite the previous sentence.
@@ -83,11 +86,13 @@ Title                                           Tags                            
 .. _Dungeon Keeper Ami: https://forums.sufficientvelocity.com/threads/dungeon-keeper-ami-sailor-moon-dungeon-keeper-story-only-thread.30066/
 .. _Fleep: http://www.shigabooks.com/fleep.php
 .. _Friendship is Optimal: https://www.fimfiction.net/story/62074/friendship-is-optimal
+.. _Greg Vader vs The World: https://www.royalroad.com/fiction/18283/greg-veder-vs-the-world
 .. _Harry Potter and the Methods of Rationality: http://www.hpmor.com/
 .. _Harry Potter and the Natural 20: https://www.fanfiction.net/s/8096183/1/Harry-Potter-and-the-Natural-20
 .. _Heromaker\'s Legacy: https://forums.sufficientvelocity.com/threads/heromakers-legacy-worm-au-original.7589/
 .. _Kaleidoscope: https://archiveofourown.org/works/10531500
 .. _Luminosity: http://luminous.elcenia.com/story.shtml
+.. _Maou no Hisho: http://mangakakalot.com/chapter/maou_no_hisho/chapter_1
 .. _Mother of Learning: https://www.fictionpress.com/s/2961893/1/Mother-of-Learning
 .. _On Being a Sith Lord: https://www.fanfiction.net/s/5759101/1/On-Being-A-Sith-Lord
 .. _Pact: https://pactwebserial.wordpress.com/
@@ -111,6 +116,7 @@ Title                                           Tags                            
 .. _The Truth of the Sith: https://archive.is/WNfW5
 .. _The Two Year Emperor: https://www.reddit.com/r/rational/comments/3xe9fn/ffrt_the_two_year_emperor_is_back_and_free/
 .. _The Waves Arisen: https://wertifloke.wordpress.com/about/
+.. _The World Waits on Evil: https://forums.spacebattles.com/threads/the-world-waits-on-evil-hivers-eoa-ww-a-finished-story.274791/
 .. _Threadbare: https://www.royalroadl.com/fiction/15130/threadbare
 .. _Three Worlds Collide: https://www.lesswrong.com/posts/HawFh7RvDM4RyoJ2d/three-worlds-collide-0-8
 .. _Time Braid: https://www.fanfiction.net/s/5193644

@@ -1,6 +1,9 @@
 KevinJames.README
 =================
 
+Welcome to my meta-README README, wherein I link to READMEs for you to read for
+your reading pleasure.
+
 Coworker? You might be looking for my `WorkingWithKevinJames.README`_
 
 Developer / Recruiter? I keep an `OpenSource.README`_.

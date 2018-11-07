@@ -21,9 +21,11 @@ Title                                           Tags                            
 `Friendship is Optimal`_                        FanFic(MLP), RatFic                     The MLP RatFic which spawned any others. Well-written and interesting take, but I've never really been able to get into the MLP fandom even for adjacent material like this. Worth a read, especially if you feel differently.
 `Greg Vader vs The World`_                      FanFic(Worm), LitRPG                    I *wanted* to like this one, but... man. This one just wasn't good. Maybe I didn't give it enough of a chance, but I do not see how it got the ratings it has. Maybe 4.x stars on RoyalRoad doesn't mean as much as I hoped it would? The first time I've abandoned reading something so early in several months.
 `Harry Potter and the Methods of Rationality`_  FanFic(HP), RatFic                      The story which defined the RatFic genre. Read this.
+`Instruments of Destruction`_                   FanFic(Star Wars)                       This... is largely a story about project management. The story of the project manager of the Death Star (mark two). Short little vignette, but a hilarious take on managing an absurd project nonetheless.
 `Kaleidoscope`_                                 FanFic(Naruto), SI                      The author is born into the Uchiha family before the massacre. A frantic struggle to survive ensues. Enjoyable read, bit of a power-up fantasy.
 `Luminosity`_                                   FanFic(Twilight), RatFic                What if Bella was not an idiot? Well written, interesting story, highly acclaimed on `/r/rational`_. Personally, though, I've picked up and abandoned this a couple times now but can't quite put my finger on why. My current best guess is timing -- someday soon I'll set aside the time to read this in one go and see if that changes things.
 `Maou no Hisho`_                                Comic                                   Silly manga. Manga is very rarely my thing, but this one is definitely silly and fun.
+`Not This Time, Fate`_                          FanFic(RWBY)                            A Jaune Arc groundhog day story where he finally gives up and just tries to live a normal life. Hilarity and surprisingly poignant moments ensue.
 `On Being a Sith Lord`_                         FanFic(Star Wars)                       One-shot KotOR story about how the protag feels about finding out about her previously-amnesiac past (massive spoilers, obviously -- go play KotOR, its great!). Short but sweet, lots of interesting tidbits and fun character interactions.
 `Pact`_                                         Fantasy                                 The protagonist finds himself inheriting an old property with a trove of supernatural knowledge -- magic and demons ensue. Wonderfully written (same author as Worm), but I could never really get into the flow of the story. I've been informed that this one is much better reading in its entirety rather than trying to keep up week-by-week, so I'll likely try again at some point.
 `People Lie`_                                   FanFic(Naruto)                          Darker Naruto world, Naruto/Hinata/Sasuke focus with a darker, more cynical Naruto whose personality spreads to the others. Interestingly written, but abandoned with a couple short spin-offs which seemed to be attempts to resurrect it. Very gratuitous, decent enough read.
@@ -42,6 +44,7 @@ Title                                           Tags                            
 `The Last Christmas`_                           RatFic                                  Short story about the mantle of Santa Claus being passed down to an industrial engineer. Short story, interesting read.
 `The Metropolitan Man`_                         FanFic(Superman), RatFic                Fantastically written story which pits Lex Luther as the villain protagonist to a newly arrived alien God. Highly recommended.
 `The Secret Number`_                            Oddball                                 A short and hard-to-classify story. Vaguely SCPish, involves memetics. Awesome read!
+`The Trial of Darth Vader`_                     FanFic(Star Wars)                       An aftermath story of Darth Vader's history, very interestingly told alternate view of the Star Wars universe. Would recommend.
 `The Truth of the Sith`_                        FanFic(Star Wars), RatFic               A five-minute read -- Palpatine tells Anakin a story about the force. Very interesting take on the Force / Dark Side / Light Side / etc.
 `The Two Year Emperor`_                         FanFic(D&D), RatFic                     A guy gets thrown into a D&D universe to act as the emperor of a country. Fun, munchkin-ey story.
 `The Waves Arisen`_                             FanFic(Naruto), Rational                What if Naruto grew up smart and curious? A defining work of the RatFic genre, absolutely worth a read.
@@ -90,10 +93,12 @@ Title                                           Tags                            
 .. _Harry Potter and the Methods of Rationality: http://www.hpmor.com/
 .. _Harry Potter and the Natural 20: https://www.fanfiction.net/s/8096183/1/Harry-Potter-and-the-Natural-20
 .. _Heromaker\'s Legacy: https://forums.sufficientvelocity.com/threads/heromakers-legacy-worm-au-original.7589/
+.. _Instruments of Destruction: https://www.fanfiction.net/s/11685932/1/Instruments-of-Destruction
 .. _Kaleidoscope: https://archiveofourown.org/works/10531500
 .. _Luminosity: http://luminous.elcenia.com/story.shtml
 .. _Maou no Hisho: http://mangakakalot.com/chapter/maou_no_hisho/chapter_1
 .. _Mother of Learning: https://www.fictionpress.com/s/2961893/1/Mother-of-Learning
+.. _Not This Time, Fate: https://www.fanfiction.net/s/11822902/1/
 .. _On Being a Sith Lord: https://www.fanfiction.net/s/5759101/1/On-Being-A-Sith-Lord
 .. _Pact: https://pactwebserial.wordpress.com/
 .. _People Lie: https://www.fanfiction.net/s/3745099/1/People-Lie
@@ -113,6 +118,7 @@ Title                                           Tags                            
 .. _The Last Christmas: https://fictionhub.io/story/the-last-christmas/
 .. _The Metropolitan Man: https://fictionhub.io/story/the-metropolitan-man/
 .. _The Secret Number: http://strangehorizons.com/fiction/the-secret-number/
+.. _The Trial of Darth Vader: https://archiveofourown.org/works/4121383/chapters/9290023
 .. _The Truth of the Sith: https://archive.is/WNfW5
 .. _The Two Year Emperor: https://www.reddit.com/r/rational/comments/3xe9fn/ffrt_the_two_year_emperor_is_back_and_free/
 .. _The Waves Arisen: https://wertifloke.wordpress.com/about/

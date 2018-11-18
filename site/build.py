@@ -28,6 +28,7 @@ freezer = flask_frozen.Freezer(app)
 def index():
     return flask.render_template('index.html')
 
+
 @app.route('/blog/')
 def blog():
     posts = [p for p in flatpages]
@@ -46,6 +47,7 @@ def blog():
 
     return flask.render_template('blog.html', by_date=by_date, by_tag=by_tag,
                                  filter_tag=None, recent=posts[:6])
+
 
 @app.route('/blog/<tag>.html')
 def blog_tagged(tag):
@@ -68,17 +70,20 @@ def blog_tagged(tag):
     return flask.render_template('blog.html', by_date=by_date, by_tag=by_tag,
                                  filter_tag=tag, recent=by_tag[tag])
 
+
 @app.route('/blog/<name>/')
 def blog_page(name):
     post = flatpages.get_or_404(name)
     post.meta['tag_list'] = post.meta.get('tags', 'Untagged').split(', ')
     return flask.render_template('post.html', post=post)
 
+
 @freezer.register_generator
 def blog_pages():
     pages = pathlib.Path(__file__).resolve().parents[0] / 'pages'
     for name in pages.iterdir():
         yield 'blog_page', {'name': name.stem}
+
 
 @app.route('/feed.xml')
 def blog_rss():
@@ -95,9 +100,11 @@ def blog_rss():
     response.headers['Content-Type'] = 'application/xml'
     return response
 
+
 @app.route('/404.html')
 def err404():
     return flask.render_template('404.html')
+
 
 @app.route('/ping')
 def ping():

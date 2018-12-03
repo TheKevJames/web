@@ -6,7 +6,7 @@
   <body>
     <outline text="Tech" title="Tech">
       <outline text="CloudFlare" title="CloudFlare" type="rss" xmlUrl="https://blog.cloudflare.com/rss/" htmlUrl="http://blog.cloudflare.com/"/>
-      <outline text="Factorio" title="Factorio" type="rss" xmlUrl="https://steamcommunity.com/games/427520/rss/" htmlUrl="https://steamcommunity.com/app/427520/allnews"/>
+      <outline text="Factorio" title="Factorio" type="rss" xmlUrl="https://www.factorio.com/blog/rss" htmlUrl="https://www.factorio.com/blog/"/>
       <outline text="GitHub" title="GitHub" type="rss" xmlUrl="https://blog.github.com/all.atom" htmlUrl="https://blog.github.com/"/>
       <outline text="GitHub API Changes" title="GitHub API Changes" type="rss" xmlUrl="https://developer.github.com/changes.atom" htmlUrl="http://developer.github.com/"/>
       <outline text="GitHub Engineering" title="GitHub Engineering" type="rss" xmlUrl="https://githubengineering.com/atom.xml" htmlUrl="https://githubengineering.com/"/>

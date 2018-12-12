@@ -1,113 +1,100 @@
 #!/usr/bin/env python
 import collections
+import itertools
 import operator
 import pathlib
+import typing
 
 import flask
 import flask_flatpages
 import flask_frozen
 
 
-FLATPAGES_EXTENSION = '.md'
-FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'tables']
-FREEZER_BASE_URL = 'https://thekev.in/'
-FREEZER_DEFAULT_MIMETYPE = 'text/html'
-FREEZER_IGNORE_404_NOT_FOUND = False
-FREEZER_RELATIVE_URLS = True
-FREEZER_REMOVE_EXTRA_FILES = True
-FREEZER_STATIC_IGNORE = ['.git*']
-
-
 app = flask.Flask(__name__, static_url_path='')
-app.config.from_object(__name__)
-flatpages = flask_flatpages.FlatPages(app)
+app.config.update(
+    FLATPAGES_BLOG_EXTENSION='.md',
+    FLATPAGES_BLOG_MARKDOWN_EXTENSIONS=['codehilite', 'tables'],
+    FLATPAGES_BLOG_ROOT='pages/blog',
+)
+app.config.update(
+    FREEZER_BASE_URL='https://thekev.in/',
+    FREEZER_DEFAULT_MIMETYPE='text/html',
+    FREEZER_IGNORE_404_NOT_FOUND=False,
+    FREEZER_RELATIVE_URLS=True,
+    FREEZER_REMOVE_EXTRA_FILES=True,
+    FREEZER_STATIC_IGNORE=['.git*'],
+)
+blogpages = flask_flatpages.FlatPages(app, name='blog')
 freezer = flask_frozen.Freezer(app)
 
 
-@app.route('/')
-def index():
+BLOGS = sorted(blogpages, key=operator.itemgetter('date'), reverse=True)
+BLOGS_BY_TAG: typing.Dict[str, typing.Any] = collections.defaultdict(list)
+for blog in BLOGS:
+    for t in blog.meta['tags'].split(', '):
+        BLOGS_BY_TAG[t].append(blog)
+BLOGS_BY_YEAR_GROUPED = itertools.groupby(
+    BLOGS, key=lambda x: x['date'].year)  # type: ignore
+BLOGS_BY_YEAR = {k: list(v) for k, v in BLOGS_BY_YEAR_GROUPED}
+
+
+@app.route('/')  # type: ignore
+def index() -> typing.Any:
     return flask.render_template('index.html')
 
 
-@app.route('/blog/')
-def blog():
-    posts = [p for p in flatpages]
-    posts.sort(key=operator.itemgetter('date'), reverse=True)
-
-    by_date = collections.OrderedDict()
-    by_tag = {}
-    for post in posts:
-        for tag in post.meta.get('tags', '').split(', '):
-            tag = tag or 'Untagged'
-            by_tag[tag] = by_tag.get(tag, list())
-            by_tag[tag].append(post)
-
-        by_date[post['date'].year] = by_date.get(post['date'].year, list())
-        by_date[post['date'].year].append(post)
-
-    return flask.render_template('blog.html', by_date=by_date, by_tag=by_tag,
-                                 filter_tag=None, recent=posts[:6])
+@app.route('/blog/')  # type: ignore
+def blog() -> typing.Any:
+    return flask.render_template('blog.html', by_date=BLOGS_BY_YEAR,
+                                 by_tag=BLOGS_BY_TAG, filter_tag=None,
+                                 recent=BLOGS[:6])
 
 
-@app.route('/blog/<tag>.html')
-def blog_tagged(tag):
-    posts = [p for p in flatpages]
-    posts.sort(key=operator.itemgetter('date'), reverse=True)
-
-    by_date = collections.OrderedDict()
-    by_tag = collections.defaultdict(list)
-    for post in posts:
-        for t in post.meta.get('tags', '').split(', '):
-            by_tag[t or 'Untagged'].append(post)
-
-        by_date[post['date'].year] = by_date.get(post['date'].year, list())
-        by_date[post['date'].year].append(post)
-
+@app.route('/blog/<tag>.html')  # type: ignore
+def blog_tagged(tag: str) -> typing.Any:
     tag = tag.replace('_', ' ')
-    if not by_tag.get(tag):
+    if not BLOGS_BY_TAG.get(tag):
         flask.abort(404)
 
-    return flask.render_template('blog.html', by_date=by_date, by_tag=by_tag,
-                                 filter_tag=tag, recent=by_tag[tag])
+    return flask.render_template('blog.html', by_date=BLOGS_BY_YEAR,
+                                 by_tag=BLOGS_BY_TAG, filter_tag=tag,
+                                 recent=BLOGS_BY_TAG[tag])
 
 
-@app.route('/blog/<name>/')
-def blog_page(name):
-    post = flatpages.get_or_404(name)
-    post.meta['tag_list'] = post.meta.get('tags', 'Untagged').split(', ')
+@app.route('/blog/<name>/')  # type: ignore
+def blog_page(name: str) -> typing.Any:
+    post = blogpages.get_or_404(name)
+    post.meta['tag_list'] = post.meta['tags'].split(', ')
     return flask.render_template('post.html', post=post)
 
 
-@freezer.register_generator
-def blog_pages():
-    pages = pathlib.Path(__file__).resolve().parents[0] / 'pages'
+@freezer.register_generator  # type: ignore
+def blog_pages() -> typing.Iterable[typing.Tuple[str, dict]]:
+    pages = pathlib.Path(__file__).resolve().parents[0] / 'pages' / 'blog'
     for name in pages.iterdir():
         yield 'blog_page', {'name': name.stem}
 
 
-@app.route('/feed.xml')
-def blog_rss():
-    posts = [p for p in flatpages]
-    posts.sort(key=operator.itemgetter('date'), reverse=True)
-    for post in posts:
+@app.route('/feed.xml')  # type: ignore
+def blog_rss() -> typing.Any:
+    for post in BLOGS:
+        post.meta['description'] = post.meta.get('description', post.body)
         post.meta['pub_date'] = post.meta['date'].strftime(
             '%a, %d %b %Y 12:%M:%S GMT')
 
-        post.meta['description'] = post.meta.get('description', post.body)
-
-    feed = flask.render_template('feed.xml', posts=posts[:10])
+    feed = flask.render_template('feed.xml', posts=BLOGS[:10])
     response = flask.make_response(feed)
     response.headers['Content-Type'] = 'application/xml'
     return response
 
 
-@app.route('/404.html')
-def err404():
+@app.route('/404.html')  # type: ignore
+def err404() -> typing.Any:
     return flask.render_template('404.html')
 
 
-@app.route('/ping')
-def ping():
+@app.route('/ping')  # type: ignore
+def ping() -> str:
     return 'ok'
 
 

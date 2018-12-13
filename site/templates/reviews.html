@@ -31,13 +31,15 @@
             {% for rating, grouped in by_rating.items() %}
                 <!-- TODO: depend on length, set "active" and "display: none|block" -->
                 <li class="accordion {{ 'active' if grouped|length < 4 else '' }}">{{ rating }}</li>
-                <ul style="display: {{ 'block' if grouped|length < 4 else 'none' }};">
-                {% for review in grouped %}
-                    <li>
-                        <a href="{{ url_for('review_page', name=review.path) }}">{{ review.title }}</a>
-                    </li>
-                {% endfor %}
-                </ul>
+                <li style="display: {{ 'block' if grouped|length < 4 else 'none' }};">
+                  <ul>
+                  {% for review in grouped %}
+                      <li>
+                          <a href="{{ url_for('review_page', name=review.path) }}">{{ review.title }}</a>
+                      </li>
+                  {% endfor %}
+                  </ul>
+                </li>
             {% endfor %}
             </ul>
         </div>
@@ -83,7 +85,7 @@
 #reviews-entries ul li {
   margin-bottom: 0;
   padding: 5px; }
-  #reviews-entries ul ul li {
+  #reviews-entries ul li ul li {
     padding: 1px; }
 
 .accordion {

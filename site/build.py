@@ -1,13 +1,15 @@
 #!/usr/bin/env python
-import collections
-import itertools
 import operator
 import pathlib
-import typing
+from typing import Any
+from typing import Iterable
+from typing import Tuple
 
 import flask
 import flask_flatpages
 import flask_frozen
+from utils import collect_by_key
+from utils import collect_by_tags
 
 
 app = flask.Flask(__name__, static_url_path='')
@@ -33,42 +35,28 @@ freezer = flask_frozen.Freezer(app)
 
 
 POSTS = sorted(blogpages, key=operator.itemgetter('date'), reverse=True)
-POSTS_BY_TAG: typing.Dict[str, typing.Any] = collections.defaultdict(list)
-for post in POSTS:
-    for t in post.meta['tags'].split(', '):
-        POSTS_BY_TAG[t].append(post)
-POSTS_BY_YEAR_GROUPED = itertools.groupby(
-    POSTS, key=lambda x: x['date'].year)  # type: ignore
-POSTS_BY_YEAR = {k: list(v) for k, v in POSTS_BY_YEAR_GROUPED}
+POSTS_BY_TAG = collect_by_tags(POSTS)
+POSTS_BY_YEAR = collect_by_key(POSTS, key=lambda x: x['date'].year)
 
 REVIEWS = sorted(reviewpages, key=operator.itemgetter('date'), reverse=True)
-REVIEWS_BY_RATING: typing.Dict[str, list] = collections.defaultdict(list)
-for review in sorted(REVIEWS, key=lambda x: x.meta['rating'], reverse=True):
-    REVIEWS_BY_RATING[review.meta['rating']].append(review)
-# TODO: nest subtags and accordion-ify
-REVIEWS_BY_TAG: typing.Dict[str, typing.Any] = collections.defaultdict(list)
-for review in REVIEWS:
-    for t in review.meta['tags'].split(', '):
-        REVIEWS_BY_TAG[t].append(review)
-        subtags = [i for i, x in enumerate(t) if x == '>']
-        for i in subtags:
-            REVIEWS_BY_TAG[t[:i].strip()].append(review)
+REVIEWS_BY_RATING = collect_by_key(REVIEWS, key=lambda x: x.meta['rating'])
+REVIEWS_BY_TAG = collect_by_tags(REVIEWS)
 
 
 @app.route('/')  # type: ignore
-def index() -> typing.Any:
+def index() -> Any:
     return flask.render_template('index.html')
 
 
 @app.route('/blog/')  # type: ignore
-def blog() -> typing.Any:
+def blog() -> Any:
     return flask.render_template(
         'blog.html', by_date=POSTS_BY_YEAR, by_tag=POSTS_BY_TAG,
         filter_tag=None, recent=POSTS[:6])
 
 
 @app.route('/blog/<tag>.html')  # type: ignore
-def blog_tagged(tag: str) -> typing.Any:
+def blog_tagged(tag: str) -> Any:
     tag = tag.replace('_', ' ')
     if not POSTS_BY_TAG.get(tag):
         flask.abort(404)
@@ -79,7 +67,7 @@ def blog_tagged(tag: str) -> typing.Any:
 
 
 @app.route('/blog/<name>/')  # type: ignore
-def blog_post(name: str) -> typing.Any:
+def blog_post(name: str) -> Any:
     post = blogpages.get_or_404(name)
     post.meta['tag_list'] = post.meta['tags'].split(', ')
     return flask.render_template('post.html', post=post)
@@ -87,7 +75,7 @@ def blog_post(name: str) -> typing.Any:
 
 # TODO: reviews rss?
 @app.route('/feed.xml')  # type: ignore
-def blog_rss() -> typing.Any:
+def blog_rss() -> Any:
     for post in POSTS:
         post.meta['description'] = post.meta.get('description', post.body)
         post.meta['pub_date'] = post.meta['date'].strftime(
@@ -100,14 +88,14 @@ def blog_rss() -> typing.Any:
 
 
 @app.route('/reviews/')  # type: ignore
-def reviews() -> typing.Any:
+def reviews() -> Any:
     return flask.render_template(
         'reviews.html', by_rating=REVIEWS_BY_RATING, by_tag=REVIEWS_BY_TAG,
         filter_tag=None, recent=REVIEWS[:8])
 
 
 @app.route('/reviews/<tag>.html')  # type: ignore
-def reviews_tagged(tag: str) -> typing.Any:
+def reviews_tagged(tag: str) -> Any:
     tag = tag.replace('_', ' ')
     if not REVIEWS_BY_TAG.get(tag):
         flask.abort(404)
@@ -119,14 +107,14 @@ def reviews_tagged(tag: str) -> typing.Any:
 
 
 @app.route('/reviews/<name>/')  # type: ignore
-def review_page(name: str) -> typing.Any:
+def review_page(name: str) -> Any:
     review = reviewpages.get_or_404(name)
     review.meta['tag_list'] = review.meta['tags'].split(', ')
     return flask.render_template('review.html', review=review)
 
 
 @freezer.register_generator  # type: ignore
-def frozen_flatpages() -> typing.Iterable[typing.Tuple[str, dict]]:
+def frozen_flatpages() -> Iterable[Tuple[str, dict]]:
     pages = pathlib.Path(__file__).resolve().parents[0] / 'pages'
     for name in (pages / 'blog').iterdir():
         yield 'blog_post', {'name': name.stem}
@@ -135,7 +123,7 @@ def frozen_flatpages() -> typing.Iterable[typing.Tuple[str, dict]]:
 
 
 @app.route('/404.html')  # type: ignore
-def err404() -> typing.Any:
+def err404() -> Any:
     return flask.render_template('404.html')
 
 

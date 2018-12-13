@@ -16,7 +16,7 @@ Communication
 
 Despite my best efforts to minimize them, I've somehow ended up with nearly a
 dozen different communication channels to manage. I do my best to keep
-up-to-date with them all, but its inevitable that some will fall through the
+up-to-date with them all, but it's inevitable that some will fall through the
 cracks. For any unscheduled communication, my preference is the following:
 
 - face-to-face/video for **high bandwidth** communication. If another
@@ -96,11 +96,11 @@ Here's a few of my thoughts around code reviews:
   significantly easier. I try to set up tools for the vast majority of these
   sorts of issues, but will often comment with "nitpicks". If I begin any
   review comment with "nitpick: ", you are welcome to avoid addressing that
-  issue if you believe its worth getting the code out more quickly. These
+  issue if you believe it's worth getting the code out more quickly. These
   things should be addressed at some point, but there's a trade-off between
   "perfect" and "fast"; "good enough" is a worthy goal.
 
-- if we've chatted about it already, or its a "one-liner", or if its
+- if we've chatted about it already, or it's a "one-liner", or if its
   config-only, it might be a candidate for going "straight to master". Use your
   best judgement! Despite what I said above, there's a time-and-place for
   inundating each other with PRs.
@@ -114,7 +114,7 @@ to hear it.
 
 If there's something you liked and want to seem more of, something you thought
 I could do better, something you think I completely screwed up, or anything
-else, I want to hear it. If you think its something I wouldn't want to hear,
+else, I want to hear it. If you think it's something I wouldn't want to hear,
 I'd love feedback on why you feel that way.
 
 If you're not comfortable giving this feedback to me directly, you can feel

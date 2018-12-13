@@ -138,7 +138,7 @@ I crawled through the pip documentation for a way to fix this; as far as I can
 tell there is no solution to this. Only the "editable" flag solves our problem,
 but it will only ever create an "egg-info" in the project's directory.
 
-Now here's our saving grace: at it's core, Python package management has a...
+Now here's our saving grace: at its core, Python package management has a...
 confusing history. `setuptools`, `distutils`, `easy_install`... each of these
 projects has contributed a bit towards making the state of Python package
 management into what it is today. How about if we go backwards a little bit?

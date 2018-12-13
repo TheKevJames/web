@@ -16,7 +16,7 @@
             <div id='post-{{ post.path }}'>
                 <h3>{{ post.title }}</h3>
                 <p class='date'>{{ post.date }}</p>
-                <a class='live' href="{{ url_for('blog_page', name=post.path) }}">View</a>
+                <a class='live' href="{{ url_for('blog_post', name=post.path) }}">View</a>
             </div>
         {% endfor %}
         </div>
@@ -32,7 +32,7 @@
                 <ul>
                 {% for post in grouped %}
                     <li>
-                        <a href="{{ url_for('blog_page', name=post.path) }}">{{ post.title }}</a>
+                        <a href="{{ url_for('blog_post', name=post.path) }}">{{ post.title }}</a>
                     </li>
                 {% endfor %}
                 </ul>
@@ -46,7 +46,7 @@
             <ul class='list'>
             {% for tag in by_tag|sort %}
                 <li>
-                    <a href="{{ url_for('blog_tagged', tag=tag.replace(' ', '_')) }}">{{ tag }}</a>
+                    <a href="{{ url_for('blog_tagged', tag=tag.replace(' ', '_')) }}">{{ tag }}</a> ({{ by_tag[tag]|length }})
                 </li>
             {% endfor %}
             </ul>
@@ -101,9 +101,6 @@
     padding: 5px; }
     .list div p.date {
       text-align: center; }
-    .list div p.title {
-      text-align: center;
-      margin-bottom: 0; }
   .list div .live {
     background-color: #99b7d1;
     -webkit-box-sizing: border-box;

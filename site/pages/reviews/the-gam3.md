@@ -1,5 +1,5 @@
 title: The Game3
-date: 2018-12-11
+date: 2018-12-02
 link: https://thegam3.com/
 tags: LitRPG
 rating: 6

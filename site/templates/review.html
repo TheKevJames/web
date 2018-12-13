@@ -31,7 +31,9 @@
         <div>
             {{ review.html|safe }}
 
-            <a href='{{review.link}}'>Link.</a>
+            {% if review.link is defined %}
+              <a href='{{review.link}}'>Link.</a>
+            {% endif %}
         </div>
     </div>
 </div>

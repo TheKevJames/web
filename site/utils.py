@@ -3,10 +3,16 @@ from typing import Any
 from typing import Callable
 from typing import Dict
 from typing import List
+from typing import TypeVar
 
 
-def collect_by_key(items: List[Any], *, key: Callable) -> Dict[str, Any]:
-    by_key: Dict[str, List[Any]] = collections.defaultdict(list)
+T = TypeVar('T')
+
+
+# TODO: key returns a str
+def collect_by_key(items: List[T], *,
+                   key: Callable[[T], Any]) -> Dict[str, List[T]]:
+    by_key: Dict[str, List[T]] = collections.defaultdict(list)
     for review in sorted(items, key=key, reverse=True):
         by_key[key(review)].append(review)
 

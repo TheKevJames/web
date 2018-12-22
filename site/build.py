@@ -2,6 +2,7 @@
 import operator
 import pathlib
 from typing import Any
+from typing import Dict
 from typing import Iterable
 from typing import Tuple
 
@@ -114,7 +115,7 @@ def review_page(name: str) -> Any:
 
 
 @freezer.register_generator  # type: ignore
-def frozen_flatpages() -> Iterable[Tuple[str, dict]]:
+def frozen_flatpages() -> Iterable[Tuple[str, Dict[str, str]]]:
     pages = pathlib.Path(__file__).resolve().parents[0] / 'pages'
     for name in (pages / 'blog').iterdir():
         yield 'blog_post', {'name': name.stem}

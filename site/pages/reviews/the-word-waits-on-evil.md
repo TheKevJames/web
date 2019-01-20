@@ -2,7 +2,7 @@ title: The World Waits on Evil
 date: 2018-10-11
 link: https://forums.spacebattles.com/threads/the-world-waits-on-evil-hivers-eoa-ww-a-finished-story.274791/
 tags: Fantasy, Self-Insert
-rating: 4
+rating: 3
 state: complete
 description: Protagonist gets body-swapped into a Lich Dread Lord.
 

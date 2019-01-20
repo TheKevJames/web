@@ -2,7 +2,7 @@ title: Broken Blades
 date: 2018-09-27
 link: https://www.fanfiction.net/s/12466638/1/Broken-Blades
 tags: FanFic > RWBY
-rating: 6
+rating: 5
 state: abandoned
 description: Divergence-style retelling with a competent Jaune.
 

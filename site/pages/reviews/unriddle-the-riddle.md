@@ -2,7 +2,7 @@ title: Unriddle the Riddle
 date: 2016-06-22
 link: https://www.fanfiction.net/s/12970295
 tags: FanFic > Harry Potter > HPMOR
-rating: 5
+rating: 4
 state: complete
 description: Recursive HPMOR fanfic with an alternate ending.
 

@@ -2,7 +2,7 @@ title: On the Way to Greatness
 date: 2018-12-08
 link: https://www.fanfiction.net/s/4745329/1/On-the-Way-to-Greatness
 tags: FanFic > Harry Potter
-rating: 6
+rating: 5
 state: abandoned
 description: Harry Potter sorted into Slytherin.
 

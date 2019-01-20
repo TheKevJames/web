@@ -2,7 +2,7 @@ title: Greg Vader vs The World
 date: 2018-10-11
 link: https://www.royalroad.com/fiction/18283/greg-veder-vs-the-world
 tags: FanFic > Worm, LitRPG
-rating: 3
+rating: 2
 state: ongoing
 description: A gamer in the Worm universe.
 

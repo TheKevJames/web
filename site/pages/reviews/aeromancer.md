@@ -2,7 +2,7 @@ title: Aeromancer
 date: 2018-09-27
 link: https://www.fictionpress.com/s/3323184/1/Aeromancer
 tags: Fantasy
-rating: 7
+rating: 6
 state: abandoned
 description: A low-tier mage grows into his powers after his sight is stolen.
 

@@ -1,7 +1,7 @@
 title: Elizium for the Sleepless Souls
 date: 2018-12-10
 link: https://www.fanfiction.net/s/7713063/1/
-tags: Fantasy
+tags: FanFic > Harry Potter
 rating: 7
 state: complete
 description: Prison break from a crumbling Azkaban.

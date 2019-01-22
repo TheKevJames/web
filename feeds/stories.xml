@@ -5,7 +5,6 @@
   </head>
   <body>
     <outline text="Comics" title="Comics">
-      <outline text="Daughter of the Lilies" title="Daughter of the Lilies" type="rss" xmlUrl="http://daughterofthelilies.com/rss.php" htmlUrl="http://www.daughterofthelilies.com/"/>
       <outline text="Molly Beans" title="Molly Beans" type="rss" xmlUrl="http://www.mollybeans.com/feed/" htmlUrl="http://www.mollybeans.com/"/>
       <outline text="Nimona" title="Nimona" type="rss" xmlUrl="http://gingerhaze.com/nimona/rss.xml" htmlUrl="http://gingerhaze.com/nimona/archive"/>
       <outline text="Order of the Stick" title="Order of the Stick" type="rss" xmlUrl="http://www.giantitp.com/comics/oots.rss" htmlUrl="http://www.giantitp.com/Comics.html"/>

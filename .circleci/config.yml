@@ -7,7 +7,15 @@ jobs:
   functions:
     docker:
       - image: google/cloud-sdk
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /gcloud-service-key.json
     steps:
+      - run:
+          name: authenticate with google cloud
+          command: |
+            echo "${GCLOUD_SERVICE_KEY}" > "${GOOGLE_APPLICATION_CREDENTIALS}"
+            gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
+            gcloud config set project "thekevjames-175823"
       - checkout
       - run:
           name: grab env vars

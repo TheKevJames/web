@@ -29,9 +29,10 @@ def tucker_run(req: flask.Request) -> Tuple[str, int]:
     tucker = api.devices()[0]
     vacbot = sucks.VacBot(api.uid, api.REALM, api.resource,
                           api.user_access_token, tucker, SUCKS_CONTINENT)
-    vacbot.connect_and_wait_until_ready()
 
+    vacbot.connect_and_wait_until_ready()
     vacbot.run(sucks.Clean())
+    vacbot.disconnect()
     return 'ok', 200
 
 
@@ -48,7 +49,8 @@ def tucker_stop(req: flask.Request) -> Tuple[str, int]:
     tucker = api.devices()[0]
     vacbot = sucks.VacBot(api.uid, api.REALM, api.resource,
                           api.user_access_token, tucker, SUCKS_CONTINENT)
-    vacbot.connect_and_wait_until_ready()
 
+    vacbot.connect_and_wait_until_ready()
     vacbot.run(sucks.Charge())
+    vacbot.disconnect()
     return 'ok', 200

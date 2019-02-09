@@ -1,22 +1,9 @@
-version: 2
+version: 2.1
+
+orbs:
+  linter: thekevjames/linter@0
 
 jobs:
-  lint:
-    docker:
-      - image: python:3.7.1
-    steps:
-      - checkout
-      - run: pip install pre-commit
-      - restore_cache:
-          keys:
-            - cache-pre-commit-{{ checksum ".pre-commit-config.yaml" }}
-      - run: pre-commit install-hooks
-      - save_cache:
-          key: cache-pre-commit-{{ checksum ".pre-commit-config.yaml" }}
-          paths:
-            - ~/.cache/pre-commit
-      - run: pre-commit run --all-files
-
   hexclock:
     docker:
       - image: mysocialobservations/docker-tdewolff-minify
@@ -204,31 +191,41 @@ workflows:
   version: 2
   run-jobs:
     jobs:
-      - lint
+      - linter/pre-commit:
+          python_version: 3.7.1
+
       - hexclock:
           requires:
-            - lint
+            - linter/pre-commit
+
       - octodash:
           requires:
-            - lint
+            - linter/pre-commit
+
       - octodash-extension:
           requires:
             - octodash
+
       - quotes:
           requires:
-            - lint
+            - linter/pre-commit
+
       - site:
           requires:
-            - lint
+            - linter/pre-commit
+
       - site-minify:
           requires:
             - site
+
       - webcycle:
           requires:
-            - lint
+            - linter/pre-commit
+
       - www-redir:
           requires:
-            - lint
+            - linter/pre-commit
+
       - upload:
           requires:
             - hexclock
@@ -240,6 +237,7 @@ workflows:
           filters:
             branches:
               only: master
+
       - publish:
           requires:
             - octodash-extension

@@ -4,6 +4,38 @@ orbs:
   linter: thekevjames/linter@0
 
 jobs:
+  functions:
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      - checkout
+      - run:
+          name: grab env vars
+          command: |
+            cd functions/
+            echo "API_TOKEN: ${API_TOKEN}" >> .env.yaml
+            echo "SUCKS_DEVICE_ID: ${SUCKS_DEVICE_ID}" >> .env.yaml
+            echo "SUCKS_EMAIL: ${SUCKS_EMAIL}" >> .env.yaml
+            echo "SUCKS_PASSWORD_HASH: ${SUCKS_PASSWORD_HASH}" >> .env.yaml
+      - run:
+          name: gcloud functions deploy tucker_run
+          command: |
+            cd functions/
+            gcloud functions deploy tucker_run \
+              --memory=128MB \
+              --runtime python37 \
+              --trigger-http \
+              --env-vars-file .env.yaml
+      - run:
+          name: gcloud functions deploy tucker_stop
+          command: |
+            cd functions/
+            gcloud functions deploy tucker_stop \
+              --memory=128MB \
+              --runtime python37 \
+              --trigger-http \
+              --env-vars-file .env.yaml
+
   hexclock:
     docker:
       - image: mysocialobservations/docker-tdewolff-minify
@@ -193,6 +225,10 @@ workflows:
     jobs:
       - linter/pre-commit:
           python_version: 3.7.1
+
+      - functions:
+          requires:
+            - linter/pre-commit
 
       - hexclock:
           requires:

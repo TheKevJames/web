@@ -44,19 +44,19 @@ REVIEWS_BY_RATING = collect_by_key(REVIEWS, key=lambda x: x.meta['rating'])
 REVIEWS_BY_TAG = collect_by_tags(REVIEWS)
 
 
-@app.route('/')  # type: ignore
+@app.route('/')
 def index() -> Any:
     return flask.render_template('index.html')
 
 
-@app.route('/blog/')  # type: ignore
+@app.route('/blog/')
 def blog() -> Any:
     return flask.render_template(
         'blog.html', by_date=POSTS_BY_YEAR, by_tag=POSTS_BY_TAG,
         filter_tag=None, recent=POSTS[:6])
 
 
-@app.route('/blog/<tag>.html')  # type: ignore
+@app.route('/blog/<tag>.html')
 def blog_tagged(tag: str) -> Any:
     tag = tag.replace('_', ' ')
     if not POSTS_BY_TAG.get(tag):
@@ -67,7 +67,7 @@ def blog_tagged(tag: str) -> Any:
         filter_tag=tag, recent=POSTS_BY_TAG[tag])
 
 
-@app.route('/blog/<name>/')  # type: ignore
+@app.route('/blog/<name>/')
 def blog_post(name: str) -> Any:
     post = blogpages.get_or_404(name)
     post.meta['tag_list'] = post.meta['tags'].split(', ')
@@ -75,7 +75,7 @@ def blog_post(name: str) -> Any:
 
 
 # TODO: reviews rss?
-@app.route('/feed.xml')  # type: ignore
+@app.route('/feed.xml')
 def blog_rss() -> Any:
     for post in POSTS:
         post.meta['description'] = post.meta.get('description', post.body)
@@ -88,14 +88,14 @@ def blog_rss() -> Any:
     return response
 
 
-@app.route('/reviews/')  # type: ignore
+@app.route('/reviews/')
 def reviews() -> Any:
     return flask.render_template(
         'reviews.html', by_rating=REVIEWS_BY_RATING, by_tag=REVIEWS_BY_TAG,
         filter_tag=None, recent=REVIEWS[:8])
 
 
-@app.route('/reviews/<tag>.html')  # type: ignore
+@app.route('/reviews/<tag>.html')
 def reviews_tagged(tag: str) -> Any:
     tag = tag.replace('_', ' ')
     if not REVIEWS_BY_TAG.get(tag):
@@ -107,7 +107,7 @@ def reviews_tagged(tag: str) -> Any:
                                       key=operator.itemgetter('title')))
 
 
-@app.route('/reviews/<name>/')  # type: ignore
+@app.route('/reviews/<name>/')
 def review_page(name: str) -> Any:
     review = reviewpages.get_or_404(name)
     review.meta['tag_list'] = review.meta['tags'].split(', ')
@@ -123,12 +123,12 @@ def frozen_flatpages() -> Iterable[Tuple[str, Dict[str, str]]]:
         yield 'review_page', {'name': name.stem}
 
 
-@app.route('/404.html')  # type: ignore
+@app.route('/404.html')
 def err404() -> Any:
     return flask.render_template('404.html')
 
 
-@app.route('/ping')  # type: ignore
+@app.route('/ping')
 def ping() -> str:
     return 'ok'
 

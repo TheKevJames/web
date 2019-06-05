@@ -119,6 +119,21 @@ jobs:
       - run: mkdir -p artifacts/quotes
       - run: cp shared/* artifacts/quotes/
       - run: cp quotes/* artifacts/quotes/
+      - run: minify --recursive --output artifacts/ artifacts/
+      - persist_to_workspace:
+          root: artifacts
+          paths:
+            - quotes/
+
+  quotes-json:
+    docker:
+      - image: mysocialobservations/docker-tdewolff-minify
+    steps:
+      - run:
+          name: install dependencies
+          command: apk add --update ca-certificates curl jq openssl
+      - checkout
+      - run: mkdir -p artifacts/quotes
       - run:
           name: get quotes
           command: |
@@ -210,6 +225,7 @@ jobs:
       - attach_workspace:
           at: artifacts
       - run: gsutil -m cp -r artifacts/* gs://thekevjames-artifacts
+      - run: ls -la artifacts/quotes
       - attach_workspace:
           at: site
       - run: gsutil -m cp -r site/build/* gs://thekev.in
@@ -253,11 +269,13 @@ workflows:
       - quotes:
           requires:
             - linter/pre-commit
+      - quotes-json:
+          requires:
+            - linter/pre-commit
 
       - site:
           requires:
             - linter/pre-commit
-
       - site-minify:
           requires:
             - site
@@ -275,6 +293,7 @@ workflows:
             - hexclock
             - octodash
             - quotes
+            - quotes-json
             - site-minify
             - webcycle
             - www-redir

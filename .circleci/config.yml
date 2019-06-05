@@ -4,6 +4,7 @@ orbs:
   linter: thekevjames/linter@0
 
 jobs:
+  # TODO: configure in terraform
   functions:
     docker:
       - image: google/cloud-sdk
@@ -225,7 +226,6 @@ jobs:
       - attach_workspace:
           at: artifacts
       - run: gsutil -m cp -r artifacts/* gs://thekevjames-artifacts
-      - run: ls -la artifacts/quotes
       - attach_workspace:
           at: site
       - run: gsutil -m cp -r site/build/* gs://thekev.in
@@ -244,7 +244,6 @@ jobs:
       - run: APP_ID=${OCTODASH_APP_ID} publish extensions/octodash.zip
 
 workflows:
-  version: 2
   run-jobs:
     jobs:
       - linter/pre-commit:
@@ -261,7 +260,6 @@ workflows:
       - octodash:
           requires:
             - linter/pre-commit
-
       - octodash-extension:
           requires:
             - octodash
@@ -307,3 +305,16 @@ workflows:
           filters:
             branches:
               only: master
+
+  nightly-quotes:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only: master
+    jobs:
+      - quotes-json
+      - upload:
+          requires:
+            - quotes-json

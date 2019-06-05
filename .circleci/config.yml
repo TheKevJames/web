@@ -3,6 +3,28 @@ version: 2.1
 orbs:
   linter: thekevjames/linter@0
 
+  web:
+    jobs:
+      app:
+        docker:
+          - image: mysocialobservations/docker-tdewolff-minify
+        parameters:
+          dir:
+            type: string
+        steps:
+          - run:
+              name: install dependencies
+              command: apk add --update ca-certificates openssl
+          - checkout
+          - run: mkdir -p artifacts/<<parameters.dir>>
+          - run: cp shared/* artifacts/<<parameters.dir>>/
+          - run: cp <<parameters.dir>>/* artifacts/<<parameters.dir>>/
+          - run: minify --recursive --output artifacts/ artifacts/
+          - persist_to_workspace:
+              root: artifacts
+              paths:
+                - <<parameters.dir>>/
+
 jobs:
   # TODO: configure in terraform
   functions:
@@ -45,26 +67,9 @@ jobs:
               --trigger-http \
               --env-vars-file .env.yaml
 
-  hexclock:
-    docker:
-      - image: mysocialobservations/docker-tdewolff-minify
-    steps:
-      - run:
-          name: install dependencies
-          command: apk add --update ca-certificates openssl
-      - checkout
-      - run: mkdir -p artifacts/hexclock
-      - run: cp shared/* artifacts/hexclock/
-      - run: cp hexclock/* artifacts/hexclock/
-      - run: minify --recursive --output artifacts/ artifacts/
-      - persist_to_workspace:
-          root: artifacts
-          paths:
-            - hexclock/
-
   octodash:
     docker:
-      - image: node:10.3.0-alpine
+      - image: node:10.16.0-alpine
     steps:
       - run:
           name: install dependencies
@@ -81,7 +86,7 @@ jobs:
 
   octodash-extension:
     docker:
-      - image: node:10.3.0
+      - image: node:10.16.0
     environment:
       OCTODASH_APP_ID: gpdoaoigpdmgpfebclknegmdkaamcdpf
     steps:
@@ -109,22 +114,15 @@ jobs:
           paths:
             - octodash.zip
 
-  quotes:
+  octodash-publish:
     docker:
-      - image: mysocialobservations/docker-tdewolff-minify
+      - image: cibuilds/chrome-extension:latest
+    environment:
+      OCTODASH_APP_ID: gpdoaoigpdmgpfebclknegmdkaamcdpf
     steps:
-      - run:
-          name: install dependencies
-          command: apk add --update ca-certificates curl jq openssl
-      - checkout
-      - run: mkdir -p artifacts/quotes
-      - run: cp shared/* artifacts/quotes/
-      - run: cp quotes/* artifacts/quotes/
-      - run: minify --recursive --output artifacts/ artifacts/
-      - persist_to_workspace:
-          root: artifacts
-          paths:
-            - quotes/
+      - attach_workspace:
+          at: extensions
+      - run: APP_ID=${OCTODASH_APP_ID} publish extensions/octodash.zip
 
   quotes-json:
     docker:
@@ -178,23 +176,6 @@ jobs:
           paths:
             - build/
 
-  webcycle:
-    docker:
-      - image: mysocialobservations/docker-tdewolff-minify
-    steps:
-      - run:
-          name: install dependencies
-          command: apk add --update ca-certificates openssl
-      - checkout
-      - run: mkdir -p artifacts/webcycle
-      - run: cp shared/* artifacts/webcycle/
-      - run: cp webcycle/* artifacts/webcycle/
-      - run: minify --recursive --output artifacts/ artifacts/
-      - persist_to_workspace:
-          root: artifacts
-          paths:
-            - webcycle/
-
   www-redir:
     docker:
       - image: mysocialobservations/docker-tdewolff-minify
@@ -233,16 +214,6 @@ jobs:
           at: www
       - run: gsutil -m cp -r www/redir/* gs://www.thekev.in
 
-  publish:
-    docker:
-      - image: cibuilds/chrome-extension:latest
-    environment:
-      OCTODASH_APP_ID: gpdoaoigpdmgpfebclknegmdkaamcdpf
-    steps:
-      - attach_workspace:
-          at: extensions
-      - run: APP_ID=${OCTODASH_APP_ID} publish extensions/octodash.zip
-
 workflows:
   run-jobs:
     jobs:
@@ -253,39 +224,33 @@ workflows:
           requires:
             - linter/pre-commit
 
-      - hexclock:
+      - web/app:
+          name: hexclock
+          dir: hexclock
           requires:
             - linter/pre-commit
-
-      - octodash:
-          requires:
-            - linter/pre-commit
-      - octodash-extension:
-          requires:
-            - octodash
-
-      - quotes:
+      - web/app:
+          name: quotes
+          dir: quotes
           requires:
             - linter/pre-commit
       - quotes-json:
           requires:
             - linter/pre-commit
-
+      - web/app:
+          name: webcycle
+          dir: webcycle
+          requires:
+            - linter/pre-commit
       - site:
           requires:
             - linter/pre-commit
       - site-minify:
           requires:
             - site
-
-      - webcycle:
-          requires:
-            - linter/pre-commit
-
       - www-redir:
           requires:
             - linter/pre-commit
-
       - upload:
           requires:
             - hexclock
@@ -299,7 +264,13 @@ workflows:
             branches:
               only: master
 
-      - publish:
+      - octodash:
+          requires:
+            - linter/pre-commit
+      - octodash-extension:
+          requires:
+            - octodash
+      - octodash-publish:
           requires:
             - octodash-extension
           filters:

@@ -77,6 +77,34 @@ read-only.
 - I also have various `deprecated`_ and `archived`_ projects. These are not the
   codes you're looking for.
 
+Open-Source'd Through Work
+--------------------------
+
+- `aerofs-sdk-python`_: Python SDK for AeroFS APIs
+- `aeroup`_: Secure file-sharing (hackathon demo for AeroFS APIs)
+- `gcloud-aio`_: asynchronous Python library for GCP APIs
+- `gcloud-rest`_: threadsafe Python library for GCP APIs
+- `redis-cli-cluster`_: ``redis-cli`` clone with native cluster support
+- `pystun3`_: ``pystun`` fork with Python 3 support
+
+OSS Contributions
+-----------------
+
+Features
+^^^^^^^^
+
+- `inline tooltip support for SublimeLinter`_
+
+Fixes
+^^^^^
+
+- `make the Datadog MetricsAggregator threadsafe`_
+- `ensure protobufs support Python 3.8`_
+- `ensure Sentry supports Python 3.8`_
+- `support missing Elasticsearch metrics in Sensu`_
+
+.. _aerofs-sdk-python: https://github.com/redbooth/aerofs-sdk-python
+.. _aeroup: https://github.com/redbooth/aeroup
 .. _archived: https://github.com/TheKevJames?tab=repositories&type=archived
 .. _blog: https://thekev.in/blog
 .. _challenges: https://github.com/TheKevJames/challenges
@@ -89,18 +117,27 @@ read-only.
 .. _Dialpad: https://dialpad.com/app
 .. _Docker Hub: https://hub.docker.com/
 .. _dotsystem: https://github.com/TheKevJames/dotsystem
+.. _ensure protobufs support Python 3.8: https://github.com/protocolbuffers/protobuf/pull/5195
+.. _ensure Sentry supports Python 3.8: https://github.com/getsentry/raven-python/pull/1298
 .. _experiments: https://github.com/TheKevJames/experiments
 .. _franz-recipe-dialpad: https://github.com/TheKevJames/franz-recipe-dialpad
 .. _Franz: https://meetfranz.com/
 .. _FRESH schema: https://github.com/fresh-standard/fresh-resume-schema
+.. _gcloud-aio: https://github.com/talkiq/gcloud-aio
+.. _gcloud-rest: https://github.com/talkiq/gcloud-rest
 .. _gnome-shell-extension-transmission-daemon: https://github.com/TheKevJames/gnome-shell-extension-transmission-daemon
 .. _Homebrew: https://brew.sh/
 .. _human-readable resume format: https://thekev.in/cv
 .. _infrastructure: https://github.com/TheKevJames/infrastructure
+.. _inline tooltip support for SublimeLinter: https://github.com/SublimeLinter/SublimeLinter/pull/552/
 .. _Julia: https://julialang.org/
+.. _make the Datadog MetricsAggregator threadsafe: https://github.com/DataDog/datadogpy/pull/370
 .. _publishing: https://github.com/TheKevJames/publishing
 .. _puppet-homebrew: https://github.com/TheKevJames/puppet-homebrew
 .. _Puppet: https://puppet.com/
+.. _pystun3: https://github.com/talkiq/pystun3
+.. _redis-cli-cluster: https://github.com/talkiq/redis-cli-cluster
+.. _support missing Elasticsearch metrics in Sensu: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/
 .. _Terraform: https://www.terraform.io/
 .. _tidbits: https://github.com/TheKevJames/tidbits
 .. _tools: https://github.com/TheKevJames/tools

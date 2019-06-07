@@ -45,8 +45,8 @@ read-only.
 
 - Small, self-contained `tools`_ not quite large enough to deserve their own
   repo live here. Often, these start as `experiments`_ which have grown. A few
-  of these have a surprising amount of public usage (thousands of pulls from
-  `Docker Hub`_) but updates are rarely necessary.
+  of these have a surprising amount of public usage (tens of thousands of pulls
+  from `Docker Hub`_) but updates are rarely necessary and/or fully automated.
 
 - My `CV`_ is a json blob encoded in the `FRESH schema`_ which is automatically
   rendered to a more `human-readable resume format`_.
@@ -58,10 +58,6 @@ read-only.
   most projects I touch are released on PyPI. This sort of thing would be much
   better solved by a file- or method-level ``git subtree``-like feature, but
   sadly one does not exist.
-
-- A mostly-abandoned review system called `you-should-read`_. The important
-  part of this is a review algorithm using Bayesian logic, which will likely
-  end up in either `tools`_ or `experiments`_ once I archive this.
 
 - Various miscellaneous `publishing`_ lives in a repo as well. Most of this is
   linked to from my `blog`_.

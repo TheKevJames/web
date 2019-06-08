@@ -155,7 +155,7 @@ jobs:
       - run: python3 -m pip install -r site/requirements.txt
       - run: cp shared/* site/static/
       - run: python3 site/build.py
-      - run: pygmentize -S emacs -f html -a .codehighlite > site/build/emacs.css
+      - run: pygmentize -S emacs -f html -a .codehilite > site/build/emacs.css
       - persist_to_workspace:
           root: site
           paths:

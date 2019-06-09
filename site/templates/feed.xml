@@ -18,8 +18,8 @@
 {% for post in posts %}
 <item>
     <title>{{ post.title }}</title>
-    <link>https://thekev.in{{ url_for('blog_post', name=post.path) }}</link>
-    <guid isPermaLink='true'>https://thekev.in{{ url_for('blog_post', name=post.path) }}</guid>
+    <link>https://thekev.in/{{ url_for('blog_post', name=post.path) }}</link>
+    <guid isPermaLink='true'>https://thekev.in/{{ url_for('blog_post', name=post.path) }}</guid>
     <pubDate>{{ post.pub_date }}</pubDate>
     <description><![CDATA[{{ post.description }}]]></description>
 </item>

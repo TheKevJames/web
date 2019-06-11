@@ -9,7 +9,8 @@ and avoiding the use of more than a single CPU.
 
 This code is available in my
 [experiments Github repository](https://github.com/TheKevJames/experiments/tree/master/tensorflow-perf),
-if you'd like to follow along.
+if you'd like to follow along. More specifically,
+[here's the commit range](https://github.com/TheKevJames/experiments/compare/9b3c103b155dadf31148841cd4b6de1e8b9092ae...1d02e64aa992b130164ff855615078beb5341e76).
 
 ### Starting Point
 

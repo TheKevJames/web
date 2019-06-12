@@ -31,6 +31,12 @@
         <div>
             {{ post.html|safe }}
         </div>
+
+        <hr />
+
+        <div id='post-github'>
+            As always, this article is available <a href='https://github.com/TheKevJames/web/blob/master/site/pages/blog/{{post.path}}.md'>on GitHub</a>. Comments (ie. <a href='https://github.com/TheKevJames/web/issues/new'>issues</a>) are welcome!
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -74,6 +80,9 @@
   width: 33%;
   float: right;
   text-align: right; }
+#post-github {
+  font-weight: 300;
+  margin-bottom: 20px; }
 
 /* tables */
 table {

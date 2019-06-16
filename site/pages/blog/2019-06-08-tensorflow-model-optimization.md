@@ -12,6 +12,10 @@ This code is available in my
 if you'd like to follow along. More specifically,
 [here's the commit range](https://github.com/TheKevJames/experiments/compare/9b3c103b155dadf31148841cd4b6de1e8b9092ae...1d02e64aa992b130164ff855615078beb5341e76).
 
+> tl;dr: massive speed improvement comes from using MKL libs, compiling
+> Tensorflow with the right instruction sets, and saving/freezing/optimizing
+> your model file.
+
 ### Starting Point
 
 I started off by grabbing the

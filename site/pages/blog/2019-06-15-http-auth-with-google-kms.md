@@ -15,7 +15,7 @@ This experiment was motivated by some recent work my team is doing at Dialpad.
 
 <link rel="stylesheet" href="https://thekev.in/emacs.css">
 
-> tl;dr: using KMS keyrings and keys to mirror your APIs and routes let's you
+> tl;dr: using KMS keyrings and keys to mirror your APIs and routes lets you
 > build your own robust auth solution using only Google primitives and get as
 > fine-grained control of those permissions as you'd like.
 
@@ -79,9 +79,9 @@ many details on the overview level, but instead focus on the relevant parts for
 this use-case. If you're interested in learning more, check out the
 [official docs](https://cloud.google.com/kms/) -- seriously, they're great.
 
-For our use-case, here's the important part: KMS let's you create arbitrary
+For our use-case, here's the important part: KMS lets you create arbitrary
 keyrings and arbitrary keys within those keyrings, where each key can be used
-to encrypt or decrypt some arbitrary blob. Furthermore, it let's you specify
+to encrypt or decrypt some arbitrary blob. Furthermore, it lets you specify
 IAM roles which have encryption and/or decryption access using that key --
 the fact that you can specify either or is important here.
 
@@ -293,7 +293,7 @@ have the client generate and send along an auth header.
             'Authorization': f'Bearer {token}',
         }
 
-Then its just a matter of attaching those headers to our request:
+Then it's just a matter of attaching those headers to our request:
 
     #!python
     resp = await sess.post(f'https://{service}.{project}.thekev.in/resource',
@@ -347,7 +347,7 @@ One keyring gets created for every service.
 Then, the service account for your API server is marked as being allowed to
 decrypt with any keys in that keyring, so it can verify requests. Note that
 I've also marked down that developers can decrypt using this key as well --
-since its not the data that's being encrypted which is meant to be secure here
+since it's not the data that's being encrypted which is meant to be secure here
 but rather the act of encryption itself being what matters, this is a secure
 way to ensure you don't need to, say, disable authentication when running in
 dev/staging/whatever. Even running this API on a dev's laptop should
@@ -397,7 +397,7 @@ lowest Google allows), which will ensure that new key material is regularly
 used so that exposed keys can get expired. Google also allows you to manually
 cause a rotation in case you, say, suspect a breach has occurred.
 
-Plus its just good practice: if you ever find yourself needing to rotate your
+Plus it's just good practice: if you ever find yourself needing to rotate your
 keys and you don't already have that infrastructure and workflow in place,
 you're going to be in for many sleepless nights.
 
@@ -440,8 +440,8 @@ but, I mean, if you were going to do that, you probably wouldn't be reading
 this post.
 
 There's some cool stuff you can do here with terraform that's probably worth
-calling out since its such a common usecase for authentication -- since you can
-refer to other resources, its easy to create cascading permissions.
+calling out since it's such a common usecase for authentication -- since you can
+refer to other resources, it's easy to create cascading permissions.
 
 Say, if you want all admins to implicitly get access to the readwrite routes,
 and all readwrite users to get access to the readonly routes:
@@ -475,7 +475,7 @@ You can see how this looks all in one place
 
 That's about all I have to say on this one. There's a bit of setup cost to
 getting this up-and-running and integrated with you're particular stack, but at
-its core its a pretty simple solution without much in the way of shared
+its core it's a pretty simple solution without much in the way of shared
 information.
 
 This solution can very easily be modified for server-to-server comunication,

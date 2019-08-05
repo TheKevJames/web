@@ -64,7 +64,7 @@ for yourself which ones your machine supports by running:
     #!bash
     cat /proc/cpuinfo | grep flags
 
-or, if you're a ~~heathen~~ OSX user:
+or, if you're a <s>heathen</s> OSX user:
 
     #!bash
     sysctl machdep.cpu.features

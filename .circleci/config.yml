@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  linter: thekevjames/linter@0.1
+  linter: thekevjames/linter@0.1.3
 
   web:
     jobs:

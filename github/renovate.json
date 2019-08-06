@@ -1,0 +1,27 @@
+{
+  "assignees": ["thekevjames"],
+  "automerge": false,
+  "branchPrefix": "renovate/",
+  "ignoreUnstable": true,
+  "labels": ["task"],
+  "packageRules": [{
+    "depTypeList": ["devDependencies"],
+    "commitBody": ["[skip ci]"]
+  }, {
+    "datasources": ["orb"],
+    "patch": {
+      "enabled": false
+    }
+  }],
+  "prConcurrentLimit": 0,
+  "prCreation": "immediate",
+  "prHourlyLimit": 0,
+  "pruneStaleBranches": true,
+  "rangeStrategy": "pin",
+  "rollbackPrs": true,
+  "semanticCommits": true,
+  "semanticCommitType": "chore",
+  "separateMajorMinor": true,
+  "separateMinorPatch": true,
+  "updateNotScheduled": true
+}

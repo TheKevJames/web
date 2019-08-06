@@ -39,8 +39,8 @@ problem was presented to me:
 
 #### <s>Bragging About My Team</s> Problem Statement
 
-At Dialpad, my team has built up a lot of very cool tooling for our data
-science team -- there are plenty of automated pipelines for transforming an
+At Dialpad, my team has built up a lot of very cool tooling to help out the
+datascience team -- there are plenty of automated pipelines for transforming an
 idea and a dataset into an optimized model running in our massively scalable
 realtime system. But despite having automated and optimized a good chunk of
 that, sometimes there's just no excuse for creating a VM with exactly the right

@@ -1,5 +1,4 @@
 {
-  "assignees": ["thekevjames"],
   "automerge": false,
   "branchPrefix": "renovate/",
   "ignoreUnstable": true,

@@ -223,6 +223,9 @@ workflows:
       - functions:
           requires:
             - linter/pre-commit
+          filters:
+            branches:
+              only: master
 
       - web/app:
           name: hexclock

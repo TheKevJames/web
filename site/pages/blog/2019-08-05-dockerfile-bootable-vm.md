@@ -3,8 +3,6 @@ date: 2019-08-05
 tags: Technology
 description: Scriptable creation of GCP custom VM images from Dockerfiles
 
-TODO: add comment to https://iximiuz.com/en/posts/from-docker-container-to-bootable-linux-disk-image/
-
 This post is an experiment-turned-solution -- as per usual, my code is
 available in my [experiments Github repository][thekevjames/experiments:gcp].
 

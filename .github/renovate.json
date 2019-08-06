@@ -7,7 +7,12 @@
     "depTypeList": ["devDependencies"],
     "commitBody": ["[skip ci]"]
   }, {
+    "datasources": ["docker"],
+    "packagenames": ["python"],
+    "versionScheme": "pep440"
+  }, {
     "datasources": ["orb"],
+    "rangeStrategy": "replace",
     "patch": {
       "enabled": false
     }

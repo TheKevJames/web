@@ -8,7 +8,7 @@
     "commitBody": ["[skip ci]"]
   }, {
     "datasources": ["docker"],
-    "packagenames": ["python"],
+    "packageNames": ["python"],
     "versionScheme": "pep440"
   }, {
     "datasources": ["orb"],

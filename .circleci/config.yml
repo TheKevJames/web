@@ -149,7 +149,7 @@ jobs:
 
   site:
     docker:
-      - image: python:3.7.1
+      - image: python:3.7.4
     steps:
       - checkout
       - run: python3 -m pip install -r site/requirements.txt

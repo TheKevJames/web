@@ -133,5 +133,11 @@ def ping() -> str:
     return 'ok'
 
 
+# https://tools.ietf.org/html/draft-foudil-securitytxt-05
+@app.route('/.well-known/security.txt')
+def security() -> Any:
+    return flask.redirect(flask.url_for('static', filename='security.txt'))
+
+
 if __name__ == '__main__':
     freezer.freeze()

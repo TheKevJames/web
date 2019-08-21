@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Canonical: https://thekev.in/security.txt
+
+Contact: mailto:security@thekev.in
+Encryption: https://thekev.in/pgp.txt
+-----BEGIN PGP SIGNATURE-----
+
+iIsEARYIADMWIQTtNbvHXYuA2hlJqr2ysL0v5O6ExQUCXVy7fRUca2V2aW5qYW1l
+c0B0aGVrZXYuaW4ACgkQsrC9L+TuhMXhmAD9GA3A0s1TlGZnJgXTTFDW1EDqLhqP
+hkoMcKf2ePW50ucBAO9lKzcLqT/KannULkjEJIKNZfcCwKIb17oGKWQr5rsP
+=gEJr
+-----END PGP SIGNATURE-----

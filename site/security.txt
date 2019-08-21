@@ -1,0 +1,4 @@
+Canonical: https://thekev.in/security.txt
+
+Contact: mailto:security@thekev.in
+Encryption: https://thekev.in/pgp.txt

@@ -2,3 +2,23 @@ Canonical: https://thekev.in/security.txt
 
 Contact: mailto:security@thekev.in
 Encryption: https://thekev.in/pgp.txt
+
+# The above is my preferred key (B2B0BD2FE4EE84C5) and canonical source, but
+# if you think this site may have been tampered with, you can get my keys from
+# multiple other sources:
+#
+# * I keep "all my GPG keys ever used" attached to my Github profile:
+#   https://github.com/thekevjames.gpg
+# * Similarly, the source for this website can be found on Github:
+#   https://github.com/TheKevJames/web/blob/master/site/static/pgp.txt
+#
+# Sample verification flow:
+# $ curl -s https://thekev.in/pgp.txt | gpg --import
+# gpg: key B2B0BD2FE4EE84C5: public key "Kevin James <KevinJames@thekev.in>" imported
+# gpg: Total number processed: 1
+# gpg:              unchanged: 1
+# $ curl -s https://thekev.in/security.txt | gpg --verify
+# gpg: Signature made Tue Aug 20 20:33:17 2019 PDT
+# gpg:                using EDDSA key ED35BBC75D8B80DA1949AABDB2B0BD2FE4EE84C5
+# gpg:                issuer "kevinjames@thekev.in"
+# gpg: Good signature from "Kevin James <KevinJames@thekev.in>" [uncertain]

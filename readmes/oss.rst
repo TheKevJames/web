@@ -89,6 +89,7 @@ OSS Contributions
 Features
 ^^^^^^^^
 
+- `support arbitrary verioning schemes in Renovate`_
 - `inline tooltip support for SublimeLinter`_
 - `support globally allowing direct imports in pylint_import_modules`_
 
@@ -134,6 +135,7 @@ Fixes
 .. _Puppet: https://puppet.com/
 .. _pystun3: https://github.com/talkiq/pystun3
 .. _redis-cli-cluster: https://github.com/talkiq/redis-cli-cluster
+.. _support arbitrary versioning schemes in Renovate: https://github.com/renovatebot/renovate/pull/4273
 .. _support globally allowing direct imports in pylint_import_modules: https://github.com/bayesimpact/pylint_import_modules/pull/7
 .. _support missing Elasticsearch metrics in Sensu: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/
 .. _Terraform: https://www.terraform.io/

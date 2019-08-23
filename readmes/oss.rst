@@ -89,7 +89,7 @@ OSS Contributions
 Features
 ^^^^^^^^
 
-- `support arbitrary verioning schemes in Renovate`_
+- `support arbitrary versioning schemes in Renovate`_
 - `inline tooltip support for SublimeLinter`_
 - `support globally allowing direct imports in pylint_import_modules`_
 

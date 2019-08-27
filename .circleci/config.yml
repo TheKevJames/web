@@ -7,7 +7,7 @@ orbs:
     jobs:
       app:
         docker:
-          - image: mysocialobservations/docker-tdewolff-minify
+          - image: mysocialobservations/docker-tdewolff-minify:latest
         parameters:
           dir:
             type: string
@@ -29,7 +29,7 @@ jobs:
   # TODO: configure in terraform
   functions:
     docker:
-      - image: google/cloud-sdk
+      - image: google/cloud-sdk:latest
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: /gcloud-service-key.json
     steps:
@@ -126,7 +126,7 @@ jobs:
 
   quotes-json:
     docker:
-      - image: mysocialobservations/docker-tdewolff-minify
+      - image: mysocialobservations/docker-tdewolff-minify:latest
     steps:
       - run:
           name: install dependencies
@@ -163,7 +163,7 @@ jobs:
 
   site-minify:
     docker:
-      - image: mysocialobservations/docker-tdewolff-minify
+      - image: mysocialobservations/docker-tdewolff-minify:latest
     steps:
       - run:
           name: install dependencies
@@ -194,7 +194,7 @@ jobs:
 
   upload:
     docker:
-      - image: google/cloud-sdk
+      - image: google/cloud-sdk:latest
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: /gcloud-service-key.json
     steps:
@@ -218,7 +218,7 @@ workflows:
   run-jobs:
     jobs:
       - linter/pre-commit:
-          python_version: 3.7.1
+          python_version: 3.7.4
 
       - functions:
           requires:

@@ -1,6 +1,3 @@
 {
-  "extends": ["github>thekevjames/tools:personal"],
-  "lockFileMaintenance": {
-    "enabled": true
-  }
+  "extends": ["github>thekevjames/tools:personal"]
 }

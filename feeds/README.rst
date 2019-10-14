@@ -12,9 +12,9 @@ individual lists you're interested in.
 * Whenever possible, anything I'm `actively reading goes here`_.
 * You probably aren't here to follow the `folks I know`_.
 
-.. _actively reading goes here: https://github.com/TheKevJames/web/blob/master/feeds/stories.rst
-.. _daily funnies: https://github.com/TheKevJames/web/blob/master/feeds/funny.rst
-.. _folks I know: https://github.com/TheKevJames/web/blob/master/feeds/friends.rst
-.. _music subscriptions: https://github.com/TheKevJames/web/blob/master/feeds/music.rst
-.. _Tech blogs from companies: https://github.com/TheKevJames/web/blob/master/feeds/tech-people.rst
-.. _tech blogs: https://github.com/TheKevJames/web/blob/master/feeds/tech-companies.rst
+.. _actively reading goes here: https://github.com/TheKevJames/web/blob/master/feeds/stories.xml
+.. _daily funnies: https://github.com/TheKevJames/web/blob/master/feeds/funny.xml
+.. _folks I know: https://github.com/TheKevJames/web/blob/master/feeds/friends.xml
+.. _music subscriptions: https://github.com/TheKevJames/web/blob/master/feeds/music.xml
+.. _Tech blogs from companies: https://github.com/TheKevJames/web/blob/master/feeds/tech-people.xml
+.. _tech blogs: https://github.com/TheKevJames/web/blob/master/feeds/tech-companies.xml

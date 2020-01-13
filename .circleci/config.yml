@@ -7,7 +7,7 @@ orbs:
     jobs:
       app:
         docker:
-          - image: mysocialobservations/docker-tdewolff-minify:latest
+          - image: thekevjames/minify:2.7.0
         parameters:
           dir:
             type: string
@@ -126,7 +126,7 @@ jobs:
 
   quotes-json:
     docker:
-      - image: mysocialobservations/docker-tdewolff-minify:latest
+      - image: thekevjames/minify:2.7.0
     steps:
       - run:
           name: install dependencies
@@ -163,7 +163,7 @@ jobs:
 
   site-minify:
     docker:
-      - image: mysocialobservations/docker-tdewolff-minify:latest
+      - image: thekevjames/minify:2.7.0
     steps:
       - run:
           name: install dependencies
@@ -178,7 +178,7 @@ jobs:
 
   www-redir:
     docker:
-      - image: mysocialobservations/docker-tdewolff-minify
+        - image: thekevjames/minify:2.7.0
     steps:
       - run:
           name: install dependencies

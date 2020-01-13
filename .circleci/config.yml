@@ -24,6 +24,8 @@ orbs:
               root: artifacts
               paths:
                 - <<parameters.dir>>/
+          - store_artifacts:
+              path: artifacts/<<parameters.dir>>/
 
 jobs:
   # TODO: configure in terraform
@@ -83,6 +85,8 @@ jobs:
           root: artifacts
           paths:
             - octodash/
+      - store_artifacts:
+          path: artifacts/octodash/
 
   octodash-extension:
     docker:
@@ -146,6 +150,8 @@ jobs:
           root: artifacts
           paths:
             - quotes/
+      - store_artifacts:
+          path: artifacts/quotes/
 
   site:
     docker:
@@ -175,6 +181,8 @@ jobs:
           root: site
           paths:
             - build/
+      - store_artifacts:
+          path: site/build/
 
   www-redir:
     docker:
@@ -191,6 +199,8 @@ jobs:
           root: www
           paths:
             - redir/
+      - store_artifacts:
+          path: www/redir/
 
   upload:
     docker:

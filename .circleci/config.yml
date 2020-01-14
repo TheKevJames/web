@@ -155,7 +155,7 @@ jobs:
 
   site:
     docker:
-      - image: python:3.7.6
+      - image: python:3.8.1
     steps:
       - checkout
       - run: python3 -m pip install -r site/requirements.txt

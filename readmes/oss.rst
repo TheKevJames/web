@@ -13,11 +13,11 @@ Active OSS Projects
 
 These are the "brag-worthy" ones. Recruiters, look here.
 
-- I am the primary maintainer of the `coveralls-python`_ project used by ~6.5k
-  OSS projects on GitHub. No affiliation with `Coveralls`_. Over 6M downloads.
+- I am the primary maintainer of the `coveralls-python`_ project used by ~12k
+  OSS projects on GitHub. No affiliation with `Coveralls`_. Over 13M downloads.
 
 - I am the maintainer of the `Puppet`_ `Homebrew`_ plugin `puppet-homebrew`_.
-  Over 60k downloads.
+  Over 110k downloads.
 
 - I maintain the GNOME Shell extension for interfacing with a `Transmission`_
   daemon/gtk instance: `gnome-shell-extension-transmission-daemon`_.
@@ -45,8 +45,9 @@ read-only.
 
 - Small, self-contained `tools`_ not quite large enough to deserve their own
   repo live here. Often, these start as `experiments`_ which have grown. A few
-  of these have a surprising amount of public usage (tens of thousands of pulls
-  from `Docker Hub`_) but updates are rarely necessary and/or fully automated.
+  of these have a surprising amount of public usage (hundreds of thousands of
+  pulls from `Docker Hub`_) but updates are rarely necessary and/or fully
+  automated.
 
 - My `CV`_ is a json blob encoded in the `FRESH schema`_ which is automatically
   rendered to a more `human-readable resume format`_.

@@ -11,7 +11,7 @@ request-for-pull-requests!
 Active OSS Projects
 -------------------
 
-These are the "brag-worthy" ones. Recruiters, look here.
+These are the "brag-worthy" and "public use" ones. Recruiters, look here.
 
 - I am the primary maintainer of the `coveralls-python`_ project used by ~12k
   OSS projects on GitHub. No affiliation with `Coveralls`_. Over 13M downloads.
@@ -22,8 +22,11 @@ These are the "brag-worthy" ones. Recruiters, look here.
 - I maintain the GNOME Shell extension for interfacing with a `Transmission`_
   daemon/gtk instance: `gnome-shell-extension-transmission-daemon`_.
 
-- The `Franz`_ recipe for `Dialpad`_ (aptly-named repo link:
+- The `Franz`_/`Ferdi`_ recipe for `Dialpad`_ (aptly-named repo link:
   `franz-recipe-dialpad`_). Pending inclusion in Franz official recipe list.
+
+- The `Brew`_ formula for `youtube-viewer`_ (similarly aptly-named link:
+  `homebrew-youtube-viewer`_).
 
 Personal Projects
 -----------------
@@ -90,58 +93,64 @@ OSS Contributions
 Features
 ^^^^^^^^
 
-- `support arbitrary versioning schemes in Renovate`_
-- `inline tooltip support for SublimeLinter`_
-- `support globally allowing direct imports in pylint_import_modules`_
+- `Renovate (bot) - support arbitrary versioning schemes`_
+- `SublimeLinter - support inline tooltips`_
+- `git-standup - support branch filtering`_
+- `pylint_import_modules - support globally allowed direct imports`_
 
 Fixes
 ^^^^^
 
-- `make the Datadog MetricsAggregator threadsafe`_
-- `ensure protobufs support Python 3.8`_
-- `ensure Sentry supports Python 3.8`_
-- `support missing Elasticsearch metrics in Sensu`_
+- `Sentry (python, raven) - fix support for Python 3.8`_
+- `datadogpy - make the MetrcsAggregator threadsafe`_
+- `protobuf (python) - fix support for Python 3.8`_
+- `sensu-plugins-elasticsearch - support installations with partially disabled metrics`_
 
+.. _Brew: https://brew.sh/
+.. _CV: https://github.com/TheKevJames/cv
+.. _Clojure: https://clojure.org/
+.. _Cloudflare: https://www.cloudflare.com/
+.. _Coveralls: https://coveralls.io/
+.. _Dialpad: https://dialpad.com/app
+.. _Docker Hub: https://hub.docker.com/
+.. _FRESH schema: https://github.com/fresh-standard/fresh-resume-schema
+.. _Ferdi: https://getferdi.com/
+.. _Franz: https://meetfranz.com/
+.. _Homebrew: https://brew.sh/
+.. _Julia: https://julialang.org/
+.. _Puppet: https://puppet.com/
+.. _Renovate (bot) - support arbitrary versioning schemes: https://github.com/renovatebot/renovate/pull/4273
+.. _Sentry (python, raven) - fix support for Python 3.8: https://github.com/getsentry/raven-python/pull/1298
+.. _SublimeLinter - support inline tooltips: https://github.com/SublimeLinter/SublimeLinter/pull/552/
+.. _Terraform: https://www.terraform.io/
+.. _Transmission: https://transmissionbt.com/
 .. _aerofs-sdk-python: https://github.com/redbooth/aerofs-sdk-python
 .. _aeroup: https://github.com/redbooth/aeroup
 .. _archived: https://github.com/TheKevJames?tab=repositories&type=archived
 .. _blog: https://thekev.in/blog
 .. _challenges: https://github.com/TheKevJames/challenges
-.. _Clojure: https://clojure.org/
-.. _Cloudflare: https://www.cloudflare.com/
 .. _coveralls-python: https://github.com/coveralls-clients/coveralls-python
-.. _Coveralls: https://coveralls.io/
-.. _CV: https://github.com/TheKevJames/cv
+.. _datadogpy - make the MetrcsAggregator threadsafe: https://github.com/DataDog/datadogpy/pull/370
 .. _deprecated: https://github.com/TheKevJames/deprecated
-.. _Dialpad: https://dialpad.com/app
-.. _Docker Hub: https://hub.docker.com/
 .. _dotsystem: https://github.com/TheKevJames/dotsystem
-.. _ensure protobufs support Python 3.8: https://github.com/protocolbuffers/protobuf/pull/5195
-.. _ensure Sentry supports Python 3.8: https://github.com/getsentry/raven-python/pull/1298
 .. _experiments: https://github.com/TheKevJames/experiments
 .. _franz-recipe-dialpad: https://github.com/TheKevJames/franz-recipe-dialpad
-.. _Franz: https://meetfranz.com/
-.. _FRESH schema: https://github.com/fresh-standard/fresh-resume-schema
 .. _gcloud-aio: https://github.com/talkiq/gcloud-aio
 .. _gcloud-rest: https://github.com/talkiq/gcloud-rest
+.. _git-standup - support branch filtering: https://github.com/kamranahmedse/git-standup/pull/114
 .. _gnome-shell-extension-transmission-daemon: https://github.com/TheKevJames/gnome-shell-extension-transmission-daemon
-.. _Homebrew: https://brew.sh/
+.. _homebrew-youtube-viewer: https://github.com/TheKevJames/homebrew-youtube-viewer
 .. _human-readable resume format: https://thekev.in/cv
 .. _infrastructure: https://github.com/TheKevJames/infrastructure
-.. _inline tooltip support for SublimeLinter: https://github.com/SublimeLinter/SublimeLinter/pull/552/
-.. _Julia: https://julialang.org/
-.. _make the Datadog MetricsAggregator threadsafe: https://github.com/DataDog/datadogpy/pull/370
+.. _protobuf (python) - fix support for Python 3.8: https://github.com/protocolbuffers/protobuf/pull/5195
 .. _publishing: https://github.com/TheKevJames/publishing
 .. _puppet-homebrew: https://github.com/TheKevJames/puppet-homebrew
-.. _Puppet: https://puppet.com/
+.. _pylint_import_modules - support globally allowed direct imports: https://github.com/bayesimpact/pylint_import_modules/pull/7
 .. _pystun3: https://github.com/talkiq/pystun3
 .. _redis-cli-cluster: https://github.com/talkiq/redis-cli-cluster
-.. _support arbitrary versioning schemes in Renovate: https://github.com/renovatebot/renovate/pull/4273
-.. _support globally allowing direct imports in pylint_import_modules: https://github.com/bayesimpact/pylint_import_modules/pull/7
-.. _support missing Elasticsearch metrics in Sensu: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/
-.. _Terraform: https://www.terraform.io/
+.. _sensu-plugins-elasticsearch - support installations with partially disabled metrics: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/
 .. _tidbits: https://github.com/TheKevJames/tidbits
 .. _tools: https://github.com/TheKevJames/tools
-.. _Transmission: https://transmissionbt.com/
 .. _web: https://github.com/TheKevJames/web
 .. _you-should-read: https://github.com/TheKevJames/you-should-read
+.. _youtube-viewer: https://github.com/trizen/youtube-viewer

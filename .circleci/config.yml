@@ -71,7 +71,7 @@ jobs:
 
   octodash:
     docker:
-      - image: node:10.18.1-alpine
+      - image: node:10.19.0-alpine
     steps:
       - run:
           name: install dependencies
@@ -90,7 +90,7 @@ jobs:
 
   octodash-extension:
     docker:
-      - image: node:10.18.1
+      - image: node:10.19.0
     environment:
       OCTODASH_APP_ID: gpdoaoigpdmgpfebclknegmdkaamcdpf
     steps:

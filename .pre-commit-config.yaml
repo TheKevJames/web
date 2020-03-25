@@ -119,7 +119,7 @@ repos:
     rev: v2.10.2
     hooks:
     -   id: jshint
-        exclude: '(octodash)|(quotes)'  # TODO
+        exclude: '(quotes)'  # TODO
 
 # terraform
 -   repo: https://github.com/antonbabenko/pre-commit-terraform

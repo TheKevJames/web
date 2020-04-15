@@ -135,7 +135,7 @@ average is low, more concrete work on the foundations is probably warranted.
 
 ### Dress for the Job You Want, Not the One You Have
 
-An important aspect of mentorship is knowing where the trainee is aiming to be.
+An important aspect of mentorship is knowing where the mentee is aiming to be.
 I don't mean this in terms of "where do you see yourself in ten years", but
 rather a bit more near-term than that. Are they a SWE2 looking to get bumped up
 to SWE3? Are they trying to broaden their horizons towards a different career
@@ -146,14 +146,14 @@ more on that later) of what's expected of where they are now and how they're
 doing compared to that, as well as something similar for their target next
 position. At a smaller company, this might not be formalized, at a larger
 company it might be over-formalized, but either way there's *something* that
-you and your trainee can look at and use to base your judgments.
+you and your mentee can look at and use to base your judgments.
 
 I don't mean this in the performance evaluation sense and the word "rubric"
 implies some sort of grading system that I don't think is really relevant here.
 What's important is to be able to come up with areas of focus to answer two
 questions:
 
-* how can the trainee get better at their current role?
+* how can the mentee get better at their current role?
 * what can they improve at to get better at their next role?
 
 The ideal mentorship scenario explores a bit of both. In fact, it explores a
@@ -178,11 +178,11 @@ current role before setting sights on the next one.
 That plays into this idea of gradual shifts perfectly: at first, most of your
 mentorship should be aimed at fitting the current role. After some time, that
 should start shifting to be closer to half-and-half current role and next role.
-By the time your trainee is getting close to a promotion, you should be mostly
+By the time your mentee is getting close to a promotion, you should be mostly
 focusing on skills related to that new role (since you've already built the
 foundations...).
 
-Its all related, eh?
+It's all related, eh?
 
 If you're in the sort of situation where there's not too much in the way of
 formalized requirements here, this section might be trickier than otherwise --
@@ -217,7 +217,7 @@ imagine coming up with a mentorship curriculum with some pre-defined order and
 having that actually work out with no hiccups. If you can pull that off...
 damn. Power to you. Drop me a message and let me know how you did it!
 
-I mentioned "stack ranking" your trainee's current and target skills above -- I
+I mentioned "stack ranking" your mentee's current and target skills above -- I
 think that requirement goes double in cases like this. At any given point in
 time, there's probably a whole bunch of different things you can focus on to
 varying degrees; different skills at different levels and of varying
@@ -231,12 +231,12 @@ interest thing, sometimes it's a timing issue... taken all together, playing
 with the order like this might be less sub-optimal than you think.
 
 That said, I can't know what your situation is -- it could also be simple
-oversight or something along those lines! If you think your trainee isn't being
+oversight or something along those lines! If you think your mentee isn't being
 given the work they need in order to grow, your friendly neighbourhood tech
 lead / project manager / agile coach / waterfall guru / scrum battle-emperor
 may just not be aware of the issue.
 
-To some extent, you can work around this -- even if the trainee is not being
+To some extent, you can work around this -- even if the mentee is not being
 given "stretch goal" type work, you can always chat a bit about what that
 improvement *could* look like -- but my advice definitely starts to run dry at
 this point. If you or your teammates are not regularly able to work on things
@@ -278,19 +278,19 @@ on some specific skill is invaluable.
 Note that this can be (and should be) both short-term and long-term. Sometimes
 the two can even be related to each other! But overall the point here is to get
 an idea of your teammate's goals (of varying durations) and work together on
-figuring out how to improve at them. By the very nature of a mentor-trainee
+figuring out how to improve at them. By the very nature of a mentor-mentee
 relationship, it's likely the case that one of you has a better grasp of the
-trainee's skills and goals and the other has a better grasp of how to improve
-at them.
+mentee's skills and goals and the other has a better grasp of how to improve at
+them.
 
 No points for guessing who knows what.
 
-As a mentor, learning this information is *incredibly* valuable. Sure there'll
-be skills you in your larger amount of experience know the trainee needs that
-they aren't yet aware of -- and you can't ignore those -- but there's a lot of
+As a mentor, learning this information is *incredibly* valuable. Given you have
+a larger amount of experience, you may be aware of skills the mentee needs but
+is not yet aware of -- and you can't ignore those -- but there's a lot of
 information to pull from the places you overlap.
 
-Does your trainee think they need to focus on the same specific as you? Great,
+Does your mentee think they need to focus on the same specific as you? Great,
 that means you know you're aligned and don't need to spend as much time selling
 why the skill is one to focus on.
 
@@ -328,7 +328,7 @@ focus on next or might be focusing on the wrong priorities. It's great to get
 more input in these sorts of things; I love "360 Reviews" and other similar
 approaches for gathering insights from a wide range of people in order to help
 turn these into known unknowns (and eventually into, er... known knowns...?).
-If you and/or your trainee are unusure what to work on, why not ask around?
+If you and/or your mentee are unusure what to work on, why not ask around?
 
 #### A Variety of Spice is the Spice of a Well-Stocked Kitchen
 
@@ -352,7 +352,7 @@ When isn't?
 Seriously though, if you think of mentoring as something which happens only on
 some specific cadence during its assigned timeslot, you're missing a whole lot
 of its most valuable aspects. Mentorship is about the mindset behind things;
-it's about the personal growth which might be *fueled* by any mentor-trainee
+it's about the personal growth which might be *fueled* by any mentor-mentee
 meetings but should not be the exclusive domain of those meetings. It's about
 continuously sharing your thought patterns with your teammate -- and you are
 interested in continuous personal growth, right?

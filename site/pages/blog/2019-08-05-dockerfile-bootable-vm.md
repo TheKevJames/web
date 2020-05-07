@@ -12,8 +12,6 @@ team in [Vancouver][dialpad:careers:bc] and [Kitchener][dialpad:careers:kw]!
 
 ---
 
-<link rel="stylesheet" href="https://thekev.in/emacs.css">
-
 > tl;dr: turn an arbitrary Dockerfile into a bootable and fully GCP-compatible
 custom VM image by going [here][thekevjames/experiments:gcp] and running
 ``make``.

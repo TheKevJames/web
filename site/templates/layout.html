@@ -23,11 +23,15 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Helvetica Neue', 'Calibri Light', 'Roboto', sans-serif;
-  background-color: #f9f5d7;
-  color: #3c3836;
+  background-color: #1d2021;
+  color: #ebdbb2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.02em; }
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f9f5d7;
+    color: #3c3836; } }
 
 .font-header, #headline #bio #name {
   font-weight: normal;
@@ -64,14 +68,17 @@ body {
   height: 2px;
   width: 100%;
   z-index: 99;
-  background-color: #458588; }
+  background-color: #fe8019; }
+@media (prefers-color-scheme: light) {
+  #line {
+    background-color: #af3a03; } }
 
 nav {
   height: 40px;
   width: 100%;
   padding: 0 10px;
   margin-bottom: 30px;
-  background-color: #689d6a; }
+  background-color: #d65d0e; }
 
   nav div {
     display: inline;
@@ -81,11 +88,18 @@ nav {
       font-size: 16px;
       line-height: 40px;
       text-decoration: none !important;
-      color: white; }
+      color: #ebdbb2; }
       nav div a:link, nav div a:visited {
-        color: white; }
+        color: #ebdbb2; }
       nav div a:hover, nav div a:active {
-        color: #e6e6e6; }
+        color: #fbf1c7; }
+    @media (prefers-color-scheme: light) {
+      nav div a {
+        color: #3c3836; }
+        nav div a:link, nav div a:visited {
+          color: #3c3836; }
+        nav div a:hover, nav div a:active {
+          color: #282828; } }
     nav div#cv {
       float: right;
       margin-right: 30px; }
@@ -94,7 +108,7 @@ nav {
     display: inline-block; }
     nav .dropdown .dropdown-content {
       display: none;
-      background-color: #689d6a;
+      background-color: #d65d0e;
       height: initial;
       position: absolute;
       margin-left: -7px;

@@ -42,7 +42,7 @@
 {% endblock %}
 
 {% block css %}
-<link rel='stylesheet' href='/emacs.css' />
+<link rel='stylesheet' href='https://thekev.in/codehilite.css' />
 <style>
 /* positioning */
 .blog-wrapper {
@@ -91,12 +91,19 @@ table {
   margin-bottom: 23px;
   overflow-x: auto; }
   table th, table td {
-    border: 1px solid #7c6f64;
+    border: 1px solid #a89984;
     padding: 6px 13px; }
   table tbody tr:nth-child(odd) {
-    background-color: #fbf1c7; }
+    background-color: #282828; }
   .codehilite {
-    background: #fbf1c7 !important; }
+    background: #282828 !important; }
+  @media (prefers-color-scheme: light) {
+    table th, table td {
+      border: 1px solid #7c6f64; }
+    table tbody tr:nth-child(odd) {
+      background-color: #fbf1c7; }
+    .codehilite {
+      background: #fbf1c7 !important; } }
 
 /* misc */
 h3 {
@@ -106,6 +113,9 @@ h3 {
 #blog-page hr {
   margin: 20px 5px;
   border: 0;
-  border-top: 1px solid #7c6f64; }
+  border-top: 1px solid #a89984; }
+@media (prefers-color-scheme: light) {
+  table th, table td {
+    border-top: 1px solid #7c6f64; } }
 </style>
 {% endblock %}

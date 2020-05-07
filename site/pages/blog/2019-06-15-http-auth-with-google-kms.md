@@ -13,8 +13,6 @@ This experiment was motivated by some recent work my team is doing at Dialpad.
 
 ---
 
-<link rel="stylesheet" href="https://thekev.in/emacs.css">
-
 > tl;dr: using KMS keyrings and keys to mirror your APIs and routes lets you
 > build your own robust auth solution using only Google primitives and get as
 > fine-grained control of those permissions as you'd like.
@@ -493,6 +491,9 @@ whatever. I don't judge.
 <!-- Pygments doesn't like Terraform :( -->
 <style>
 .codehilite .na {
-    color: #3c3836 !important;
+    color: #ebdbb2 !important;
 }
+@media (prefers-color-scheme: light) {
+  .codehilite .na {
+    color: #3c3836 !important; } }
 </style>

@@ -100,7 +100,7 @@
 .list div {
   width: 90%;
   margin: 10px 5% 20px 5%;
-  border: 1px #7c6f64 solid;
+  border: 1px #a89984 solid;
   border-radius: 4px;
   position: relative; }
   .list div h3 {
@@ -126,7 +126,7 @@
     box-sizing: border-box;
     display: block;
     padding: 5px;
-    color: white;
+    color: #ebdbb2;
     text-decoration: none;
     text-align: center;
     transition: opacity .5s ease-out; }
@@ -135,6 +135,11 @@
       transition: opacity .5s ease-out; }
   .list div :last-child {
     border-radius: 0 0 4px 4px; }
+@media (prefers-color-scheme: light) {
+  .list div {
+    border: 1px #7c6f64 solid; }
+    .list div .live {
+      color: #3c3836; } }
 </style>
 {% endblock %}
 

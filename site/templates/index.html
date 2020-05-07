@@ -53,11 +53,15 @@
 {% block css %}
 <style>
 #symbol {
+  fill: #ebdbb2;
   margin-top: 40px;
   min-height: 180px;
   min-width: 180px;
   max-height: 240px;
   max-width: 240px; }
+@media (prefers-color-scheme: light) {
+  #symbol {
+    fill: #3c3836; } }
 
 #headline {
   text-align: center; }
@@ -66,14 +70,16 @@
     #headline #bio #name {
       font-size: 57px;
       line-height: 60px;
-      color: #191919;
+      color: #ebdbb2;
       cursor: default; }
+    @media (prefers-color-scheme: light) {
+      #headline #bio #name {
+        color: #3c3836; } }
 
 #social {
   text-align: center; }
   #social a {
-    text-decoration: none !important;
-    color: white !important; }
+    text-decoration: none !important; }
   #social a svg {
     height: 62px;
     width: 62px;
@@ -90,7 +96,10 @@
   #social #icon-facebook path {
     fill: #3b5998; }
   #social #icon-github path {
-    fill: #333333; }
+    fill: #cccccc; }  /* should be #333 but contrast */
+  @media (prefers-color-scheme: light) {
+    #social #icon-github path {
+      fill: #333333; } }
   #social #icon-linkedin path {
     fill: #0077b5; }
   #social #icon-rss path {

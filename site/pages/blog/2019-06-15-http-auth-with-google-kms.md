@@ -493,6 +493,6 @@ whatever. I don't judge.
 <!-- Pygments doesn't like Terraform :( -->
 <style>
 .codehilite .na {
-    color: #000 !important;
+    color: #3c3836 !important;
 }
 </style>

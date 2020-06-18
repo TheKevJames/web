@@ -102,7 +102,7 @@ Fixes
 ^^^^^
 
 - `Sentry (python, raven) - fix support for Python 3.8`_
-- `datadogpy - make the MetrcsAggregator threadsafe`_
+- `datadogpy - make the MetricsAggregator threadsafe`_
 - `protobuf (python) - fix support for Python 3.8`_
 - `sensu-plugins-elasticsearch - support installations with partially disabled metrics`_
 
@@ -130,7 +130,7 @@ Fixes
 .. _blog: https://thekev.in/blog
 .. _challenges: https://github.com/TheKevJames/challenges
 .. _coveralls-python: https://github.com/coveralls-clients/coveralls-python
-.. _datadogpy - make the MetrcsAggregator threadsafe: https://github.com/DataDog/datadogpy/pull/370
+.. _datadogpy - make the MetricsAggregator threadsafe: https://github.com/DataDog/datadogpy/pull/370
 .. _deprecated: https://github.com/TheKevJames/deprecated
 .. _dotsystem: https://github.com/TheKevJames/dotsystem
 .. _experiments: https://github.com/TheKevJames/experiments

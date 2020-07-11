@@ -93,10 +93,11 @@ OSS Contributions
 Features
 ^^^^^^^^
 
-- `Renovate (bot) - support arbitrary versioning schemes`_
 - `SublimeLinter - support inline tooltips`_
 - `git-standup - support branch filtering`_
 - `pylint_import_modules - support globally allowed direct imports`_
+- `renovate - support arbitrary versioning schemes`_
+- `renovate - support envvar interpolation in requirements files`_
 
 Fixes
 ^^^^^
@@ -104,6 +105,7 @@ Fixes
 - `Sentry (python, raven) - fix support for Python 3.8`_
 - `datadogpy - make the MetricsAggregator threadsafe`_
 - `protobuf (python) - fix support for Python 3.8`_
+- `renovate - fix /simple compatibility for non-standard PyPI indexes`_
 - `sensu-plugins-elasticsearch - support installations with partially disabled metrics`_
 
 .. _Brew: https://brew.sh/
@@ -119,7 +121,6 @@ Fixes
 .. _Homebrew: https://brew.sh/
 .. _Julia: https://julialang.org/
 .. _Puppet: https://puppet.com/
-.. _Renovate (bot) - support arbitrary versioning schemes: https://github.com/renovatebot/renovate/pull/4273
 .. _Sentry (python, raven) - fix support for Python 3.8: https://github.com/getsentry/raven-python/pull/1298
 .. _SublimeLinter - support inline tooltips: https://github.com/SublimeLinter/SublimeLinter/pull/552/
 .. _Terraform: https://www.terraform.io/
@@ -148,6 +149,9 @@ Fixes
 .. _pylint_import_modules - support globally allowed direct imports: https://github.com/bayesimpact/pylint_import_modules/pull/7
 .. _pystun3: https://github.com/talkiq/pystun3
 .. _redis-cli-cluster: https://github.com/talkiq/redis-cli-cluster
+.. _renovate - fix /simple compatibility for non-standard PyPI indexes: https://github.com/renovatebot/renovate/pull/6649
+.. _renovate - support arbitrary versioning schemes: https://github.com/renovatebot/renovate/pull/4273
+.. _renovate - support envvar interpolation in requirements files: https://github.com/renovatebot/renovate/pull/6648
 .. _sensu-plugins-elasticsearch - support installations with partially disabled metrics: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/
 .. _tidbits: https://github.com/TheKevJames/tidbits
 .. _tools: https://github.com/TheKevJames/tools

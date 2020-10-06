@@ -120,6 +120,19 @@ nav {
         padding: 0 10px; }
     nav .dropdown:hover .dropdown-content {
       display: block; }
+
+  .nav-small {
+    display: none !important; }
+
+@media (max-width:414px) {
+    nav div {
+      margin-left: 5px;
+      margin-right: 5px; }
+    .nav-small {
+      display: inline-block !important; }
+    .nav-large {
+      display: none; }
+}
 </style>
 {% block css %}{% endblock %}
 
@@ -129,23 +142,31 @@ nav {
     <div>
         <a href="{{ url_for('index') }}">Home</a>
     </div>
-    <div>
+    <div class='nav-small dropdown'>
+        <a href="#">Writing &#9207;</a>
+        <div class='dropdown-content'>
+            <a href="{{ url_for('blog') }}">Blog</a>
+            <a href="{{ url_for('reviews') }}">Reviews</a>
+        </div>
+    </div>
+    <div class='nav-large'>
         <a href="{{ url_for('blog') }}">Blog</a>
     </div>
-    <div>
+    <div class='nav-large'>
         <a href="{{ url_for('reviews') }}">Reviews</a>
     </div>
     <div class='dropdown'>
-        <a href='#'>Me &#x25BC;</a>
+        <a href='#'>Me &#9207;</a>
         <div class='dropdown-content'>
             <a href='https://github.com/TheKevJames/web/blob/master/readmes/README.rst'>README</a>
+            <a class='nav-small' href="https://storage.googleapis.com/thekevjames-artifacts/cv.pdf">C.V.</a>
             <hr />
             <a href='https://github.com/thekevjames.keys'>SSH Keys</a>
             <a href='https://github.com/thekevjames.gpg'>GPG Keys</a>
         </div>
     </div>
     <div class='dropdown'>
-        <a href='#'>Apps &#x25BC;</a>
+        <a href='#'>Apps &#9207;</a>
         <div class='dropdown-content'>
             <a href='https://storage.googleapis.com/thekevjames-artifacts/hexclock/hexclock.html'>Hexclock</a>
             <a href='https://storage.googleapis.com/thekevjames-artifacts/quotes/quotes.html'>Quotes</a>
@@ -153,7 +174,7 @@ nav {
         </div>
     </div>
 
-    <div id='cv'>
+    <div class='nav-large' id='cv'>
         <a href="https://storage.googleapis.com/thekevjames-artifacts/cv.pdf">C.V.</a>
     </div>
 </nav>

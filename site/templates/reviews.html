@@ -30,7 +30,7 @@
             <ul class='list'>
             {% for rating, grouped in by_rating.items() %}
                 <!-- TODO: depend on length, set "active" and "display: none|block" -->
-                <li class="accordion {{ 'active' if grouped|length < 4 else '' }}">{{ rating }}</li>
+                <li class="accordion {{ 'active' if grouped|length < 4 else '' }}" role='button' tabindex='0'>{{ rating }}</li>
                 <li style="display: {{ 'block' if grouped|length < 4 else 'none' }};">
                   <ul>
                   {% for review in grouped %}
@@ -154,6 +154,11 @@ for (var x of document.getElementsByClassName("accordion")) {
       next.style.display = "none";
     } else {
       next.style.display = "block";
+    }
+  });
+  x.addEventListener("keyup", function(e) {
+    if (e.key === "Enter") {
+      this.click();
     }
   });
 }

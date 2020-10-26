@@ -7,7 +7,7 @@ orbs:
     jobs:
       app:
         docker:
-          - image: thekevjames/minify:2.9.9
+          - image: thekevjames/minify:2.9.10
         parameters:
           dir:
             type: string
@@ -71,7 +71,7 @@ jobs:
 
   quotes-json:
     docker:
-      - image: thekevjames/minify:2.9.9
+      - image: thekevjames/minify:2.9.10
     steps:
       - run:
           name: install dependencies
@@ -111,7 +111,7 @@ jobs:
 
   site-minify:
     docker:
-      - image: thekevjames/minify:2.9.9
+      - image: thekevjames/minify:2.9.10
     steps:
       - run:
           name: install dependencies
@@ -128,7 +128,7 @@ jobs:
 
   www-redir:
     docker:
-        - image: thekevjames/minify:2.9.9
+        - image: thekevjames/minify:2.9.10
     steps:
       - run:
           name: install dependencies

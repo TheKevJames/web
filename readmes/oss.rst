@@ -58,11 +58,6 @@ read-only.
 - A bunch of `web`_ projects which form varying chunks of my website, small
   web-tools, and single-page Chrome extensions.
 
-- Various Python `tidbits`_ which would otherwise be copied-and-pasted into
-  most projects I touch are released on PyPI. This sort of thing would be much
-  better solved by a file- or method-level ``git subtree``-like feature, but
-  sadly one does not exist.
-
 - Various miscellaneous `publishing`_ lives in a repo as well. Most of this is
   linked to from my `blog`_.
 

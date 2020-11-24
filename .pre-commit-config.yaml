@@ -148,6 +148,6 @@ repos:
     hooks:
     -   id: shell-lint
 -   repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 1.11.0
+    rev: 2.1.4
     hooks:
     -   id: script-must-not-have-extension

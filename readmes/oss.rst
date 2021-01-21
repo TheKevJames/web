@@ -126,7 +126,7 @@ Fixes
 .. _archived: https://github.com/TheKevJames?tab=repositories&type=archived
 .. _blog: https://thekev.in/blog
 .. _challenges: https://github.com/TheKevJames/challenges
-.. _coveralls-python: https://github.com/coveralls-clients/coveralls-python
+.. _coveralls-python: https://github.com/TheKevJames/coveralls-python
 .. _datadogpy - make the MetricsAggregator threadsafe: https://github.com/DataDog/datadogpy/pull/370
 .. _deprecated: https://github.com/TheKevJames/deprecated
 .. _dotsystem: https://github.com/TheKevJames/dotsystem

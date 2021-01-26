@@ -91,6 +91,8 @@ Features
 - `SublimeLinter - support inline tooltips`_
 - `git-standup - support branch filtering`_
 - `macports - contribute p5-lwp-useragent-cached port`_
+- `macports - contribute skhd port`_
+- `macports - contribute yabai port`_
 - `pylint_import_modules - support globally allowed direct imports`_
 - `renovate - support arbitrary versioning schemes`_
 - `renovate - support envvar interpolation in requirements files`_
@@ -140,6 +142,8 @@ Fixes
 .. _human-readable resume format: https://thekev.in/cv
 .. _infrastructure: https://github.com/TheKevJames/infrastructure
 .. _macports - contribute p5-lwp-useragent-cached port: https://github.com/macports/macports-ports/pull/9003
+.. _macports - contribute skhd port: https://github.com/macports/macports-ports/pull/9005
+.. _macports - contribute yabai port: https://github.com/macports/macports-ports/pull/9006
 .. _protobuf (python) - fix support for Python 3.8: https://github.com/protocolbuffers/protobuf/pull/5195
 .. _publishing: https://github.com/TheKevJames/publishing
 .. _puppet-homebrew: https://github.com/TheKevJames/puppet-homebrew

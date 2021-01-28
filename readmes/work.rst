@@ -48,7 +48,7 @@ often online after-hours or even on the weekends. I do not expect you to be. If
 I message you outside of ~9 to ~5 (in your timezone!), I'm not expecting a
 response -- it can wait until the next (work)day.
 
-I am often in the office between 10AM and 6PM, with some slight variation
+I am often "in the office" between 10AM and 6PM, with some slight variation
 depending on bus routes, sleep schedule, and "getting one last thing done
 before I head out".
 
@@ -128,22 +128,15 @@ One-Liners
 
 Various one-liners embodying my favorite axioms and architectural principles:
 
-- Design for 10x scale. Re-design when you get to 20x.
-
-- Reuse components. Corollary: build reusable components.
-
-- Use *boring* software. Alpha is exciting but easily breakable.
-
-- *Use* boring software. `Not Invented Here`_ is a poison.
-
-- You either have a single source of truth or multiple sources of lies.
-
-- Similarly, but to be clear: you either have a single schema or many implicit
+* Design for 10x scale. Re-design when you get to 20x.
+* Reuse components. Corollary: build reusable components.
+* Use *boring* software. Alpha is exciting but easily breakable.
+* *Use* boring software. `Not Invented Here`_ is a poison.
+* You either have a single source of truth or multiple sources of lies.
+* Similarly, but to be clear: you either have a single schema or many implicit
   ones defined throughout your codebase.
-
-- Do it decently the first time. The second try will be when it catches fire.
-
-- Migrations should be easy. Plan for disaster, build for failure, lower the
+* Do it decently the first time. The second try will be when it catches fire.
+* Migrations should be easy. Plan for disaster, build for failure, lower the
   risk.
 
 Your Philosophies

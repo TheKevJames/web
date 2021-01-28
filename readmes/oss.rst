@@ -96,6 +96,7 @@ Features
 - `pylint_import_modules - support globally allowed direct imports`_
 - `renovate - support arbitrary versioning schemes`_
 - `renovate - support envvar interpolation in requirements files`_
+- `renovate - support PyPI simple indexes`_
 
 Fixes
 ^^^^^
@@ -151,6 +152,7 @@ Fixes
 .. _pystun3: https://github.com/talkiq/pystun3
 .. _redis-cli-cluster: https://github.com/talkiq/redis-cli-cluster
 .. _renovate - fix /simple compatibility for non-standard PyPI indexes: https://github.com/renovatebot/renovate/pull/6649
+.. _renovate - support PyPI simple indexes: https://github.com/renovatebot/renovate/pull/6649
 .. _renovate - support arbitrary versioning schemes: https://github.com/renovatebot/renovate/pull/4273
 .. _renovate - support envvar interpolation in requirements files: https://github.com/renovatebot/renovate/pull/6648
 .. _sensu-plugins-elasticsearch - support installations with partially disabled metrics: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/

@@ -96,7 +96,6 @@ Features
 - `pylint_import_modules - support globally allowed direct imports`_
 - `renovate - support arbitrary versioning schemes`_
 - `renovate - support envvar interpolation in requirements files`_
-- `renovate - support PyPI simple indexes`_
 
 Fixes
 ^^^^^
@@ -105,6 +104,7 @@ Fixes
 - `datadogpy - make the MetricsAggregator threadsafe`_
 - `protobuf (python) - fix support for Python 3.8`_
 - `renovate - fix /simple compatibility for non-standard PyPI indexes`_
+- `renovate - fix HTTP auth for NOPASS indexes`_
 - `sensu-plugins-elasticsearch - support installations with partially disabled metrics`_
 
 .. _Brew: https://brew.sh/
@@ -152,7 +152,7 @@ Fixes
 .. _pystun3: https://github.com/talkiq/pystun3
 .. _redis-cli-cluster: https://github.com/talkiq/redis-cli-cluster
 .. _renovate - fix /simple compatibility for non-standard PyPI indexes: https://github.com/renovatebot/renovate/pull/6649
-.. _renovate - support PyPI simple indexes: https://github.com/renovatebot/renovate/pull/6649
+.. _renovate - fix HTTP auth for NOPASS indexes: https://github.com/renovatebot/renovate/pull/8442
 .. _renovate - support arbitrary versioning schemes: https://github.com/renovatebot/renovate/pull/4273
 .. _renovate - support envvar interpolation in requirements files: https://github.com/renovatebot/renovate/pull/6648
 .. _sensu-plugins-elasticsearch - support installations with partially disabled metrics: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/

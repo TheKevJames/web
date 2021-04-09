@@ -60,7 +60,7 @@ systems. At the end of the day, I care less about the framework and much more
 about the following:
 
 - I value speed of development -- including proactive efforts such as
-  writing/improving tests, refactoring legacy systems, and dissemenation of
+  writing/improving tests, refactoring legacy systems, and dissemination of
   knowledge either through pairing or improving documentation.
 
 - I value learning -- exploring new ideas, trying new methods/libraries/sytems,

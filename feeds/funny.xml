@@ -32,6 +32,7 @@
       <outline text="Waffles &amp; Pancakes" title="Waffles &amp; Pancakes" type="rss" xmlUrl="https://www.webtoons.com/en/slice-of-life/waffles-and-pancakes/rss?title_no=1310" htmlUrl="https://www.webtoons.com/en/slice-of-life/waffles-and-pancakes/list?title_no=1310"/>
       <outline text="What If?" title="What If?" type="rss" xmlUrl="http://what-if.xkcd.com/feed.atom" htmlUrl="http://what-if.xkcd.com/feed.atom"/>
       <outline text="XKCD" title="XKCD" type="rss" xmlUrl="http://xkcd.com/rss.xml" htmlUrl="http://xkcd.com/"/>
+      <outline text="Zzzzoder" title="Zzzzoder" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=Zzzzoder" htmlUrl="http://www.youtube.com/c/Zzzzoder/videos"/>
     </outline>
   </body>
 </opml>

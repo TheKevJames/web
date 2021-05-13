@@ -98,12 +98,21 @@ jobs:
     docker:
       - image: python:3.9.5
     steps:
+      - run: python3 -m pip install poetry
       - checkout
-      - run: python3 -m pip install -r site/requirements.txt
+      - run:
+          command: poetry install -n
+          working_directory: site
       - run: cp shared/* site/static/
-      - run: python3 site/build.py
-      - run: pygmentize -S emacs -f html -a .codehilite > site/build/codehilite.light.css
-      - run: pygmentize -S monokai -f html -a .codehilite > site/build/codehilite.css
+      - run:
+          command: poetry run ./build.py
+          working_directory: site
+      - run:
+          command: poetry run pygmentize -S emacs -f html -a .codehilite > build/codehilite.light.css
+          working_directory: site
+      - run:
+          command: poetry run pygmentize -S monokai -f html -a .codehilite > build/codehilite.css
+          working_directory: site
       - persist_to_workspace:
           root: site
           paths:

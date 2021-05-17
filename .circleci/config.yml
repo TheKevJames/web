@@ -108,10 +108,10 @@ jobs:
           command: poetry run ./build.py
           working_directory: site
       - run:
-          command: poetry run pygmentize -S emacs -f html -a .codehilite > build/codehilite.light.css
+          command: poetry run pygmentize -S gruvbox-light -f html -a .codehilite > build/codehilite.light.css
           working_directory: site
       - run:
-          command: poetry run pygmentize -S monokai -f html -a .codehilite > build/codehilite.css
+          command: poetry run pygmentize -S gruvbox-dark -f html -a .codehilite > build/codehilite.css
           working_directory: site
       - persist_to_workspace:
           root: site

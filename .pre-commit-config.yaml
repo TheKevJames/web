@@ -68,10 +68,12 @@ repos:
     -   id: pyupgrade
         args: [--py37-plus]
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.812
+    rev: v0.901
     hooks:
     -   id: mypy
         require_serial: True
+        additional_dependencies:
+        - types-flask
         args:
         - --ignore-missing-imports
         - --follow-imports=silent

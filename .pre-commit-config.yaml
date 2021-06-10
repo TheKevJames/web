@@ -72,6 +72,8 @@ repos:
     hooks:
     -   id: mypy
         require_serial: True
+        additional_dependencies:
+        - types-flask
         args:
         - --ignore-missing-imports
         - --follow-imports=silent

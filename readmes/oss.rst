@@ -14,16 +14,16 @@ Active OSS Projects
 These are the "brag-worthy" and "public use" ones. Recruiters, look here.
 
 - I am the primary maintainer of the `coveralls-python`_ project used by ~12k
-  OSS projects on GitHub. No affiliation with `Coveralls`_. Over 13M downloads.
+  OSS projects on GitHub. No affiliation with `Coveralls`_. Over 20M downloads.
 
 - I am the maintainer of the `Puppet`_ `Homebrew`_ plugin `puppet-homebrew`_.
-  Over 110k downloads.
+  Over 210k downloads.
 
 - I maintain the GNOME Shell extension for interfacing with a `Transmission`_
   daemon/gtk instance: `gnome-shell-extension-transmission-daemon`_.
 
-- The `Franz`_/`Ferdi`_ recipe for `Dialpad`_ (aptly-named repo link:
-  `franz-recipe-dialpad`_). Pending inclusion in Franz official recipe list.
+- The `Franz`_/`Ferdi`_ recipes for `Dialpad`_ and `Clockwise`_ (aptly-named
+  repo links: `franz-recipe-dialpad`_ and `franz-recipe-clockwise`_).
 
 - The `Brew`_ formula for `youtube-viewer`_ (similarly aptly-named link:
   `homebrew-youtube-viewer`_).
@@ -36,8 +36,8 @@ read-only.
 
 - I enjoy programming `challenges`_ and keep track of all of my answers along
   with their performance. I've answered challenges in `Clojure`_, C++,
-  `Julia`_, and Python (both 2 and 3), and often use this as an excuse to learn
-  new languages or paradigms.
+  `Julia`_, `Nim`_, Python (and maybe more by now!), and often use this as an
+  excuse to learn new languages or paradigms.
 
 - Any ad-hoc projects will often end up in my `experiments`_. This contains a
   bunch of small tidbits, generally to answer some specific problem: "how do
@@ -81,6 +81,7 @@ Open-Source'd Through Work
 - `gcloud-rest`_: threadsafe Python library for GCP APIs
 - `redis-cli-cluster`_: ``redis-cli`` clone with native cluster support
 - `pystun3`_: ``pystun`` fork with Python 3 support
+- `yaaredis`_: ``aredis`` fork with improved async stability
 
 OSS Contributions
 -----------------
@@ -93,6 +94,7 @@ Features
 - `macports - contribute p5-lwp-useragent-cached port`_
 - `macports - contribute skhd port`_
 - `macports - contribute yabai port`_
+- `macports - contribute youtube-viewer port`_
 - `pylint_import_modules - support globally allowed direct imports`_
 - `renovate - support arbitrary versioning schemes`_
 - `renovate - support envvar interpolation in requirements files`_
@@ -109,6 +111,7 @@ Fixes
 
 .. _Brew: https://brew.sh/
 .. _CV: https://github.com/TheKevJames/cv
+.. _Clockwise: https://www.getclockwise.com/
 .. _Clojure: https://clojure.org/
 .. _Cloudflare: https://www.cloudflare.com/
 .. _Coveralls: https://coveralls.io/
@@ -119,6 +122,7 @@ Fixes
 .. _Franz: https://meetfranz.com/
 .. _Homebrew: https://brew.sh/
 .. _Julia: https://julialang.org/
+.. _Nim: https://nim-lang.org/
 .. _Puppet: https://puppet.com/
 .. _Sentry (python, raven) - fix support for Python 3.8: https://github.com/getsentry/raven-python/pull/1298
 .. _SublimeLinter - support inline tooltips: https://github.com/SublimeLinter/SublimeLinter/pull/552/
@@ -134,6 +138,7 @@ Fixes
 .. _deprecated: https://github.com/TheKevJames/deprecated
 .. _dotsystem: https://github.com/TheKevJames/dotsystem
 .. _experiments: https://github.com/TheKevJames/experiments
+.. _franz-recipe-clockwise: https://github.com/TheKevJames/franz-recipe-clockwise
 .. _franz-recipe-dialpad: https://github.com/TheKevJames/franz-recipe-dialpad
 .. _gcloud-aio: https://github.com/talkiq/gcloud-aio
 .. _gcloud-rest: https://github.com/talkiq/gcloud-rest
@@ -145,6 +150,7 @@ Fixes
 .. _macports - contribute p5-lwp-useragent-cached port: https://github.com/macports/macports-ports/pull/9003
 .. _macports - contribute skhd port: https://github.com/macports/macports-ports/pull/9005
 .. _macports - contribute yabai port: https://github.com/macports/macports-ports/pull/9006
+.. _macports - contribute youtube-viewer port: https://github.com/macports/macports-ports/pull/11381
 .. _protobuf (python) - fix support for Python 3.8: https://github.com/protocolbuffers/protobuf/pull/5195
 .. _publishing: https://github.com/TheKevJames/publishing
 .. _puppet-homebrew: https://github.com/TheKevJames/puppet-homebrew
@@ -159,5 +165,6 @@ Fixes
 .. _tidbits: https://github.com/TheKevJames/tidbits
 .. _tools: https://github.com/TheKevJames/tools
 .. _web: https://github.com/TheKevJames/web
+.. _yaaredis: https://github.com/talkiq/yaaredis
 .. _you-should-read: https://github.com/TheKevJames/you-should-read
 .. _youtube-viewer: https://github.com/trizen/youtube-viewer

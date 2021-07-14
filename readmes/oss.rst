@@ -98,6 +98,7 @@ Features
 - `pylint_import_modules - support globally allowed direct imports`_
 - `renovate - support arbitrary versioning schemes`_
 - `renovate - support envvar interpolation in requirements files`_
+- `renovate - support lockfiles in subdirs`_
 
 Fixes
 ^^^^^
@@ -161,6 +162,7 @@ Fixes
 .. _renovate - fix HTTP auth for NOPASS indexes: https://github.com/renovatebot/renovate/pull/8442
 .. _renovate - support arbitrary versioning schemes: https://github.com/renovatebot/renovate/pull/4273
 .. _renovate - support envvar interpolation in requirements files: https://github.com/renovatebot/renovate/pull/6648
+.. _renovate - support lockfiles in subdirs: https://github.com/renovatebot/renovate/pull/10689
 .. _sensu-plugins-elasticsearch - support installations with partially disabled metrics: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/
 .. _tidbits: https://github.com/TheKevJames/tidbits
 .. _tools: https://github.com/TheKevJames/tools

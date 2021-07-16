@@ -9,4 +9,4 @@ Flask==1.1.4
 # Werkzeug==0.14.1
 # wheel==0.31.1
 
-sucks==0.9.3
+sucks==0.9.6

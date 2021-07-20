@@ -28,47 +28,6 @@ orbs:
               path: artifacts/<<parameters.dir>>/
 
 jobs:
-  # TODO: configure in terraform
-  functions:
-    docker:
-      - image: google/cloud-sdk:latest
-    environment:
-      GOOGLE_APPLICATION_CREDENTIALS: /gcloud-service-key.json
-    steps:
-      - run:
-          name: authenticate with google cloud
-          command: |
-            echo "${GCLOUD_SERVICE_KEY}" > "${GOOGLE_APPLICATION_CREDENTIALS}"
-            gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
-            gcloud config set project "thekevjames-175823"
-      - checkout
-      - run:
-          name: grab env vars
-          command: |
-            cd functions/
-            echo "API_TOKEN: ${API_TOKEN}" >> .env.yaml
-            echo "SUCKS_DEVICE_ID: ${SUCKS_DEVICE_ID}" >> .env.yaml
-            echo "SUCKS_EMAIL: ${SUCKS_EMAIL}" >> .env.yaml
-            echo "SUCKS_PASSWORD_HASH: ${SUCKS_PASSWORD_HASH}" >> .env.yaml
-      - run:
-          name: gcloud functions deploy tucker_run
-          command: |
-            cd functions/
-            gcloud functions deploy tucker_run \
-              --memory=128MB \
-              --runtime python37 \
-              --trigger-http \
-              --env-vars-file .env.yaml
-      - run:
-          name: gcloud functions deploy tucker_stop
-          command: |
-            cd functions/
-            gcloud functions deploy tucker_stop \
-              --memory=128MB \
-              --runtime python37 \
-              --trigger-http \
-              --env-vars-file .env.yaml
-
   quotes-json:
     docker:
       - image: thekevjames/minify:2.9.19
@@ -180,13 +139,6 @@ workflows:
     jobs:
       - linter/pre-commit:
           python_version: 3.7.4
-
-      - functions:
-          requires:
-            - linter/pre-commit
-          filters:
-            branches:
-              only: master
 
       - web/app:
           name: hexclock

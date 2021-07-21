@@ -88,6 +88,11 @@ def blog_rss() -> Any:
     return response
 
 
+@app.route('/publications.html')
+def publications() -> Any:
+    return flask.render_template('publications.html')
+
+
 @app.route('/reviews/')
 def reviews() -> Any:
     return flask.render_template(
@@ -134,6 +139,8 @@ def ping() -> str:
 
 
 # https://tools.ietf.org/html/draft-foudil-securitytxt-05
+# TODO: why is `.well-known` redirecting weirdly? This 404s and the home link
+# breaks in any 404 with a subdir.
 @app.route('/.well-known/security.txt')
 def security() -> Any:
     return flask.redirect(flask.url_for('static', filename='security.txt'))

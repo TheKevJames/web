@@ -132,7 +132,7 @@ nav {
   .nav-small {
     display: none !important; }
 
-@media (max-width:414px) {
+@media (max-width:360px) {
   nav div {
     margin-left: 5px;
     margin-right: 5px; }
@@ -152,18 +152,13 @@ img {
     <div>
         <a href="{{ url_for('index') }}">Home</a>
     </div>
-    <div class='nav-small dropdown'>
-        <a href="#">Writing &#x25BE;</a>
+    <div class='dropdown'>
+        <a href="{{ url_for('publications') }}">Writing &#x25BE;</a>
         <div class='dropdown-content'>
             <a href="{{ url_for('blog') }}">Blog</a>
             <a href="{{ url_for('reviews') }}">Reviews</a>
+            <a href="{{ url_for('publications') }}">Other Pubs</a>
         </div>
-    </div>
-    <div class='nav-large'>
-        <a href="{{ url_for('blog') }}">Blog</a>
-    </div>
-    <div class='nav-large'>
-        <a href="{{ url_for('reviews') }}">Reviews</a>
     </div>
     <div class='dropdown'>
         <a href='#'>Me &#x25BE;</a>

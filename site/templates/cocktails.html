@@ -1,0 +1,335 @@
+{% extends "layout.html" %}
+
+{% block title %}Cocktails{% endblock %}
+
+{% block body %}
+<svg width='0' height='0' viewBox='0 0 0 0'>
+    <defs>
+        <g id='dry-down'>
+            <polygon points='0,-7 0,7 9,0' />
+        </g>
+
+        <g id='dry-up'>
+            <polygon points='0,0 9,-7 9,7' />
+        </g>
+
+        <g id='fill-down'>
+            <polygon points='0,-7 0,7 9,0' fill='#fff' />
+        </g>
+
+        <g id='fill-up'>
+            <polygon points='0,0 9,-7 9,7' fill='#fff' />
+        </g>
+
+        <g id='shake-down'>
+            <line x1='0' y1='-7' x2='0' y2='7'></line>
+            <line x1='3' y1='-5' x2='3' y2='5'></line>
+            <line x1='6' y1='-3' x2='6' y2='3'></line>
+            <line x1='9' y1='-1' x2='9' y2='1'></line>
+        </g>
+
+        <g id='shake-up'>
+            <line x1='0' y1='-1' x2='0' y2='1'></line>
+            <line x1='3' y1='-3' x2='3' y2='3'></line>
+            <line x1='6' y1='-5' x2='6' y2='5'></line>
+            <line x1='9' y1='-7' x2='9' y2='7'></line>
+        </g>
+    </defs>
+</svg>
+
+<div id='content'>
+    <div id='cocktails'>
+        <div class='list'>
+            <div id='berry-punch'>
+                <h3><a href='#berry-punch'>Berry Punch</a></h3>
+                <p class='description'>2:1:1 Vodka:lemonade:berry juice (I recommend Strawberry, but most will work). Toss in about two teaspoons of frozen mixed berries, then shake a bit (not too vigourously). Pour into a highball glass, garnish with lemon slices and mint sprigs.</p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>2VS<tspan class='sub' dy='-10'>-</tspan><tspan dy='+10'>Le</tspan><tspan class='sub' dy='-10'>-</tspan><tspan dy='+10'>J</tspan><tspan class='sub'>berry</tspan></text>
+                            <use xlink:href='#shake-up' x='90' y='43' />
+                            <text x='105' y='50'>frozen berries + 2(LiG<tspan class='sub'>m</tspan>)</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id='bluebird'>
+                <h3><a href='#bluebird'>Bluebird</a></h3>
+                <p class='description'>1.5oz gin : .5 oz blue curacao : 1 dash bitters</p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>3GL<tspan class='sub'>orange</tspan>&#x2644;</text>
+                            <use xlink:href='#shake-up' x='80' y='43' />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id='chocolate-martini'>
+                <h3><a href='#chocolate-martini'>Chocolate Martini</a></h3>
+                <p class='description'>Baileys, chocolate liqueur, and vodka; even ratio. For maximum presentation, rim a martini glass with chocolate sauce, squirt a bit into the glass, then pour in the booze (shaken with ice then strained).</p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>VL<tspan class='sub'>irish cream</tspan>L<tspan class='sub'>chocolate</tspan></text>
+                            <use xlink:href='#shake-down' x='125' y='43' />
+                            <text x='140' y='50'>S<tspan class='sub'>chocolate</tspan></text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id='gin-rickey'>
+                <h3><a href='#gin-rickey'>Gin Rickey</a></h3>
+                <p class='description'></p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>2G<tspan class='sub' dy='-10'>+</tspan><tspan dy='+10'>Li</tspan></text>
+                            <use xlink:href='#fill-up' x='50' y='43' />
+                            <text x='65' y='50'>soda + LiC</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id='hemingway-daiquiri'>
+                <h3><a href='#hemingway-daiquiri'>Hemingway Daiquiri</a></h3>
+                <p class='description'>Mix 4:2:2:3:1 shots of dark rum, cherry liquor, grapefruit juice, lime juice, and simple syrup, add ice and shake, strain into a cocktail glass. Garnish with a lime wheel and brandied cherry skewered together.</p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>4R<tspan class='sub'>d</tspan></text>
+                            <line x1='30' y1='43' x2='47' y2='23' />
+                            <text x='50' y='30'>2L<tspan class='sub'>cherry</tspan></text>
+                            <line x1='30' y1='43' x2='47' y2='43' />
+                            <text x='50' y='50'>3LiS</text>
+                            <line x1='30' y1='43' x2='47' y2='63' />
+                            <text x='50' y='70'>2J<tspan class='sub'>grapefruit</tspan></text>
+                            <use xlink:href='#shake-down' x='90' y='43' />
+                            <text x='105' y='50'>LiC<tspan class='sub'>brandied</tspan></text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id='honey-old-fashioned'>
+                <h3><a href='#honey-old-fashioned'>Honey Old Fashioned</a></h3>
+                <p class='description'></p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>2W<tspan class='sub'>b</tspan>2R<tspan class='sub'>d</tspan>R<tspan class='sub'>w</tspan></text>
+                            <use xlink:href='#shake-up' x='85' y='43' />
+                            <text x='100' y='50'>2H2Sg&#x2644;</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id='rainbow-lagoon'>
+                <h3><a href='#rainbow-lagoon'>Rainbow Lagoon</a></h3>
+                <p class='description'>Pour one shot grenadine, then fill the glass with ice. Mix 4:2 shots pineapple juice and coconut rum, the pour slowly onto the ice. Mix a half shot of blue curacao with twice as much water, then pour slowly as the third layer. The trick is to pour <i>onto</i>the ice cubes so you get a real soft landing and the layers stay separate!</p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>S<tspan class='sub'>c</tspan>=4J<tspan class='sub'>pineapple</tspan>2R<tspan class='sub'>c</tspan>=2H<tspan class='sub'>2</tspan>OL<tspan class='sub'>orange</tspan><tspan class='sub' dy='-10'>-</tspan></text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id='whiskey-sour'>
+                <h3><a href='#whiskey-sour'>Whiskey Sour</a></h3>
+                <p class='description'></p>
+                <div class='diagram'>
+                    <svg width='400' height='100'>
+                        <g transform='translate(50, 8)'>
+                            <text x='0' y='50'>2W<tspan class='sub'>b</tspan>SLi<tspan class='sub' dy='-10'>-</tspan><tspan dy='+10'> </tspan></text>
+                            <use xlink:href='#dry-up' x='65' y='43' />
+                            <text x='80' y='50'>E + 2&#x2644;</text>
+                            <use xlink:href='#shake-down' x='138' y='43' />
+                            <text x='153' y='50'>C</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id='legend'>
+        <div class='row'>
+            <h2>Legend</h2>
+
+            <dl>
+                <dt>C</dt>
+                <dd>Cherry. Sometimes with a modifier for eg. <sub>brandied</sub> or <sub>sour</sub> cherries. Technically a garnish, but popular enough for me to avoid the nesting.</dd>
+
+                <dt>E</dt>
+                <dd>Egg white.</dd>
+
+                <dt>G</dt>
+                <dd>Gin. With a modifier, means garnish; eg. G<sub>m</sub> for mint.</dd>
+    
+                <dt>H</dt>
+                <dd>Honey.</dd>
+
+                <dt>H<sub>2</sub>O</dt>
+                <dd>Water. Specifically, liquid water; ice is handled via the mixing shapes.</dd>
+
+                <dt>J</dt>
+                <dd>Juice. Flavour provided as a modifier.</dd>
+
+                <dt>L</dt>
+                <dd>Liquour. Flavour provided as a modifier.</dd>
+
+                <dt>Li</dt>
+                <dd>Lime Juice.</dd>
+
+                <dt>R</dt>
+                <dd>Rum. Possible modifiers include <b>c</b>oconut, <b>d</b>ark, <b>s</b>piced, and <b>w</b>hite.</dd>
+
+                <dt>S</dt>
+                <dd>Syrup. Symple syrup by default, flavoured with a modifier such as <b>c</b>herry (ie. Grenadine), <b>s</b>our, or <b>o</b>range.</dd>
+
+                <dt>Sg</dt>
+                <dd>Sugar, ie. finely granulated white sugar.</dd>
+
+                <dt>W</dt>
+                <dd>Whiskey. Possible modifiers include <b>b</b>ourboun, <b>i</b>rish, <b>r</b>ye, and <b>s</b>cotch.</dd>
+
+                <dt>&#x2644;</dt>
+                <dd>Bitters (by the dash). Don't ask me why I started using the alchemical symbol for lead to denote bitters, I'm sure it made sense at the time.</dd>
+
+                <dt><sup>+</sup> or <sup>-</sup></dt>
+                <dd>Half a shot more or less than described.</dd>
+            </dl>
+        </div>
+
+        <div class='row'>
+            <h2>Mixing</h2>
+
+            <dl>
+                <dt><svg height='20' width='15'><use xlink:href='#shake-down' y='10' /></svg></dt>
+                <dd>Shake with ice, strain into glass.</dd>
+
+                <dt><svg height='20' width='15'><use xlink:href='#dry-down' y='10' /></svg></dt>
+                <dd>Dry shake.</dd>
+
+                <dt><svg height='20' width='15'><use xlink:href='#fill-down' y='10' /></svg></dt>
+                <dd>Fill glass and stir.</dd>
+
+                <dt><svg height='20' width='15'><use xlink:href='#shake-up' y='10' /></svg>, <svg height='20' width='15'><use xlink:href='#dry-up' y='10' /></svg>, or <svg height='20' width='15'><use xlink:href='#fill-up' y='10' /></svg></dt>
+                <dd>Reversing the symbol means "add ice".</dd>
+
+                <dt>=</dt>
+                <dd>Construct rather than mix, eg. for creating layers.</dd>
+            </dl>
+        </div>
+
+        <div class='row'>
+            <h2>Recipes</h2>
+
+            <dl>
+                <dt>Simple Syrup</dt>
+                <dd>I tend to prefer a 1:1 mix between water and sugar.</dd>
+
+                <dt>Sour Mix</dt>
+                <dd>4:3:2 ratio of simple syrup, lime juice, and lemon juice.</dd>
+
+                <dt>Brandied Cherries</dt>
+                <dd>Take pitless cherries (preferably sour), toss them in a mason jar with brandy syrup (2:3:4 ratio of sugar:water:cheap brandy, melted together). Cool at least 30m.</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block css %}
+<style>
+svg {
+  stroke: #fff;
+  stroke-width: 1;
+  fill: none; }
+  svg text {
+    font-size: 20px;
+    stroke: none;
+    fill: #fff; }
+    svg text tspan.sub {
+      font-size: 10px; }
+
+/* columns */
+#cocktails {
+  width: 100%;
+  float: left; }
+  #cocktails h2 {
+    padding: 0 4%; }
+#legend {
+  width: 100%;
+  float: right; }
+@media (min-width:801px)  {
+  #cocktails {
+    width: 60%; }
+  #legend {
+    width: 40%; } }
+
+/* tag header */
+@media (max-width:600px)  {
+  .hidden-small {
+    display: none; } }
+
+#legend ul li {
+  margin-bottom: 0;
+  padding: 5px; }
+  #legend ul li ul li {
+    padding: 1px; }
+
+.list div {
+  width: 90%;
+  margin: 10px 5% 20px 5%;
+  border: 1px #a89984 solid;
+  border-radius: 4px; }
+  .list div h3 {
+    font-size: 28px;
+    font-weight: normal;
+    text-transform: none;
+    padding: 5px;
+    margin: 10px 0 5px;
+    text-align: center; }
+    .list div h3 a {
+        color: #ebdbb2; }
+  .list div p {
+    text-transform: none;
+    padding: 5px; }
+    .list div p.description {
+      padding-left: 15px;
+      padding-right: 15px; }
+  .list div .live {
+    background-color: #458588;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    padding: 5px;
+    color: #ebdbb2;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity .5s ease-out; }
+    .list div .live:hover {
+      opacity: 0.8;
+      transition: opacity .5s ease-out; }
+  .list div :last-child {
+    border-radius: 0 0 4px 4px; }
+@media (prefers-color-scheme: light) {
+  .list div {
+    border: 1px #7c6f64 solid; }
+    .list div h3 a {
+        color: #3c3836; }
+    .list div .live {
+      color: #3c3836; } }
+</style>
+{% endblock %}

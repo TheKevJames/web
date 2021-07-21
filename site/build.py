@@ -74,6 +74,11 @@ def blog_post(name: str) -> Any:
     return flask.render_template('post.html', post=post)
 
 
+@app.route('/cocktails.html')
+def cocktails() -> Any:
+    return flask.render_template('cocktails.html')
+
+
 # TODO: reviews rss?
 @app.route('/feed.xml')
 def blog_rss() -> Any:

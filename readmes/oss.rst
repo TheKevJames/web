@@ -25,6 +25,9 @@ These are the "brag-worthy" and "public use" ones. Recruiters, look here.
 - The `Franz`_/`Ferdi`_ recipes for `Dialpad`_ and `Clockwise`_ (aptly-named
   repo links: `franz-recipe-dialpad`_ and `franz-recipe-clockwise`_).
 
+- The `MacPorts`_ ports for `several things`_, most notably `skhd`_, `yabai`_,
+  and `youtube-viewer`_.
+
 - The `Brew`_ formula for `youtube-viewer`_ (similarly aptly-named link:
   `homebrew-youtube-viewer`_).
 
@@ -123,6 +126,7 @@ Fixes
 .. _Franz: https://meetfranz.com/
 .. _Homebrew: https://brew.sh/
 .. _Julia: https://julialang.org/
+.. _MacPorts: https://www.macports.org/
 .. _Nim: https://nim-lang.org/
 .. _Puppet: https://puppet.com/
 .. _Sentry (python, raven) - fix support for Python 3.8: https://github.com/getsentry/raven-python/pull/1298
@@ -164,9 +168,11 @@ Fixes
 .. _renovate - support envvar interpolation in requirements files: https://github.com/renovatebot/renovate/pull/6648
 .. _renovate - support lockfiles in subdirs: https://github.com/renovatebot/renovate/pull/10689
 .. _sensu-plugins-elasticsearch - support installations with partially disabled metrics: https://github.com/sensu-plugins/sensu-plugins-elasticsearch/pull/85/
+.. _several things: https://ports.macports.org/search/?selected_facets=maintainers_exact:thekevjames
+.. _skhd: https://github.com/koekeishiya/skhd
 .. _tidbits: https://github.com/TheKevJames/tidbits
 .. _tools: https://github.com/TheKevJames/tools
 .. _web: https://github.com/TheKevJames/web
 .. _yaaredis: https://github.com/talkiq/yaaredis
-.. _you-should-read: https://github.com/TheKevJames/you-should-read
+.. _yabai: https://github.com/koekeishiya/yabai
 .. _youtube-viewer: https://github.com/trizen/youtube-viewer

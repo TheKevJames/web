@@ -6,7 +6,7 @@ authors = ["Kevin James <KevinJames@thekev.in>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-flask = "2.0.1"
+flask = "2.0.2"
 flask-flatpages = "0.7.3"
 frozen-flask = "0.15"
 pygments = "2.10.0"

@@ -11,11 +11,16 @@
       <outline text="Allison Kaptur" title="Allison Kaptur" type="rss" xmlUrl="http://akaptur.com/atom.xml" htmlUrl="http://akaptur.github.com/"/>
       <outline text="Andrew Fallant (burntsushi)" title="Andrew Fallant (burntsushi)" type="rss" xmlUrl="https://blog.burntsushi.net/index.xml" htmlUrl="https://blog.burntsushi.net/"/>
       <outline text="Armin Ronacher" title="Armin Ronacher" type="rss" xmlUrl="http://lucumr.pocoo.org/feed.atom" htmlUrl="http://lucumr.pocoo.org/"/>
+      <outline text="Austin Henley" title="Austin Henley" type="rss" xmlUrl="https://austinhenley.com/blog/feed.rss" htmlUrl="https://austinhenley.com/blog.html"/>
       <outline text="Avery Pennarun (apenwarr)" title="Avery Pennarun (apenwarr)" type="rss" xmlUrl="https://apenwarr.ca/log/rss.php" htmlUrl="https://apenwarr.ca/log/"/>
+      <outline text="Ben Cartwright-Cox (benjojo)" title="Ben Cartwright-Cox (benjojo)" type="rss" xmlUrl="https://blog.benjojo.co.uk/rss.xml" htmlUrl="https://blog.benjojo.co.uk/"/>
+      <outline text="Brad (go350)" title="Brad (go350)" type="rss" xmlUrl="https://www.go350.com/index.xml" htmlUrl="https://www.go350.com/"/>
       <outline text="Bruce Dawson (Random ASCII)" title="Bruce Dawson (Random ASCII)" type="rss" xmlUrl="https://randomascii.wordpress.com/feed/" htmlUrl="http://randomascii.wordpress.com/"/>
       <outline text="Carl Svensson (datagubbe)" title="Carl Svensson (datagubbe)" type="rss" xmlUrl="https://datagubbe.se/atom.xml" htmlUrl="https://datagubbe.se/"/>
       <outline text="Charity Majors (charity.wtf)" title="Charity Majors (charity.wtf)" type="rss" xmlUrl="https://charity.wtf/feed/" htmlUrl="https://charity.wtf/"/>
       <outline text="Chris Wellons (null program)" title="Chris Wellons (null program)" type="rss" xmlUrl="https://nullprogram.com/feed/" htmlUrl="https://nullprogram.com/index/"/>
+      <outline text="Dan Luu" title="Dan Luu" type="rss" xmlUrl="https://danluu.com/atom.xml" htmlUrl="https://danluu.com/"/>
+      <outline text="Dan McKinley" title="Dan McKinley" type="rss" xmlUrl="https://mcfunley.com/feed.xml" htmlUrl="https://mcfunley.com/writing"/>
       <outline text="Daniel Lemire" title="Daniel Lemire" type="rss" xmlUrl="https://lemire.me/blog/feed/" htmlUtl="https://lemire.me/blog/"/>
       <outline text="David MacIver" title="David MacIver" type="rss" xmlUrl="https://www.drmaciver.com/feed/" htmlUrl="https://www.drmaciver.com/"/>
       <outline text="Drew DeVault" title="Drew DeVault" type="rss" xmlUrl="https://drewdevault.com/feed.xml" htmlUrl="https://drewdevault.com/"/>
@@ -24,6 +29,7 @@
       <outline text="Increment" title="Increment" type="rss" xmlUrl="https://increment.com/feed.xml" htmlUrl="https://increment.com/"/>
       <outline text="James Brown (Roguelazer)" title="James Brown (Roguelazer)" type="rss" xmlUrl="https://www.roguelazer.com/feeds/rss.xml" htmlUrl="https://www.roguelazer.com/"/>
       <outline text="Jeff Atwood (Coding Horror)" title="Jeff Atwood (Coding Horror)" type="rss" xmlUrl="http://feeds.feedburner.com/codinghorror" htmlUrl="http://blog.codinghorror.com/"/>
+      <outline text="Jeff Geerling" title="Jeff Geerling" type="rss" xmlUrl="https://www.jeffgeerling.com/blog.xml" htmlUrl="https://www.jeffgeerling.com/blog"/>
       <outline text="Jestem Kroliczkiem (beepb00p)" title="Jestem Kroliczkiem (beepb00p)" type="rss" xmlUrl="https://beepb00p.xyz/rss.xml" htmlUrl="https://beepb00p.xyz/"/>
       <outline text="Joe Beda (80%)" title="Joe Beda (80%)" type="rss" xmlUrl="https://www.eightypercent.net/index.xml" htmlUrl="http://www.eightypercent.net/"/>
       <outline text="Joel Perras (Nerderati)" title="Joel Perras (Nerderati)" type="rss" xmlUrl="http://nerderati.com/atom.xml" htmlUrl="http://nerderati.com/"/>

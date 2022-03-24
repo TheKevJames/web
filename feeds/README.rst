@@ -11,10 +11,12 @@ individual lists you're interested in.
 * If you have similar taste as me, you might like my `music subscriptions`_.
 * Whenever possible, anything I'm `actively reading goes here`_.
 * You probably aren't here to follow the `folks I know`_.
+* And, of course, no collection is complete without having `misc others`_.
 
+.. _Tech blogs from companies: https://github.com/TheKevJames/web/blob/master/feeds/tech-people.xml
 .. _actively reading goes here: https://github.com/TheKevJames/web/blob/master/feeds/stories.xml
 .. _daily funnies: https://github.com/TheKevJames/web/blob/master/feeds/funny.xml
 .. _folks I know: https://github.com/TheKevJames/web/blob/master/feeds/friends.xml
+.. _misc others: https://github.com/TheKevJames/web/blob/master/feeds/other.xml
 .. _music subscriptions: https://github.com/TheKevJames/web/blob/master/feeds/music.xml
-.. _Tech blogs from companies: https://github.com/TheKevJames/web/blob/master/feeds/tech-people.xml
 .. _tech blogs: https://github.com/TheKevJames/web/blob/master/feeds/tech-companies.xml

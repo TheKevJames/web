@@ -16,9 +16,11 @@ from utils import collect_by_tags
 app = flask.Flask(__name__, static_url_path='')
 app.config.update(
     FLATPAGES_BLOG_EXTENSION='.md',
+    FLATPAGES_BLOG_LEGACY_META_PARSER=True,  # TODO?
     FLATPAGES_BLOG_MARKDOWN_EXTENSIONS=['codehilite', 'tables'],
     FLATPAGES_BLOG_ROOT='pages/blog',
     FLATPAGES_REVIEWS_EXTENSION='.md',
+    FLATPAGES_REVIEWS_LEGACY_META_PARSER=True,  # TODO?
     FLATPAGES_REVIEWS_MARKDOWN_EXTENSIONS=[],
     FLATPAGES_REVIEWS_ROOT='pages/reviews',
 )

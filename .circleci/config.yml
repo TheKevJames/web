@@ -55,7 +55,7 @@ jobs:
 
   site:
     docker:
-      - image: python:3.10.6
+      - image: python:3.10.7
     steps:
       - run: python3 -m pip install poetry
       - checkout

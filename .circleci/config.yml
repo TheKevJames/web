@@ -1,36 +1,44 @@
 version: 2.1
 
 orbs:
-  linter: thekevjames/linter@0.1
+  linter: talkiq/linter@3
+  poetry: talkiq/poetry@4
 
-  web:
-    jobs:
-      app:
-        docker:
-          - image: thekevjames/minify:2.10.0
-        parameters:
-          dir:
-            type: string
-        steps:
-          - run:
-              name: install dependencies
-              command: apk add --update ca-certificates openssl
-          - checkout
-          - run: mkdir -p artifacts/<<parameters.dir>>
-          - run: cp shared/* artifacts/<<parameters.dir>>/
-          - run: cp <<parameters.dir>>/* artifacts/<<parameters.dir>>/
-          - run: minify --recursive --output artifacts/ artifacts/
-          - persist_to_workspace:
-              root: artifacts
-              paths:
-                - <<parameters.dir>>/
-          - store_artifacts:
-              path: artifacts/<<parameters.dir>>/
+executors:
+  minify:
+    docker:
+      - image: tdewolff/minify:latest
+    resource_class: small
+  python:
+    docker:
+      - image: python:3.10.7
+    resource_class: small
 
 jobs:
+  app:
+    executor: minify
+    parameters:
+      dir:
+        type: string
+    steps:
+      - run:
+          name: install dependencies
+          command: apk add --update ca-certificates openssl
+      - checkout
+      - run: mkdir -p artifacts/<<parameters.dir>>
+      - run: cp shared/* artifacts/<<parameters.dir>>/
+      - run: cp <<parameters.dir>>/* artifacts/<<parameters.dir>>/
+      - run: minify --recursive --output artifacts/ artifacts/
+      - persist_to_workspace:
+          root: artifacts
+          paths:
+            - <<parameters.dir>>/
+      - store_artifacts:
+          path: artifacts/<<parameters.dir>>/
+
+  # TODO: build off "app" plus a pre-step
   quotes-json:
-    docker:
-      - image: thekevjames/minify:2.10.0
+    executor: minify
     steps:
       - run:
           name: install dependencies
@@ -54,10 +62,9 @@ jobs:
           path: artifacts/quotes/
 
   site:
-    docker:
-      - image: python:3.10.7
+    executor: python
     steps:
-      - run: python3 -m pip install poetry
+      - poetry/install
       - checkout
       - run:
           command: poetry install -n
@@ -78,8 +85,7 @@ jobs:
             - build/
 
   site-minify:
-    docker:
-      - image: thekevjames/minify:2.10.0
+    executor: minify
     steps:
       - run:
           name: install dependencies
@@ -95,8 +101,7 @@ jobs:
           path: site/build/
 
   www-redir:
-    docker:
-        - image: thekevjames/minify:2.10.0
+    executor: minify
     steps:
       - run:
           name: install dependencies
@@ -138,14 +143,14 @@ workflows:
   run-jobs:
     jobs:
       - linter/pre-commit:
-          python_version: 3.7.4
+          executor: python
 
-      - web/app:
+      - app:
           name: hexclock
           dir: hexclock
           requires:
             - linter/pre-commit
-      - web/app:
+      - app:
           name: quotes
           dir: quotes
           requires:
@@ -153,7 +158,7 @@ workflows:
       - quotes-json:
           requires:
             - linter/pre-commit
-      - web/app:
+      - app:
           name: webcycle
           dir: webcycle
           requires:

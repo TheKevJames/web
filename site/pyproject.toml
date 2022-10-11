@@ -14,15 +14,6 @@ flask = "2.2.2"
 flask-flatpages = "0.8.1"
 pygments = "2.13.0"
 
-[[tool.mypy.overrides]]
-# TODO: the below libraries don't have type hints
-# https://mypy.readthedocs.io/en/stable/running_mypy.html#ignore-missing-imports
-module = [
-  'flask_flatpages.*',
-  'flask_frozen.*',
-]
-ignore_missing_imports = true
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

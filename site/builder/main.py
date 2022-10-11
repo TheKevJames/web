@@ -13,17 +13,21 @@ from .utils import collect_by_key
 from .utils import collect_by_tags
 
 
-app = flask.Flask(__name__, static_url_path='', static_folder='../static',
-                  template_folder='../templates')
+SITE_DIR = pathlib.Path(__file__).resolve().parents[1]
+PAGES_DIR = SITE_DIR / 'pages'
+
+app = flask.Flask(__name__, static_url_path='',
+                  static_folder=str(SITE_DIR / 'static'),
+                  template_folder=str(SITE_DIR / 'templates'))
 app.config.update(
     FLATPAGES_BLOG_EXTENSION='.md',
     FLATPAGES_BLOG_LEGACY_META_PARSER=True,  # TODO?
     FLATPAGES_BLOG_MARKDOWN_EXTENSIONS=['codehilite', 'tables'],
-    FLATPAGES_BLOG_ROOT='../pages/blog',
+    FLATPAGES_BLOG_ROOT=PAGES_DIR / 'blog',
     FLATPAGES_REVIEWS_EXTENSION='.md',
     FLATPAGES_REVIEWS_LEGACY_META_PARSER=True,  # TODO?
     FLATPAGES_REVIEWS_MARKDOWN_EXTENSIONS=[],
-    FLATPAGES_REVIEWS_ROOT='../pages/reviews',
+    FLATPAGES_REVIEWS_ROOT=PAGES_DIR / 'reviews',
 )
 app.config.update(
     FREEZER_BASE_URL='https://thekev.in/',
@@ -129,10 +133,9 @@ def review_page(name: str) -> Any:
 
 @freezer.register_generator  # type: ignore
 def frozen_flatpages() -> Iterable[Tuple[str, Dict[str, str]]]:
-    pages = pathlib.Path(__file__).resolve().parents[1] / 'pages'
-    for name in (pages / 'blog').iterdir():
+    for name in (PAGES_DIR / 'blog').iterdir():
         yield 'blog_post', {'name': name.stem}
-    for name in (pages / 'reviews').iterdir():
+    for name in (PAGES_DIR / 'reviews').iterdir():
         yield 'review_page', {'name': name.stem}
 
 

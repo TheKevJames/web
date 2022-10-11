@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import operator
 import pathlib
 from typing import Any
@@ -9,20 +8,22 @@ from typing import Tuple
 import flask
 import flask_flatpages
 import flask_frozen
-from utils import collect_by_key
-from utils import collect_by_tags
+
+from .utils import collect_by_key
+from .utils import collect_by_tags
 
 
-app = flask.Flask(__name__, static_url_path='')
+app = flask.Flask(__name__, static_url_path='', static_folder='../static',
+                  template_folder='../templates')
 app.config.update(
     FLATPAGES_BLOG_EXTENSION='.md',
     FLATPAGES_BLOG_LEGACY_META_PARSER=True,  # TODO?
     FLATPAGES_BLOG_MARKDOWN_EXTENSIONS=['codehilite', 'tables'],
-    FLATPAGES_BLOG_ROOT='pages/blog',
+    FLATPAGES_BLOG_ROOT='../pages/blog',
     FLATPAGES_REVIEWS_EXTENSION='.md',
     FLATPAGES_REVIEWS_LEGACY_META_PARSER=True,  # TODO?
     FLATPAGES_REVIEWS_MARKDOWN_EXTENSIONS=[],
-    FLATPAGES_REVIEWS_ROOT='pages/reviews',
+    FLATPAGES_REVIEWS_ROOT='../pages/reviews',
 )
 app.config.update(
     FREEZER_BASE_URL='https://thekev.in/',
@@ -128,7 +129,7 @@ def review_page(name: str) -> Any:
 
 @freezer.register_generator  # type: ignore
 def frozen_flatpages() -> Iterable[Tuple[str, Dict[str, str]]]:
-    pages = pathlib.Path(__file__).resolve().parents[0] / 'pages'
+    pages = pathlib.Path(__file__).resolve().parents[1] / 'pages'
     for name in (pages / 'blog').iterdir():
         yield 'blog_post', {'name': name.stem}
     for name in (pages / 'reviews').iterdir():
@@ -151,7 +152,3 @@ def ping() -> str:
 @app.route('/.well-known/security.txt')
 def security() -> Any:
     return flask.redirect(flask.url_for('static', filename='security.txt'))
-
-
-if __name__ == '__main__':
-    freezer.freeze()

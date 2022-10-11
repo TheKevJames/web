@@ -25,8 +25,8 @@ def collect_by_tags(items: List[Any]) -> Dict[str, List[Any]]:
     for item in items:
         for t in item.meta['tags'].split(', '):
             by_tag[t].append(item)
-            subtags = [i for i, x in enumerate(t) if x == '>']
-            for i in subtags:
-                by_tag[t[:i].strip()].append(item)
+            for i, x in enumerate(t):
+                if x == '>':
+                    by_tag[t[:i].strip()].append(item)
 
     return by_tag

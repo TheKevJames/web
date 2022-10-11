@@ -1,4 +1,5 @@
 **/__pycache__/*
 **/venv/*
 .mypy_cache/*
-site/build/*
+site/builder/build/*
+site/static/favicon.png

@@ -72,6 +72,9 @@ jobs:
       - run: cp shared/* site/static/
       - run:
           command: poetry run freeze
+          environment:
+            PYTHONDEVMODE: 1
+            PYTHONWARNINGS: error
           working_directory: site
       - run:
           command: poetry run pygmentize -S gruvbox-light -f html -a .codehilite > codehilite.light.css

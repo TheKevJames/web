@@ -1,9 +1,7 @@
 import operator
 import pathlib
+from collections.abc import Iterable
 from typing import Any
-from typing import Dict
-from typing import Iterable
-from typing import Tuple
 
 import flask
 import flask_flatpages
@@ -132,7 +130,7 @@ def review_page(name: str) -> Any:
 
 
 @freezer.register_generator  # type: ignore
-def frozen_flatpages() -> Iterable[Tuple[str, Dict[str, str]]]:
+def frozen_flatpages() -> Iterable[tuple[str, dict[str, str]]]:
     for name in (PAGES_DIR / 'blog').iterdir():
         yield 'blog_post', {'name': name.stem}
     for name in (PAGES_DIR / 'reviews').iterdir():

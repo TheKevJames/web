@@ -83,7 +83,6 @@ repos:
         - --strict
         - --strict-equality
         - --warn-unreachable
-        exclude: tests/
 -   repo: https://github.com/asottile/yesqa
     rev: v1.4.0
     hooks:

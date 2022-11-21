@@ -147,23 +147,13 @@ workflows:
     jobs:
       - linter/pre-commit:
           executor: python
-
       - app:
-          name: hexclock
-          dir: hexclock
-          requires:
-            - linter/pre-commit
-      - app:
-          name: quotes
-          dir: quotes
+          matrix:
+            parameters:
+              dir: [cheatsheets, hexclock, quotes, webcycle]
           requires:
             - linter/pre-commit
       - quotes-json:
-          requires:
-            - linter/pre-commit
-      - app:
-          name: webcycle
-          dir: webcycle
           requires:
             - linter/pre-commit
       - site:

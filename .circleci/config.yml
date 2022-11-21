@@ -167,11 +167,12 @@ workflows:
             - linter/pre-commit
       - upload:
           requires:
-            - hexclock
-            - quotes
+            - app-cheatsheets
+            - app-hexclock
+            - app-quotes
+            - app-webcycle
             - quotes-json
             - site-minify
-            - webcycle
             - www-redir
           filters:
             branches:

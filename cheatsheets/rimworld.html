@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='author' content='Kevin James'>
+  <meta name='description' content="Rimworld | Game Cheatsheets">
+  <meta name='keywords' content="games,cheatsheets,nms,Rimworld">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>Rimworld | Game Cheatsheets</title>
+
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css'>
+  <link rel='icon' href='./favicon.png' />
+</head>
+
+<body>
+<div class='ui pointing secondary menu'>
+  <div class='ui container'>
+    <a class='header item' href='./index.html'>Home</a>
+    <a class='item' href='./nms.html'>No Man's Sky</a>
+    <a class='active item' href='./rimworld.html'>Rimworld</a>
+  </div>
+</div>
+
+<div class='ui main container'>
+  <div class='ui menu'>
+    <div class='item'><a href='#logical-diagram'>Logical Room Diagram</a></div>
+  </div>
+
+  <div class='ui segment'>
+    <h2 id='logical-diagram'>Logical Room Diagram</h2>
+    <pre class='mermaid'>
+      flowchart LR
+        subgraph living space
+          cemetary[Cemetary]
+          bedrooms[Bedrooms]
+          deathrest[Deathrest]
+          dining[Dining Room]
+          landing[Landing Pad]
+          library[Library]
+          meditation[Meditation Area]
+          nursery[Nursery]
+          rec[Rec Room]
+          ritual[Ritual Room]
+          school[School]
+          throne[Throne Room]
+          training[Training Grounds]
+        end
+
+        subgraph production
+          art[Art]
+          brewery[Brewery]
+          butcher[Butcher]
+          druglab[Drug Lab]
+          geneshop[Gene Shop]
+          kitchen[Kitchen]
+          manufacturing[Manufacturing]
+          masonry[Masonry]
+          mecshop[Mec Shop]
+          medlab[Med Lab]
+          research[Research]
+          refinery[Refinery]
+          scribe[Scribe]
+          smelter[Smelter]
+          tailor[Tailor]
+
+          storagechunks([Chunk Storage])
+          storageblocks([Block Storage])
+          storagemetals([Metals Storage])
+          storagesmeltables([Smeltables Storage])
+        end
+
+        subgraph combat
+          crematorium([Crematorium])
+          killbox([Killbox])
+          prison[Prison]
+          prisonhospital[Prison Hospital]
+
+          storagecorpses([Corpse Storage])
+        end
+
+        subgraph farming
+          barn[Barn]
+          farmdrugs[Drug Farms]
+          farmfood[Food Farms]
+          farmtextile[Textile Farms]
+        end
+
+        subgraph health
+          cryosleep[Cryosleep]
+          hospital[Hospital]
+          surgery[Surgery]
+
+          storagegenes([Gene Storage])
+          storagemedical([Medical Storage])
+        end
+
+        power[Power Generators]
+        storageclothes([Clothes Storage])
+        storagedrugs([Drug Storage])
+        storagefridge([Fridge])
+        storagemisc([Misc Storage])
+        storageplant([Plant Storage])
+        storagetextile([Textile Storage])
+        storageweapons([Weapon Storage])
+
+        barn & farmfood-->storagefridge
+        crematorium & killbox-->storagesmeltables-->smelter-->storagemetals-->manufacturing & mecshop
+        farmdrugs-->storageplant
+        farmtextile-->storagetextile
+        geneshop-->storagegenes-->surgery
+        killbox & prisonhospital-->storagecorpses-->crematorium
+        storageblocks-->art-->storagemisc
+        storagechunks-->masonry-->storageblocks
+        storagedrugs-->dining
+        storagefridge-->brewery-->storagedrugs
+        storagefridge-->dining
+        storagefridge-->refinery-->storagemisc
+        storagefridge<-->butcher-->kitchen & storagemisc & storagetextile
+        storagefridge<-->kitchen
+        storagemisc-->power
+        storageplant & storagetextile-->medlab-->storagemedical-->hospital & surgery
+        storageplant-->druglab-->storagedrugs
+        storagetextile-->manufacturing-->storageweapons
+        storagetextile-->scribe-->library
+        storagetextile-->tailor-->storageclothes
+
+        bedrooms---dining
+        bedrooms---nursery
+        bedrooms---rec
+        dining---meditation
+        dining---nursery
+        dining---rec
+        dining---throne
+        hospital---cryosleep
+        hospital---surgery
+        prison---geneshop
+        prison---mecshop
+        prison---prisonhospital
+        rec---cemetary
+        rec---landing
+        rec---library
+        rec---ritual
+        rec---training
+    </pre>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+<script type='module'>
+import mermaid from 'https://unpkg.com/mermaid@9.2.2/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true });
+</script>
+</body>
+</html>

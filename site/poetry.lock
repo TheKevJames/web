@@ -149,8 +149,8 @@ watchdog = ["watchdog"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = ">=3.10,<4.0"
-content-hash = "92de4622ff39586399015cd7bf0e4dfce2b77365f040c6550761783a90ae4476"
+python-versions = ">=3.11,<4.0"
+content-hash = "5a60ce6e8db0e93964e8ec0ed818fbc1185e928e71871bb91a07666c4c3dc73c"
 
 [metadata.files]
 click = [

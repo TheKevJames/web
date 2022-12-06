@@ -11,7 +11,7 @@ executors:
     resource_class: small
   python:
     docker:
-      - image: python:3.10.7
+      - image: python:3.11.0
     resource_class: small
 
 jobs:
@@ -74,7 +74,7 @@ jobs:
           command: poetry run freeze
           environment:
             PYTHONDEVMODE: 1
-            PYTHONWARNINGS: error
+            PYTHONWARNINGS: error,ignore::DeprecationWarning:certifi.core:36,ignore::DeprecationWarning:lark.utils:116,ignore::DeprecationWarning:lark.utils:117
           working_directory: site
       - run:
           command: poetry run pygmentize -S gruvbox-light -f html -a .codehilite > codehilite.light.css

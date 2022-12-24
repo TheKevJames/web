@@ -8,8 +8,10 @@ T = TypeVar('T')
 
 
 # TODO: key returns a str
-def collect_by_key(items: list[T], *,
-                   key: Callable[[T], Any]) -> dict[str, list[T]]:
+def collect_by_key(
+    items: list[T], *,
+    key: Callable[[T], Any],
+) -> dict[str, list[T]]:
     by_key: dict[str, list[T]] = collections.defaultdict(list)
     for review in sorted(items, key=key, reverse=True):
         by_key[key(review)].append(review)

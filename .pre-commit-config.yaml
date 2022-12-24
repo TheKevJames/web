@@ -34,8 +34,53 @@ repos:
     -   id: double-quote-string-fixer
     -   id: name-tests-test
     -   id: requirements-txt-fixer
--   repo: https://github.com/pycqa/pylint
-    rev: v2.15.8
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.3.1
+    hooks:
+    -   id: remove-crlf
+    -   id: remove-tabs
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v3.9.0
+    hooks:
+    -   id: reorder-python-imports
+        args: [--py311-plus]
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.3.1
+    hooks:
+    -   id: pyupgrade
+        args: [--py311-plus]
+-   repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.4.0
+    hooks:
+    -   id: add-trailing-comma
+        args: [--py36-plus]
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+    -   id: flake8
+        additional_dependencies:
+        - flake8-2020==1.7.0
+        # - flake8-broken-line==0.6.0  # TODO: https://github.com/wemake-services/flake8-broken-line/issues/281
+        - flake8-builtins==2.1.0
+        - flake8-comprehensions==3.10.1
+        - flake8-typing-imports==1.14.0
+        args:
+        # E501: line too long. Covered by autopep8.
+        - --ignore=E501
+-   repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v2.0.1
+    hooks:
+    -   id: autopep8
+        args:
+        - --in-place
+        - --aggressive
+        - --pep8-passes=2
+-   repo: https://github.com/asottile/yesqa
+    rev: v1.4.0
+    hooks:
+    -   id: yesqa
+-   repo: https://github.com/PyCQA/pylint
+    rev: v2.15.9
     hooks:
     -   id: pylint
         additional_dependencies:
@@ -57,21 +102,6 @@ repos:
         - -d too-few-public-methods
         - -d ungrouped-imports  # conflicts with reorder-python-imports
         - -d wrong-import-order  # conflicts with reorder-python-imports
--   repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.3.1
-    hooks:
-    -   id: remove-crlf
-    -   id: remove-tabs
--   repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.9.0
-    hooks:
-    -   id: reorder-python-imports
-        args: [--py39-plus]
--   repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.0
-    hooks:
-    -   id: pyupgrade
-        args: [--py311-plus]
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.991
     hooks:
@@ -83,34 +113,14 @@ repos:
         - --strict
         - --strict-equality
         - --warn-unreachable
-        exclude: tests/
--   repo: https://github.com/asottile/yesqa
-    rev: v1.4.0
-    hooks:
-    -   id: yesqa
--   repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v2.0.0
-    hooks:
-    -   id: autopep8
 -   repo: https://github.com/PyCQA/pydocstyle
     rev: 6.1.1
     hooks:
     -   id: pydocstyle
+        additional_dependencies:
+        - toml
         args:
         - --ignore=D1,D203,D205,D212,D400,D401,D404,D407,D412,D413
--   repo: https://github.com/PyCQA/flake8
-    rev: 6.0.0
-    hooks:
-    -   id: flake8
-        additional_dependencies:
-        - flake8-2020==1.7.0
-          # - flake8-broken-line==0.6.0  # TODO: enable when they support flake6
-        - flake8-builtins==2.0.1
-        - flake8-commas==2.1.0
-        - flake8-comprehensions==3.10.1
-        - flake8-typing-imports==1.14.0
-        args:
-        - --ignore=E501,W503,F401,F811
 -   repo: local
     hooks:
     -   id: pytest-fixture-require-scope

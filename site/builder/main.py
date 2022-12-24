@@ -14,9 +14,11 @@ from .utils import collect_by_tags
 SITE_DIR = pathlib.Path(__file__).resolve().parents[1]
 PAGES_DIR = SITE_DIR / 'pages'
 
-app = flask.Flask(__name__, static_url_path='',
-                  static_folder=str(SITE_DIR / 'static'),
-                  template_folder=str(SITE_DIR / 'templates'))
+app = flask.Flask(
+    __name__, static_url_path='',
+    static_folder=str(SITE_DIR / 'static'),
+    template_folder=str(SITE_DIR / 'templates'),
+)
 app.config.update(
     FLATPAGES_BLOG_EXTENSION='.md',
     FLATPAGES_BLOG_LEGACY_META_PARSER=True,  # TODO?
@@ -58,7 +60,8 @@ def index() -> Any:
 def blog() -> Any:
     return flask.render_template(
         'blog.html', by_date=POSTS_BY_YEAR, by_tag=POSTS_BY_TAG,
-        filter_tag=None, recent=POSTS[:6])
+        filter_tag=None, recent=POSTS[:6],
+    )
 
 
 @app.route('/blog/<tag>.html')
@@ -69,7 +72,8 @@ def blog_tagged(tag: str) -> Any:
 
     return flask.render_template(
         'blog.html', by_date=POSTS_BY_YEAR, by_tag=POSTS_BY_TAG,
-        filter_tag=tag, recent=POSTS_BY_TAG[tag])
+        filter_tag=tag, recent=POSTS_BY_TAG[tag],
+    )
 
 
 @app.route('/blog/<name>/')
@@ -90,7 +94,8 @@ def blog_rss() -> Any:
     for post in POSTS:
         post.meta['description'] = post.meta.get('description', post.body)
         post.meta['pub_date'] = post.meta['date'].strftime(
-            '%a, %d %b %Y 12:%M:%S GMT')
+            '%a, %d %b %Y 12:%M:%S GMT',
+        )
 
     feed = flask.render_template('feed.xml', posts=POSTS[:10])
     response = flask.make_response(feed)
@@ -107,7 +112,8 @@ def publications() -> Any:
 def reviews() -> Any:
     return flask.render_template(
         'reviews.html', by_rating=REVIEWS_BY_RATING, by_tag=REVIEWS_BY_TAG,
-        filter_tag=None, recent=REVIEWS[:8])
+        filter_tag=None, recent=REVIEWS[:8],
+    )
 
 
 @app.route('/reviews/<tag>.html')
@@ -118,8 +124,11 @@ def reviews_tagged(tag: str) -> Any:
 
     return flask.render_template(
         'reviews.html', by_rating=REVIEWS_BY_RATING, by_tag=REVIEWS_BY_TAG,
-        filter_tag=tag, recent=sorted(REVIEWS_BY_TAG[tag],
-                                      key=operator.itemgetter('title')))
+        filter_tag=tag, recent=sorted(
+            REVIEWS_BY_TAG[tag],
+            key=operator.itemgetter('title'),
+        ),
+    )
 
 
 @app.route('/reviews/<name>/')

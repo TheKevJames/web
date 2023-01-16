@@ -14,7 +14,7 @@ Active OSS Projects
 These are the "brag-worthy" and "public use" ones. Recruiters, look here.
 
 - I am the primary maintainer of the `coveralls-python`_ project used by ~12k
-  OSS projects on GitHub. No affiliation with `Coveralls`_. Over 20M downloads.
+  OSS projects on GitHub. No affiliation with `Coveralls`_. `Over 25M downloads`_.
 
 - I am the maintainer of the `Puppet`_ `Homebrew`_ plugin `puppet-homebrew`_.
   Over 210k downloads.
@@ -128,6 +128,7 @@ Fixes
 .. _Julia: https://julialang.org/
 .. _MacPorts: https://www.macports.org/
 .. _Nim: https://nim-lang.org/
+.. _Over 25M downloads: https://pepy.tech/project/coveralls
 .. _Puppet: https://puppet.com/
 .. _Sentry (python, raven) - fix support for Python 3.8: https://github.com/getsentry/raven-python/pull/1298
 .. _SublimeLinter - support inline tooltips: https://github.com/SublimeLinter/SublimeLinter/pull/552/

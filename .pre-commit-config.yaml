@@ -68,7 +68,7 @@ repos:
         # E501: line too long. Covered by autopep8.
         - --ignore=E501
 -   repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v2.0.1
+    rev: v2.0.2
     hooks:
     -   id: autopep8
         args:
@@ -80,7 +80,7 @@ repos:
     hooks:
     -   id: yesqa
 -   repo: https://github.com/PyCQA/pylint
-    rev: v2.16.2
+    rev: v2.16.4
     hooks:
     -   id: pylint
         additional_dependencies:

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='author' content='Kevin James'>
+  <meta name='description' content="Stellaris | Game Cheatsheets">
+  <meta name='keywords' content="games,cheatsheets,Sellaris">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>Stellaris | Game Cheatsheets</title>
+
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css'>
+  <link rel='icon' href='./favicon.png' />
+</head>
+
+<body>
+<div class='ui pointing secondary menu'>
+  <div class='ui container'>
+    <a class='header item' href='./index.html'>Home</a>
+    <a class='item' href='./nms.html'>No Man's Sky</a>
+    <a class='item' href='./rimworld.html'>Rimworld</a>
+    <a class='active item' href='./stellaris.html'>Stellaris</a>
+  </div>
+</div>
+
+<div class='ui main container'>
+  <div class='ui menu'>
+    <div class='item'><a href='#ascension-techs'>Ascension Techs</a></div>
+    <div class='item'><a href='#market-trades'>Market Trades</a></div>
+    <div class='item'><a href='#precursors'>Precursors</a></div>
+    <div class='item'><a href='#shroud-covenants'>Shroud Covenants</a></div>
+  </div>
+
+  <div class='ui segment'>
+    <h2 id='ascension-techs'>Ascension Techs</h2>
+    <table class='ui celled compact selectable table'>
+      <thead>
+        <tr>
+          <th>Path</th>
+          <th>Tradition</th>
+          <th>Required Tech</th>
+          <th colspan='4'>Prerequisites</th>
+        </tr>
+      </thead>
+      <tr>
+        <td rowspan='2'>Cybernetic</td>
+        <td rowspan='2'>The Flesh is Weak</td>
+        <td rowspan='2'>Integrated Cybernetics</td>
+        <td colspan='2'>Planetary Unification</td>
+        <td colspan='2'>Colonial Centralization</td>
+      </tr>
+      <tr>
+        <td colspan='4'>Powered Exoskeletons</td>
+      </tr>
+      <tr>
+        <td>Genetic</td>
+        <td>Engineered Evolution</td>
+        <td>Gene Tailoring</td>
+        <td colspan='4'>Genome Mapping</td>
+      </tr>
+      <tr>
+        <td>Psionic</td>
+        <td>Mind over Matter</td>
+        <td>Psionic Theory</td>
+        <td colspan='4'>None</td>
+      </tr>
+      <tr>
+        <td rowspan='3'>Synthetic</td>
+        <td rowspan='3'>Synthetic Evolution</td>
+        <td rowspan='3'>Synthetics</td>
+        <td>Planetary Unification</td>
+        <td>Colonial Centralization</td>
+        <td>Galactic Administration</td>
+      </tr>
+      <tr>
+        <td>Powered Exoskeletons</td>
+        <td>Robotic Workers</td>
+        <td>Droids (dep: Colonial Centralization)</td>
+      </tr>
+      <tr>
+        <td>Administrative AI</td>
+        <td>Self-Evolving Logic</td>
+        <td>Positronic AI</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class='ui segment'>
+    <h2 id='market-trades'>Optimal Monthly Trades</h2>
+    <p>Before the Galactic Market is formed, the maximum amount of resources to buy/sell monthly to keep a stable price is:</p>
+    <table class='ui celled compact selectable table'>
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Max Buy</th>
+          <th>Max Sell</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Minerals</td>
+        <td>52</td>
+        <td>146</td>
+      </tr>
+      <tr>
+        <td>Food</td>
+        <td>52</td>
+        <td>146</td>
+      </tr>
+      <tr>
+        <td>Consumer Goods</td>
+        <td>26</td>
+        <td>73</td>
+      </tr>
+      <tr>
+        <td>Alloys</td>
+        <td>13</td>
+        <td>36</td>
+      </tr>
+      <tr>
+        <td>Gas/Crystals/Motes</td>
+        <td>5</td>
+        <td>14</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class='ui segment'>
+    <h2 id='precursors'>Precursors</h2>
+    <p>TODO: need to grab the empire modifiers ("Secrets of the Foobar"). Last I recall: Zroni 10% psionic research speed, Cybrex Mega-Structure build speed, Vultuam 10% amenities, Irassian pop growth, baol 15% terraform discount?</p>
+    <table class='ui celled compact selectable structured table'>
+      <thead>
+        <tr>
+          <th>Precursor</th>
+          <th>System</th>
+          <th>Relic</th>
+          <th>Secret Project Bonuses</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Baol</td>
+        <td>Tomb World (20)</td>
+        <td>+10% Pop Growth Speed<br />+10% Society Resarch (Machine Empires only)<br />3000 Unity &rarr; Terraform to Gaia World, +4 Nu-Baol Pops</td>
+        <td>Building (Planet Unique): +2 Farmer Jobs, +1 Food from Farmers, +0.5 / +1 Consumer Goods from Farmers<br />Epigenetic Triggers OR Terrestrial Sculpting<br />Scoiologist gains Biology</td>
+      </tr>
+      <tr>
+        <td>Cybrex</td>
+        <td>Ruined Ringworld</td>
+        <td>Cybrex Warform armies<br />3000 Unity + 2000 Minerals &rarr; 1000 Alloys</td>
+        <td>Starbase Building: +100% / +150% Mining Station Output<br />Mega-Engineering<br />Engineer gains Voidcraft</td>
+      </tr>
+      <tr>
+        <td>First League</td>
+        <td>Relic World (25)<br />+10 Energy<br />+10 Minerals</td>
+        <td>N/A</td>
+        <td>Building (Empire Unique): +50 / +100 Edicts Fund, +1 Unity from various Rulers, +2 various Ruler Jobs<br />Weather Control Systems<br />Anti-Gravity Engineering<br />Engineer gains Industry</td>
+      </tr>
+      <tr>
+        <td>Irassian Concordat</td>
+        <td>+10 Energy<br />+10 Minerals<br />+5 Alloys<br />+5 Gas<br />+10 Research</td>
+        <td>+20 Leader Lifespan<br />Javorian Pox bombardment stance<br />2x chance to pull Bio Technologies<br />3000 Unity &rarr; +50% Biology Research Speed (10yrs)</td>
+        <td>Starbase Building: +1 Shipyard, +20% / +30% Ship Build Speed<br />next Organic Pops Technology<br />Sociologist gains Biology</td>
+      </tr>
+      <tr>
+        <td>Vultaum Star Assembly</td>
+        <td>+10 Energy<br />+10 Minerals<br />+5 Alloys<br />+5 Gas<br />+10 Research</td>
+        <td>-10% Pop Amenities Usage<br />3000 Unity &rarr; +40% Armor HP OR Shield HP OR Ship Hull OR Weapons Damage (2-5yrs) OR +40% all the above (1yr)</td>
+        <td>Building (Planet Unique): +1 Research Multiplier Job, +1 / +2 Physics from Researchers<br />+10% Research Speed, -20% Happiness (Fanatic Materialist only)<br />Physicist gains Computing</td>
+      </tr>
+      <tr>
+        <td>Yuht Empire</td>
+        <td>+10 Energy<br />+10 Minerals<br />+5 Alloys<br />+5 Gas<br />+10 Research</td>
+        <td>+1 extra Pop when colonizing<br />+20% Energy Weapons Attack Speed<br />3000 Unity &rarr; -20% Ship Upkeep (10yrs)</td>
+        <td>Starbase Building: +7 / +10 Sensor Range, +14 / +20 Ship Detection Range<br />Atmospheric Filtering<br />Hostile Environment Adaptation<br />Decision: +10% Habitabilty + 50 Devastation<br />Sciologist gains New Worlds</td>
+      </tr>
+      <tr>
+        <td>Zroni</td>
+        <td>+5 Zro</td>
+        <td>-50% Shroud Breach cooldown<br />Zro Additive Edict (0.2 Zro + 15 Unity &rarr; +25% Leader Exp + +30yr Leader Lifespan)<br />Better Shroud Odds<br />300 Unity &rarr; +1 Ruler Level OR +20% Ship Weapons Damage (10yrs) OR +5 Stability, -10% Edict Upkeep, +25% Ethics Attraction (5yrs)</td>
+        <td>Starbase Building: Create Storm, -10% Daily Hull to Enemies<br />Psionic Theory<br />Sociologist gains Psionics</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class='ui segment'>
+    <h2 id='shroud-covenants'>Shroud Covenants</h2>
+    <table class='ui celled compact selectable structured table'>
+      <thead>
+        <tr>
+          <th>Covenant</th>
+          <th>Benefits</th>
+          <th>Negatives</th>
+          <th>Building</th>
+          <th>Ship Component</th>
+          <th>Preferences</th>
+          <th>Traits</th>
+        </tr>
+      </thead>
+      <tr>
+        <td rowspan='5'>Composer of Strands</td>
+        <td rowspan='5'>Pop Growth: +10% / +20%<br />Leader Lifespan: +10 / +20<br />Pop Growth per Telepath: +2% / +5%</td>
+        <td rowspan='5'>Organic Species Traits: -1 / -2<br /><br />Occasionally:<br />* 60% psychic species ±1 trait<br />* 25% 8 psychic pops devolve<br />* 15% psychic leader dies</td>
+        <td rowspan='5'>+10% Habitability<br />+5% Resources from Jobs</td>
+        <td rowspan='5'>+15% Daily Hull Regen<br />+20% Daily Armor Regen
+        <td rowspan='5'>No Gene Clinics<br />Xenophile Ethics<br />Adaptability Tradition<br />Environment/Mutagen Civics<br />Gaia/Xeno-Compat Perks</td>
+        <td>Ruler:<br />+50 Lifespan<br />+30% Exp Gain<br />+1 Lvl Cap</td>
+      </tr>
+      <tr>
+        <td>Governer:<br />+5% Pop Growth<br />+5% Resources from Jobs</td>
+      </tr>
+      <tr>
+        <td>Scientist:<br />+15% Research Speed<br />+25% Survey Speed<br />+2 Monthly Special Gas/Crystals/Motes</td>
+      </tr>
+      <tr>
+        <td>Admiral: N/A</td>
+      </tr>
+      <tr>
+        <td>General:<br />+10% Army Damage<br />+50% Army Health</td>
+      </tr>
+      <tr>
+        <td rowspan='5'>Eater of Worlds</td>
+        <td rowspan='5'>Army Damage: +25% / +50%<br />Fire Rate: +7% / +15%<br />Naval Capacity per Telepath: +5 / +12</td>
+        <td rowspan='5'>Army Upkeep (Peace): +100% / +200%<br />Ship Upkeep (Peace): +100% / +200%<br /><br />Occasionally<br />* 30% planet -3 pops, -40% happiness (10yrs)<br />* 30% planet gets shrouded crater<br />15% highest level leader dies<br />* 15% planet -1 pop, -20% happiness (10yrs)<br />* 10% uninhabited planet becomes shrouded world w/ no deposits</td>
+        <td rowspan='5'>+10% Weapons Range<br />-10% Ship Upkeep</td>
+        <td rowspan='5'>+5 Chance to Hit<br />+25% Bombardment Damage</td>
+        <td rowspan='5'>At War<br />Militarist Ethics<br />Supremacy Tradition<br />Military Civics<br />Domination Perks</td>
+        <td>Ruler:<br />+15% Ship Build Speed<br />-10% Ship Upkeep</td>
+      </tr>
+      <tr>
+        <td>Governer:<br />+25% Ship Build Speed<br />-15% Ship Build Cost</td>
+      </tr>
+      <tr>
+        <td>Scentist: N/A</td>
+      </tr>
+      <tr>
+        <td>Admiral:<br />+40% Weapons Damage<br />+10 Chance to Hit</td>
+      </tr>
+      <tr>
+        <td>General:<br />+30% Army Damage<br />+50% Army Morale Damage<br />+50% Army Morale</td>
+      </tr>
+      <tr>
+        <td rowspan='5'>Instrument of Desire</td>
+        <td rowspan='5'>Resources from Jobs: +5% / +10%<br />Amenities per Telepath: +7 / +15</td>
+        <td rowspan='5'>Pop Upkeep: +12.5% / +25%<br /><br />Occasionally:<br />* psionic pops require advanced or strategic resource upkeep (2yrs)</td>
+        <td rowspan='5'>+5% Happiness<br />+10% Trade Value</td>
+        <td rowspan='5'>+25% Sublight Speed<br />-5% Upkeep</td>
+        <td rowspan='5'>At Peace<br />Resort World<br />Substance Abuser Ruler<br />Authoritarian Ethics<br />Domination Tradition<br />Slavery/Hedonism Civics<br />Overlord Perks</td>
+        <td>Ruler:<br />+10% Happiness<br />+15% Trade Value</td>
+      </tr>
+      <tr>
+        <td>Coverner:<br />+30% Slave Resource Output<br />+5 Stability</td>
+      </tr>
+      <tr>
+        <td>Scientist:<br />+15% Research Speed<br />+2 Monthly Zro</td>
+      </tr>
+      <tr>
+        <td>Admiral:<br />+40% Sublight Speed<br />-15% Hyperjump Charge Time<br />-25% Emergency FTL Damage<br />+35% Disengagement Chance</td>
+      </tr>
+      <tr>
+        <td>General: N/A</td>
+      </tr>
+      <tr>
+        <td rowspan='5'>Whisperers in the Void</td>
+        <td rowspan='5'>Research Speed: +5% / +10%<br />Monthly Influence: +7.5% / +15%<br />Codebreaking: +1 / +2<br />Clocking Strength: +1 / +2<br />Research per Telepath: +3 / +6</td>
+        <td rowspan='5'>Stability: -3 / -7<br />Monthly Unity: -7% / -15%<br /><br />Occasionally:<br />* 45% psychic leader gains substance abuser<br />* 25% psychic leader dies<br />* 20% planet w/ psychic -1 pop and empire gains -200% ethics attraction, +100% ethics shift, -10 stability (10yrs)<br />* 10% planet w/ 5 physics -1 pop and empire gains -200% ethics attraction, +100% ethics shift, -20% monthly unity (10yrs)</td>
+        <td rowspan='5'>+1 Envoy<br />+15% Infiltration Speed</td>
+        <td rowspan='5'>+15% Evasion</td>
+        <td rowspan='5'>Spy Network<br />Materialist Ethics<br />Discovery/Subterfuge Tradition<br />Political Civics<br />Technology Perks</td>
+        <td>Ruler:<br />+1 Monthly Influence<br />+1 Encryption<br />-15% Operation Cost</td>
+      </tr>
+      <tr>
+        <td>Governer: N/A</td>
+      </tr>
+      <tr>
+        <td>Scientist:<br />+25% Research Speed<br />+50% Anomaly Discovery<br />+3 Archaeology Skill</td>
+      </tr>
+      <tr>
+        <td>Admiral:<br />+3 Sensor Range<br />+40% Evasion</td>
+      </tr>
+      <tr>
+        <td>General:<br />+20% Army Damage<br />+30% Army Disengagment Chance</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

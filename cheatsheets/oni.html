@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='author' content='Kevin James'>
+  <meta name='description' content="Oxygen Not Included | Game Cheatsheets">
+  <meta name='keywords' content="games,cheatsheets,oni,Oxygen Not Included">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>Oxygen Not Included | Game Cheatsheets</title>
+
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css'>
+  <link rel='icon' href='./favicon.png' />
+</head>
+
+<body>
+<div class='ui pointing secondary menu'>
+  <div class='ui container'>
+    <a class='header item' href='./index.html'>Home</a>
+    <a class='item' href='./nms.html'>No Man's Sky</a>
+    <a class='active item' href='./oni.html'>Oxygen Not Included</a>
+    <a class='item' href='./rimworld.html'>Rimworld</a>
+    <a class='item' href='./stellaris.html'>Stellaris</a>
+  </div>
+</div>
+
+<div class='ui main container'>
+  <div class='ui menu'>
+    <div class='item'><a href='#skill-tree'>Skill Tree</a></div>
+  </div>
+
+  <div class='ui segment'>
+    <h2 id='skill-tree'>Skill Tree</h2>
+    <pre class='mermaid'>
+      flowchart LR
+        subgraph Skills
+          direction LR
+
+          subgraph Digging
+            direction LR
+
+            dig1[Hard Digging]
+            dig2[Superhard Digging]
+            dig3[Super-Duperhard Digging]
+            dig4[Haxmat Digging]
+
+            dig1-->dig2-->dig3-->dig4
+          end
+
+          subgraph Building
+            direction LR
+
+            build1[Improved Construction I]
+            build2[Improved Construction II]
+            build3[Demolition]
+
+            build1-->build2-->build3
+          end
+
+          subgraph Farming
+            farm1[Improved Farming I]
+            farm2[Crop Tending]
+            farm3[Improved Farming II]
+
+            farm1-->farm2-->farm3
+          end
+
+          subgraph Ranching
+            ranch1[Critter Ranching I]
+            ranch2[Critter Ranching II]
+
+            ranch1-->ranch2
+          end
+
+          subgraph Cooking
+            direction LR
+
+            cook1[Grilling]
+            cook2[Grilling II]
+
+            cook1-->cook2
+          end
+
+          subgraph Decorating
+            direction LR
+
+            art1[Art Fundamentals]
+            art2[Aesthetic Design]
+            art3[Masterworks]
+
+            art1-->art2-->art3
+          end
+
+          subgraph Research
+            research1[Advanced Research]
+            research2[Field Science]
+            research3[Applied Sciences Research]
+            research4[Astronomy]
+            research5[Data Analysis Researcher]
+
+            research1-->research2-->research3
+            research1-->research4-->research5
+          end
+
+          subgraph Rocketry
+            rocketry1[Rocket Piloting]
+            rocketry2[Rocket Piloting II]
+
+            rocketry1-->rocketry2
+          end
+
+          subgraph Suit Wearing
+            suit1[Suit Sustainability Training]
+            suit2[Exosuit Training]
+
+            suit1-->suit2
+          end
+
+          subgraph Supplying
+            supplying1[Improved Carrying I]
+            supplying2[Improved Carrying II]
+
+            supplying1-->supplying2
+          end
+
+          subgraph Operating
+            operating1[Improved Tinkering]
+            operating2[Electrical Engineering]
+            operating3[Mechatronics Engineering]
+
+            operating1-->operating2-->operating3
+          end
+
+          subgraph Doctoring
+            direction LR
+
+            doctoring1[Medicine Compounding]
+            doctoring2[Bedside Manner]
+            doctoring3[Advanced Medical Care]
+
+            doctoring1-->doctoring2-->doctoring3
+          end
+
+          subgraph Tidying
+            direction LR
+
+            tidying1[Improved Strength]
+            tidying2[Plumbing]
+            tidying3[Pyrotechnics]
+
+            tidying1-->tidying2-->tidying3
+          end
+
+          farm1-->ranch1
+          research4-->rocketry2
+          suit1-->rocketry1
+          supplying1-->rocketry1
+          supplying2-->operating3
+
+          Building<-.->operating3
+          Supplying<-.->Tidying
+        end
+    </pre>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+<script type='module'>
+import mermaid from 'https://unpkg.com/mermaid@9.2.2/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true });
+</script>
+</body>
+</html>

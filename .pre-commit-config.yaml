@@ -34,60 +34,16 @@ repos:
     -   id: double-quote-string-fixer
     -   id: name-tests-test
     -   id: requirements-txt-fixer
--   repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.4.2
-    hooks:
-    -   id: remove-crlf
-    -   id: remove-tabs
--   repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.9.0
-    hooks:
-    -   id: reorder-python-imports
-        args: [--py311-plus]
--   repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
-    hooks:
-    -   id: pyupgrade
-        args: [--py311-plus]
--   repo: https://github.com/asottile/add-trailing-comma
-    rev: v2.4.0
-    hooks:
-    -   id: add-trailing-comma
-        args: [--py36-plus]
--   repo: https://github.com/PyCQA/flake8
-    rev: 6.0.0
-    hooks:
-    -   id: flake8
-        additional_dependencies:
-        - flake8-2020==1.7.0
-        # - flake8-broken-line==0.6.0  # TODO: https://github.com/wemake-services/flake8-broken-line/issues/281
-        - flake8-builtins==2.1.0
-        - flake8-comprehensions==3.10.1
-        - flake8-typing-imports==1.14.0
-        args:
-        # E501: line too long. Covered by autopep8.
-        - --ignore=E501
--   repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v2.0.2
-    hooks:
-    -   id: autopep8
-        args:
-        - --in-place
-        - --aggressive
-        - --pep8-passes=2
--   repo: https://github.com/asottile/yesqa
-    rev: v1.4.0
-    hooks:
-    -   id: yesqa
 -   repo: https://github.com/PyCQA/pylint
-    rev: v2.17.1
+    rev: v2.17.2
     hooks:
     -   id: pylint
         additional_dependencies:
         - pylint-import-modules==0.3.0
         args:
         - --allowed-direct-imports="typing.*"
-        - --load-plugins=pylint_import_modules
+        - --load-plugins=pylint_import_modules,pylint.extensions.mccabe
+        - --max-complexity=10
         - --max-line-length=79
         - --max-args=10
         - --score=n
@@ -100,12 +56,40 @@ repos:
         - -d locally-disabled
         - -d missing-docstring
         - -d too-few-public-methods
+        - -d try-except-raise
         - -d ungrouped-imports  # conflicts with reorder-python-imports
         - -d wrong-import-order  # conflicts with reorder-python-imports
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.1
+    hooks:
+    -   id: remove-crlf
+    -   id: remove-tabs
+-   repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.9.0
+    hooks:
+    -   id: reorder-python-imports
+        args: [--py311-plus]
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.6.0
+    hooks:
+    -   id: pyupgrade
+        args: [--py311-plus]
+-   repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.5.1
+    hooks:
+    -   id: add-trailing-comma
+        args: [--py36-plus]
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.1.1
+    rev: v1.3.0
     hooks:
     -   id: mypy
+        require_serial: True
+        # N.B. mypy requires an installed version of whatever third-party
+        # library it is asked to check against. In practice, that means
+        # whenever we see an error telling us to do so, we should add the
+        # relevant library to `additional_dependencies`.
+        # Note that some libraries keep their type hints in packages named
+        # `types-$lib` or `$lib-stubs`.
         additional_dependencies:
         - types-flask
         args:
@@ -113,18 +97,58 @@ repos:
         - --strict
         - --strict-equality
         - --warn-unreachable
+-   repo: https://github.com/asottile/yesqa
+    rev: v1.5.0
+    hooks:
+    -   id: yesqa
+        # N.B. keep these in sync with flake8, otherwise yesqa will remove
+        # required noqa's related to these plugins
+        additional_dependencies: &flake8deps
+        - flake8-2020==1.8.1
+        - flake8-broken-line==1.0.0
+        - flake8-builtins==2.1.0
+        - flake8-commas==2.1.0
+        - flake8-comprehensions==3.13.0
+-   repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v2.0.2
+    hooks:
+    -   id: autopep8
+        args: [-a, -i, -p2]
 -   repo: https://github.com/PyCQA/pydocstyle
     rev: 6.3.0
     hooks:
     -   id: pydocstyle
-        additional_dependencies:
-        - toml
         args:
         - --ignore=D1,D203,D205,D212,D400,D401,D404,D407,D412,D413
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+    -   id: flake8
+        additional_dependencies: *flake8deps
+        args:
+        # https://www.flake8rules.com/
+        # E501: Line too long. Covered by autopep8.
+        - --ignore=E501
 -   repo: local
     hooks:
-    -   id: pytest-fixture-require-scope
-        name: Require explicit scope for pytest fixtures
+    -   id: poetry-check
+        name: check pyproject.toml validity
+        description: 'Validate the structure of the pyproject.toml file'
+        entry: bash -c 'set -e; for toml in "$@"; do pushd ./${toml%pyproject.toml}; poetry check; popd; done' --
+        language: python
+        additional_dependencies:
+        - poetry>=1.2.0
+        pass_filenames: true
+        files: 'pyproject\.toml$'
+    -   id: poetry-use-version-ranges
+        name: avoid using carets for version ranges
+        description: 'Avoid using carets for version ranges'
+        entry: '\^'
+        language: pygrep
+        types: [toml]
+        files: 'pyproject.toml$'
+    -   id: pytest-fixtures-require-scope
+        name: ensure pytest fixture scopes are explicitly set
         description: 'Ensure we explicitly set pytest fixture scopes'
         entry: '@pytest\.fixture( |\n|(\(\)))'
         language: pygrep
@@ -140,6 +164,15 @@ repos:
     -   id: rst-backticks
     -   id: rst-directive-colons
     -   id: rst-inline-touching-normal
+
+# json
+- repo: https://github.com/python-jsonschema/check-jsonschema
+  rev: 0.23.2
+  hooks:
+    - id: check-github-workflows
+    - id: check-renovate
+      additional_dependencies:
+      - pyjson5
 
 # javascript
 -   repo: https://github.com/pre-commit/mirrors-fixmyjs

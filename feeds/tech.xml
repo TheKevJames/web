@@ -9,6 +9,7 @@
       <outline text="Alan Shreve (Inconshreveable)" title="Alan Shreve (Inconshreveable)" type="rss" xmlUrl="https://inconshreveable.com/feed.xml" htmlUrl="http://inconshreveable.com/"/>
       <outline text="Alex Clemmer" title="Alex Clemmer" type="rss" xmlUrl="http://blog.nullspace.io/feed.xml" htmlUrl="http://blog.nullspace.io/"/>
       <outline text="Allison Kaptur" title="Allison Kaptur" type="rss" xmlUrl="http://akaptur.com/atom.xml" htmlUrl="http://akaptur.github.com/"/>
+      <outline text="Amos (Faster Than Lime)" title="Amos (Faster Than Lime)" type="rss" xmlUrl="https://fasterthanli.me/index.xml" htmlUrl="https://fasterthanli.me/"/>
       <outline text="Andrew Fallant (burntsushi)" title="Andrew Fallant (burntsushi)" type="rss" xmlUrl="https://blog.burntsushi.net/index.xml" htmlUrl="https://blog.burntsushi.net/"/>
       <outline text="Armin Ronacher" title="Armin Ronacher" type="rss" xmlUrl="http://lucumr.pocoo.org/feed.atom" htmlUrl="http://lucumr.pocoo.org/"/>
       <outline text="Austin Henley" title="Austin Henley" type="rss" xmlUrl="https://austinhenley.com/blog/feed.rss" htmlUrl="https://austinhenley.com/blog.html"/>
@@ -25,6 +26,7 @@
       <outline text="David MacIver" title="David MacIver" type="rss" xmlUrl="https://www.drmaciver.com/feed/" htmlUrl="https://www.drmaciver.com/"/>
       <outline text="Drew DeVault" title="Drew DeVault" type="rss" xmlUrl="https://drewdevault.com/feed.xml" htmlUrl="https://drewdevault.com/"/>
       <outline text="Gustavo Duarte (Many But Finite)" title="Gustavo Duarte (Many But Finite)" type="rss" xmlUrl="https://manybutfinite.com/feed.xml" htmlUrl="https://manybutfinite.com/"/>
+      <outline text="Harley Hicks (500 Mile Email)" title="Harley Hicks (500 Mile Email)" type="rss" xmlUrl="https://500mile.email/feed.xml" htmlUrl="https://500mile.email/"/>
       <outline text="Hillel Wayne" title="Hillel Wayne" type="rss" xmlUrl="https://www.hillelwayne.com/post/index.xml" htmlUrl="https://www.hillelwayne.com/post/"/>
       <outline text="Increment" title="Increment" type="rss" xmlUrl="https://increment.com/feed.xml" htmlUrl="https://increment.com/"/>
       <outline text="James Brown (Roguelazer)" title="James Brown (Roguelazer)" type="rss" xmlUrl="https://www.roguelazer.com/feeds/rss.xml" htmlUrl="https://www.roguelazer.com/"/>

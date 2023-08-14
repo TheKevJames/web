@@ -98,6 +98,7 @@ Features
 - `macports - contribute skhd port`_
 - `macports - contribute yabai port`_
 - `macports - contribute youtube-viewer port`_
+- `pipx - add support for pre-injected packages`_
 - `pylint_import_modules - support globally allowed direct imports`_
 - `renovate - support arbitrary versioning schemes`_
 - `renovate - support envvar interpolation in requirements files`_
@@ -157,6 +158,7 @@ Fixes
 .. _macports - contribute skhd port: https://github.com/macports/macports-ports/pull/9005
 .. _macports - contribute yabai port: https://github.com/macports/macports-ports/pull/9006
 .. _macports - contribute youtube-viewer port: https://github.com/macports/macports-ports/pull/11381
+.. _pipx - add support for pre-injected packages: https://github.com/pypa/pipx/pull/900
 .. _protobuf (python) - fix support for Python 3.8: https://github.com/protocolbuffers/protobuf/pull/5195
 .. _publishing: https://github.com/TheKevJames/publishing
 .. _puppet-homebrew: https://github.com/TheKevJames/puppet-homebrew

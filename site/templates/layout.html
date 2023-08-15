@@ -138,7 +138,7 @@ nav {
   .nav-small {
     display: inline-block !important; }
   .nav-large {
-    display: none; } }
+    display: none !important; } }
 
 img {
   max-width: 100%; }
@@ -163,7 +163,8 @@ img {
         <a href='#'>Me &#x25BE;</a>
         <div class='dropdown-content'>
             <a href='https://github.com/TheKevJames/web/blob/master/readmes/README.rst'>README</a>
-            <a class='nav-small' href="https://storage.googleapis.com/thekevjames-artifacts/cv.pdf">CV</a>
+            <a class='nav-small' href="https://storage.googleapis.com/thekevjames-artifacts/cv.html">CV (HTML)</a>
+            <a class='nav-small' href="https://storage.googleapis.com/thekevjames-artifacts/cv.pdf">CV (PDF)</a>
             <hr />
             <a href='https://github.com/thekevjames.keys'>SSH Keys</a>
             <a href='https://github.com/thekevjames.gpg'>GPG Keys</a>
@@ -179,8 +180,12 @@ img {
         </div>
     </div>
 
-    <div class='nav-large' id='cv'>
-        <a href="https://storage.googleapis.com/thekevjames-artifacts/cv.pdf">CV</a>
+    <div class='dropdown nav-large' id='cv'>
+        <a href="https://storage.googleapis.com/thekevjames-artifacts/cv.html">CV &#x25BE;</a>
+        <div class='dropdown-content'>
+            <a href="https://storage.googleapis.com/thekevjames-artifacts/cv.html">HTML</a>
+            <a href="https://storage.googleapis.com/thekevjames-artifacts/cv.pdf">PDF</a>
+        </div>
     </div>
 </nav>
 {% block body %}{% endblock %}

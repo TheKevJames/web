@@ -49,7 +49,7 @@ jobs:
           command: |
             curl -X POST https://content.dropboxapi.com/2/files/download \
                 -H "Authorization: Bearer ${DROPBOX_TOKEN}" \
-                -H "Dropbox-API-Arg: {\"path\": \"/vimwiki/quotes.md\"}" \
+                -H "Dropbox-API-Arg: {\"path\": \"/sync/vimwiki/quotes.md\"}" \
                 -o /quotes.md
             jq -n --arg x "$(cat /quotes.md)" '$x | split("\n")' > artifacts/quotes/quotes.json
       - run: minify --recursive --output artifacts/ artifacts/

@@ -64,26 +64,25 @@ dotenv = ["python-dotenv"]
 
 [[package]]
 name = "flask-flatpages"
-version = "0.8.1"
+version = "0.8.2"
 description = "Provides flat static pages to a Flask application"
 category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
 files = [
-    {file = "Flask-FlatPages-0.8.1.tar.gz", hash = "sha256:ee6b389a93558f66ae626cebc86ff99f299f6b972d2cdd8db9fb9b8a3deed1aa"},
-    {file = "Flask_FlatPages-0.8.1-py2.py3-none-any.whl", hash = "sha256:d6626b4fafd3dbe48e40fa91ac5c0e8aced1dcb7f7b77beb5fa583a995b64abf"},
+    {file = "Flask-FlatPages-0.8.2.tar.gz", hash = "sha256:403f0c574a308d45489bd02ac3abf618efc5f1f206b1f80603400580bcd0bc69"},
+    {file = "Flask_FlatPages-0.8.2-py3-none-any.whl", hash = "sha256:d638d05b8cde4498da3259f04e8b44e213bc0b113809ee5991b5ca16336ee771"},
 ]
 
 [package.dependencies]
 Flask = ">1.0"
 Jinja2 = ">=2.10.2"
 Markdown = ">=2.5"
-PyYAML = {version = ">5.3.1", markers = "python_version != \"3.5\""}
+PyYAML = ">5.3.1"
 six = "*"
 
 [package.extras]
-codehilite = ["Pygments (>=2.5.2)"]
-docs = ["Pallets-Sphinx-Themes", "Pygments", "Sphinx (>=1.4)"]
+codehilite = ["Pygmetns (>=2.5.2)"]
 
 [[package]]
 name = "frozen-flask"
@@ -324,4 +323,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<4.0"
-content-hash = "a4358d0d9ff0ca46bc07b49c60befef2c1ed254c1f6443815d1881acd06b3447"
+content-hash = "2b4fc2bf8d6b09ac780655f153ea9a7fb950513790b1b515097e733f51895375"

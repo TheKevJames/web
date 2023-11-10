@@ -86,18 +86,23 @@ codehilite = ["Pygmetns (>=2.5.2)"]
 
 [[package]]
 name = "frozen-flask"
-version = "0.18"
+version = "1.0.0"
 description = "Freezes a Flask application into a set of static files."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.8"
 files = [
-    {file = "Frozen-Flask-0.18.tar.gz", hash = "sha256:4113638baebb348e16b10b12cbd88bddc7309f24d94332a18ae6a56c8ac02d3d"},
-    {file = "Frozen_Flask-0.18-py3-none-any.whl", hash = "sha256:6d892fd929f6676c3270b7d91d86a1fc03c9850dc21e3b02b3946381c48ab307"},
+    {file = "frozen_flask-1.0.0-py3-none-any.whl", hash = "sha256:297663dc60ae8afb7b84766bb48722b41a89c77884c0660ceeb7d03dc24aa0ea"},
+    {file = "frozen_flask-1.0.0.tar.gz", hash = "sha256:2721085fa550a8f0806a91bb26c4b89e6d24c3211e7da321b22eeec4ae171329"},
 ]
 
 [package.dependencies]
-Flask = ">=1.1.0"
+flask = ">=2.0.0"
+
+[package.extras]
+check = ["flake8", "isort"]
+doc = ["pallets-sphinx-themes", "sphinx"]
+test = ["pytest"]
 
 [[package]]
 name = "itsdangerous"
@@ -323,4 +328,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<4.0"
-content-hash = "2b4fc2bf8d6b09ac780655f153ea9a7fb950513790b1b515097e733f51895375"
+content-hash = "4f2324b69709cadd882c2c95cca48295756d30e7b53d4718beb8ccc1d89fab6f"

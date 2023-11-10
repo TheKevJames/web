@@ -9,7 +9,7 @@ freeze = "builder.main:freezer.freeze"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
-Frozen-Flask = "0.18"
+Frozen-Flask = "1.0"
 flask = "2.3.3"
 flask-flatpages = "0.8.2"
 pygments = "2.16.1"

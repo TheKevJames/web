@@ -12,7 +12,7 @@ freeze = "builder.main:cli"
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
 frozen-flask = "1.0.1"
-flask = "2.3.3"
+flask = "3.0.0"
 flask-flatpages = "0.8.2"
 pygments = "2.16.1"
 

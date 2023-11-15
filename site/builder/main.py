@@ -162,3 +162,7 @@ def ping() -> str:
 @app.route('/.well-known/security.txt')
 def security() -> Any:
     return flask.redirect(flask.url_for('static', filename='security.txt'))
+
+
+def cli():
+    freezer.freeze()

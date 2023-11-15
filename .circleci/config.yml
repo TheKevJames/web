@@ -63,10 +63,7 @@ jobs:
   site:
     executor: python
     steps:
-      - poetry/install:
-          # TODO: why is this necessary?
-          # https://app.circleci.com/pipelines/github/TheKevJames/web/1888/workflows/1f074fb2-ae31-44bd-952d-e49a33208b6d/jobs/11807
-          version: 1.2.2
+      - poetry/install
       - checkout
       - run:
           command: poetry install -n

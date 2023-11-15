@@ -164,5 +164,5 @@ def security() -> Any:
     return flask.redirect(flask.url_for('static', filename='security.txt'))
 
 
-def cli():
+def cli() -> None:
     freezer.freeze()

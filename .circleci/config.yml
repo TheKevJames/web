@@ -10,7 +10,7 @@ executors:
     resource_class: small
   python:
     docker:
-      - image: python:3.12.0
+      - image: python:3.12.1
     resource_class: small
 
 jobs:

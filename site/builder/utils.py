@@ -13,8 +13,8 @@ def collect_by_key(
     key: Callable[[T], Any],
 ) -> dict[str, list[T]]:
     by_key: dict[str, list[T]] = collections.defaultdict(list)
-    for review in sorted(items, key=key, reverse=True):
-        by_key[key(review)].append(review)
+    for x in sorted(items, key=key, reverse=True):
+        by_key[key(x)].append(x)
 
     return by_key
 

@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+import pathlib
+import urllib.request
+
+
+MUSIC = [
+    ('Against the Current', '@againstthecurrent'),
+    ('Book Club Radio', '@bookclubradio'),
+    ('Chainsmokers', '@THECHAINSMOKERS'),
+    ('Dylan Taylor', '@DylanTaylorDrums'),
+    ('Epic Rap Battles of History', '@ERB'),
+    ('Fueled By Ramen', '@fueledbyramen'),
+    ('Jack Conte', '@Jackconte'),
+    ('Kurt Hugo Schneider', '@KurtHugoSchneider'),
+    ('Lonely Island', '@thelonelyisland'),
+    ('Lukas Graham', '@LukasGraham'),
+    ('Noah Guthrie', '@noahguthrie'),
+    ('The Tech Thieves', '@TheTechThieves'),
+    ('TheFatRat', '@TheFatRat'),
+    ('Tony Ann', '@tonyannmusic'),
+    ('Trap Nation', '@TrapNation'),
+    ('Triple J', '@triplej'),
+]
+
+TEMPLATE_HEAD = """
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>{title}</title>
+  </head>
+  <body>
+    <outline text="{title}" title="{title}">
+"""
+TEMPLATE_ITEM = """
+      <outline text="{name}" title="{name}" type="rss" xmlUrl="{xml}"
+               htmlUrl="{html}"/>
+"""
+TEMPLATE_FOOT = """
+    </outline>
+  </body>
+</opml>
+"""
+
+
+def main() -> None:
+    fname = pathlib.Path(__file__).parent / 'music.xml'
+    with open(fname, 'w', encoding='utf-8') as f:
+        f.write(TEMPLATE_HEAD.format(title='Music').lstrip('\n'))
+        for name, user in sorted(MUSIC):
+            html = f'https://www.youtube.com/{user}'
+            with urllib.request.urlopen(html) as resp:
+                body = resp.read()
+            _, body = body.split(b'<link rel="alternate" '
+                                 b'type="application/rss+xml" title="RSS" '
+                                 b'href="')
+            xml, *_ = body.split(b'">')
+            item = TEMPLATE_ITEM.format(name=name, html=html,
+                                        xml=xml.decode('utf-8'))
+            f.write(item.lstrip('\n'))
+        f.write(TEMPLATE_FOOT.lstrip('\n'))
+
+
+if __name__ == '__main__':
+    main()

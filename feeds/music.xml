@@ -5,19 +5,38 @@
   </head>
   <body>
     <outline text="Music" title="Music">
-      <outline text="Against the Current" title="Against the Current" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCxMsgwldMZiuFTD6jjv32yQ" htmlUrl="http://www.youtube.com/user/againstthecurrentNY"/>
-      <outline text="Chainsmokers" title="Chainsmokers" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCRzzwLpLiUNIs6YOPe33eMg" htmlUrl="http://www.youtube.com/channel/UCRzzwLpLiUNIs6YOPe33eMg"/>
-      <outline text="Dylan Taylor" title="Dylan Taylor" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=dylantaylordrums" htmlUrl="http://www.youtube.com/channel/UCgAZQMB-xcjBEa8LFV0vlqg"/>
-      <outline text="Epic Rap Battles of History" title="Epic Rap Battles of History" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=ERB" htmlUrl="http://www.youtube.com/"/>
-      <outline text="Fueled By Ramen" title="Fueled By Ramen" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UClVrJwcIy7saPcGc1nct80A" htmlUrl="http://www.youtube.com/user/FueledByRamen"/>
-      <outline text="Jack Conte" title="Jack Conte" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=jackcontemusic" htmlUrl="http://www.youtube.com/channel/UCXuc4N_UKi5IXNGtHZY8qQA/videos"/>
-      <outline text="Kurt Hugo Schneider" title="Kurt Hugo Schneider" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=KurtHugoSchneider" htmlUrl="http://www.youtube.com/channel/UCplkk3J5wrEl0TNrthHjq4Q/videos"/>
-      <outline text="Lonely Island" title="Lonely Island" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=thelonelyisland" htmlUrl="http://www.youtube.com/"/>
-      <outline text="Lukas Graham" title="Lukas Graham" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCs8ynQgjoKZblUXosXoeOEQ" htmlUrl="http://www.youtube.com/channel/UCs8ynQgjoKZblUXosXoeOEQ"/>
-      <outline text="Noah Guthrie" title="Noah Guthrie" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=only1noah" htmlUrl="http://www.youtube.com/channel/UC10EcWjwbU79-6dc4WO-bDQ"/>
-      <outline text="OfficialENGR" title="OfficialENGR" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=officialengr" htmlUrl="http://www.youtube.com/channel/UCIf3VxnSyMI6Aci1Twteqsw"/>
-      <outline text="The Tech Thieves" title="The Tech Thieves" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=TheTechThieves" htmlUrl="http://www.youtube.com/c/TheTechThieves/videos"/>
-      <outline text="TheFatRat" title="TheFatRat" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa_UMppcMsHIzb5LDx1u9zQ" htmlUrl="http://www.youtube.com/user/ThisIsTheFatRat"/>
+      <outline text="Against the Current" title="Against the Current" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCxMsgwldMZiuFTD6jjv32yQ"
+               htmlUrl="https://www.youtube.com/@againstthecurrent"/>
+      <outline text="Book Club Radio" title="Book Club Radio" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCLmaR7ew57x0XJEe_-REUyg"
+               htmlUrl="https://www.youtube.com/@bookclubradio"/>
+      <outline text="Chainsmokers" title="Chainsmokers" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCq3Ci-h945sbEYXpVlw7rJg"
+               htmlUrl="https://www.youtube.com/@THECHAINSMOKERS"/>
+      <outline text="Dylan Taylor" title="Dylan Taylor" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCgAZQMB-xcjBEa8LFV0vlqg"
+               htmlUrl="https://www.youtube.com/@DylanTaylorDrums"/>
+      <outline text="Epic Rap Battles of History" title="Epic Rap Battles of History" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCMu5gPmKp5av0QCAajKTMhw"
+               htmlUrl="https://www.youtube.com/@ERB"/>
+      <outline text="Fueled By Ramen" title="Fueled By Ramen" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UClVrJwcIy7saPcGc1nct80A"
+               htmlUrl="https://www.youtube.com/@fueledbyramen"/>
+      <outline text="Jack Conte" title="Jack Conte" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCXuc4N_UKi5IXNGtHZY8qQA"
+               htmlUrl="https://www.youtube.com/@Jackconte"/>
+      <outline text="Kurt Hugo Schneider" title="Kurt Hugo Schneider" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCplkk3J5wrEl0TNrthHjq4Q"
+               htmlUrl="https://www.youtube.com/@KurtHugoSchneider"/>
+      <outline text="Lonely Island" title="Lonely Island" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCCHcEUksSVKsRDH86j77Ntg"
+               htmlUrl="https://www.youtube.com/@thelonelyisland"/>
+      <outline text="Lukas Graham" title="Lukas Graham" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCs8ynQgjoKZblUXosXoeOEQ"
+               htmlUrl="https://www.youtube.com/@LukasGraham"/>
+      <outline text="Noah Guthrie" title="Noah Guthrie" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC10EcWjwbU79-6dc4WO-bDQ"
+               htmlUrl="https://www.youtube.com/@noahguthrie"/>
+      <outline text="The Tech Thieves" title="The Tech Thieves" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCRYrNPcd_Ib8pdDUsYDVOag"
+               htmlUrl="https://www.youtube.com/@TheTechThieves"/>
+      <outline text="TheFatRat" title="TheFatRat" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa_UMppcMsHIzb5LDx1u9zQ"
+               htmlUrl="https://www.youtube.com/@TheFatRat"/>
+      <outline text="Tony Ann" title="Tony Ann" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCfXIJckiinUkYIM-TSpIaFw"
+               htmlUrl="https://www.youtube.com/@tonyannmusic"/>
+      <outline text="Trap Nation" title="Trap Nation" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa10nxShhzNrCE1o2ZOPztg"
+               htmlUrl="https://www.youtube.com/@TrapNation"/>
+      <outline text="Triple J" title="Triple J" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCd2KNtfphz8HvYzM4pwtHmg"
+               htmlUrl="https://www.youtube.com/@triplej"/>
     </outline>
   </body>
 </opml>

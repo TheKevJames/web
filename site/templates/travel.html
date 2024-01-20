@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}Travel{% endblock %}
+
+{% block body %}
+<div id='content'>
+    <div id='travel-main'>
+        <h2>Travel</h2>
+
+        <div class='list'>
+            <div>
+                <h3>Travel Map</h3>
+                <p class='description'>I've been slowly filling in my travel map, updating this every time I visit a new city. Circles are sized based on the relative time spent in each location. You may also be interested in my <a href="https://maps.app.goo.gl/KKmwqEsPDViVBFPH9">Favourite Places</a> or the <a href="https://maps.app.goo.gl/gjw3sbbaQocwdGFw9">Places I Want to Check Out</a> which, let's be honest, is about 99% restaurants!</p>
+                <img src="./img/travel.svg"/>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block css %}
+<style>
+/* columns */
+#travel-main {
+  width: 100%; }
+  #travel-main h2 {
+    padding: 0 4%; }
+
+.list div {
+  width: 90%;
+  margin: 10px 5% 20px 5%;
+  border: 1px #a89984 solid;
+  border-radius: 4px; }
+  .list div h3 {
+    font-size: 28px;
+    font-weight: normal;
+    text-transform: none;
+    padding: 5px;
+    margin: 10px 0 5px;
+    text-align: center; }
+  .list div p {
+    text-transform: none;
+    padding: 5px; }
+    .list div p.description {
+      padding-left: 15px;
+      padding-right: 15px; }
+  .list div img {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 15px 15px 15px;
+    text-align: center; }
+  .list div :last-child {
+    border-radius: 0 0 4px 4px; }
+@media (prefers-color-scheme: light) {
+  .list div {
+      border: 1px #7c6f64 solid; } }
+</style>
+{% endblock %}

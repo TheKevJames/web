@@ -73,7 +73,7 @@ jobs:
           command: poetry run freeze
           environment:
             PYTHONDEVMODE: 1
-            PYTHONWARNINGS: error,ignore::DeprecationWarning:certifi.core:36,ignore::DeprecationWarning:lark.utils:116,ignore::DeprecationWarning:lark.utils:117
+            PYTHONWARNINGS: error,ignore::DeprecationWarning:dateutil.tz.tz:37,ignore::DeprecationWarning:kaleido.scopes.base:188
           working_directory: site
       - run:
           command: poetry run pygmentize -S gruvbox-light -f html -a .codehilite > codehilite.light.css

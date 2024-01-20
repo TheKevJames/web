@@ -1,5 +1,6 @@
 import operator
 import pathlib
+import sys
 from collections.abc import Iterable
 from typing import Any
 
@@ -7,6 +8,7 @@ import flask
 import flask_flatpages
 import flask_frozen
 
+from .map import draw
 from .utils import collect_by_key
 from .utils import collect_by_tags
 
@@ -98,6 +100,11 @@ def publications() -> Any:
     return flask.render_template('publications.html')
 
 
+@app.route('/travel.html')
+def travel() -> Any:
+    return flask.render_template('travel.html')
+
+
 @freezer.register_generator  # type: ignore
 def frozen_flatpages() -> Iterable[tuple[str, dict[str, str]]]:
     for name in (PAGES_DIR / 'blog').iterdir():
@@ -124,3 +131,4 @@ def security() -> Any:
 
 def cli() -> None:
     freezer.freeze()
+    draw(sys.argv[1] if len(sys.argv) > 1 else None)

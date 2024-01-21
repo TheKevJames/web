@@ -4,7 +4,7 @@ import json
 import math
 import pathlib
 
-import geocoder
+import geopy.geocoders
 import plotly.express
 
 
@@ -17,9 +17,9 @@ def latlng(cache: dict[str, tuple[float, float]],
     if cache.get(x):
         return cache[x]
 
-    lat, lng = geocoder.arcgis(x).latlng
-    cache[x] = (lat, lng)
-    return (lat, lng)
+    loc = geopy.geocoders.Nominatim(user_agent='site').geocode(x)
+    cache[x] = (loc.latitude, loc.longitude)
+    return (loc.latitude, loc.longitude)
 
 
 def format_data(totals: dict[str, int]) -> list[dict[str, object]]:

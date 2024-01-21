@@ -10,11 +10,11 @@ authors = ["Kevin James <KevinJames@thekev.in>"]
 freeze = "builder.main:cli"
 
 [tool.poetry.dependencies]
-python = ">=3.11,<3.12"  # TODO: find a replacement for geocoder
+python = ">=3.11,<4.0"
 flask = "3.0.1"
 flask-flatpages = "0.8.2"
 frozen-flask = "1.0.1"
-geocoder = "1.38.1"
+geopy = "2.4.1"
 kaleido = "0.2.1"
 pandas = "2.1.4"
 plotly = "5.18.0"

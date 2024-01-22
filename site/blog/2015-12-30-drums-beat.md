@@ -1,6 +1,6 @@
 title: The Drums Beat
-date: 2015-12-30
-tags: Writing, Poetry
+tags: Writing
+      Poetry
 
 Its been a while since I've had more than a passing moment to write. University
 has been time-consuming and my hobbies have suffered. That said, it (writing)

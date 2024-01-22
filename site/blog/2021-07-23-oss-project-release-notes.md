@@ -1,5 +1,4 @@
 title: OSS Project Release Notes
-date: 2021-07-23
 tags: Technology
 description: My wishlist for ideal OSS project release notes
 

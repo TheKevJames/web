@@ -15,16 +15,16 @@
             </div>
             <div id='post-tags'>
                 <h4>
-                {% for tag in post.tag_list %}
+                {% for tag in post.tags %}
                     {% if loop.index0 != 0 %}
                         <span>- </span>
                     {% endif %}
-                    <a class='blog-tag' href="{{ url_for('blog_tagged', tag=tag.replace(' ', '_')) }}">{{ tag }}</a>
+                    <a class='blog-tag' href="/blog/{{ tag.replace(' ', '_') }}.html">{{ tag }}</a>
                 {% endfor %}
                 </h4>
             </div>
             <div id='post-rss' >
-                <h4><a href="{{ url_for('blog_rss') }}">Subscribe with RSS</a></h4>
+                <h4><a href='/feed.xml'>Subscribe with RSS</a></h4>
             </div>
         </div>
 
@@ -35,15 +35,15 @@
         <hr />
 
         <div id='post-github'>
-            As always, this article is available <a href='https://github.com/TheKevJames/web/blob/master/site/pages/blog/{{post.path}}.md'>on GitHub</a>. Comments (ie. <a href='https://github.com/TheKevJames/web/issues/new'>issues</a>) are welcome!
+            As always, this article is available <a href='https://github.com/TheKevJames/web/blob/master/site/blog/{{ post.fname.name }}'>on GitHub</a>. Comments (ie. <a href='https://github.com/TheKevJames/web/issues/new'>issues</a>) are welcome!
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block css %}
-<link rel='stylesheet' href='https://thekev.in/codehilite.light.css' media="(prefers-color-scheme: light)" />
-<link rel='stylesheet' href='https://thekev.in/codehilite.css' media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" />
+<link rel='stylesheet' href='/codehilite.light.css' media="(prefers-color-scheme: light)" />
+<link rel='stylesheet' href='/codehilite.css' media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" />
 <style>
 /* positioning */
 .blog-wrapper {

@@ -66,23 +66,16 @@ jobs:
       - poetry/install
       - checkout
       - run:
-          command: poetry install -n
+          command: poetry install -n --no-ansi
           working_directory: site
-      - run: cp shared/* site/static/
       - run:
-          command: poetry run freeze
+          command: make
           environment:
             PYTHONDEVMODE: 1
             PYTHONWARNINGS: error,ignore::DeprecationWarning:dateutil.tz.tz:37,ignore::DeprecationWarning:kaleido.scopes.base:188
           working_directory: site
-      - run:
-          command: poetry run pygmentize -S gruvbox-light -f html -a .codehilite > codehilite.light.css
-          working_directory: site/builder/build
-      - run:
-          command: poetry run pygmentize -S gruvbox-dark -f html -a .codehilite > codehilite.css
-          working_directory: site/builder/build
       - persist_to_workspace:
-          root: site/builder
+          root: site
           paths:
             - build/
 
@@ -136,10 +129,10 @@ jobs:
       - run: gsutil -m cp -r artifacts/* gs://thekevjames-artifacts
       - attach_workspace:
           at: site
-      - run: gsutil -m cp -r site/build/* gs://thekev.in || true
+      - run: gcloud storage rsync --delete-unmatched-destination-objects -r site/build gs://thekev.in
       - attach_workspace:
           at: www
-      - run: gsutil -m cp -r www/redir/* gs://www.thekev.in || true
+      - run: gcloud storage rsync --delete-unmatched-destination-objects -r www/redir gs://www.thekev.in/redir
 
 workflows:
   run-jobs:

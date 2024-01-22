@@ -3,7 +3,7 @@
 
 <title>Kevin James' Blog</title>
 <link>https://www.thekev.in/blog</link>
-<description>Dialpad (Vi, formerly TalkIQ) staff engineer and tech lead; uWaterloo software engineer; occasional musician. mixologist, and writer</description>
+<description>Dialpad (AI, formerly TalkIQ) staff engineer and tech lead; uWaterloo software engineer; occasional musician, mixologist, and writer</description>
 
 <docs>http://cyber.harvard.edu/rss/rss.html</docs>
 <language>en-us</language>
@@ -18,8 +18,8 @@
 {% for post in posts %}
 <item>
     <title>{{ post.title }}</title>
-    <link>https://thekev.in/{{ url_for('blog_post', name=post.path) }}</link>
-    <guid isPermaLink='true'>https://thekev.in/{{ url_for('blog_post', name=post.path) }}</guid>
+    <link>https://thekev.in/blog/{{ post.pub_path }}</link>
+    <guid isPermaLink='true'>https://thekev.in/blog/{{ post.pub_path }}</guid>
     <pubDate>{{ post.pub_date }}</pubDate>
     <description><![CDATA[{{ post.description }}]]></description>
 </item>

@@ -1,5 +1,4 @@
 title: Kubernetes Multi-Cluster Lifecycle Management
-date: 2020-04-27
 tags: Technology
 description: How to design, plan, and execute upgrades in multi-cluster k8s
 

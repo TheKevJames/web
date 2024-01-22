@@ -44,18 +44,20 @@ TEMPLATE_FOOT = """
 
 def main() -> None:
     fname = pathlib.Path(__file__).parent / 'music.xml'
-    with open(fname, 'w', encoding='utf-8') as f:
+    with fname.open('w', encoding='utf-8') as f:
         f.write(TEMPLATE_HEAD.format(title='Music').lstrip('\n'))
         for name, user in sorted(MUSIC):
             html = f'https://www.youtube.com/{user}'
             with urllib.request.urlopen(html) as resp:
                 body = resp.read()
-            _, body = body.split(b'<link rel="alternate" '
-                                 b'type="application/rss+xml" title="RSS" '
-                                 b'href="')
+            _, body = body.split(
+                b'<link rel="alternate" type="application/rss+xml" '
+                b'title="RSS" href="',
+            )
             xml, *_ = body.split(b'">')
-            item = TEMPLATE_ITEM.format(name=name, html=html,
-                                        xml=xml.decode('utf-8'))
+            item = TEMPLATE_ITEM.format(
+                name=name, html=html, xml=xml.decode('utf-8'),
+            )
             f.write(item.lstrip('\n'))
         f.write(TEMPLATE_FOOT.lstrip('\n'))
 

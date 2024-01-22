@@ -76,7 +76,7 @@ I guess that means it's time to roll up our sleeves and start hacking!
 
 I'm going to mostly gloss over our starting point here; I highly recommend
 reading the [original article][iximiuz:post] where all this gets explained. The
-core of it is that we have some Dockerfile with a kernal and an init system:
+core of it is that we have some Dockerfile with a kernel and an init system:
 
     #!docker
     FROM debian:stretch
@@ -401,7 +401,7 @@ and push it to Google Storage:
     gcloud compute images create custom-unoptimized \
         --source-uri gs://my-image-bucket/disk.tar.gz
 
-You may have noticed I refered to that image as "unoptimized" -- that's because
+You may have noticed I referred to that image as "unoptimized" -- that's because
 we've not yet attached all the final stuff that makes an image truly useful on
 GCE, things like IAM integration and such. Fortunately, GCP actually has a
 built-in import tool which can do this for us:

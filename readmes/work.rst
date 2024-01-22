@@ -8,7 +8,7 @@ relationship more quickly.
 
 I am very interested in self-improvement -- constructive feedback on this
 document or on anything else is always welcome and appreciated. If you have any
-suggestions on how I can improve, or if you notice any discrepency between this
+suggestions on how I can improve, or if you notice any discrepancy between this
 README and my behaviour, **please** tell me!
 
 Communication

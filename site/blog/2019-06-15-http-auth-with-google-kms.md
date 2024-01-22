@@ -475,7 +475,7 @@ getting this up-and-running and integrated with you're particular stack, but at
 its core it's a pretty simple solution without much in the way of shared
 information.
 
-This solution can very easily be modified for server-to-server comunication,
+This solution can very easily be modified for server-to-server communication,
 ie. by having what I've designated as the client and server act in the opposite
 way when communicating from server to client (the server encrypts something,
 the client decrypts it to validate communication). Sounds like build-your-own

@@ -15,7 +15,7 @@ This post is mostly an attempt to get my thoughts in order about the whole
 "mentorship" thing -- expect a whole lot more in the way of scattered thoughts
 than well-argued central theme. I'm focusing mostly on the individual level of
 mentorship here; so far my advice on mentoring entire teams pretty much amounts
-to "do all of this, but moreso; also, you probably need to delegate a bit
+to "do all of this, but more; also, you probably need to delegate a bit
 rather than try to do it all yourself". I'll try to keep the
 engineering-specific thoughts light, but all this comes from my background as a
 software engineering tech lead so I make no promises that any of this is

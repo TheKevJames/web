@@ -1,6 +1,6 @@
 title: Effective Mentorship
-date: 2020-04-13
-tags: Technology, Leadership
+tags: Technology
+      Leadership
 description: Some rambling about effective mentorship, as I see it
 
 It's annual performance review season again here at `$company` and personal

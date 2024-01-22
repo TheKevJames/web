@@ -1,5 +1,4 @@
 title: Tensorflow Model Optimization
-date: 2019-06-08
 tags: Technology
 description: An experiment in eking out Tensorflow performance on a single CPU
 

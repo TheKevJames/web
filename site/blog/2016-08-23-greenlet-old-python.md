@@ -1,5 +1,4 @@
 title: Greenlet on Old Systems
-date: 2016-08-23
 tags: Technology
 
 I ran into an issue when trying to set up a Docker container for Plivo; this

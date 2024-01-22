@@ -1,5 +1,4 @@
 title: HTTP Auth with Google KMS
-date: 2019-06-15
 tags: Technology
 description: An experiment in fine-grained HTTP authentication using Google KMS
 

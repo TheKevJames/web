@@ -1,5 +1,4 @@
 title: Python in Docker
-date: 2016-11-18
 tags: Technology
 
 I've been playing around a lot lately with Docker containers.

@@ -1,5 +1,4 @@
 title: A Guide to Python Datetimes
-date: 2018-01-03
 tags: Technology
 description: Wherein I try to once-and-for-all solve Python timezone issues.
 

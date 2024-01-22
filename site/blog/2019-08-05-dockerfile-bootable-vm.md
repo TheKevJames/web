@@ -1,5 +1,4 @@
 title: Dockerfile to Bootable GCP-Optimized VM
-date: 2019-08-05
 tags: Technology
 description: Scriptable creation of GCP custom VM images from Dockerfiles
 

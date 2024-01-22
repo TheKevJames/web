@@ -84,7 +84,8 @@ repos:
         # Note that some libraries keep their type hints in packages named
         # `types-$lib` or `$lib-stubs`.
         additional_dependencies:
-        - types-flask
+        - jinja2
+        - types-markdown
         args:
         - --show-error-codes
         - --strict

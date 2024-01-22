@@ -1,5 +1,5 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA256
+Hash: SHA512
 
 Canonical: https://thekev.in/security.txt
 
@@ -27,8 +27,8 @@ Encryption: https://thekev.in/pgp.txt
 # gpg: Good signature from "Kevin James <KevinJames@thekev.in>" [uncertain]
 -----BEGIN PGP SIGNATURE-----
 
-iIsEARYIADMWIQTtNbvHXYuA2hlJqr2ysL0v5O6ExQUCXVzDrhUca2V2aW5qYW1l
-c0B0aGVrZXYuaW4ACgkQsrC9L+TuhMU2lAD8C8krbcAauK3WyyZICIj2wO3PUEbf
-vtTUz+aNsKr8h1oA/ApC/jVomQYWFm1r28QeuSd0JOITD9O2mTar7BTP1oEH
-=rTPz
+iIsEARYKADMWIQTtNbvHXYuA2hlJqr2ysL0v5O6ExQUCZa3lBhUca2V2aW5qYW1l
+c0B0aGVrZXYuaW4ACgkQsrC9L+TuhMVkpwEA+8BUn/zUu3omYb/YC6tL3rwKu6s8
+aKJXknZO3c5cU1QA/jLyI2sd+wR+NYhAQe1jdODjAl9FhKpw5AJlEscgM2kN
+=O82n
 -----END PGP SIGNATURE-----

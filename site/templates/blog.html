@@ -8,15 +8,15 @@
         {% if not filter_tag %}
             <h2>Recent Posts</h2>
         {% else %}
-            <h2><span class='hidden-small'>Posts Tagged With </span>"{{ filter_tag }}" (<a href="{{ url_for('blog') }}">view all</a>)</h2>
+            <h2><span class='hidden-small'>Posts Tagged With </span>"{{ filter_tag }}" (<a href='/blog/index.html'>view all</a>)</h2>
         {% endif %}
 
         <div class='list'>
         {% for post in recent %}
-            <div id='post-{{ post.path }}'>
+            <div id='post-{{ post.fname.name }}'>
                 <h3>{{ post.title }}</h3>
                 <p class='date'>{{ post.date }}</p>
-                <a class='live' href="{{ url_for('blog_post', name=post.path) }}">View</a>
+                <a class='live' href="/blog/{{ post.pub_path }}">View</a>
             </div>
         {% endfor %}
         </div>
@@ -32,7 +32,7 @@
                 <ul>
                 {% for post in grouped %}
                     <li>
-                        <a href="{{ url_for('blog_post', name=post.path) }}">{{ post.title }}</a>
+                        <a href="/blog/{{ post.pub_path }}">{{ post.title }}</a>
                     </li>
                 {% endfor %}
                 </ul>
@@ -46,7 +46,7 @@
             <ul class='list'>
             {% for tag in by_tag|sort %}
                 <li>
-                    <a href="{{ url_for('blog_tagged', tag=tag.replace(' ', '_')) }}">{{ tag }}</a> ({{ by_tag[tag]|length }})
+                    <a href="/blog/{{ tag.replace(' ', '_') }}.html">{{ tag }}</a> ({{ by_tag[tag]|length }})
                 </li>
             {% endfor %}
             </ul>

@@ -46,15 +46,16 @@ def collect_by_tags(items: list[Post]) -> dict[str, list[Post]]:
 
 
 def parse_blog() -> Iterator[Post]:
-    md = markdown.Markdown(extensions=[
-        'markdown.extensions.codehilite',
-        'markdown.extensions.meta',
-        'markdown.extensions.tables',
-    ])
+    md = markdown.Markdown(
+        extensions=[
+            'markdown.extensions.codehilite',
+            'markdown.extensions.meta',
+            'markdown.extensions.tables',
+        ],
+    )
 
     for fname in (SITE_DIR / 'blog').glob('*.md'):
-        with open(fname, encoding='utf-8') as f:
-            raw = f.read()
+        raw = fname.read_text(encoding='utf-8')
 
         html = md.convert(raw)
         meta = md.Meta  # type: ignore[attr-defined]
@@ -85,10 +86,10 @@ def render() -> None:
         template = env.get_template('post.html')
         fname = build_dir / 'blog' / post.pub_path
         fname.parent.mkdir(exist_ok=True)
-        with open(fname, 'w', encoding='utf-8') as f:
+        with fname.open('w', encoding='utf-8') as f:
             f.write(template.render(post=post))
 
-    posts = sorted(posts, key=operator.attrgetter('date'), reverse=True)
+    posts.sort(key=operator.attrgetter('date'), reverse=True)
     posts_by_tag = collect_by_tags(posts)
     context = {
         'by_date': {k: list(v) for k, v in itertools.groupby(posts, getyear)},
@@ -96,21 +97,29 @@ def render() -> None:
     }
 
     template = env.get_template('blog.html')
-    with open(build_dir / 'blog' / 'index.html', 'w', encoding='utf-8') as f:
-        f.write(template.render({'filter_tag': None, 'recent': posts[:6],
-                                 **context}))
+    with (build_dir / 'blog' / 'index.html').open('w', encoding='utf-8') as f:
+        f.write(
+            template.render(
+                {'filter_tag': None, 'recent': posts[:6]} | context,
+            ),
+        )
     for tag, by_tag in posts_by_tag.items():
         fname = build_dir / 'blog' / f'{tag.replace(" ", "_")}.html'
-        with open(fname, 'w', encoding='utf-8') as f:
-            f.write(template.render({'filter_tag': tag, 'recent': by_tag,
-                                     **context}))
+        with fname.open('w', encoding='utf-8') as f:
+            f.write(
+                template.render(
+                    {'filter_tag': tag, 'recent': by_tag} | context,
+                ),
+            )
 
     template = env.get_template('feed.xml')
-    with open(build_dir / 'feed.xml', 'w', encoding='utf-8') as f:
+    with (build_dir / 'feed.xml').open('w', encoding='utf-8') as f:
         f.write(template.render(posts=posts[:10]))
 
-    for fbasename in ('404.html', 'cocktails.html', 'index.html',
-                      'publications.html', 'travel.html'):
+    for fbasename in (
+        '404.html', 'cocktails.html', 'index.html',
+        'publications.html', 'travel.html',
+    ):
         template = env.get_template(fbasename)
-        with open(build_dir / fbasename, 'w', encoding='utf-8') as f:
+        with (build_dir / fbasename).open('w', encoding='utf-8') as f:
             f.write(template.render())

@@ -17,9 +17,12 @@ geopy = "2.4.1"
 jinja2 = "3.1.3"
 markdown = "3.5.2"
 kaleido = "0.2.1"
-pandas = "2.1.4"
+pandas = "2.2.0"
 plotly = "5.18.0"
 pygments = "2.17.2"
+
+[tool.poetry.group.resolution.dependencies]
+pyarrow = "15.0.0"  # Pandas v3, or https://github.com/pandas-dev/pandas/issues/54466
 
 [[tool.poetry.source]]
 name = "pypi"

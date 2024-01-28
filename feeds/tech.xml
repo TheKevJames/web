@@ -48,6 +48,7 @@
       <outline text="One Thing Well" title="One Thing Well" type="rss" xmlUrl="http://onethingwell.org/rss" htmlUrl="http://onethingwell.org/"/>
       <outline text="Paul Graham" title="Paul Graham" type="rss" xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss" htmlUrl="http://paulgraham.com/articles.html"/>
       <outline text="Rachel Kroll (rachelbythebay)" title="Rachel Kroll (rachelbythebay)" type="rss" xmlUrl="http://rachelbythebay.com/w/atom.xml" htmlUrl="http://rachelbythebay.com/w/"/>
+      <outline text="Rich Lafferty" title="Rich Lafferty" type="rss" xmlUrl="https://www.lafferty.ca/index.xml" htmlUrl="https://www.lafferty.ca/archives"/>
       <outline text="Salvatore Sanfilippo (Antirez)" title="Salvatore Sanfilippo (Antirez)" type="rss" xmlUrl="http://antirez.com/rss" htmlUrl="http://antirez.com/"/>
       <outline text="Sinclair Target (0b10 History)" title="Sinclair Target (0b10 History)" type="rss" xmlUrl="https://twobithistory.org/feed.xml" htmlUrl="https://twobithistory.org/"/>
       <outline text="Stephen Mann" title="Stephen Mann" type="rss" xmlUrl="https://stephenmann.io/index.xml" htmlUrl="https://stephenmann.io/"/>
@@ -56,6 +57,7 @@
       <outline text="Todd Hoff (High Scalability)" title="Todd Hoff (High Scalability)" type="rss" xmlUrl="http://feeds.feedburner.com/HighScalability" htmlUrl="http://highscalability.com/blog/"/>
       <outline text="Travis Downs (Performance Matters)" title="Travis Downs (Performance Matters)" type="rss" xmlUrl="https://travisdowns.github.io/feed.xml" htmlUrl="https://travisdowns.github.io/"/>
       <outline text="Troy Hunt" title="Troy Hunt" type="rss" xmlUrl="https://feeds.feedburner.com/TroyHunt" htmlUrl="https://www.troyhunt.com/"/>
+      <outline text="lcamtuf" title="lcamtuf" type="rss" xmlUrl="https://lcamtuf.blogspot.com/feeds/posts/default" htmlUrl="https://lcamtuf.blogspot.com/"/>
     </outline>
   </body>
 </opml>

@@ -1,19 +1,21 @@
-<rss version='2.0'>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
 <channel>
 
 <title>Kevin James' Blog</title>
-<link>https://www.thekev.in/blog</link>
+<link>https://thekev.in/blog</link>
 <description>Dialpad (AI, formerly TalkIQ) staff engineer and tech lead; uWaterloo software engineer; occasional musician, mixologist, and writer</description>
 
-<docs>http://cyber.harvard.edu/rss/rss.html</docs>
+<docs>https://www.rssboard.org/rss-profile</docs>
 <language>en-us</language>
 <pubDate>{{ posts.0.pub_date }}</pubDate>
 
 <image>
     <title>Kevin James' Blog</title>
-    <link>https://www.thekev.in/blog</link>
+    <link>https://thekev.in/blog</link>
     <url>https://thekev.in/favicon.png</url>
 </image>
+
+<atom:link href='https://thekev.in/feed.xml' rel='self' type='application/rss+xml' />
 
 {% for post in posts %}
 <item>

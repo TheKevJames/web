@@ -110,6 +110,7 @@ Fixes
 - `Sentry (python, raven) - fix support for Python 3.8`_
 - `datadogpy - make the MetricsAggregator threadsafe`_
 - `protobuf (python) - fix support for Python 3.8`_
+- `python-aioplatform - migrate off of pkg_resources`_
 - `renovate - fix /simple compatibility for non-standard PyPI indexes`_
 - `renovate - fix HTTP auth for NOPASS indexes`_
 - `sensu-plugins-elasticsearch - support installations with partially disabled metrics`_
@@ -164,6 +165,7 @@ Fixes
 .. _puppet-homebrew: https://github.com/TheKevJames/puppet-homebrew
 .. _pylint_import_modules - support globally allowed direct imports: https://github.com/bayesimpact/pylint_import_modules/pull/7
 .. _pystun3: https://github.com/talkiq/pystun3
+.. _python-aioplatform - migrate off of pkg_resources: https://github.com/googleapis/python-aiplatform/pull/3298
 .. _redis-cli-cluster: https://github.com/talkiq/redis-cli-cluster
 .. _renovate - fix /simple compatibility for non-standard PyPI indexes: https://github.com/renovatebot/renovate/pull/6649
 .. _renovate - fix HTTP auth for NOPASS indexes: https://github.com/renovatebot/renovate/pull/8442

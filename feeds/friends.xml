@@ -5,7 +5,6 @@
   </head>
   <body>
     <outline text="Misc" title="Misc">
-      <outline text="Josh Goller" title="Josh Goller" type="rss" xmlUrl="https://jsgoller1.tumblr.com/rss" htmlUrl="https://jsgoller1.tumblr.com/"/>
       <outline text="Mounir" title="Mounir" type="rss" xmlUrl="http://www.youtube.com/feeds/videos.xml?user=SOIACW" htmlUrl="http://www.youtube.com/channel/UCmlf94lnDNoLxHIjn1jhv7Q"/>
     </outline>
     <outline text="Music" title="Music">

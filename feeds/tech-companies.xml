@@ -10,7 +10,7 @@
       <outline text="GitHub Engineering" title="GitHub Engineering" type="rss" xmlUrl="https://githubengineering.com/atom.xml" htmlUrl="https://githubengineering.com/"/>
       <outline text="Google Testing Blog" title="Google Testing Blog" type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/RLXA" htmlUrl="http://googletesting.blogspot.com/"/>
       <outline text="Netflix TechBlog" title="Netflix TechBlog" type="rss" xmlUrl="https://medium.com/feed/netflix-techblog" htmlUrl="https://medium.com/netflix-techblog?source=rss----2615bd06b42e---4"/>
-      <outline text="The Overflow" title="The Overflow" type="rss" xmlUrl="https://stackoverflow.blog/newsletter/feed" htmlUrl="https://stackoverflow.blog/"/>
+      <outline text="The Overflow" title="The Overflow" type="rss" xmlUrl="https://stackoverflow.blog/feed" htmlUrl="https://stackoverflow.blog/"/>
     </outline>
   </body>
 </opml>

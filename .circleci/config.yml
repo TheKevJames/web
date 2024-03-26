@@ -117,6 +117,10 @@ jobs:
       - image: google/cloud-sdk:latest
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: /gcloud-service-key.json
+    parameters:
+      only_quotes:
+        type: boolean
+        default: false
     steps:
       - run:
           name: authenticate with google cloud
@@ -127,6 +131,10 @@ jobs:
       - attach_workspace:
           at: artifacts
       - run: gsutil -m cp -r artifacts/* gs://thekevjames-artifacts
+      - when:
+          condition: <<parameters.only_quotes>>
+          steps:
+            - run: circleci-agent step halt
       - attach_workspace:
           at: site
       - run: gcloud storage rsync --delete-unmatched-destination-objects -r site/build gs://thekev.in
@@ -170,5 +178,6 @@ workflows:
     jobs:
       - quotes-json
       - upload:
+          only_quotes: true
           requires:
             - quotes-json

@@ -22,7 +22,7 @@ plotly = "5.22.0"
 pygments = "2.18.0"
 
 [tool.poetry.group.resolution.dependencies]
-pyarrow = "16.0.0"  # Pandas v3, or https://github.com/pandas-dev/pandas/issues/54466
+pyarrow = "16.1.0"  # Pandas v3, or https://github.com/pandas-dev/pandas/issues/54466
 
 [[tool.poetry.source]]
 name = "pypi"

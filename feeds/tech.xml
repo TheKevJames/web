@@ -55,7 +55,7 @@
       <outline text="Todd Hoff (High Scalability)" title="Todd Hoff (High Scalability)" type="rss" xmlUrl="http://feeds.feedburner.com/HighScalability" htmlUrl="http://highscalability.com/blog/"/>
       <outline text="Travis Downs (Performance Matters)" title="Travis Downs (Performance Matters)" type="rss" xmlUrl="https://travisdowns.github.io/feed.xml" htmlUrl="https://travisdowns.github.io/"/>
       <outline text="Troy Hunt" title="Troy Hunt" type="rss" xmlUrl="https://feeds.feedburner.com/TroyHunt" htmlUrl="https://www.troyhunt.com/"/>
-      <outline text="lcamtuf" title="lcamtuf" type="rss" xmlUrl="https://lcamtuf.blogspot.com/feeds/posts/default" htmlUrl="https://lcamtuf.blogspot.com/"/>
+      <outline text="lcamtuf" title="lcamtuf" type="rss" xmlUrl="https://lcamtuf.substack.com/feed" htmlUrl="https://lcamtuf.substack.com/"/>
     </outline>
   </body>
 </opml>

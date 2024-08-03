@@ -41,8 +41,8 @@ build/codehilite.light.css: build
 # requires secrets, must be run locally
 local: src/data.cache static/security.txt
 
-src/data.cache:
-	poetry run cache ~/sync/finance/location.beancount
+src/data.cache: ~/sync/finance/location.beancount
+	poetry run cache $<
 
 static/security.txt: security.txt
 	gpg --clearsign --default-key KevinJames@thekev.in -o $@ $<

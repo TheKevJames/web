@@ -8,7 +8,7 @@ default_install_hook_types:
   - pre-commit
 
 default_language_version:
-    python: python3.12
+    python: python3.13
 
 repos:
   - repo: https://github.com/compilerla/conventional-pre-commit
@@ -53,6 +53,7 @@ repos:
           - --max-complexity=10
           - --max-line-length=79
           - --max-module-lines=500
+          - --max-positional-arguments=10
           - --max-args=10
           - --score=n
           # TODO: narrow these down
@@ -99,7 +100,8 @@ repos:
         # Note that some libraries keep their type hints in packages named
         # `types-$lib` or `$lib-stubs`.
         additional_dependencies:
-          - jinja2
+          # renovate: datasource=pypi depName=jinja2
+          - jinja2==3.1.4
           - types-markdown
         args:
           - --show-error-codes
@@ -205,6 +207,7 @@ repos:
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.29.4
     hooks:
+      - id: check-circle-ci
       - id: check-github-workflows
       - id: check-renovate
         additional_dependencies:
@@ -250,10 +253,6 @@ repos:
       - id: terraform_validate
 
 # shell
-  - repo: https://github.com/lovesegfault/beautysh
-    rev: v6.2.1
-    hooks:
-      - id: beautysh
   - repo: https://github.com/openstack/bashate
     rev: 2.1.1
     hooks:

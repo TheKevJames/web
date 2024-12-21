@@ -101,7 +101,7 @@ repos:
         # `types-$lib` or `$lib-stubs`.
         additional_dependencies:
           # renovate: datasource=pypi depName=jinja2
-          - jinja2==3.1.4
+          - jinja2==3.1.5
           - types-markdown
         args:
           - --show-error-codes

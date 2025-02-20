@@ -34,7 +34,7 @@ package-mode = true
 python = ">=3.11,<4.0"
 
 [tool.poetry.group.resolution.dependencies]
-pyarrow = "19.0.0"  # Pandas v3, or https://github.com/pandas-dev/pandas/issues/54466
+pyarrow = "19.0.1"  # Pandas v3, or https://github.com/pandas-dev/pandas/issues/54466
 
 [[tool.poetry.source]]
 name = "pypi"

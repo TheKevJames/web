@@ -14,10 +14,10 @@ Active OSS Projects
 These are the "brag-worthy" and "public use" ones. Recruiters, look here.
 
 - I am the primary maintainer of the `coveralls-python`_ project used by ~12k
-  OSS projects on GitHub. No affiliation with `Coveralls`_. `Over 25M downloads`_.
+  OSS projects on GitHub. No affiliation with `Coveralls`_. `Over 55M downloads`_.
 
 - I am the maintainer of the `Puppet`_ `Homebrew`_ plugin `puppet-homebrew`_.
-  Over 210k downloads.
+  Over 350k downloads.
 
 - I maintain the GNOME Shell extension for interfacing with a `Transmission`_
   daemon/gtk instance: `gnome-shell-extension-transmission-daemon`_.
@@ -30,6 +30,9 @@ These are the "brag-worthy" and "public use" ones. Recruiters, look here.
 
 - The `Brew`_ formula for `youtube-viewer`_ (similarly aptly-named link:
   `homebrew-youtube-viewer`_).
+
+- The `Beancount`_ extension package `beancount-importer`_ for handling data
+  from various banks.
 
 Personal Projects
 -----------------
@@ -115,6 +118,7 @@ Fixes
 - `renovate - fix HTTP auth for NOPASS indexes`_
 - `sensu-plugins-elasticsearch - support installations with partially disabled metrics`_
 
+.. _Beancount: https://beancount.github.io/
 .. _Brew: https://brew.sh/
 .. _CV: https://github.com/TheKevJames/cv
 .. _Clockwise: https://www.getclockwise.com/
@@ -130,7 +134,7 @@ Fixes
 .. _Julia: https://julialang.org/
 .. _MacPorts: https://www.macports.org/
 .. _Nim: https://nim-lang.org/
-.. _Over 25M downloads: https://pepy.tech/project/coveralls
+.. _Over 55M downloads: https://pepy.tech/project/coveralls
 .. _Puppet: https://puppet.com/
 .. _Sentry (python, raven) - fix support for Python 3.8: https://github.com/getsentry/raven-python/pull/1298
 .. _SublimeLinter - support inline tooltips: https://github.com/SublimeLinter/SublimeLinter/pull/552/
@@ -139,6 +143,7 @@ Fixes
 .. _aerofs-sdk-python: https://github.com/redbooth/aerofs-sdk-python
 .. _aeroup: https://github.com/redbooth/aeroup
 .. _archived: https://github.com/TheKevJames?tab=repositories&type=archived
+.. _beancount-importer: https://pypi.org/project/beancount-importer/
 .. _blog: https://thekev.in/blog
 .. _challenges: https://github.com/TheKevJames/challenges
 .. _coveralls-python: https://github.com/TheKevJames/coveralls-python

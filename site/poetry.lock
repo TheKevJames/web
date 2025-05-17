@@ -159,14 +159,14 @@ files = [
 
 [[package]]
 name = "narwhals"
-version = "1.38.2"
+version = "1.39.1"
 description = "Extremely lightweight compatibility layer between dataframe libraries"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "narwhals-1.38.2-py3-none-any.whl", hash = "sha256:a33a182e32f18d794a04e7828a5c401fb26ce9083f609993e7e5064aace641c7"},
-    {file = "narwhals-1.38.2.tar.gz", hash = "sha256:7c5fbc9f2b8e1d5d95f49dcef9c2d94bf17810de68c87ff195dc7d22f7b3eeb5"},
+    {file = "narwhals-1.39.1-py3-none-any.whl", hash = "sha256:68d0f29c760f1a9419ada537f35f21ff202b0be1419e6d22135a0352c6d96deb"},
+    {file = "narwhals-1.39.1.tar.gz", hash = "sha256:cf15389e6f8c5321e8cd0ca8b5bace3b1aea5f5622fa59dfd64821998741d836"},
 ]
 
 [package.extras]
@@ -347,14 +347,14 @@ xml = ["lxml (>=4.9.2)"]
 
 [[package]]
 name = "plotly"
-version = "6.0.1"
+version = "6.1.0"
 description = "An open-source interactive data visualization library for Python"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "plotly-6.0.1-py3-none-any.whl", hash = "sha256:4714db20fea57a435692c548a4eb4fae454f7daddf15f8d8ba7e1045681d7768"},
-    {file = "plotly-6.0.1.tar.gz", hash = "sha256:dd8400229872b6e3c964b099be699f8d00c489a974f2cfccfad5e8240873366b"},
+    {file = "plotly-6.1.0-py3-none-any.whl", hash = "sha256:a29d3ed523c9d7960095693af1ee52689830df0f9c6bae3e5e92c20c4f5684c3"},
+    {file = "plotly-6.1.0.tar.gz", hash = "sha256:f13f497ccc2d97f06f771a30b27fab0cbd220f2975865f4ecbc75057135521de"},
 ]
 
 [package.dependencies]
@@ -362,7 +362,9 @@ narwhals = ">=1.15.1"
 packaging = "*"
 
 [package.extras]
+dev = ["black (==25.1.0)"]
 express = ["numpy"]
+kaleido = ["kaleido (==1.0.0rc13)"]
 
 [[package]]
 name = "pyarrow"
@@ -501,4 +503,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<4.0"
-content-hash = "6a78d0f37ec69fc24a457ea132a181065a1f5dad9276d143ab3ec7e7d729c76a"
+content-hash = "f450daffaee281d3a1284d7b9a5f355d996b3aae9550c599adf9295e9e849037"

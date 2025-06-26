@@ -1,4 +1,4 @@
-.PHONY: all build local view
+.PHONY: all build install local view
 
 BUILDDIR = build
 STATICDIR = static
@@ -15,7 +15,7 @@ $(BUILDDIR)/%.txt: $(STATICDIR)/%.txt build
 
 build:
 	mkdir -p $@
-build/blog: build
+build/blog: build install
 	mkdir -p $@
 	poetry run render  # TODO: better place
 
@@ -29,19 +29,22 @@ build/.well-known/security.txt: build/security.txt build/.well-known
 
 build/img: build
 	mkdir -p $@
-build/img/travel.svg: src/data.cache src/latlng.cache build/img
+build/img/travel.svg: install src/data.cache src/latlng.cache build/img
 	poetry run draw
 
-build/codehilite.css: build
+build/codehilite.css: build install
 	poetry run pygmentize -S gruvbox-dark -f html -a .codehilite > $@
-build/codehilite.light.css: build
+build/codehilite.light.css: build install
 	poetry run pygmentize -S gruvbox-light -f html -a .codehilite > $@
 
+
+install:
+	poetry sync
 
 # requires secrets, must be run locally
 local: src/data.cache static/security.txt
 
-src/data.cache:
+src/data.cache: install
 	poetry run cache ~/sync/finance/location.beancount
 
 static/security.txt: security.txt

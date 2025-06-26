@@ -14,7 +14,7 @@ dependencies = [
     "markdown==3.8.2",
     "kaleido==1.0.0",
     "pandas==2.2.3",
-    "plotly==6.1.2",
+    "plotly==6.2.0",
     "pygments==2.19.2",
 ]
 

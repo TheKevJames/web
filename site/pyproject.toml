@@ -13,7 +13,7 @@ dependencies = [
     "jinja2==3.1.6",
     "markdown==3.8.2",
     "kaleido==1.0.0",
-    "pandas==2.2.3",
+    "pandas==2.3.1",
     "plotly==6.1.2",
     "pygments==2.19.2",
 ]

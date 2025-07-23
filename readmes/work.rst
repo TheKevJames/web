@@ -138,6 +138,7 @@ Various one-liners embodying my favorite axioms and architectural principles:
 * Do it decently the first time. The second try will be when it catches fire.
 * Migrations should be easy. Plan for disaster, build for failure, lower the
   risk.
+* Make it work. Make it right. Make it fast.
 
 Your Philosophies
 -----------------

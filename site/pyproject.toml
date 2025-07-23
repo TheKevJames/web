@@ -13,8 +13,8 @@ dependencies = [
     "jinja2==3.1.6",
     "markdown==3.8.2",
     "kaleido==1.0.0",
-    "pandas==2.2.3",
-    "plotly==6.1.2",
+    "pandas==2.3.1",
+    "plotly==6.2.0",
     "pygments==2.19.2",
 ]
 
@@ -34,7 +34,7 @@ package-mode = true
 python = ">=3.11,<4.0"
 
 [tool.poetry.group.resolution.dependencies]
-pyarrow = "20.0.0"  # Pandas v3, or https://github.com/pandas-dev/pandas/issues/54466
+pyarrow = "21.0.0"  # Pandas v3, or https://github.com/pandas-dev/pandas/issues/54466
 
 [[tool.poetry.source]]
 name = "pypi"

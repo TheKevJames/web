@@ -32,7 +32,7 @@ TEMPLATE_HEAD = """
     <outline text="{title}" title="{title}">
 """
 TEMPLATE_ITEM = """
-      <outline text="{name}" title="{name}" type="rss" xmlUrl="{xml}"
+      <outline text="{name}" title="{name}" type="rss" xmlUrl="{url}"
                htmlUrl="{html}"/>
 """
 TEMPLATE_FOOT = """
@@ -55,8 +55,11 @@ def main() -> None:
                 b'title="RSS" href="',
             )
             xml, *_ = body.split(b'">')
+            channel = xml.decode('utf-8')
+            # filters out shorts
+            videos = channel.replace('channel_id=UC', 'playlist_id=UULF')
             item = TEMPLATE_ITEM.format(
-                name=name, html=html, xml=xml.decode('utf-8'),
+                name=name, html=html, url=videos,
             )
             f.write(item.lstrip('\n'))
         f.write(TEMPLATE_FOOT.lstrip('\n'))

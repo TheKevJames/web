@@ -5,37 +5,37 @@
   </head>
   <body>
     <outline text="Music" title="Music">
-      <outline text="Against the Current" title="Against the Current" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCxMsgwldMZiuFTD6jjv32yQ"
+      <outline text="Against the Current" title="Against the Current" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFxMsgwldMZiuFTD6jjv32yQ"
                htmlUrl="https://www.youtube.com/@againstthecurrent"/>
-      <outline text="Book Club Radio" title="Book Club Radio" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCLmaR7ew57x0XJEe_-REUyg"
+      <outline text="Book Club Radio" title="Book Club Radio" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFLmaR7ew57x0XJEe_-REUyg"
                htmlUrl="https://www.youtube.com/@bookclubradio"/>
-      <outline text="Chainsmokers" title="Chainsmokers" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCq3Ci-h945sbEYXpVlw7rJg"
+      <outline text="Chainsmokers" title="Chainsmokers" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFq3Ci-h945sbEYXpVlw7rJg"
                htmlUrl="https://www.youtube.com/@THECHAINSMOKERS"/>
-      <outline text="Dylan Taylor" title="Dylan Taylor" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCgAZQMB-xcjBEa8LFV0vlqg"
+      <outline text="Dylan Taylor" title="Dylan Taylor" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFgAZQMB-xcjBEa8LFV0vlqg"
                htmlUrl="https://www.youtube.com/@DylanTaylorDrums"/>
-      <outline text="Epic Rap Battles of History" title="Epic Rap Battles of History" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCMu5gPmKp5av0QCAajKTMhw"
+      <outline text="Epic Rap Battles of History" title="Epic Rap Battles of History" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFMu5gPmKp5av0QCAajKTMhw"
                htmlUrl="https://www.youtube.com/@ERB"/>
-      <outline text="Fueled By Ramen" title="Fueled By Ramen" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UClVrJwcIy7saPcGc1nct80A"
+      <outline text="Fueled By Ramen" title="Fueled By Ramen" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFlVrJwcIy7saPcGc1nct80A"
                htmlUrl="https://www.youtube.com/@fueledbyramen"/>
-      <outline text="Jack Conte" title="Jack Conte" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCXuc4N_UKi5IXNGtHZY8qQA"
+      <outline text="Jack Conte" title="Jack Conte" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFXuc4N_UKi5IXNGtHZY8qQA"
                htmlUrl="https://www.youtube.com/@Jackconte"/>
-      <outline text="Kurt Hugo Schneider" title="Kurt Hugo Schneider" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCplkk3J5wrEl0TNrthHjq4Q"
+      <outline text="Kurt Hugo Schneider" title="Kurt Hugo Schneider" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFplkk3J5wrEl0TNrthHjq4Q"
                htmlUrl="https://www.youtube.com/@KurtHugoSchneider"/>
-      <outline text="Lonely Island" title="Lonely Island" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCCHcEUksSVKsRDH86j77Ntg"
+      <outline text="Lonely Island" title="Lonely Island" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFCHcEUksSVKsRDH86j77Ntg"
                htmlUrl="https://www.youtube.com/@thelonelyisland"/>
-      <outline text="Lukas Graham" title="Lukas Graham" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCs8ynQgjoKZblUXosXoeOEQ"
+      <outline text="Lukas Graham" title="Lukas Graham" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFs8ynQgjoKZblUXosXoeOEQ"
                htmlUrl="https://www.youtube.com/@LukasGraham"/>
-      <outline text="Noah Guthrie" title="Noah Guthrie" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC10EcWjwbU79-6dc4WO-bDQ"
+      <outline text="Noah Guthrie" title="Noah Guthrie" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULF10EcWjwbU79-6dc4WO-bDQ"
                htmlUrl="https://www.youtube.com/@noahguthrie"/>
-      <outline text="The Tech Thieves" title="The Tech Thieves" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCRYrNPcd_Ib8pdDUsYDVOag"
+      <outline text="The Tech Thieves" title="The Tech Thieves" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFRYrNPcd_Ib8pdDUsYDVOag"
                htmlUrl="https://www.youtube.com/@TheTechThieves"/>
-      <outline text="TheFatRat" title="TheFatRat" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa_UMppcMsHIzb5LDx1u9zQ"
+      <outline text="TheFatRat" title="TheFatRat" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFa_UMppcMsHIzb5LDx1u9zQ"
                htmlUrl="https://www.youtube.com/@TheFatRat"/>
-      <outline text="Tony Ann" title="Tony Ann" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCfXIJckiinUkYIM-TSpIaFw"
+      <outline text="Tony Ann" title="Tony Ann" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFfXIJckiinUkYIM-TSpIaFw"
                htmlUrl="https://www.youtube.com/@tonyannmusic"/>
-      <outline text="Trap Nation" title="Trap Nation" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa10nxShhzNrCE1o2ZOPztg"
+      <outline text="Trap Nation" title="Trap Nation" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFa10nxShhzNrCE1o2ZOPztg"
                htmlUrl="https://www.youtube.com/@TrapNation"/>
-      <outline text="Triple J" title="Triple J" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCd2KNtfphz8HvYzM4pwtHmg"
+      <outline text="Triple J" title="Triple J" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFd2KNtfphz8HvYzM4pwtHmg"
                htmlUrl="https://www.youtube.com/@triplej"/>
     </outline>
   </body>

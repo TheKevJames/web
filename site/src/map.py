@@ -4,6 +4,7 @@ import json
 import math
 import pathlib
 import sys
+import warnings
 
 import geopy.geocoders
 import plotly.express
@@ -87,4 +88,11 @@ def draw() -> None:
 
     images = pathlib.Path(__file__).parents[1] / 'build' / 'img'
     images.mkdir(exist_ok=True)
-    fig.write_image(images / 'travel.svg')
+    with warnings.catch_warnings():
+        # TODO: remove this filter in October 2025
+        # Deprecation message is:
+        # Support for the 'engine' argument is deprecated and will be removed
+        # after September 2025.
+        # Kaleido will be the only supported engine at that time.
+        warnings.simplefilter('ignore', DeprecationWarning)
+        fig.write_image(images / 'travel.svg')

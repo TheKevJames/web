@@ -29,7 +29,7 @@ build/.well-known/security.txt: build/security.txt build/.well-known
 
 build/img: build
 	mkdir -p $@
-build/img/travel.svg: install src/data.cache src/latlng.cache build/img
+build/img/travel.svg: install build/img
 	poetry run draw
 
 build/codehilite.css: build install

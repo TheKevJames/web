@@ -102,7 +102,7 @@ repos:
         # `types-$lib` or `$lib-stubs`.
         additional_dependencies:
           - jinja2==3.1.6
-          - types-markdown==3.8.0.20250809
+          - types-markdown==3.9.0.20250906
         args:
           - --show-error-codes
           - --strict

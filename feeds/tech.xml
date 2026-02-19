@@ -50,6 +50,7 @@
       <outline text="Salvatore Sanfilippo (Antirez)" title="Salvatore Sanfilippo (Antirez)" type="rss" xmlUrl="http://antirez.com/rss" htmlUrl="http://antirez.com/"/>
       <outline text="Sinclair Target (0b10 History)" title="Sinclair Target (0b10 History)" type="rss" xmlUrl="https://twobithistory.org/feed.xml" htmlUrl="https://twobithistory.org/"/>
       <outline text="Steve Losh" title="Steve Losh" type="rss" xmlUrl="https://feeds.feedburner.com/stevelosh" htmlUrl="http://stevelosh.com/blog/"/>
+      <outline text="Lorin Hochstein (Surfing Complexity)" title="Lorin Hochstein (Surfing Complexity)" type="rss" xmlUrl="https://surfingcomplexity.blog/feed/" htmlUrl="https://surfingcomplexity.blog/"/>
       <outline text="Ted Kaminski" title="Ted Kaminski" type="rss" xmlUrl="https://www.tedinski.com/feed.xml" htmlUrl="https://www.tedinski.com/archive/"/>
       <outline text="Todd Hoff (High Scalability)" title="Todd Hoff (High Scalability)" type="rss" xmlUrl="http://feeds.feedburner.com/HighScalability" htmlUrl="http://highscalability.com/blog/"/>
       <outline text="Travis Downs (Performance Matters)" title="Travis Downs (Performance Matters)" type="rss" xmlUrl="https://travisdowns.github.io/feed.xml" htmlUrl="https://travisdowns.github.io/"/>

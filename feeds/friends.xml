@@ -14,6 +14,7 @@
       <outline text="Jon Dobson" title="Jon Dobson" type="rss" xmlUrl="http://hashbeat.blogspot.com/feeds/posts/default" htmlUrl="http://hashbeat.blogspot.com/"/>
       <outline text="Kevin James" title="Kevin James" type="rss" xmlUrl="https://thekev.in/feed.xml" htmlUrl="https://www.thekev.in/blog"/>
       <outline text="Kyle Lexmond" title="Kyle Lexmond" type="rss" xmlUrl="https://kyle.io/feed/" htmlUrl="https://kyle.io/"/>
+      <outline text="Kyle Lexmond" title="Kyle Lexmond" type="rss" xmlUrl="https://insufficientlyadvanced.tech/index.xml" htmlUrl="https://insufficientlyadvanced.tech/"/>
       <outline text="Stephen Cagle" title="Stephen Cagle" type="rss" xmlUrl="http://samedhi.github.io/feed.xml" htmlUrl="http://samedhi.github.io/"/>
       <outline text="Stephen Cagle" title="Stephen Cagle" type="rss" xmlUrl="https://stephencagle.dev/feed.xml" htmlUrl="https://stephencagle.dev/"/>
     </outline>

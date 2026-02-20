@@ -4,13 +4,13 @@
   font-weight: 100;
   src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWIX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); }
 
-html {
+html, body {
   background-color: rgb(121, 165, 242);
   transition: background-color 1s linear;
+  height: 100%;
 }
 
 body {
-  background-color: transparent;
   overflow: hidden;
 }
 

@@ -10,14 +10,16 @@ body {
   transition: background-color 1s linear;
 }
 
-#quote, #quote-next {
+#quote, #quote-next, #quote-old {
   font: 48px/48px 'Raleway';
   text-align: center;
   position: absolute;
 
   top: 50%;
   left: 0;
-  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+
   margin-top: 0; /* line-height / 2 */
   margin-left: 0;
   opacity: 1; }
@@ -27,17 +29,17 @@ body {
   opacity: 0; }
 
 @media (max-width: 1000px) {
-  #quote, #quote-next {
+  #quote, #quote-next, #quote-old {
     padding: 0 36px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1800px) {
-  #quote, #quote-next {
+  #quote, #quote-next, #quote-old {
     padding: 0 72px;
   }
 }
 @media (min-width: 1800px) {
-  #quote, #quote-next {
+  #quote, #quote-next, #quote-old {
     padding: 0 144px;
   }
 }

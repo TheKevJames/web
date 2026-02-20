@@ -4,10 +4,14 @@
   font-weight: 100;
   src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWIX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); }
 
-body {
+html {
   background-color: rgb(121, 165, 242);
-  overflow: hidden;
   transition: background-color 1s linear;
+}
+
+body {
+  background-color: transparent;
+  overflow: hidden;
 }
 
 #quote, #quote-next, #quote-old {

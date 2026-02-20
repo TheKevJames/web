@@ -29,7 +29,7 @@ async function rerender() {
         })
     })).then(r => r.json());
 
-    await update_from_list('body', '#quote', '#quote-next', quotes, 10000);
+    await update_from_list('html', '#quote', '#quote-next', quotes, 10000);
     setTimeout(rerender, 5000);
 }
 

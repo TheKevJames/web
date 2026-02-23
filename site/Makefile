@@ -17,7 +17,7 @@ build:
 	mkdir -p $@
 build/blog: build install
 	mkdir -p $@
-	poetry run render  # TODO: better place
+	poetry run render
 
 build/favicon.png: ../shared/favicon.png build
 	cp $< $@

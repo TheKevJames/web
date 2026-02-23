@@ -36,7 +36,6 @@ jobs:
       - store_artifacts:
           path: artifacts/<<parameters.dir>>/
 
-  # TODO: build off "app" plus a pre-step
   quotes-json:
     executor: minify
     steps:

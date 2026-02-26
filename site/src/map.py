@@ -80,8 +80,14 @@ def draw() -> None:
         data = json.load(f)
 
     fig = plotly.express.scatter_geo(
-        data, lat='lat', lon='lon', size_max=20,
-        size='val', projection='natural earth',
+        data,
+        lat='lat',
+        lon='lon',
+        size_max=20,
+        size='val',
+        projection='natural earth',
+        hover_name='loc',
+        hover_data={'lat': False, 'lon': False, 'val': False},
     )
     fig.update_layout(height=700, margin={'l': 0, 'r': 0, 't': 0, 'b': 0})
 

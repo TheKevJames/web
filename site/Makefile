@@ -6,7 +6,7 @@ STATICDIR = static
 STATICSOURCES = $(wildcard $(STATICDIR)/*.txt)
 STATICBUILDS = $(patsubst $(STATICDIR)/%.txt, $(BUILDDIR)/%.txt, $(STATICSOURCES))
 
-OBJECTS = $(STATICBUILDS) build/blog build/favicon.png build/.well-known/security.txt build/img/travel.svg build/codehilite.css build/codehilite.light.css
+OBJECTS = $(STATICBUILDS) build/blog build/favicon.png build/.well-known/security.txt build/embed/travel.html build/codehilite.css build/codehilite.light.css
 
 all: $(OBJECTS)
 
@@ -27,9 +27,9 @@ build/.well-known: build
 build/.well-known/security.txt: build/security.txt build/.well-known
 	cp $< $@
 
-build/img: build
+build/embed: build
 	mkdir -p $@
-build/img/travel.svg: install build/img
+build/embed/travel.html: install build/embed
 	poetry run draw
 
 build/codehilite.css: build install

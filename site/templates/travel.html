@@ -11,7 +11,7 @@
             <div>
                 <h3>Travel Map</h3>
                 <p class='description'>I've been slowly filling in my travel map, updating this every time I visit a new city. Circles are sized based on the relative time spent in each location. You may also be interested in my <a href="https://maps.app.goo.gl/KKmwqEsPDViVBFPH9">Favourite Places</a> or the <a href="https://maps.app.goo.gl/gjw3sbbaQocwdGFw9">Places I Want to Check Out</a> which, let's be honest, is about 99% restaurants!</p>
-                <img src="./img/travel.svg"/>
+                <iframe class="travel-map" src="./embed/travel.html" title="Travel map" scrolling="no"></iframe>
             </div>
         </div>
     </div>
@@ -44,12 +44,18 @@
     .list div p.description {
       padding-left: 15px;
       padding-right: 15px; }
-  .list div img {
+  .list div iframe.travel-map {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    padding: 0 15px 15px 15px;
+    width: calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: 700px;
+    margin: 0 15px 15px 15px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
     text-align: center; }
   .list div :last-child {
     border-radius: 0 0 4px 4px; }

@@ -81,10 +81,10 @@ def draw() -> None:
 
     fig = plotly.express.scatter_geo(
         data, lat='lat', lon='lon', size_max=20,
-        size='val', height=1080, width=1920,
-        projection='natural earth',
+        size='val', projection='natural earth',
     )
+    fig.update_layout(height=700, margin={'l': 0, 'r': 0, 't': 0, 'b': 0})
 
-    images = pathlib.Path(__file__).parents[1] / 'build' / 'img'
-    images.mkdir(exist_ok=True)
-    fig.write_image(images / 'travel.svg')
+    embeds = pathlib.Path(__file__).parents[1] / 'build' / 'embed'
+    embeds.mkdir(exist_ok=True)
+    fig.write_html(embeds / 'travel.html', config={'responsive': True})

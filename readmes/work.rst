@@ -48,33 +48,15 @@ often online after-hours or even on the weekends. I do not expect you to be. If
 I message you outside of ~9 to ~5 (in your timezone!), I'm not expecting a
 response -- it can wait until the next (work)day.
 
-I am often "in the office" between 10AM and 6PM, with some slight variation
-depending on bus routes, sleep schedule, and "getting one last thing done
-before I head out".
+I am often "in the office" between noon and 8PM, with some slight variation
+depending on errands, sleep schedule, and "getting one last thing done before I
+head out".
 
 Process and Development
 -----------------------
 
-I've worked with and without Agile, Scrum, Waterfall, and blah-blah-blah other
-systems. At the end of the day, I care less about the framework and much more
-about the following:
-
-- I value speed of development -- including proactive efforts such as
-  writing/improving tests, refactoring legacy systems, and dissemination of
-  knowledge either through pairing or improving documentation.
-
-- I value learning -- exploring new ideas, trying new methods/libraries/sytems,
-  and being willing to discard and prune exploratory code once we settle into
-  something which works. Re-exploring the status quo semi-regularly, especially
-  with regards to legacy systems and pain points, is a fantastic way to build a
-  reliable and easy-to-work-with system.
-
-- I value our time as employees -- automating our workflows, simplifying our
-  systems, pruning unnecessary meetings, etc. are all fantastic ways to give us
-  the time to *actually do our jobs* rather than talk about doing them.
-
-- I value doing things right rather than quick -- cutting corners now is an
-  excellent way to have more work to do next week.
+Check out my `Beliefs.README`_ for an overview of what I think is important, my
+overall priorities, and a detailed look at how I tackle specific problems.
 
 Code Reviews
 ^^^^^^^^^^^^
@@ -147,4 +129,5 @@ Though I've written a lot here about working with me, I'm much more interested
 in how you'd like me to work with you -- if there's anything I could be doing
 to better work with you, let's chat!
 
+.. _Beliefs.README: https://github.com/TheKevJames/web/blob/master/readmes/beliefs.rst
 .. _Not Invented Here: https://en.wikipedia.org/wiki/Not_invented_here

@@ -43,7 +43,7 @@ cracks. For any unscheduled communication, my preference is the following:
 Or, more visually:
 
 ==================  =====  ====  ====
-                    Video  Code  Chat
+Problem vs Medium   Video  Code  Chat
 ==================  =====  ====  ====
 Decision Making            x     x
 Documentation              x

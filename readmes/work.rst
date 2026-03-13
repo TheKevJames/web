@@ -42,14 +42,16 @@ cracks. For any unscheduled communication, my preference is the following:
 
 Or, more visually:
 
-|                    | Video | Code | Chat |
-|--------------------|-------|------|------|
-| Decision Making    |       | x    | x    |
-| Documentation      |       | x    |      |
-| Problem-Solving    | x     |      | x    |
-| Status Update      |       |      | x    |
-| Task-Related       |       |      | x    |
-| Technical Design   |       | x    |      |
+==================  =====  ====  ====
+                    Video  Code  Chat
+==================  =====  ====  ====
+Decision Making            x     x
+Documentation              x
+Problem-Solving     x            x
+Status Update                    x
+Task-Related                     x
+Technical Design           x
+==================  =====  ====  ====
 
 Availability
 ------------

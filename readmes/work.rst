@@ -40,6 +40,17 @@ cracks. For any unscheduled communication, my preference is the following:
   juggling multiple things at once and *enjoy* context-switching to respond
   quickly.
 
+Or, more visually:
+
+|                    | Video | Code | Chat |
+|--------------------|-------|------|------|
+| Decision Making    |       | x    | x    |
+| Documentation      |       | x    |      |
+| Problem-Solving    | x     |      | x    |
+| Status Update      |       |      | x    |
+| Task-Related       |       |      | x    |
+| Technical Design   |       | x    |      |
+
 Availability
 ------------
 

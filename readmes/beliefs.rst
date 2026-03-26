@@ -1,8 +1,8 @@
 Beliefs.README
 ==============
 
-The README serves as a respository of the North Star beliefs which guide my
-decision-making prcesses. As a general rule, when presented with any
+The README serves as a repository of the North Star beliefs which guide my
+decision-making processes. As a general rule, when presented with any
 engineering problem, the following ideas tend to be the ones in my mind as I
 craft a solution.
 
@@ -17,11 +17,11 @@ about the following:
   writing/improving tests, refactoring legacy systems, and dissemination of
   knowledge either through pairing or improving documentation.
 
-- I value learning -- exploring new ideas, trying new methods/libraries/sytems,
-  and being willing to discard and prune exploratory code once we settle into
-  something which works. Re-exploring the status quo semi-regularly, especially
-  with regards to legacy systems and pain points, is a fantastic way to build a
-  reliable and easy-to-work-with system.
+- I value learning -- exploring new ideas, trying new
+  methods/libraries/systems, and being willing to discard and prune exploratory
+  code once we settle into something which works. Re-exploring the status quo
+  semi-regularly, especially with regards to legacy systems and pain points, is
+  a fantastic way to build a reliable and easy-to-work-with system.
 
 - I value our time as employees -- automating our workflows, simplifying our
   systems, pruning unnecessary meetings, etc. are all fantastic ways to give us

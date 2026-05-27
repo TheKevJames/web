@@ -20,7 +20,10 @@ def latlng(
     if cache_latlng.get(x):
         return cache_latlng[x]
 
-    loc = geopy.geocoders.Nominatim(user_agent='site').geocode(x)
+    loc = geopy.geocoders.Nominatim(user_agent='site', timeout=5).geocode(x)
+    if loc is None:
+        raise ValueError(f'Could not geocode location: {x!r}')
+
     cache_latlng[x] = (loc.latitude, loc.longitude)
     return (loc.latitude, loc.longitude)
 
@@ -58,7 +61,6 @@ def load(fname: str) -> list[dict[str, object]]:
         start, place = lhs
         end, _ = rhs
 
-        # TODO: include places with frequent day trips?
         delta = (
             datetime.date.fromisoformat(end)
             - datetime.date.fromisoformat(start)

@@ -93,4 +93,10 @@ def draw() -> None:
 
     embeds = pathlib.Path(__file__).parents[1] / 'build' / 'embed'
     embeds.mkdir(exist_ok=True)
-    fig.write_html(embeds / 'travel.html', config={'responsive': True})
+    fig.write_html(
+        embeds / 'travel.html',
+        config={
+            'responsive': True,
+        },
+        include_plotlyjs='cdn',
+    )

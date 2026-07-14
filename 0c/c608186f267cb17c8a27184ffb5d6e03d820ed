@@ -1,0 +1,22 @@
+webcycle/webcycle.html
+  s_7c0cb8f2a00567::t_489fba6fe8d2b3 4-15,18-25,31-56,73
+cheatsheets/nms.html
+  s_7c0cb8f2a00567::t_030527fc40a6ca 1020
+  s_7c0cb8f2a00567::t_3e2ec8a4aa501d 12,1019
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "0cc608186f267cb17c8a27184ffb5d6e03d820ed",
+  "prompts": {},
+  "sessions": {
+    "s_7c0cb8f2a00567": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "019f6143-cbb1-712c-9e01-bf5f8d406e77",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Kevin James <KevinJames@thekev.in>"
+    }
+  }
+}

@@ -1,29 +1,59 @@
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.min.css" rel="stylesheet">
 <link rel="icon" href="./favicon.png" />
+<style>
+body { overflow-y: hidden; margin: 0; }
+
+#timer { position: absolute; bottom: 0; right: 0; height: 80px; width: 80px; }
+
+/* Deplete the ring starting from the top, sweeping counter-clockwise. */
+#ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(-90deg) scaleX(-1);
+}
+</style>
 </head>
 
-<body style="overflow-y: hidden; margin: 0">
-<div id="timer" data-timer="10" style="position: absolute; bottom: 0; right: 0; height: 80px; width: 80px"></div>
+<body>
+<div id="timer">
+    <svg viewBox="0 0 80 80" width="80" height="80">
+        <circle id="ring" cx="40" cy="40" r="36" fill="none" stroke="#C0C8CF" stroke-width="4" />
+        <text id="timer-label" x="40" y="40" text-anchor="middle" dominant-baseline="central"
+              fill="#C0C8CF" font-size="24" font-family="sans-serif">0</text>
+    </svg>
+</div>
 
 <script>
 let params = new URLSearchParams(window.location.search);
 let interval = parseInt(params.get('interval') || 0);
 
-$("#timer").TimeCircles({
-    direction: "Counter-clockwise",
-    start: false,
-    total_duration: interval,
-    time: {
-        Days: { show: false },
-        Hours: { show: false },
-        Minutes: { show: false },
-        Seconds: { color: "#C0C8CF" },
-    },
-});
+const ring = document.getElementById('ring');
+const label = document.getElementById('timer-label');
+const circumference = 2 * Math.PI * 36;
+ring.style.strokeDasharray = circumference;
+
+let timer_frame = null;
+let timer_start = null;
+
+function render_timer(now) {
+    let remaining = Math.max(interval - (now - timer_start) / 1000, 0);
+    let fraction = interval > 0 ? remaining / interval : 0;
+
+    // Offset grows as time runs out, shrinking the visible arc.
+    ring.style.strokeDashoffset = circumference * (1 - fraction);
+    label.textContent = Math.ceil(remaining);
+
+    if (remaining > 0) {
+        timer_frame = requestAnimationFrame(render_timer);
+    }
+}
+
+function restart_timer() {
+    cancelAnimationFrame(timer_frame);
+    timer_start = performance.now();
+    timer_frame = requestAnimationFrame(render_timer);
+}
 
 let frames = params.getAll('url').map((u) => {
     let frame = document.createElement("embed");
@@ -40,7 +70,7 @@ let frames = params.getAll('url').map((u) => {
 const update_freq = interval * 1000;
 let current_frame = frames.length - 1;
 function cycle() {
-    $("#timer").TimeCircles().restart();
+    restart_timer();
     frames[current_frame].style.display = "none";
 
     current_frame = (current_frame + 1) % frames.length;

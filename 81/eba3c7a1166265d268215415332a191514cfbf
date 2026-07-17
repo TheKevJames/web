@@ -1,0 +1,19 @@
+.circleci/config.yml
+  s_f7ddfdbeedcc43::t_a2817b791efd86 153
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "81eba3c7a1166265d268215415332a191514cfbf",
+  "prompts": {},
+  "sessions": {
+    "s_f7ddfdbeedcc43": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "019f60c9-c5d9-7651-81a0-94da1d875d50",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Kevin James <KevinJames@thekev.in>"
+    }
+  }
+}

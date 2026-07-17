@@ -150,7 +150,7 @@ workflows:
       - app:
           matrix:
             parameters:
-              dir: [cheatsheets, hexclock, quotes, webcycle]
+              dir: [cheatsheets, hexclock, quotes]
       - quotes-json
       - site
       - site-minify:
@@ -162,7 +162,6 @@ workflows:
             - app-cheatsheets
             - app-hexclock
             - app-quotes
-            - app-webcycle
             - quotes-json
             - site-minify
             - www-redir

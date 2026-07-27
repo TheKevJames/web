@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  linter: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/linter.yml
   poetry: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/poetry.yml
+  prek: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/prek.yml
 
 executors:
   minify:
@@ -145,7 +145,7 @@ jobs:
 workflows:
   run-jobs:
     jobs:
-      - linter/prek
+      - prek/run
       - app:
           matrix:
             parameters:

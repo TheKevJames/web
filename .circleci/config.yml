@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   poetry: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/poetry.yml
-  prek: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/prek.yml
+  pre-commit: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/pre-commit.yml
 
 executors:
   minify:
@@ -145,7 +145,8 @@ jobs:
 workflows:
   run-jobs:
     jobs:
-      - prek/run
+      - pre-commit/run:
+          executor: python
       - app:
           matrix:
             parameters:

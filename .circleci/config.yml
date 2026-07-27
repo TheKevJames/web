@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   linter: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/linter.yml
-  poetry: talkiq/poetry@4.2.1
+  poetry: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/poetry.yml
 
 executors:
   minify:
@@ -145,8 +145,7 @@ jobs:
 workflows:
   run-jobs:
     jobs:
-      - linter/pre-commit:
-          executor: python
+      - linter/prek
       - app:
           matrix:
             parameters:

@@ -145,7 +145,7 @@ jobs:
 workflows:
   run-jobs:
     jobs:
-      - pre-commit/run:
+      - pre-commit/pre-commit:
           executor: python
       - app:
           matrix:

@@ -1,0 +1,19 @@
+.pre-commit-config.yaml
+  s_93813e02bdbe04::t_425a383bb92416 210,212
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "804b0ee55e2fdd370c61e2906b66f429aebd2bc2",
+  "prompts": {},
+  "sessions": {
+    "s_93813e02bdbe04": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "019febee-36bf-705c-9659-dd9c9e410ed3",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Kevin James <KevinJames@thekev.in>"
+    }
+  }
+}

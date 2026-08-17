@@ -5,8 +5,9 @@
   </head>
   <body>
     <outline text="Tech" title="Tech">
-      <outline text="Kyle Lexmond" title="Kyle Lexmond" type="rss" xmlUrl="https://insufficientlyadvanced.tech/index.xml" htmlUrl="https://insufficientlyadvanced.tech/"/>
-      <outline text="Stephen Cagle" title="Stephen Cagle" type="rss" xmlUrl="https://stephencagle.dev/feed.xml" htmlUrl="https://stephencagle.dev/"/>
+      <outline text="Kyle Lexmond" title="Kyle Lexmond" type="rss" xmlUrl="https://insufficientlyadvanced.tech/index.xml" htmlUrl="https://insufficientlyadvanced.tech/" />
+      <outline text="Nigel Daniels" title="Nigel Daniels" type="rss" xmlUrl="https://netchosis.com/feed/" htmlUrl="https://netchosis.com/" />
+      <outline text="Stephen Cagle" title="Stephen Cagle" type="rss" xmlUrl="https://stephencagle.dev/feed.xml" htmlUrl="https://stephencagle.dev/" />
     </outline>
   </body>
 </opml>

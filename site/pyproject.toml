@@ -14,7 +14,7 @@ dependencies = [
     "markdown==3.10.3",
     "pandas==3.0.5",
     "plotly==6.9.0",
-    "pygments==2.20.0",
+    "pygments==2.21.0",
 ]
 
 [project.urls]

@@ -8,14 +8,12 @@ import sys
 import geopy.geocoders
 import plotly.express
 
-
 CACHE_DATA = pathlib.Path(__file__).parent / 'data.cache'
 CACHE_LATLNG = pathlib.Path(__file__).parent / 'latlng.cache'
 
 
 def latlng(
-    cache_latlng: dict[str, tuple[float, float]],
-    x: str,
+    cache_latlng: dict[str, tuple[float, float]], x: str
 ) -> tuple[float, float]:
     if cache_latlng.get(x):
         return cache_latlng[x]
@@ -61,9 +59,8 @@ def load(fname: str) -> list[dict[str, object]]:
         start, place = lhs
         end, _ = rhs
 
-        delta = (
-            datetime.date.fromisoformat(end)
-            - datetime.date.fromisoformat(start)
+        delta = datetime.date.fromisoformat(end) - datetime.date.fromisoformat(
+            start
         )
         totals[place] += delta.days
 
@@ -97,8 +94,6 @@ def draw() -> None:
     embeds.mkdir(exist_ok=True)
     fig.write_html(
         embeds / 'travel.html',
-        config={
-            'responsive': True,
-        },
+        config={'responsive': True},
         include_plotlyjs='cdn',
     )

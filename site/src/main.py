@@ -8,7 +8,6 @@ from collections.abc import Iterator
 import jinja2
 import markdown
 
-
 SITE_DIR = pathlib.Path(__file__).parents[1]
 
 
@@ -51,7 +50,7 @@ def parse_blog() -> Iterator[Post]:
             'markdown.extensions.codehilite',
             'markdown.extensions.meta',
             'markdown.extensions.tables',
-        ],
+        ]
     )
 
     for fname in (SITE_DIR / 'blog').glob('*.md'):
@@ -100,16 +99,16 @@ def render() -> None:
     with (build_dir / 'blog' / 'index.html').open('w', encoding='utf-8') as f:
         f.write(
             template.render(
-                {'filter_tag': None, 'recent': posts[:6]} | context,
-            ),
+                {'filter_tag': None, 'recent': posts[:6]} | context
+            )
         )
     for tag, by_tag in posts_by_tag.items():
         fname = build_dir / 'blog' / f'{tag.replace(" ", "_")}.html'
         with fname.open('w', encoding='utf-8') as f:
             f.write(
                 template.render(
-                    {'filter_tag': tag, 'recent': by_tag} | context,
-                ),
+                    {'filter_tag': tag, 'recent': by_tag} | context
+                )
             )
 
     template = env.get_template('feed.xml')
@@ -117,8 +116,11 @@ def render() -> None:
         f.write(template.render(posts=posts[:10]))
 
     for fbasename in (
-        '404.html', 'cocktails.html', 'index.html',
-        'publications.html', 'travel.html',
+        '404.html',
+        'cocktails.html',
+        'index.html',
+        'publications.html',
+        'travel.html',
     ):
         template = env.get_template(fbasename)
         with (build_dir / fbasename).open('w', encoding='utf-8') as f:

@@ -2,7 +2,6 @@
 import pathlib
 import urllib.request
 
-
 MUSIC = [
     ('Against the Current', '@againstthecurrent'),
     ('Book Club Radio', '@bookclubradio'),
@@ -52,15 +51,13 @@ def main() -> None:
                 body = resp.read()
             _, body = body.split(
                 b'<link rel="alternate" type="application/rss+xml" '
-                b'title="RSS" href="',
+                b'title="RSS" href="'
             )
             xml, *_ = body.split(b'">')
             channel = xml.decode('utf-8')
             # filters out shorts
             videos = channel.replace('channel_id=UC', 'playlist_id=UULF')
-            item = TEMPLATE_ITEM.format(
-                name=name, html=html, url=videos,
-            )
+            item = TEMPLATE_ITEM.format(name=name, html=html, url=videos)
             f.write(item.lstrip('\n'))
         f.write(TEMPLATE_FOOT.lstrip('\n'))
 

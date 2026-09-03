@@ -129,6 +129,22 @@ nav {
     nav .dropdown:hover .dropdown-content {
       display: block; }
 
+    nav .dropdown .dropdown-content .submenu {
+      display: block;
+      position: relative;
+      margin: 0; }
+      nav .dropdown .dropdown-content .submenu > .submenu-content {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin: 0;
+        background-color: #d65d0e;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2; }
+      nav .dropdown .dropdown-content .submenu:hover > .submenu-content {
+        display: block; }
+
   .nav-small {
     display: none !important; }
 
@@ -164,6 +180,16 @@ img {
         <div class='dropdown-content'>
             <a href='https://github.com/TheKevJames/web/blob/master/readmes/README.rst'>README</a>
             <a href='/travel.html'>Travel</a>
+            <div class='submenu'>
+                <a href='#'>Links &#x25B8;</a>
+                <div class='submenu-content'>
+                    <a href='https://hub.docker.com/u/thekevjames'>Docker Hub</a>
+                    <a href='https://facebook.com/TheKevJames'>Facebook</a>
+                    <a href='https://quay.io/user/thekevjames'>Quay</a>
+                    <a href='https://twitter.com/TheKevJ'>Twitter</a>
+                    <a href='https://userstyles.world/user/thekevjames'>UserStyles</a>
+                </div>
+            </div>
             <a class='nav-small' href='https://storage.googleapis.com/thekevjames-artifacts/cv.html'>CV (HTML)</a>
             <a class='nav-small' href='https://storage.googleapis.com/thekevjames-artifacts/cv.pdf'>CV (PDF)</a>
             <hr />

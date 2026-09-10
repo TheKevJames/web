@@ -22,15 +22,15 @@ def latlng(
     if loc is None:
         raise ValueError(f'Could not geocode location: {x!r}')
 
-    cache_latlng[x] = (loc.latitude, loc.longitude)
-    return (loc.latitude, loc.longitude)
+    cache_latlng[x] = (float(loc.latitude), float(loc.longitude))
+    return cache_latlng[x]
 
 
 def format_data(totals: dict[str, int]) -> list[dict[str, object]]:
     with CACHE_LATLNG.open(encoding='utf-8') as f:
         cache_latlng = json.load(f)
 
-    data = []
+    data: list[dict[str, object]] = []
     for location, days in totals.items():
         lat, lng = latlng(cache_latlng, location)
         value = math.log1p(days) + 1.0

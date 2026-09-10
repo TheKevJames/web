@@ -1,7 +1,6 @@
 version: 2.1
 
 orbs:
-  poetry: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/poetry.yml
   pre-commit: https://raw.githubusercontent.com/TheKevJames/tools/refs/heads/master/circleci-orbs/pre-commit.yml
 
 executors:
@@ -63,10 +62,14 @@ jobs:
   site:
     executor: python
     steps:
-      - poetry/install
+      - run:
+          name: install uv
+          command: |
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            echo 'export PATH="${HOME}/.local/bin:${PATH}"' >> "${BASH_ENV}"
       - checkout
       - run:
-          command: poetry install -n --no-ansi
+          command: uv sync --frozen
           working_directory: site
       - run:
           command: make

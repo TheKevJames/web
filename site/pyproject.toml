@@ -1,5 +1,5 @@
 [project]
-name = "src"
+name = "website"
 version = "1.0.0"
 description = ""
 requires-python = ">=3.11,<4.0"
@@ -21,21 +21,29 @@ dependencies = [
 repository = "https://github.com/TheKevJames/web"
 
 [project.scripts]
-cache = "src.map:cache"
-draw = "src.map:draw"
-render = "src.main:render"
+cache = "website.map:cache"
+draw = "website.map:draw"
+render = "website.main:render"
 
-[tool.poetry]
-requires-poetry = ">=2.0"
-package-mode = true
+[dependency-groups]
+dev = [
+    "flake8-broken-line==1.0.0",
+    "flake8-complicated-walrus==2.1.0",
+    "flake8-import-restrictions==2.1",
+    "flake8-requirements==2.3.0",
+    "flake8==7.3.0",
+    "pylint==4.0.8",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.11,<4.0"
+[tool.hatch.build.targets.wheel]
+packages = ["website"]
 
-[[tool.poetry.source]]
-name = "pypi"
-priority = "primary"
+[tool.ty.rules]
+dynamic-function-decorator-return = "error"
+missing-type-argument = "error"
+possibly-unresolved-reference = "warn"
+unsound-return-statement = "error"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -17,7 +17,7 @@ build:
 	mkdir -p $@
 build/blog: build install
 	mkdir -p $@
-	poetry run render
+	uv run render
 
 build/favicon.png: ../shared/favicon.png build
 	cp $< $@
@@ -30,22 +30,22 @@ build/.well-known/security.txt: build/security.txt build/.well-known
 build/embed: build
 	mkdir -p $@
 build/embed/travel.html: install build/embed
-	poetry run draw
+	uv run draw
 
 build/codehilite.css: build install
-	poetry run pygmentize -S gruvbox-dark -f html -a .codehilite > $@
+	uv run pygmentize -S gruvbox-dark -f html -a .codehilite > $@
 build/codehilite.light.css: build install
-	poetry run pygmentize -S gruvbox-light -f html -a .codehilite > $@
+	uv run pygmentize -S gruvbox-light -f html -a .codehilite > $@
 
 
 install:
-	poetry sync
+	uv sync
 
 # requires secrets, must be run locally
-local: src/data.cache static/security.txt
+local: website/data.cache static/security.txt
 
-src/data.cache: install
-	poetry run cache ~/sync/finance/location.beancount
+website/data.cache: install
+	uv run cache ~/sync/finance/location.beancount
 
 static/security.txt: security.txt
 	gpg --clearsign --default-key KevinJames@thekev.in -o $@ $<

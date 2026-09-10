@@ -57,7 +57,7 @@ def parse_blog() -> Iterator[Post]:
         raw = fname.read_text(encoding='utf-8')
 
         html = md.convert(raw)
-        meta = md.Meta  # type: ignore[attr-defined]
+        meta = getattr(md, 'Meta')
 
         year, month, day, *_ = fname.name.split('-')
         date = datetime.date.fromisoformat(f'{year}-{month}-{day}')

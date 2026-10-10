@@ -22,17 +22,17 @@
         "strict_required_status_checks_policy": false,
         "do_not_enforce_on_create": false,
         "required_status_checks": [
-          {"context": "app-cheatsheets"},
-          {"context": "app-hexclock"},
-          {"context": "app-quotes"},
+          {"context": "ci/circleci: app-cheatsheets"},
+          {"context": "ci/circleci: app-hexclock"},
+          {"context": "ci/circleci: app-quotes"},
           {"context": "ci/circleci: pre-commit"},
+          {"context": "ci/circleci: quotes-json"},
+          {"context": "ci/circleci: site"},
+          {"context": "ci/circleci: site-minify"},
+          {"context": "ci/circleci: www-redir"},
           {"context": "dependency-review"},
           {"context": "lint"},
-          {"context": "quotes-json"},
-          {"context": "site"},
-          {"context": "site-minify"},
-          {"context": "wip"},
-          {"context": "www-redir"}
+          {"context": "wip"}
         ]
       }
     }

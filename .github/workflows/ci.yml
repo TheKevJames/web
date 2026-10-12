@@ -1,6 +1,12 @@
 name: ci
 
-on: [pull_request, push]
+on:
+  pull_request:
+  push:
+  schedule:
+    # Refreshes quotes.json from Dropbox; everything else is skipped.
+    - cron: '0 7 * * *'
+  workflow_dispatch:
 
 jobs:
   lint:
@@ -19,3 +25,156 @@ jobs:
           # renovate: datasource=pypi depName=prek
           prek-version: v0.5.5
           extra-args: --all-files
+
+  app:
+    name: app-${{ matrix.dir }}
+    if: github.event_name != 'schedule' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
+    runs-on: ubuntu-26.04
+    strategy:
+      matrix:
+        dir: [cheatsheets, hexclock, quotes]
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - &install-minify
+        name: install minify
+        env:
+          # renovate: datasource=github-releases depName=tdewolff/minify
+          minify_version: v2.24.19
+        working-directory: ${{ runner.temp }}
+        run: |
+          base="https://github.com/tdewolff/minify/releases/download/${minify_version}"
+          curl -fsSL -O "${base}/minify_linux_amd64.tar.gz" -O "${base}/checksums.txt"
+          sha256sum --check --ignore-missing checksums.txt
+          mkdir minify
+          tar -xzf minify_linux_amd64.tar.gz -C minify
+          echo "${RUNNER_TEMP}/minify" >> "${GITHUB_PATH}"
+      - env:
+          DIR: ${{ matrix.dir }}
+        run: |
+          mkdir -p "artifacts/${DIR}"
+          cp shared/* "artifacts/${DIR}/"
+          cp "${DIR}"/* "artifacts/${DIR}/"
+          minify --recursive --output artifacts/ artifacts/
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: app-${{ matrix.dir }}
+          path: artifacts/
+          retention-days: 7
+
+  quotes-json:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-26.04
+    steps:
+      - *install-minify
+      - env:
+          # Public "anyone with the link" share of /sync/vimwiki/quotes.md.
+          QUOTES_URL: https://www.dropbox.com/scl/fi/z9h9tbybhfc915vhrq0rk/quotes.md?rlkey=0nj1l3iyw3phwmnkl4rf61sql&dl=1
+        run: |
+          curl -fsSL "${QUOTES_URL}" -o "${RUNNER_TEMP}/quotes.md"
+          # A dead share link serves an HTML page rather than an HTTP error.
+          if [ ! -s "${RUNNER_TEMP}/quotes.md" ] || grep -qi '<html' "${RUNNER_TEMP}/quotes.md"; then
+            echo "::error::quotes.md download is empty or HTML; is the Dropbox share link still valid?"
+            exit 1
+          fi
+          mkdir -p artifacts/quotes
+          jq -n --arg x "$(cat "${RUNNER_TEMP}/quotes.md")" '$x | split("\n")' > artifacts/quotes/quotes.json
+          minify --recursive --output artifacts/ artifacts/
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: quotes-json
+          path: artifacts/
+          retention-days: 7
+
+  site:
+    if: github.event_name != 'schedule' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          # renovate: datasource=github-releases depName=astral-sh/uv
+          version: 0.13.0
+          # renovate: datasource=docker depName=python
+          python-version: 3.14.8
+      - *install-minify
+      - run: uv sync --frozen
+        working-directory: site
+      - run: make
+        env:
+          PYTHONDEVMODE: 1
+          PYTHONWARNINGS: error,ignore::DeprecationWarning:dateutil.tz.tz:37,ignore::DeprecationWarning:kaleido.scopes.base:188
+        working-directory: site
+      - run: minify --recursive --html-keep-document-tags --output site/build/ site/build/
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: site
+          path: site/build/
+          include-hidden-files: true
+          retention-days: 7
+
+  www-redir:
+    if: github.event_name != 'schedule' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - *install-minify
+      - run: |
+          mkdir -p www/redir
+          cp www-redir/* www/redir/
+          minify --recursive --html-keep-document-tags --output www/redir/ www/redir/
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: www-redir
+          path: www/redir/
+          retention-days: 7
+
+  upload:
+    needs: [lint, app, quotes-json, site, www-redir]
+    # Build jobs are skipped on schedule, so tolerate skipped needs.
+    if: ${{ !failure() && !cancelled() && github.ref == 'refs/heads/master' && github.event_name != 'pull_request' }}
+    runs-on: ubuntu-26.04
+    # rsync --delete-unmatched-destination-objects must never interleave.
+    concurrency:
+      group: upload
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      # Skips the bucket-level compatibility check, which would need
+      # storage.buckets.get on thekevjames-artifacts.
+      CLOUDSDK_STORAGE_PARALLEL_COMPOSITE_UPLOAD_ENABLED: 'False'
+    steps:
+      # google-github-actions/auth writes its credentials file into the
+      # workspace, which must exist first.
+      - uses: actions/checkout@v7.0.1
+      - uses: google-github-actions/auth@v3.0.0
+        with:
+          workload_identity_provider: projects/523035435583/locations/global/workloadIdentityPools/github/providers/github
+          project_id: thekevjames-175823
+      - uses: google-github-actions/setup-gcloud@v3.0.1
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: quotes-json
+          path: artifacts/
+      - if: github.event_name != 'schedule'
+        uses: actions/download-artifact@v8.0.2
+        with:
+          pattern: app-*
+          path: artifacts/
+          merge-multiple: true
+      - run: gcloud storage cp -r artifacts/* gs://thekevjames-artifacts
+      - if: github.event_name != 'schedule'
+        uses: actions/download-artifact@v8.0.2
+        with:
+          name: site
+          path: site/build/
+      - if: github.event_name != 'schedule'
+        run: gcloud storage rsync --delete-unmatched-destination-objects -r site/build gs://thekev.in
+      - if: github.event_name != 'schedule'
+        uses: actions/download-artifact@v8.0.2
+        with:
+          name: www-redir
+          path: www/redir/
+      - if: github.event_name != 'schedule'
+        run: gcloud storage rsync --delete-unmatched-destination-objects -r www/redir gs://www.thekev.in/redir

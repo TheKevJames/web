@@ -39,7 +39,7 @@ jobs:
         name: install minify
         env:
           # renovate: datasource=github-releases depName=tdewolff/minify
-          minify_version: v2.24.20
+          minify_version: v2.24.21
         working-directory: ${{ runner.temp }}
         run: |
           base="https://github.com/tdewolff/minify/releases/download/${minify_version}"

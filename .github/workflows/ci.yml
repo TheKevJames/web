@@ -102,7 +102,7 @@ jobs:
       - run: make
         env:
           PYTHONDEVMODE: 1
-          PYTHONWARNINGS: error,ignore::DeprecationWarning:dateutil.tz.tz:37,ignore::DeprecationWarning:kaleido.scopes.base:188
+          PYTHONWARNINGS: error
         working-directory: site
       - run: minify --recursive --html-keep-document-tags --output site/build/ site/build/
       - uses: actions/upload-artifact@v7.0.2

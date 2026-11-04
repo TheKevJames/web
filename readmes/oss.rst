@@ -13,8 +13,12 @@ Active OSS Projects
 
 These are the "brag-worthy" and "public use" ones. Recruiters, look here.
 
-- I am the primary maintainer of the `coveralls-python`_ project used by ~12k
-  OSS projects on GitHub. No affiliation with `Coveralls`_. `Over 70M downloads`_.
+- Primary maintainer of the `gcloud-aio`_ suite of projects, the most popular
+  of which has `over 750M downloads`_, and some of which have 10M+ downloads
+  per day.
+
+- I am the primary maintainer of the `coveralls-python`_ project used by ~250k
+  OSS projects on GitHub. No affiliation with `Coveralls`_. `Over 75M downloads`_.
 
 - I am the maintainer of the `Puppet`_ `Homebrew`_ plugin `puppet-homebrew`_.
   Over 350k downloads.
@@ -58,8 +62,8 @@ read-only.
   pulls from `Docker Hub`_) but updates are rarely necessary and/or fully
   automated.
 
-- My `CV`_ is a json blob encoded in the `FRESH schema`_ which is automatically
-  rendered to a more `human-readable resume format`_.
+- My `CV`_ is a json blob encoded in the `JsonResume`_ schema which is
+  automatically rendered to a more `human-readable resume format`_.
 
 - A bunch of `web`_ projects which form varying chunks of my website, small
   web-tools, and single-page Chrome extensions.
@@ -83,8 +87,7 @@ Open-Source'd Through Work
 
 - `aerofs-sdk-python`_: Python SDK for AeroFS APIs
 - `aeroup`_: Secure file-sharing (hackathon demo for AeroFS APIs)
-- `gcloud-aio`_: asynchronous Python library for GCP APIs
-- `gcloud-rest`_: threadsafe Python library for GCP APIs
+- `gcloud-aio`_ and ``gcloud-rest``: asynchronous/threadsafe Python libraries for GCP APIs
 - `redis-cli-cluster`_: ``redis-cli`` clone with native cluster support
 - `pystun3`_: ``pystun`` fork with Python 3 support
 - `yaaredis`_: ``aredis`` fork with improved async stability
@@ -127,14 +130,15 @@ Fixes
 .. _Coveralls: https://coveralls.io/
 .. _Dialpad: https://dialpad.com/app
 .. _Docker Hub: https://hub.docker.com/
-.. _FRESH schema: https://github.com/fresh-standard/fresh-resume-schema
+.. _JsonResume: https://jsonresume.org/
 .. _Ferdi: https://getferdi.com/
 .. _Franz: https://meetfranz.com/
 .. _Homebrew: https://brew.sh/
 .. _Julia: https://julialang.org/
 .. _MacPorts: https://www.macports.org/
 .. _Nim: https://nim-lang.org/
-.. _Over 70M downloads: https://pepy.tech/project/coveralls
+.. _Over 75M downloads: https://pepy.tech/project/coveralls
+.. _over 750M downloads: https://pepy.tech/project/gcloud-aio-storage
 .. _Puppet: https://puppet.com/
 .. _Sentry (python, raven) - fix support for Python 3.8: https://github.com/getsentry/raven-python/pull/1298
 .. _SublimeLinter - support inline tooltips: https://github.com/SublimeLinter/SublimeLinter/pull/552/
@@ -154,7 +158,6 @@ Fixes
 .. _franz-recipe-clockwise: https://github.com/TheKevJames/franz-recipe-clockwise
 .. _franz-recipe-dialpad: https://github.com/TheKevJames/franz-recipe-dialpad
 .. _gcloud-aio: https://github.com/talkiq/gcloud-aio
-.. _gcloud-rest: https://github.com/talkiq/gcloud-rest
 .. _git-standup - support branch filtering: https://github.com/kamranahmedse/git-standup/pull/114
 .. _gnome-shell-extension-transmission-daemon: https://github.com/TheKevJames/gnome-shell-extension-transmission-daemon
 .. _homebrew-youtube-viewer: https://github.com/TheKevJames/homebrew-youtube-viewer
